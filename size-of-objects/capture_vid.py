@@ -26,7 +26,7 @@ while(True):
         image = frame
         width = 26
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        gray = cv2.GaussianBlur(gray, (7, 7), 0)
+        gray = cv2.GaussianBlur(gray, (5, 5), 0)
         edged = cv2.Canny(gray, 50, 100)
         edged = cv2.dilate(edged, None, iterations=1)
         edged = cv2.erode(edged, None, iterations=1)
@@ -36,10 +36,10 @@ while(True):
         (cnts, _) = contours.sort_contours(cnts)
         colors = ((0, 0, 255), (240, 0, 159), (0, 165, 255), (255, 255, 0), (255, 0, 255))
         pixelsPerMetric = None
+        orig = image.copy()
         for c in cnts:
             if cv2.contourArea(c) < 100:
                 continue
-                orig = image.copy()
             box = cv2.minAreaRect(c)
             box = cv2.cv.BoxPoints(box) if imutils.is_cv2() else cv2.boxPoints(box)
             box = np.array(box, dtype="int")
@@ -52,6 +52,8 @@ while(True):
                 (trbrX, trbrY) = midpoint(tr, br)
                 D = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
                 refObj = (box, (cX, cY), D / width)
+                if pixelsPerMetric is None:
+                    pixelsPerMetric = D/width
                 continue
             orig = image.copy()
             cv2.drawContours(orig, [box.astype("int")], -1, (0, 255, 0), 2)
@@ -69,36 +71,42 @@ while(True):
                 cv2.circle(orig, (int(blbrX), int(blbrY)), 5, (255, 0, 0), -1)
                 cv2.circle(orig, (int(tlblX), int(tlblY)), 5, (255, 0, 0), -1)
                 cv2.circle(orig, (int(trbrX), int(trbrY)), 5, (255, 0, 0), -1)
-                cv2.line(orig, (int(tltrX), int(tltrY)), (int(blbrX), int(blbrY)),
-                         (255, 0, 255), 2)
-                cv2.line(orig, (int(tlblX), int(tlblY)), (int(trbrX), int(trbrY)),
-                         (255, 0, 255), 2)
+                # cv2.line(orig, (int(tltrX), int(tltrY)), (int(blbrX), int(blbrY)),
+                #          (255, 0, 255), 2)
+                # cv2.line(orig, (int(tlblX), int(tlblY)), (int(trbrX), int(trbrY)),
+                #          (255, 0, 255), 2)
                 dA = dist.euclidean((tltrX, tltrY), (blbrX, blbrY))
                 dB = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
-                if pixelsPerMetric is None:
-                    pixelsPerMetric = dB/width
                 dimA = dA / pixelsPerMetric
                 dimB = dB / pixelsPerMetric
                 for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
                     cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
                     cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
-                    cv2.line(orig, (int(xA), int(yA)), (int(xB), int(yB)), color, 2)
-                    D = dist.euclidean((xA, yA), (xB, yB)) / refObj[2]
-                    (mX, mY) = midpoint((xA, yA), (xB, yB))
-                    cv2.putText(orig, "{:.1f}mm".format(D), (int(mX), int(mY - 10)),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
-                    cv2.putText(orig, "{:.1f}mm".format(dimA),
-                                (int(tltrX - 15), int(tltrY - 10)), cv2.FONT_HERSHEY_SIMPLEX,
-                                0.65, (255, 255, 255), 2)
-                    cv2.putText(orig, "{:.1f}mm".format(dimB),
-                                (int(trbrX + 10), int(trbrY)),
-                                cv2.FONT_HERSHEY_SIMPLEX,
-                                0.65, (255, 255, 255), 2)
+                (xA, yA) = refObj[1]
+                (xB, yB) = (cX, cY)
+                color = (0, 255, 255)
+                cv2.line(orig, (int(xA), int(yA)), (int(xB), int(yB)), color, 2)
+                D = dist.euclidean((xA, yA), (xB, yB)) / refObj[2]
+                (mX, mY) = midpoint((xA, yA), (xB, yB))
+                cv2.putText(orig, "{:.1f}mm".format(D), (int(mX), int(mY - 10)),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
+                cv2.putText(orig, "{:.1f}mm".format(dimA),
+                            (int(tltrX - 15), int(tltrY - 10)), cv2.FONT_HERSHEY_SIMPLEX,
+                            0.65, (255, 255, 255), 2)
+                cv2.putText(orig, "{:.1f}mm".format(dimB),
+                            (int(trbrX + 10), int(trbrY)),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.65, (255, 255, 255), 2)
         cv2.imshow("measured", orig)
         # cv2.waitKey(0)
     else:
         orig = frame.copy()
-        cv2.imshow('unedited', orig)
+        gray = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY)
+        gray = cv2.GaussianBlur(gray, (7, 7), 0)
+        edged = cv2.Canny(gray, 50, 100)
+        edged = cv2.dilate(edged, None, iterations=1)
+        edged = cv2.erode(edged, None, iterations=1)
+        cv2.imshow('edged', edged)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
