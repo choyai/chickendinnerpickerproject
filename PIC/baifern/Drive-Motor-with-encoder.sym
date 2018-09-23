@@ -23,36 +23,36 @@ W0 -W1  @ADDFF.P20
 W0 -W3  @SI64TOF64.P21
 W0 -W3  @I64TOF64.P22
 W0      @delay_ms1.P23
-W0 -W1  @FLT.P24
+W0 -W1  @PRINTFD32_115200_5725_5724.P24
 W0 -W1  @SFTOI.P25
-W0      @PRINTFD16_115200_5725_5724.P26
-W0 -W1  @PRINTFD32_115200_5725_5724.P27
-W0 -W3  @ADDFF64.P28
-W0 -W1  @MULFF.P29
+W0 -W3  @ADDFF64.P26
+W0      @PRINTFD16_115200_5725_5724.P27
+W0 -W1  @MULFF.P28
+W0 -W1  @FLT.P29
 W1      @SCRATCH
 W1      @WRITE_PACKED_MEMORY.P1
 W1      @READ_PACKED_MEMORY.P2
 W2 -W3  @ADDFF.P1
-W2 -W3  @FLT.P2
+W2      @WRITE_PACKED_MEMORY.P2
 W2 -W3  @MULFF.P3
-W2      @READ_PACKED_MEMORY.P4
-W2 -W3  @DIVFF.P5
-W2      @WRITE_PACKED_MEMORY.P6
-W2 -W3  @DIV3232B.P7
-W2      @READ_ROM_MEMORY.P8
+W2 -W3  @DIVFF.P4
+W2      @READ_PACKED_MEMORY.P5
+W2      @READ_ROM_MEMORY.P6
+W2 -W3  @FLT.P7
+W2 -W3  @DIV3232B.P8
 W3      @WRITE_PACKED_MEMORY.P1
 W3 -W5  @FLT48.P2
-W3      @READ_ROM_MEMORY.P3
-W3 -W5  @ADDFF48.P4
+W3 -W5  @ADDFF48.P3
+W3 -W5  @MULFF48.P4
 W3 -W5  @DIVFF48.P5
 W3      @READ_PACKED_MEMORY.P6
-W3 -W5  @MULFF48.P7
-W4 -W7  @MULFF64.P1
-W4      @PRINTFD32_115200_5725_5724.P2
-W4 -W7  @FLT64.P3
-W4 -W7  @DIVFF64.P4
-W4      @PRINTFD16_115200_5725_5724.P5
-W4 -W7  @ADDFF64.P6
+W3      @READ_ROM_MEMORY.P7
+W4      @PRINTFD32_115200_5725_5724.P1
+W4 -W7  @FLT64.P2
+W4 -W7  @DIVFF64.P3
+W4 -W7  @MULFF64.P4
+W4 -W7  @ADDFF64.P5
+W4      @PRINTFD16_115200_5725_5724.P6
 630.6   C1OUT
 630.7   C2OUT
 800-827 pas_64
@@ -60,70 +60,66 @@ W4 -W7  @ADDFF64.P6
 850-87F pat_64
 880-8AF qat_64
 8B0-8B3 countPulse
-8B4-8B7 time
-8B8-8BB timer3time
-8BC-8BF volt
-8C0-8C1 x
-8C2-8C3 TIMER3_ist.duty
-8C4-8C5 TIMER3_ist.dir
+8B4-8B7 timer3time
+8B8-8BB volt
+8BC-8BD x
+8BE-8BF TIMER3_ist.duty
+8C0-8C1 TIMER3_ist.dir
+8C4-8C7 getDirection.voltage
+8C8-8C9 getDirection.direction
 8C8-8CB chirpSine.time
-8CC-8CF getDirection.voltage
 8CC-8CF chirpSine.sig
-8D0-8D1 getDirection.direction
+8CC-8CD flip.direction
+8CE-8CF flip.PWM
 8D0-8D3 convertToDUTY.voltage
-8D4-8D5 flip.direction
 8D4-8D5 convertToDUTY.duty
-8D6-8D7 flip.PWM
-8EA-8ED sin.x
-8FC-8FF cos.x
-900-903 cos.y
-904-907 cos.t
-908-90B cos.t2
-90C     cos.quad
-90D     cos.i
-90E-911 cos.frac
-912-925 cos.p
+8E6-8E9 sin.x
+8F8-8FB cos.x
+8FC-8FF cos.y
+900-903 cos.t
+904-907 cos.t2
+908     cos.quad
+909     cos.i
+90A-90D cos.frac
+90E-921 cos.p
 2780-27FF Stack
 
 ROM Allocation:
-000DFC  @const1181.call
-000E12  @const1186.call
-000E2E  @const1187.call
-000E46  INT_EXT_INPUT1
-000E7A  @ADDFF
-001024  @DIV3232B
-001068  @PRINTFD32_115200_5725_5724
-00117C  @MULFF
-001240  @SFTOI
-00126C  @PRINTFD16_115200_5725_5724
-001362  TIMER2_isr
-00141A  @FLT
-001482  @ITOF
-0014BC  cos
-001630  sin
-001656  chirpSine
-0016A2  @DIVFF
-00176C  convertToDUTY
-0017A6  getDirection
-0017D6  flip
-001822  TIMER3_ist
-00188C  Drivemotor
-00189E  init_Timer2
-0018AC  Init_Interrupts
-0018B2  @cinit1
-0018B2  MAIN
-001906  @cinit2
+000DFC  INT_EXT_INPUT1
+000E30  @ADDFF
+000FDA  @MULFF
+00109E  @SFTOI
+0010CA  @PRINTFD16_115200_5725_5724
+0011C0  @DIV3232B
+001204  @PRINTFD32_115200_5725_5724
+001318  TIMER2_isr
+0013A0  @FLT
+001408  @ITOF
+001442  cos
+0015B6  sin
+0015DC  chirpSine
+001616  @DIVFF
+0016E0  convertToDUTY
+00171A  getDirection
+00174A  flip
+001796  TIMER3_ist
+001800  Drivemotor
+001812  init_Timer2
+001820  Init_Interrupts
+001826  MAIN
+001826  @cinit1
+001876  @cinit2
 
 Project Directory:
     C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\baifern\
 
 Project Files:
-    Drive-Motor-with-encoder.c                              [23-Sep-18 20:59  CRC=B76612F7]
+    Drive-Motor-with-encoder.c                              [24-Sep-18 00:17  CRC=B7143205]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
     BL_Support.h                                            [23-Sep-18 20:59  CRC=2918F78D]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
 
-Source signature=B450558E
+Source signature=B3FE749C
 
 Units:
     Drive-Motor-with-encoder (main)

@@ -1,28 +1,28 @@
 
-ROM used:   3456/33788 (10%)
-            3456/33788 (10%) including unused fragments
+ROM used:   3596/33788 (11%)
+            3596/33788 (11%) including unused fragments
 
             1.1 Average locations per line
-            3.5 Average locations per statement
+            3.7 Average locations per statement
 
-RAM used:   318/8192 (4%) at main() level
-            448/8192 (5%) worst case
+RAM used:   322/8192 (4%) at main() level
+            452/8192 (6%) worst case
 
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  122    58   6  Drive-Motor-with-encoder.c
+  127    57   6  encoder.c
   862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
    32     0   0  BL_Support.h
  2229   921  94  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
 ----- -----
- 3245   979 Total
+ 3250   978 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     68   1    8             @DIV3232B
-0    104   2    8             @FLT
+0    104   1    8             @FLT
 0     44   1    4             @SFTOI
 0     58   1    2             @ITOF
 0    196   3    8             @MULFF
@@ -31,38 +31,41 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0    372   5   47  1148  9.7  cos
 0     38   1    9    46  1.7  sin
 0     52   1    2    76  3.0  INT_EXT_INPUT1
-0     58   1   13    72  2.7  chirpSine
+0     76   1   13    97  3.4  chirpSine
 0     58   1   11    75  2.9  convertToDUTY
 0     48   1    6   174  4.0  getDirection
 0      6   0    0    42  1.4  Init_Interrupts
-0    136   2    3   226  2.6  TIMER2_isr
-0    246   4    0             @PRINTFD16_115200_5725_5724
+0    184   3    3   174  2.5  TIMER2_isr
+0     22   0    0             @const1181
 0    276   4    0             @PRINTFD32_115200_5725_5724
+0     28   0    0             @const1186
+0     24   0    0             @const1187
+0    246   3    0             @PRINTFD16_115200_5725_5724
 0     14   0    0    52  1.9  init_Timer2
 0     76   1    7   452  4.9  flip
-0    106   2    0   145  2.8  TIMER3_ist
+0    106   1    0   145  2.8  TIMER3_ist
 0     18   0    0    90  2.1  Drivemotor
 0    346   5    0   132  2.1  MAIN
  Inline         0             @cinit1
 
 Program metrics:
     Functions               13
-    Statements              979
-    Comments                482
-    Volume (V)              4378
-    Difficulty (D)          41.9
-    Effort to implement (E) 183428
-    Time to implement (T)   2 hours, 50 minutes
+    Statements              978
+    Comments                476
+    Volume (V)              4343
+    Difficulty (D)          42.1
+    Effort to implement (E) 182833
+    Time to implement (T)   2 hours, 49 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   11
-    Maintainability (MI)    70
+    Maintainability (MI)    73
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  2948  27260  
+00DFC-083FA  3088  27120  
 
 
 

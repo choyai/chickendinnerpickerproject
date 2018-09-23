@@ -2,5 +2,6 @@ numpy
 matplotlib
 opencv-python
 opencv-contrib-python
+pyserial
 imutils
 scipy
