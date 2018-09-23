@@ -1,0 +1,47 @@
+
+ROM used:   602/33788 (2%)
+            602/33788 (2%) including unused fragments
+
+            0.7 Average locations per line
+            120.4 Average locations per statement
+
+RAM used:   128/8192 (2%) at main() level
+            129/8192 (2%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   23     5 100  serialTest.c
+  862     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+----- -----
+  917     5 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     16   1    2             @delay_ms1
+0     78   6    0    67  1.9  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              5
+    Comments                168
+    Volume (V)              70
+    Difficulty (D)          1.5
+    Effort to implement (E) 105
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    170
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA    94  30114  
+
+
+

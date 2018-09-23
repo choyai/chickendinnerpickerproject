@@ -1,0 +1,50 @@
+
+ROM used:   1146/33788 (3%)
+            1146/33788 (3%) including unused fragments
+
+            1.2 Average locations per line
+            45.8 Average locations per statement
+
+RAM used:   132/8192 (2%) at main() level
+            132/8192 (2%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   76    25 100  motor.c
+  862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+----- -----
+  970    25 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     68   3    8             @DIV3232B
+0     86   4    0    98  2.9  INT_EXT_INPUT1
+0    276  12    0             @PRINTFD32_9600_5725_5724
+0     86   4    0    98  2.9  INT_EXT_INPUT2
+0    122   5    0   338  3.3  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              25
+    Comments                184
+    Volume (V)              695
+    Difficulty (D)          9.3
+    Effort to implement (E) 6454
+    Time to implement (T)   6 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    87
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA   638  29570  
+
+
+

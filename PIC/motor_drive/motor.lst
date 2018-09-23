@@ -1,0 +1,460 @@
+CCS PCD C Compiler, Version 5.015, 5967               23-Sep-18 10:34
+
+               Filename:   C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\motor_drive\motor.lst
+
+               ROM used:   1146 bytes (3%)
+                           Largest free fragment is 29570
+               RAM used:   132 (2%) at main() level
+                           132 (2%) worst case
+               Stack size: 128
+
+*
+0C00:  GOTO    1000
+*
+0C74:  GOTO    F54
+*
+0C98:  GOTO    FAA
+.................... #include <24FJ48GA002.h> 
+.................... //////////// Standard Header file for the PIC24FJ48GA002 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24FJ48GA002 
+*
+0DFC:  MOV     W6,[W15++]
+0DFE:  MOV     W7,[W15++]
+0E00:  MOV     W8,[W15++]
+0E02:  MOV     W9,[W15++]
+0E04:  CLR     W4
+0E06:  CLR     W5
+0E08:  CLR     W6
+0E0A:  CLR     W7
+0E0C:  XOR     W2,W3,W8
+0E0E:  BRA     Z,E32
+0E10:  MOV     #20,W8
+0E12:  BCLR.B  42.0
+0E14:  RLC     W0,W0
+0E16:  RLC     W1,W1
+0E18:  RLC     W4,W4
+0E1A:  RLC     W5,W5
+0E1C:  CP      W5,W3
+0E1E:  BRA     NZ,E22
+0E20:  CPB     W4,W2
+0E22:  BRA     NC,E2A
+0E24:  SUB     W4,W2,W4
+0E26:  SUBB    W5,W3,W5
+0E28:  BSET.B  42.0
+0E2A:  RLC     W6,W6
+0E2C:  RLC     W7,W7
+0E2E:  DEC     W8,W8
+0E30:  BRA     NZ,E12
+0E32:  MOV     W7,W1
+0E34:  MOV     W6,W0
+0E36:  MOV     [--W15],W9
+0E38:  MOV     [--W15],W8
+0E3A:  MOV     [--W15],W7
+0E3C:  MOV     [--W15],W6
+0E3E:  RETURN  
+0E40:  MOV     W5,[W15++]
+0E42:  MOV     #C,W5
+0E44:  REPEAT  #7
+0E46:  MOV     [W5++],[W15++]
+0E48:  BTSS    W1.F
+0E4A:  BRA     E5A
+0E4C:  NEG     W0,W0
+0E4E:  BRA     Z,E52
+0E50:  BRA     NZ,E56
+0E52:  NEG     W1,W1
+0E54:  BRA     E58
+0E56:  COM     W1,W1
+0E58:  BSET    W4.8
+0E5A:  CLR     W5
+0E5C:  MOV     W0,W6
+0E5E:  MOV     W1,W7
+0E60:  MOV     W4,W12
+0E62:  BCLR    W4.F
+0E64:  CP0.B   W4L
+0E66:  BRA     NZ,E6A
+0E68:  BRA     E9A
+0E6A:  SUB.B   W4L,#B,W5L
+0E6C:  BRA     NC,E9A
+0E6E:  SUB.B   W4L,W5L,W4L
+0E70:  BTSS    W12.F
+0E72:  BRA     E8A
+0E74:  BTSS    W4.8
+0E76:  BRA     E86
+0E78:  MOV     #2D,W0
+0E7A:  BTSC.B  223.1
+0E7C:  BRA     E7A
+0E7E:  MOV     W0,224
+0E80:  BCLR    W4.8
+0E82:  DEC     W5,W5
+0E84:  BRA     N,E9A
+0E86:  MOV     #30,W0
+0E88:  BRA     E8C
+0E8A:  MOV     #20,W0
+0E8C:  BTSC.B  223.1
+0E8E:  BRA     E8C
+0E90:  MOV     W0,224
+0E92:  DEC     W5,W5
+0E94:  BRA     NN,E8C
+0E96:  BTSC    W4.8
+0E98:  DEC.B   W4L,W4L
+0E9A:  MOV     #E,W8
+0E9C:  MOV     #0,W9
+0E9E:  LNK     #10
+0EA0:  MOV     W12,[W14+W8]
+0EA2:  DEC2    W8,W8
+0EA4:  BRA     NN,EA0
+0EA6:  MOV     W4,W5
+0EA8:  MOV     #A,W4
+0EAA:  BTSC    W5.8
+0EAC:  INC     W4,W4
+0EAE:  BSET    W5.E
+0EB0:  BTSC    W12.F
+0EB2:  BSET    W5.F
+0EB4:  CP0.B   W5L
+0EB6:  BRA     Z,EBA
+0EB8:  DEC.B   W5L,W5L
+0EBA:  MOV     W4,[W14]
+0EBC:  MOV     W5,[W14+#2]
+0EBE:  MOV     W6,W0
+0EC0:  MOV     W7,W1
+0EC2:  MOV     #CA00,W2
+0EC4:  MOV     #3B9A,W3
+0EC6:  MOV     #2710,W8
+0EC8:  BCLR    W13.F
+0ECA:  BCLR.B  43.0
+0ECC:  CALL    DFC
+0ED0:  BTG     W13.F
+0ED2:  BTSC    W13.F
+0ED4:  BRA     EE4
+0ED6:  MOV     W0,[W14+#8]
+0ED8:  MOV     W1,[W14+#A]
+0EDA:  MOV     W0,W2
+0EDC:  MOV     W1,W3
+0EDE:  MOV     [W14+#4],W0
+0EE0:  MOV     [W14+#6],W1
+0EE2:  BRA     ECA
+0EE4:  MOV     W2,[W14+#8]
+0EE6:  MOV     W3,[W14+#A]
+0EE8:  MOV     W4,[W14+#4]
+0EEA:  MOV     W5,[W14+#6]
+0EEC:  MOV     [W14],W4
+0EEE:  MOV     [W14+#2],W5
+0EF0:  MOV     #30,W6
+0EF2:  CP0     W0
+0EF4:  BRA     NZ,F18
+0EF6:  BTSS    W5.E
+0EF8:  BRA     F1C
+0EFA:  DEC     W4,W4
+0EFC:  MOV     W4,[W14]
+0EFE:  CP0     W4
+0F00:  BRA     Z,F1C
+0F02:  CP.B    W4L,W5L
+0F04:  BRA     Z,F0A
+0F06:  BTSC.B  42.0
+0F08:  BRA     F3A
+0F0A:  BTSS    W5.F
+0F0C:  BRA     F14
+0F0E:  BTSS    W5.8
+0F10:  BRA     F32
+0F12:  BRA     F22
+0F14:  MOV     #20,W6
+0F16:  BRA     F32
+0F18:  BCLR    W5.E
+0F1A:  MOV     W5,[W14+#2]
+0F1C:  MOV     [W14+#2],W5
+0F1E:  BTSS    W5.8
+0F20:  BRA     F32
+0F22:  BCLR    W5.8
+0F24:  MOV     W5,[W14+#2]
+0F26:  MOV     W0,W10
+0F28:  MOV     #2D,W0
+0F2A:  BTSC.B  223.1
+0F2C:  BRA     F2A
+0F2E:  MOV     W0,224
+0F30:  MOV     W10,W0
+0F32:  ADD.B   W6L,W0L,W0L
+0F34:  BTSC.B  223.1
+0F36:  BRA     F34
+0F38:  MOV     W0,224
+0F3A:  MOV     [W14+#8],W0
+0F3C:  MOV     [W14+#A],W1
+0F3E:  MOV     #A,W2
+0F40:  CLR     W3
+0F42:  CP      W0,#1
+0F44:  BRA     Z,F48
+0F46:  BRA     ECA
+0F48:  ULNK    
+0F4A:  MOV     #1A,W5
+0F4C:  REPEAT  #7
+0F4E:  MOV     [--W15],[W5--]
+0F50:  MOV     [--W15],W5
+0F52:  RETURN  
+....................  
+.................... #list 
+....................  
+.................... #include "BL_Support.h" 
+.................... /*  
+....................  * File:    BL_Support.h 
+....................  * Author:  Dr.Santi Nuratch 
+....................  *          Embedded Intelligence Lab., INC-KMUTT 
+....................  * Created on 22 September 2016, 13:14 
+....................  */ 
+....................  
+.................... #ifndef BL_SUPPORT_H 
+.................... #define	BL_SUPPORT_H 
+....................  
+.................... /******************************************************************************/ 
+.................... /*                   BOOTLOADER SUPPORT CONFIGURATION                         */ 
+.................... /*                          (DO NOT CHANGE)                                   */ 
+.................... /******************************************************************************/ 
+.................... /* Bootloader */ 
+.................... #define LOADER_PAGES 	3  
+.................... #define ERASE_SIZE 		2048    /* 2048 bytes, 24-bit (3 bytes) per instruction, but it uses 4 bytes aligned --> 4 bytes per word */ 
+....................                                 /* each block has 512 instructions (1024 words), each instruction requires 4 bytes (2 words), so 512*4 = 2048 bytes */ 
+.................... #define LOADER_SIZE 	((LOADER_PAGES * (ERASE_SIZE/2)) - 1)   /* 2 bytes per address, so divided by 2, 2048/2 = 1024 */  
+.................... #define LOADER_END  	LOADER_SIZE                             /* End address      */ 
+.................... #define LOADER_ADDR 	0xC00//(LOADER_END - LOADER_SIZE)       /* Start address    */ 
+....................  
+.................... #build (reset=LOADER_END+1, interrupt=LOADER_END+5) 
+.................... #org 0, LOADER_END {}   /* 0x0000 - END */ 
+....................  
+.................... /******************************************************************************/ 
+.................... /*                                  END                                       */ 
+.................... /******************************************************************************/ 
+....................  
+.................... #endif	/* BL_SUPPORT_H */ 
+....................  
+....................  
+.................... #use delay(internal = 8MHz, clock = 32MHz) 
+.................... #PIN_SELECT OC1 = PIN_B2 
+.................... #PIN_SELECT OC2 = PIN_B3 
+.................... #PIN_SELECT INT1 = PIN_B4 
+.................... #PIN_SELECT INT2 = PIN_B5 
+.................... #PIN_SELECT U1RX = PIN_B12 // pin_b14 
+.................... #PIN_SELECT U1TX = PIN_B13 // pin_b15 
+.................... #use rs232(UART1, BAUD = 9600, XMIT = PIN_B13, RCV = PIN_B12) 
+....................  
+.................... // float chirpSignal(float time){ 
+.................... //   float val = sin((1*(time*time)+ PI/2.0)*Vin; 
+.................... //   return val; 
+.................... // } 
+.................... // float time = 0; 
+.................... long count = 0; 
+.................... // BOOLEAN trig = FALSE; 
+....................  
+.................... // #INT_TIMER3 
+.................... // void TIMER3_isr(void) { 
+....................   // if (trig) { 
+.................... //     printf("%d \n\r", count); 
+....................   // } 
+.................... // } 
+....................  
+.................... #INT_EXT1 
+.................... void INT_EXT_INPUT1(void) { 
+0F54:  PUSH    42
+0F56:  PUSH    36
+0F58:  PUSH    32
+0F5A:  MOV     W0,[W15++]
+0F5C:  MOV     #2,W0
+0F5E:  REPEAT  #C
+0F60:  MOV     [W0++],[W15++]
+....................   // if (trig) { 
+....................     if (input(PIN_B5)) { 
+0F62:  BSET.B  2C8.5
+0F64:  BTSS.B  2CA.5
+0F66:  BRA     F70
+....................       count++; 
+0F68:  INC     0800
+0F6A:  BTSC.B  42.1
+0F6C:  INC     0802
+....................     } else { 
+0F6E:  BRA     F76
+....................       count--; 
+0F70:  DEC     0800
+0F72:  BTSS.B  42.0
+0F74:  DEC     0802
+....................     } 
+....................     printf("(%d)\n", count); 
+0F76:  BTSC.B  223.1
+0F78:  BRA     F76
+0F7A:  MOV     #28,W4
+0F7C:  MOV     W4,224
+0F7E:  MOV     800,W0
+0F80:  MOV     802,W1
+0F82:  MOV     #0,W4
+0F84:  CALL    E40
+0F88:  BTSC.B  223.1
+0F8A:  BRA     F88
+0F8C:  MOV     #29,W4
+0F8E:  MOV     W4,224
+0F90:  BTSC.B  223.1
+0F92:  BRA     F90
+0F94:  MOV     #A,W4
+0F96:  MOV     W4,224
+....................   // } 
+.................... } 
+....................  
+0F98:  BCLR.B  86.4
+0F9A:  MOV     #1A,W0
+0F9C:  REPEAT  #C
+0F9E:  MOV     [--W15],[W0--]
+0FA0:  MOV     [--W15],W0
+0FA2:  POP     32
+0FA4:  POP     36
+0FA6:  POP     42
+0FA8:  RETFIE  
+.................... #INT_EXT2 
+.................... void INT_EXT_INPUT2(void) { 
+0FAA:  PUSH    42
+0FAC:  PUSH    36
+0FAE:  PUSH    32
+0FB0:  MOV     W0,[W15++]
+0FB2:  MOV     #2,W0
+0FB4:  REPEAT  #C
+0FB6:  MOV     [W0++],[W15++]
+....................   // if (trig) { 
+....................     if (input(PIN_B4)) { 
+0FB8:  BSET.B  2C8.4
+0FBA:  BTSS.B  2CA.4
+0FBC:  BRA     FC6
+....................       count--; 
+0FBE:  DEC     0800
+0FC0:  BTSS.B  42.0
+0FC2:  DEC     0802
+....................     } else { 
+0FC4:  BRA     FCC
+....................       count++; 
+0FC6:  INC     0800
+0FC8:  BTSC.B  42.1
+0FCA:  INC     0802
+....................     } 
+....................     printf("(%d)\n", count); 
+0FCC:  BTSC.B  223.1
+0FCE:  BRA     FCC
+0FD0:  MOV     #28,W4
+0FD2:  MOV     W4,224
+0FD4:  MOV     800,W0
+0FD6:  MOV     802,W1
+0FD8:  MOV     #0,W4
+0FDA:  CALL    E40
+0FDE:  BTSC.B  223.1
+0FE0:  BRA     FDE
+0FE2:  MOV     #29,W4
+0FE4:  MOV     W4,224
+0FE6:  BTSC.B  223.1
+0FE8:  BRA     FE6
+0FEA:  MOV     #A,W4
+0FEC:  MOV     W4,224
+....................   // } 
+0FEE:  BCLR.B  87.5
+0FF0:  MOV     #1A,W0
+0FF2:  REPEAT  #C
+0FF4:  MOV     [--W15],[W0--]
+0FF6:  MOV     [--W15],W0
+0FF8:  POP     32
+0FFA:  POP     36
+0FFC:  POP     42
+0FFE:  RETFIE  
+.................... } 
+....................  
+.................... void main() { 
+1000:  MOV     #2780,W15
+1002:  MOV     #27FF,W0
+1004:  MOV     W0,20
+1006:  NOP     
+1008:  BSET.B  81.7
+100A:  MOV     #46,W0
+100C:  MOV.B   W0L,742
+100E:  MOV     #57,W0
+1010:  MOV.B   W0L,742
+1012:  BCLR.B  742.6
+1014:  MOV     #43F,W0
+1016:  MOV     W0,680
+1018:  MOV     #3F05,W0
+101A:  MOV     W0,682
+101C:  MOV     #3F0C,W0
+101E:  MOV     W0,6A4
+1020:  MOV     #1312,W0
+1022:  MOV     W0,6C2
+1024:  MOV     #300,W0
+1026:  MOV     W0,6CC
+1028:  MOV     #46,W0
+102A:  MOV.B   W0L,742
+102C:  MOV     #57,W0
+102E:  MOV.B   W0L,742
+1030:  BSET.B  742.6
+1032:  CLR     744
+1034:  MOV     #8000,W4
+1036:  MOV     W4,220
+1038:  MOV     #400,W4
+103A:  MOV     W4,222
+103C:  BSET.B  220.3
+103E:  MOV     #1A0,W4
+1040:  MOV     W4,228
+1042:  CLR     800
+1044:  CLR     802
+1046:  SETM    32C
+....................   count = 0; 
+1048:  CLR     800
+104A:  CLR     802
+....................   disable_interrupts(GLOBAL); 
+104C:  BCLR.B  81.7
+104E:  MOV     #E0,W4
+1050:  MOV     W4,42
+1052:  BSET.B  81.7
+....................   setup_timer2(TMR_INTERNAL | TMR_DIV_BY_256, 62500); 
+1054:  CLR     110
+1056:  MOV     #F424,W4
+1058:  MOV     W4,10C
+105A:  MOV     #8030,W4
+105C:  MOV     W4,110
+....................   enable_interrupts(INT_TIMER2); 
+105E:  BSET.B  94.7
+....................   // setup_timer2(TMR_INTERNAL | TMR_DIV_BY_8 | TMR_32_BIT, 20000); 
+....................   // enable_interrupts(INT_TIMER3); 
+....................   enable_interrupts(INT_EXT1); 
+1060:  BSET.B  96.4
+....................   ext_int_edge(1, H_TO_L); 
+1062:  BSET.B  82.1
+....................   enable_interrupts(INT_EXT2); 
+1064:  BSET.B  97.5
+....................   ext_int_edge(2, H_TO_L); 
+1066:  BSET.B  82.2
+....................  
+....................   enable_interrupts(GLOBAL); 
+1068:  BCLR.B  81.7
+106A:  CLR     42
+106C:  BSET.B  81.7
+....................  
+....................   setup_compare(1, COMPARE_PWM | COMPARE_TIMER2); 
+106E:  MOV     #6,W4
+1070:  MOV     W4,184
+....................  
+....................   set_pwm_duty(1, 31250); 
+1072:  MOV     #7A12,W4
+1074:  MOV     W4,180
+....................  
+....................   while (TRUE) { 
+1076:  BRA     1076
+....................     // if(input(PIN_B6)){ 
+....................       // count = 0; 
+....................       // trig = TRUE; 
+....................     // } 
+....................   } 
+.................... } 
+1078:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  1L: 3F7F   WPOSTS16 WDT128 WINDIS NOWDT ICSP1 NODEBUG NOWRT NOPROTECT NOJTAG
+          H: FF00  
+   Word  2L: F9F7   NOPR NOALTI2C1 IOL1WAY NOOSCIO FRC_PLL SOSC_SEC WUT_DEFAULT IESO
+          H: FF00  

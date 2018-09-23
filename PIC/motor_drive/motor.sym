@@ -1,0 +1,62 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @DIV3232B.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @delay_ms1.P3
+W0      @delay_us1.P4
+W0 -W1  @PRINTFD32_9600_5725_5724.P5
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2      @WRITE_PACKED_MEMORY.P1
+W2 -W3  @DIV3232B.P2
+W2      @READ_ROM_MEMORY.P3
+W2      @READ_PACKED_MEMORY.P4
+W3      @WRITE_PACKED_MEMORY.P1
+W3      @READ_ROM_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+W4      @PRINTFD32_9600_5725_5724.P1
+630.6   C1OUT
+630.7   C2OUT
+800-803 count
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  @DIV3232B
+000E40  @PRINTFD32_9600_5725_5724
+000F54  INT_EXT_INPUT1
+000FAA  INT_EXT_INPUT2
+001000  MAIN
+001000  @cinit1
+001048  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\motor_drive\
+
+Project Files:
+    motor.c                                                 [23-Sep-18 10:34  CRC=CFAEB498]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [01-Nov-16 06:22  CRC=2918F78D]
+
+Source signature=4CE9C92A
+
+Units:
+    motor (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      motor.err
+    INHX8:       motor.hex
+    Symbols:     motor.sym
+    List:        motor.lst
+    Debug/COFF:  motor.cof
+    Project:     motor.ccspjt
+    Call Tree:   motor.tre
+    Statistics:  motor.STA

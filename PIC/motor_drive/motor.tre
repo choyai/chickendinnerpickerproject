@@ -1,0 +1,9 @@
+юдmotor
+   цдMAIN  0/122  Ram=0
+   Ё  юд@cinit1  (Inline)  Ram=0
+   цдINT_EXT_INPUT1  0/86  Ram=0
+   Ё  юд@PRINTFD32_9600_5725_5724  0/276  Ram=0
+   Ё     юд@DIV3232B  0/68  Ram=8
+   юдINT_EXT_INPUT2  0/86  Ram=0
+      юд@PRINTFD32_9600_5725_5724  0/276  Ram=0
+         юд*
