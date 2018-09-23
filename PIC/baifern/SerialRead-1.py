@@ -1,35 +1,18 @@
 import serial
+import numpy as np
 
 BAUDRATE = 115200
 PORT = 'COM5'
-m_in_voltage = 12
-max_data = 840
+max_data = 2000
 
 
-def msec2sec(msec):
-    """
-    :param msec: time in milli seconds unit
-    :return: time in seconds unit
-    """
-    return msec / 1000
-
-
-def impulse2voltage(duty_cycle):
-    """
-    :param duty_cycle: duty cycle
-    :return: motor output voltage
-    """
-    voltage = (duty_cycle / 100) * m_in_voltage
-    return voltage
-
-
-def count2distance(count):
+def count2angle(count):
     """
     :param count:  pulsecount from encoder
     :return: motor armature angle
     """
-    distance = 0.000052359 * (1 / 125) * 30 * count
-    return distance
+    angle = count * np.pi * 2 / 768
+    return angle
 
 
 ser = serial.Serial()
@@ -52,17 +35,24 @@ data = ""
 while True:
     line = ser.readline().decode('utf-8')
     print(line)
-
+# parse data and do conversions
     if len(line) > 0:
-        time = int(line.split(",")[0])
-        time = msec2sec(time)
-        # voltage = count2voltage(voltage)
-        pulse = int(line.split(",")[1])
-        voltage = int(line.split(",")[2])
-        distance = count2distance(pulse)
-        new = str(time) + ",{0:.5f},".format(voltage) + str(distance)
-        if counter >= max_data:
-            f = open("log_file.csv", "w")
+        time_in_millisecs = int(line.split(",")[0])
+        # get time in seconds
+        time_in_seconds = time_in_millisecs / 1000.0
+        # get angle in radians
+        count = int(line.split(",")[1])
+        angle = count2angle(count)
+        # get voltage
+        millivoltage = int(line.split(",")[2])
+        voltage = millivoltage / 1000.0
+
+        # create new string entry with all the values separated by commas
+        new = "{0:.5f}".format(time_in_seconds) + \
+            ",{0:.5f},".format(voltage) + "{0:.5f}".format(angle)
+        # Save to CSV file and exit after 20s or 2000 entries
+        if counter >= max_data or time_in_seconds > 20:
+            f = open("log_file2.csv", "w")
             f.write(data)
             f.close()
             data = ''

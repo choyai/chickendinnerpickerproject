@@ -57,7 +57,7 @@ void Init_Interrupts() {
 #INT_TIMER2
 void TIMER2_isr() {
   timer3time += 0.01;
-
+	// Send time and voltage in milli for resolution's sake
   printf("%d", (int)(timer3time*1000));
   printf(",");
   printf("%d", countPulse);
