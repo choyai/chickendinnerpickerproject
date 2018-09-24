@@ -12,12 +12,13 @@ def midpoint(ptA, ptB):
     return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 period = 0.1
 nexttime = time.time() + period
 bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()
 ret, bg = cap.read()
 bgsub.apply(bg, learningRate=0.5)
+cv2.imshow("background", bg)
 while(True):
     gauss_args = [3, 3]
     bilat_args = [9, 75, 75]

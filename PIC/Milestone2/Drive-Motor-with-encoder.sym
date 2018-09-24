@@ -103,23 +103,23 @@ ROM Allocation:
 00171A  getDirection
 00174A  flip
 001796  TIMER3_ist
-001800  Drivemotor
-001812  init_Timer2
-001820  Init_Interrupts
-001826  MAIN
-001826  @cinit1
-001876  @cinit2
+001802  Drivemotor
+001814  init_Timer2
+001822  Init_Interrupts
+001828  MAIN
+001828  @cinit1
+001878  @cinit2
 
 Project Directory:
     C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\baifern\
 
 Project Files:
-    Drive-Motor-with-encoder.c                              [24-Sep-18 00:17  CRC=B7143205]
+    Drive-Motor-with-encoder.c                              [24-Sep-18 04:09  CRC=09B84995]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
     BL_Support.h                                            [23-Sep-18 20:59  CRC=2918F78D]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
 
-Source signature=B3FE749C
+Source signature=06A28C2C
 
 Units:
     Drive-Motor-with-encoder (main)

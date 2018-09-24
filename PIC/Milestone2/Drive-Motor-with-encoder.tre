@@ -15,7 +15,8 @@
    ³  ÃÄ@MULFF  0/196  Ram=8
    ³  ÃÄ@SFTOI  0/44  Ram=4
    ³  ÀÄ@PRINTFD16_115200_5725_5724  0/246  Ram=0
-   ÀÄTIMER3_ist  0/106  Ram=0
+   ÀÄTIMER3_ist  0/108  Ram=0
+      ÃÄ@FLT  0/104  Ram=8
       ÃÄchirpSine  0/58  Ram=13
       ³  ÃÄ@MULFF  0/196  Ram=8
       ³  ÃÄsin  0/38  Ram=9
@@ -44,5 +45,4 @@
       ÃÄgetDirection  0/48  Ram=6
       ³  ÃÄ@FLT  0/104  Ram=8
       ³  ÀÄ@FLT  0/104  Ram=8
-      ÃÄflip  0/76  Ram=7
-      ÀÄ@ADDFF  0/426  Ram=8
+      ÀÄflip  0/76  Ram=7

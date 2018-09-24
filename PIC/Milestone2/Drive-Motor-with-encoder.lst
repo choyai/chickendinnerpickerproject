@@ -1,15 +1,15 @@
-CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 00:17
+CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 04:10
 
                Filename:   C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\baifern\Drive-Motor-with-encoder.lst
 
-               ROM used:   3456 bytes (10%)
-                           Largest free fragment is 27260
+               ROM used:   3458 bytes (10%)
+                           Largest free fragment is 27258
                RAM used:   318 (4%) at main() level
                            448 (5%) worst case
                Stack size: 128
 
 *
-0C00:  GOTO    1826
+0C00:  GOTO    1828
 *
 0C40:  GOTO    1318
 0C44:  GOTO    1796
@@ -3322,16 +3322,16 @@ CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 00:17
 0E0A:  BSET.B  2C8.6
 0E0C:  BTSC.B  2CA.6
 0E0E:  BRA     E18
-....................     countPulse++; 
-0E10:  INC     08B0
-0E12:  BTSC.B  42.1
-0E14:  INC     08B2
+....................     countPulse--; 
+0E10:  DEC     08B0
+0E12:  BTSS.B  42.0
+0E14:  DEC     08B2
 ....................   } else { 
 0E16:  BRA     E1E
-....................     countPulse--; 
-0E18:  DEC     08B0
-0E1A:  BTSS.B  42.0
-0E1C:  DEC     08B2
+....................     countPulse++; 
+0E18:  INC     08B0
+0E1A:  BTSC.B  42.1
+0E1C:  INC     08B2
 ....................   } 
 0E1E:  BCLR.B  86.4
 0E20:  MOV     #1A,W0
@@ -3444,10 +3444,10 @@ CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 00:17
 .................... void Init_Interrupts() { 
 ....................   enable_interrupts(INT_EXT1); 
 *
-1820:  BSET.B  96.4
+1822:  BSET.B  96.4
 ....................   ext_int_edge(1, L_TO_H); // Rising Edge 
-1822:  BCLR.B  82.1
-1824:  RETURN  
+1824:  BCLR.B  82.1
+1826:  RETURN  
 .................... } 
 ....................  
 .................... #INT_TIMER2 
@@ -3469,7 +3469,7 @@ CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 00:17
 1330:  CALL    E30
 1334:  MOV     W0,8B4
 1336:  MOV     W1,8B6
-....................  
+.................... 	// Send time and voltage in milli for resolution's sake 
 ....................   printf("%d", (int)(timer3time*1000)); 
 1338:  MOV     8B4,W0
 133A:  MOV     8B6,W1
@@ -3526,14 +3526,14 @@ CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 00:17
 .................... void init_Timer2() { 
 ....................   setup_timer2(TMR_INTERNAL | TMR_DIV_BY_256, 625); 
 *
-1812:  CLR     110
-1814:  MOV     #271,W4
-1816:  MOV     W4,10C
-1818:  MOV     #8030,W4
-181A:  MOV     W4,110
+1814:  CLR     110
+1816:  MOV     #271,W4
+1818:  MOV     W4,10C
+181A:  MOV     #8030,W4
+181C:  MOV     W4,110
 ....................   enable_interrupts(INT_TIMER2); 
-181C:  BSET.B  94.7
-181E:  RETURN  
+181E:  BSET.B  94.7
+1820:  RETURN  
 .................... } 
 ....................  
 .................... void flip(int direction, int PWM) { 
@@ -3600,251 +3600,252 @@ CCS PCD C Compiler, Version 5.015, 5967               24-Sep-18 00:17
 179E:  MOV     #2,W0
 17A0:  REPEAT  #C
 17A2:  MOV     [W0++],[W15++]
-.................... 	// if(timer3time <= 20){ 
+.................... 	if(timer3time <= 10){ 
+17A4:  MOV     8B4,W0
+17A6:  MOV     8B6,W1
+17A8:  MOV     #0,W2
+17AA:  MOV     #4120,W3
+17AC:  CALL    13A0
+17B0:  BRA     C,17B4
+17B2:  BRA     NZ,17EE
 ....................   volt = chirpSine(timer3time); 
-17A4:  PUSH    8B4
-17A6:  POP     8C8
-17A8:  PUSH    8B6
-17AA:  POP     8CA
-17AC:  CALL    15DC
-17B0:  MOV     W0,8B8
-17B2:  MOV     W1,8BA
+17B4:  PUSH    8B4
+17B6:  POP     8C8
+17B8:  PUSH    8B6
+17BA:  POP     8CA
+17BC:  CALL    15DC
+17C0:  MOV     W0,8B8
+17C2:  MOV     W1,8BA
 ....................   int duty = convertToDUTY(volt); 
 ....................   int dir = getDirection(volt); 
-17B4:  PUSH    8B8
-17B6:  POP     8D0
-17B8:  PUSH    8BA
-17BA:  POP     8D2
-17BC:  CALL    16E0
-17C0:  MOV     W0,8BE
-17C2:  PUSH    8B8
-17C4:  POP     8C4
-17C6:  PUSH    8BA
-17C8:  POP     8C6
-17CA:  CALL    171A
-17CE:  MOV     W0,8C0
+17C4:  PUSH    8B8
+17C6:  POP     8D0
+17C8:  PUSH    8BA
+17CA:  POP     8D2
+17CC:  CALL    16E0
+17D0:  MOV     W0,8BE
+17D2:  PUSH    8B8
+17D4:  POP     8C4
+17D6:  PUSH    8BA
+17D8:  POP     8C6
+17DA:  CALL    171A
+17DE:  MOV     W0,8C0
 ....................   flip(dir, duty); 
-17D0:  PUSH    8C0
-17D2:  POP     8CC
-17D4:  PUSH    8BE
-17D6:  POP     8CE
-17D8:  CALL    174A
-.................... 	// } 
-.................... 	// else{ 
-.................... 		// set_pwm_duty(3, 0); 
-.................... 	// } 
-....................   timer3time += 0.0001; 
-17DC:  BCLR.B  43.0
-17DE:  MOV     8B4,W0
-17E0:  MOV     8B6,W1
-17E2:  MOV     #B717,W2
-17E4:  MOV     #38D1,W3
-17E6:  CALL    E30
-17EA:  MOV     W0,8B4
-17EC:  MOV     W1,8B6
-17EE:  BCLR.B  85.0
-17F0:  MOV     #1A,W0
-17F2:  REPEAT  #C
-17F4:  MOV     [--W15],[W0--]
-17F6:  MOV     [--W15],W0
-17F8:  POP     32
-17FA:  POP     36
-17FC:  POP     42
-17FE:  RETFIE  
+17E0:  PUSH    8C0
+17E2:  POP     8CC
+17E4:  PUSH    8BE
+17E6:  POP     8CE
+17E8:  CALL    174A
+.................... 	} 
+17EC:  BRA     17F0
+.................... 	else{ 
+.................... 		set_pwm_duty(3, 0); 
+17EE:  CLR     18C
+.................... 	} 
+....................   // timer3time += 0.0001; 
+17F0:  BCLR.B  85.0
+17F2:  MOV     #1A,W0
+17F4:  REPEAT  #C
+17F6:  MOV     [--W15],[W0--]
+17F8:  MOV     [--W15],W0
+17FA:  POP     32
+17FC:  POP     36
+17FE:  POP     42
+1800:  RETFIE  
 .................... } 
 ....................  
 .................... void Drivemotor() { 
 ....................   setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, 200); // Set frequency at 10 KHz 
-1800:  CLR     112
-1802:  MOV     #C8,W4
-1804:  MOV     W4,10E
-1806:  MOV     #8010,W4
-1808:  MOV     W4,112
+1802:  CLR     112
+1804:  MOV     #C8,W4
+1806:  MOV     W4,10E
+1808:  MOV     #8010,W4
+180A:  MOV     W4,112
 ....................   enable_interrupts(INT_TIMER3); 
-180A:  BSET.B  95.0
+180C:  BSET.B  95.0
 ....................   setup_compare(3, COMPARE_PWM | COMPARE_TIMER3); 
-180C:  MOV     #E,W4
-180E:  MOV     W4,190
-1810:  RETURN  
+180E:  MOV     #E,W4
+1810:  MOV     W4,190
+1812:  RETURN  
 .................... } 
 ....................  
 .................... void main() { 
 *
-1826:  MOV     #2780,W15
-1828:  MOV     #27FF,W0
-182A:  MOV     W0,20
-182C:  NOP     
-182E:  MOV     #4444,W0
-1830:  MOV     W0,A6
-1832:  BSET.B  81.7
-1834:  MOV     #46,W0
-1836:  MOV.B   W0L,742
-1838:  MOV     #57,W0
-183A:  MOV.B   W0L,742
-183C:  BCLR.B  742.6
-183E:  MOV     #53F,W0
-1840:  MOV     W0,680
-1842:  MOV     #3F0C,W0
-1844:  MOV     W0,6A4
-1846:  MOV     #1312,W0
-1848:  MOV     W0,6C2
-184A:  MOV     #14,W0
-184C:  MOV     W0,6C4
-184E:  MOV     #300,W0
-1850:  MOV     W0,6CC
-1852:  MOV     #46,W0
-1854:  MOV.B   W0L,742
-1856:  MOV     #57,W0
-1858:  MOV.B   W0L,742
-185A:  BSET.B  742.6
-185C:  CLR     744
-185E:  MOV     #8000,W4
-1860:  MOV     W4,220
-1862:  MOV     #400,W4
-1864:  MOV     W4,222
-1866:  BSET.B  220.3
-1868:  MOV     #22,W4
-186A:  MOV     W4,228
-186C:  CLR     8B4
-186E:  CLR     8B6
-1870:  CLR     8B8
-1872:  CLR     8BA
-1874:  SETM    32C
-1876:  BRA     190C
-1878:  DATA    C0,06,08
-187A:  DATA    00,00,00
-187C:  DATA    4B,F0,3F
-187E:  DATA    5C,0A,58
-1880:  DATA    F6,3B,8F
-1882:  DATA    00,C0,3C
-1884:  DATA    8B,28,AC
-1886:  DATA    3C,BE,F6
-1888:  DATA    3F,D2,D5
-188A:  DATA    44,16,8C
-188C:  DATA    15,D7,BF
-188E:  DATA    69,00,5A
-1890:  DATA    2E,1B,87
-1892:  DATA    99,3F,9A
-1894:  DATA    5F,AD,4B
-1896:  DATA    91,E4,01
-1898:  DATA    C0,5D,11
-189A:  DATA    2F,92,E4
-189C:  DATA    81,FB,3F
-189E:  DATA    38,DA,91
-18A0:  DATA    80,9D,C5
-18A2:  DATA    E0,BF,6F
-18A4:  DATA    12,C0,B4
-18A6:  DATA    C3,09,AB
-18A8:  DATA    3F,6B,C1
-18AA:  DATA    03,4E,C1
-18AC:  DATA    B5,45,BF
-18AE:  DATA    F7,40,05
-18B0:  DATA    FF,00,5A
-18B2:  DATA    EF,3F,F3
-18B4:  DATA    A3,E2,F7
-18B6:  DATA    D7,FF,01
-18B8:  DATA    40,C0,B4
-18BA:  DATA    FF,05,3C
-18BC:  DATA    58,FC,3F
-18BE:  DATA    3B,D3,C0
-18C0:  DATA    B5,BA,8C
-18C2:  DATA    E2,3F,39
-18C4:  DATA    D3,C7,3D
-18C6:  DATA    41,79,B2
-18C8:  DATA    3F,87,0D
-18CA:  DATA    3C,50,D0
-18CC:  DATA    AF,62,3F
-18CE:  DATA    30,4B,8D
-18D0:  DATA    A2,82,AA
-18D2:  DATA    04,40,09
-18D4:  DATA    A0,40,4A
-18D6:  DATA    05,76,03
-18D8:  DATA    40,EC,9E
-18DA:  DATA    37,88,A6
-18DC:  DATA    44,F0,3F
-18DE:  DATA    8F,12,8D
-18E0:  DATA    29,9A,5B
-18E2:  DATA    C7,3F,0E
-18E4:  DATA    E0,80,7C
-18E6:  DATA    A1,D8,86
-18E8:  DATA    3F,29,4B
-18EA:  DATA    FB,95,C2
-18EC:  DATA    37,1A,3F
-18EE:  DATA    00,00,00
-18F0:  INC     W2,W2
-18F2:  CP      W2,#1
-18F4:  BRA     NZ,18FE
-18F6:  TBLRDL  [W1],W3
-18F8:  TBLRDH  [W1++],W4
-18FA:  MOV.B   6,W0L
-18FC:  RETURN  
-18FE:  CP      W2,#2
-1900:  BRA     NZ,1906
-1902:  MOV.B   7,W0L
-1904:  RETURN  
-1906:  MOV.B   8,W0L
-1908:  CLR     W2
-190A:  RETURN  
-190C:  MOV     #0,W6
-190E:  MOV     #0,W0
-1910:  MOV     W0,32
-1912:  MOV     #1878,W0
-1914:  MOV     W0,W1
-1916:  CLR     W2
-1918:  CALL    18F0
-191C:  MOV.B   W0L,B
-191E:  CALL    18F0
-1922:  MOV.B   W0L,A
-1924:  CP0     W5
-1926:  BRA     Z,195A
-1928:  BTSS    W5.F
-192A:  BRA     193A
-192C:  CALL    18F0
-1930:  MOV.B   W0L,D
-1932:  CALL    18F0
-1936:  MOV.B   W0L,C
-1938:  BCLR    W5.F
-193A:  BTSS    W5.E
-193C:  BRA     194E
-193E:  BCLR    W5.E
-1940:  DEC     W5,W5
-1942:  CALL    18F0
-1946:  MOV.B   W0L,W7L
-1948:  REPEAT  W5
-194A:  MOV.B   W7L,[W6++]
-194C:  BRA     1918
-194E:  CALL    18F0
-1952:  MOV.B   W0L,[W6++]
-1954:  DEC     W5,W5
-1956:  BRA     NZ,194E
-1958:  BRA     1918
+1828:  MOV     #2780,W15
+182A:  MOV     #27FF,W0
+182C:  MOV     W0,20
+182E:  NOP     
+1830:  MOV     #4444,W0
+1832:  MOV     W0,A6
+1834:  BSET.B  81.7
+1836:  MOV     #46,W0
+1838:  MOV.B   W0L,742
+183A:  MOV     #57,W0
+183C:  MOV.B   W0L,742
+183E:  BCLR.B  742.6
+1840:  MOV     #53F,W0
+1842:  MOV     W0,680
+1844:  MOV     #3F0C,W0
+1846:  MOV     W0,6A4
+1848:  MOV     #1312,W0
+184A:  MOV     W0,6C2
+184C:  MOV     #14,W0
+184E:  MOV     W0,6C4
+1850:  MOV     #300,W0
+1852:  MOV     W0,6CC
+1854:  MOV     #46,W0
+1856:  MOV.B   W0L,742
+1858:  MOV     #57,W0
+185A:  MOV.B   W0L,742
+185C:  BSET.B  742.6
+185E:  CLR     744
+1860:  MOV     #8000,W4
+1862:  MOV     W4,220
+1864:  MOV     #400,W4
+1866:  MOV     W4,222
+1868:  BSET.B  220.3
+186A:  MOV     #22,W4
+186C:  MOV     W4,228
+186E:  CLR     8B4
+1870:  CLR     8B6
+1872:  CLR     8B8
+1874:  CLR     8BA
+1876:  SETM    32C
+1878:  BRA     190E
+187A:  DATA    C0,06,08
+187C:  DATA    00,00,00
+187E:  DATA    4B,F0,3F
+1880:  DATA    5C,0A,58
+1882:  DATA    F6,3B,8F
+1884:  DATA    00,C0,3C
+1886:  DATA    8B,28,AC
+1888:  DATA    3C,BE,F6
+188A:  DATA    3F,D2,D5
+188C:  DATA    44,16,8C
+188E:  DATA    15,D7,BF
+1890:  DATA    69,00,5A
+1892:  DATA    2E,1B,87
+1894:  DATA    99,3F,9A
+1896:  DATA    5F,AD,4B
+1898:  DATA    91,E4,01
+189A:  DATA    C0,5D,11
+189C:  DATA    2F,92,E4
+189E:  DATA    81,FB,3F
+18A0:  DATA    38,DA,91
+18A2:  DATA    80,9D,C5
+18A4:  DATA    E0,BF,6F
+18A6:  DATA    12,C0,B4
+18A8:  DATA    C3,09,AB
+18AA:  DATA    3F,6B,C1
+18AC:  DATA    03,4E,C1
+18AE:  DATA    B5,45,BF
+18B0:  DATA    F7,40,05
+18B2:  DATA    FF,00,5A
+18B4:  DATA    EF,3F,F3
+18B6:  DATA    A3,E2,F7
+18B8:  DATA    D7,FF,01
+18BA:  DATA    40,C0,B4
+18BC:  DATA    FF,05,3C
+18BE:  DATA    58,FC,3F
+18C0:  DATA    3B,D3,C0
+18C2:  DATA    B5,BA,8C
+18C4:  DATA    E2,3F,39
+18C6:  DATA    D3,C7,3D
+18C8:  DATA    41,79,B2
+18CA:  DATA    3F,87,0D
+18CC:  DATA    3C,50,D0
+18CE:  DATA    AF,62,3F
+18D0:  DATA    30,4B,8D
+18D2:  DATA    A2,82,AA
+18D4:  DATA    04,40,09
+18D6:  DATA    A0,40,4A
+18D8:  DATA    05,76,03
+18DA:  DATA    40,EC,9E
+18DC:  DATA    37,88,A6
+18DE:  DATA    44,F0,3F
+18E0:  DATA    8F,12,8D
+18E2:  DATA    29,9A,5B
+18E4:  DATA    C7,3F,0E
+18E6:  DATA    E0,80,7C
+18E8:  DATA    A1,D8,86
+18EA:  DATA    3F,29,4B
+18EC:  DATA    FB,95,C2
+18EE:  DATA    37,1A,3F
+18F0:  DATA    00,00,00
+18F2:  INC     W2,W2
+18F4:  CP      W2,#1
+18F6:  BRA     NZ,1900
+18F8:  TBLRDL  [W1],W3
+18FA:  TBLRDH  [W1++],W4
+18FC:  MOV.B   6,W0L
+18FE:  RETURN  
+1900:  CP      W2,#2
+1902:  BRA     NZ,1908
+1904:  MOV.B   7,W0L
+1906:  RETURN  
+1908:  MOV.B   8,W0L
+190A:  CLR     W2
+190C:  RETURN  
+190E:  MOV     #0,W6
+1910:  MOV     #0,W0
+1912:  MOV     W0,32
+1914:  MOV     #187A,W0
+1916:  MOV     W0,W1
+1918:  CLR     W2
+191A:  CALL    18F2
+191E:  MOV.B   W0L,B
+1920:  CALL    18F2
+1924:  MOV.B   W0L,A
+1926:  CP0     W5
+1928:  BRA     Z,195C
+192A:  BTSS    W5.F
+192C:  BRA     193C
+192E:  CALL    18F2
+1932:  MOV.B   W0L,D
+1934:  CALL    18F2
+1938:  MOV.B   W0L,C
+193A:  BCLR    W5.F
+193C:  BTSS    W5.E
+193E:  BRA     1950
+1940:  BCLR    W5.E
+1942:  DEC     W5,W5
+1944:  CALL    18F2
+1948:  MOV.B   W0L,W7L
+194A:  REPEAT  W5
+194C:  MOV.B   W7L,[W6++]
+194E:  BRA     191A
+1950:  CALL    18F2
+1954:  MOV.B   W0L,[W6++]
+1956:  DEC     W5,W5
+1958:  BRA     NZ,1950
+195A:  BRA     191A
 ....................   countPulse = 0; 
-195A:  CLR     8B0
-195C:  CLR     8B2
+195C:  CLR     8B0
+195E:  CLR     8B2
 ....................   timer3time = 0; 
-195E:  CLR     8B4
-1960:  CLR     8B6
+1960:  CLR     8B4
+1962:  CLR     8B6
 ....................   disable_interrupts(GLOBAL); 
-1962:  BCLR.B  81.7
-1964:  MOV     #E0,W4
-1966:  MOV     W4,42
-1968:  BSET.B  81.7
+1964:  BCLR.B  81.7
+1966:  MOV     #E0,W4
+1968:  MOV     W4,42
+196A:  BSET.B  81.7
 ....................   Drivemotor(); 
-196A:  CALL    1800
+196C:  CALL    1802
 ....................   Init_Timer2(); 
-196E:  CALL    1812
+1970:  CALL    1814
 ....................   Init_Interrupts(); 
-1972:  CALL    1820
+1974:  CALL    1822
 ....................   enable_interrupts(GLOBAL); 
-1976:  BCLR.B  81.7
-1978:  CLR     42
-197A:  BSET.B  81.7
+1978:  BCLR.B  81.7
+197A:  CLR     42
+197C:  BSET.B  81.7
 ....................  
 ....................   while (TRUE) { 
-197C:  BRA     197C
+197E:  BRA     197E
 ....................   } 
 .................... } 
-197E:  PWRSAV  #0
+1980:  PWRSAV  #0
 
 Configuration Fuses:
    Word  1L: 3F7F   WPOSTS16 WDT128 WINDIS NOWDT ICSP1 NODEBUG NOWRT NOPROTECT NOJTAG

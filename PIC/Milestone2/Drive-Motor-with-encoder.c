@@ -22,9 +22,9 @@ int x;
 #INT_EXT1
 void INT_EXT_INPUT1(void) {
   if (input(PIN_B6) == 0) {
-    countPulse++;
-  } else {
     countPulse--;
+  } else {
+    countPulse++;
   }
 }
 
@@ -89,16 +89,16 @@ void flip(int direction, int PWM) {
 
 #INT_TIMER3
 void TIMER3_ist() {
-	// if(timer3time <= 20){
+	if(timer3time <= 10){
   volt = chirpSine(timer3time);
   int duty = convertToDUTY(volt);
   int dir = getDirection(volt);
   flip(dir, duty);
-	// }
-	// else{
-		// set_pwm_duty(3, 0);
-	// }
-  timer3time += 0.0001;
+	}
+	else{
+		set_pwm_duty(3, 0);
+	}
+  // timer3time += 0.0001;
 }
 
 void Drivemotor() {
