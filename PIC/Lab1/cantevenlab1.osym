@@ -1,0 +1,30 @@
+_RETURN_
+C1OUT
+C2OUT
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Lab1\
+
+Project Files:
+    cantevenlab1.c                                          [25-Sep-18 18:38  CRC=5143E05E]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [25-Sep-18 15:40  CRC=2918F78D]
+
+Source signature=CE7EF4F0
+
+Units:
+    cantevenlab1 (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Output file:    Relocatable
+
+Output Files:
+    Errors:      cantevenlab1.err
+    Object:      cantevenlab1.o
+    Symbols:     cantevenlab1.osym

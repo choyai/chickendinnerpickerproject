@@ -1,0 +1,48 @@
+_RETURN_
+C1OUT
+C2OUT
+pe
+pe_64
+pl
+ql
+pl_64
+ql_64
+pas
+qas
+pas_64
+qas_64
+pat
+qat
+pat_64
+qat_64
+frequency
+duty_percent
+desired_clock_cycles
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Lab1\
+
+Project Files:
+    lab1_1.c                                                [25-Sep-18 18:36  CRC=20C64B40]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [25-Sep-18 15:40  CRC=2918F78D]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
+
+Source signature=1DB08DD7
+
+Units:
+    lab1_1 (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Output file:    Relocatable
+
+Output Files:
+    Errors:      lab1_1.err
+    Object:      lab1_1.o
+    Symbols:     lab1_1.osym

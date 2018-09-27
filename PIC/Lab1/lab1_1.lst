@@ -1,0 +1,163 @@
+CCS PCD C Compiler, Version 5.015, 5967               25-Sep-18 18:40
+
+               Filename:   C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Lab1\lab1_1.lst
+
+               ROM used:   640 bytes (2%)
+                           Largest free fragment is 30076
+               RAM used:   131 (2%) at main() level
+                           129 (2%) worst case
+               Stack size: 128
+
+*
+0C00:  GOTO    E20
+*
+0C40:  GOTO    DFC
+.................... #include <24FJ48GA002.h> 
+.................... //////////// Standard Header file for the PIC24FJ48GA002 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC24FJ48GA002 
+....................  
+.................... #list 
+....................  
+.................... #include "BL_Support.h" 
+.................... /*  
+....................  * File:    BL_Support.h 
+....................  * Author:  Dr.Santi Nuratch 
+....................  *          Embedded Intelligence Lab., INC-KMUTT 
+....................  * Created on 22 September 2016, 13:14 
+....................  */ 
+....................  
+.................... #ifndef BL_SUPPORT_H 
+.................... #define	BL_SUPPORT_H 
+....................  
+.................... /******************************************************************************/ 
+.................... /*                   BOOTLOADER SUPPORT CONFIGURATION                         */ 
+.................... /*                          (DO NOT CHANGE)                                   */ 
+.................... /******************************************************************************/ 
+.................... /* Bootloader */ 
+.................... #define LOADER_PAGES 	3  
+.................... #define ERASE_SIZE 		2048    /* 2048 bytes, 24-bit (3 bytes) per instruction, but it uses 4 bytes aligned --> 4 bytes per word */ 
+....................                                 /* each block has 512 instructions (1024 words), each instruction requires 4 bytes (2 words), so 512*4 = 2048 bytes */ 
+.................... #define LOADER_SIZE 	((LOADER_PAGES * (ERASE_SIZE/2)) - 1)   /* 2 bytes per address, so divided by 2, 2048/2 = 1024 */  
+.................... #define LOADER_END  	LOADER_SIZE                             /* End address      */ 
+.................... #define LOADER_ADDR 	0xC00//(LOADER_END - LOADER_SIZE)       /* Start address    */ 
+....................  
+.................... #build (reset=LOADER_END+1, interrupt=LOADER_END+5) 
+.................... #org 0, LOADER_END {}   /* 0x0000 - END */ 
+....................  
+.................... /******************************************************************************/ 
+.................... /*                                  END                                       */ 
+.................... /******************************************************************************/ 
+....................  
+.................... #endif	/* BL_SUPPORT_H */ 
+....................  
+....................  
+.................... #use delay (internal = 8 MHz, clock = 32MHz) 
+....................  
+.................... #PIN_SELECT OC1 = PIN_B2 
+....................  
+.................... #INT_TIMER2 
+.................... void TIMER2_ist(){ 
+*
+0DFC:  PUSH    42
+0DFE:  PUSH    36
+0E00:  PUSH    32
+0E02:  MOV     W0,[W15++]
+0E04:  MOV     #2,W0
+0E06:  REPEAT  #C
+0E08:  MOV     [W0++],[W15++]
+.................... 	output_toggle(PIN_A2); 
+0E0A:  BCLR.B  2C0.2
+0E0C:  BTG.B   2C4.2
+0E0E:  BCLR.B  84.7
+0E10:  MOV     #1A,W0
+0E12:  REPEAT  #C
+0E14:  MOV     [--W15],[W0--]
+0E16:  MOV     [--W15],W0
+0E18:  POP     32
+0E1A:  POP     36
+0E1C:  POP     42
+0E1E:  RETFIE  
+.................... } 
+.................... void main(){ 
+0E20:  MOV     #2780,W15
+0E22:  MOV     #27FF,W0
+0E24:  MOV     W0,20
+0E26:  NOP     
+0E28:  MOV     #4444,W0
+0E2A:  MOV     W0,A6
+0E2C:  BSET.B  81.7
+0E2E:  MOV     #46,W0
+0E30:  MOV.B   W0L,742
+0E32:  MOV     #57,W0
+0E34:  MOV.B   W0L,742
+0E36:  BCLR.B  742.6
+0E38:  MOV     #12,W0
+0E3A:  MOV     W0,6C2
+0E3C:  MOV     #46,W0
+0E3E:  MOV.B   W0L,742
+0E40:  MOV     #57,W0
+0E42:  MOV.B   W0L,742
+0E44:  BSET.B  742.6
+0E46:  CLR     744
+0E48:  SETM    32C
+.................... 	set_tris_a (get_tris_a() & 0xffeb); // 1111 1111 1110 1011 A2, A4 o/p 
+0E4A:  MOV     2C0,W5
+0E4C:  MOV     #FFEB,W0
+0E4E:  AND     W0,W5,W5
+0E50:  MOV     W5,2C0
+.................... 	output_high(PIN_A2);//LED0 
+0E52:  BCLR.B  2C0.2
+0E54:  BSET.B  2C4.2
+.................... 	output_high(PIN_A4);//LED1 
+0E56:  BCLR.B  2C0.4
+0E58:  BSET.B  2C4.4
+....................  
+.................... 	disable_interrupts(GLOBAL); 
+0E5A:  BCLR.B  81.7
+0E5C:  MOV     #E0,W4
+0E5E:  MOV     W4,42
+0E60:  BSET.B  81.7
+.................... 	// (for 1 Hz)setup_timer2(TMR_INTERNAL |TMR_DIV_BY_256, 62500); // freq=32M/2/8/6250 
+.................... 	// (for 100Hz)setup_timer2(TMR_INTERNAL |TMR_DIV_BY_8, 20000); 
+.................... 	//(for 1KHz)setup_timer2(TMR_INTERNAL |TMR_DIV_BY_8, 2000); 
+.................... 	//(for 10 kHz) 
+.................... 	setup_timer2(TMR_INTERNAL |TMR_DIV_BY_8, 200); 
+0E62:  CLR     110
+0E64:  MOV     #C8,W4
+0E66:  MOV     W4,10C
+0E68:  MOV     #8010,W4
+0E6A:  MOV     W4,110
+.................... 	enable_interrupts(INT_TIMER2); 
+0E6C:  BSET.B  94.7
+.................... 	enable_interrupts(GLOBAL); 
+0E6E:  BCLR.B  81.7
+0E70:  CLR     42
+0E72:  BSET.B  81.7
+....................  
+.................... 	setup_compare(1, COMPARE_PWM | COMPARE_TIMER2); 
+0E74:  MOV     #6,W4
+0E76:  MOV     W4,184
+.................... 	set_pwm_duty(1,200); //6000/6250 *100 
+0E78:  MOV     #C8,W4
+0E7A:  MOV     W4,180
+....................  
+.................... 	while(TRUE){ 
+0E7C:  BRA     E7C
+.................... 	} 
+.................... } 
+0E7E:  PWRSAV  #0
+
+Configuration Fuses:
+   Word  1L: 3F7F   WPOSTS16 WDT128 WINDIS NOWDT ICSP1 NODEBUG NOWRT NOPROTECT NOJTAG
+          H: FF00  
+   Word  2L: F9F7   NOPR NOALTI2C1 IOL1WAY NOOSCIO FRC_PLL SOSC_SEC WUT_DEFAULT IESO
+          H: FF00  

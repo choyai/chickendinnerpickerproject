@@ -1,0 +1,4 @@
+*** Error 68 "C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Milestone2\$linker.c" Line 2(8,14): Duplicate function  main()
+*** Error 68 "C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Milestone2\$linker.c" Line 2(8,91): Duplicate function
+      2 Errors,  0 Warnings.
+Build Failed.

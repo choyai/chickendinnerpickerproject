@@ -1,0 +1,56 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @DIV3232B.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @delay_us1.P3
+W0      @delay_ms1.P4
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @READ_ROM_MEMORY.P1
+W2      @READ_PACKED_MEMORY.P2
+W2      @WRITE_PACKED_MEMORY.P3
+W2 -W3  @DIV3232B.P4
+W3      @READ_ROM_MEMORY.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+630.6   C1OUT
+630.7   C2OUT
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  TIMER2_ist
+000E20  MAIN
+000E20  @cinit1
+000E4A  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Lab1\
+
+Project Files:
+    lab1_1.c                                                [25-Sep-18 18:39  CRC=5143E05E]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [25-Sep-18 15:40  CRC=2918F78D]
+
+Source signature=CE7EF4F0
+
+Units:
+    lab1_1 (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      lab1_1.err
+    INHX8:       lab1_1.hex
+    Symbols:     lab1_1.sym
+    List:        lab1_1.lst
+    Debug/COFF:  lab1_1.cof
+    Project:     lab1_1.ccspjt
+    Call Tree:   lab1_1.tre
+    Statistics:  lab1_1.STA

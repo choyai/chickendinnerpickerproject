@@ -1,0 +1,47 @@
+
+ROM used:   640/33788 (2%)
+            640/33788 (2%) including unused fragments
+
+            0.7 Average locations per line
+            53.3 Average locations per statement
+
+RAM used:   131/8192 (2%) at main() level
+            129/8192 (2%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   31    12 100  lab1_1.c
+  862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+----- -----
+  925    12 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     36   3    0    17  0.8  TIMER2_ist
+0     96   8    3   280  3.2  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              12
+    Comments                170
+    Volume (V)              329
+    Difficulty (D)          4.2
+    Effort to implement (E) 1388
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    165
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA   132  30076  
+
+
+

@@ -1,0 +1,16 @@
+[PROJECT]
+Target=lab1_1.hex
+Processor_Text=PIC24FJ48GA002
+CCSVersion=5.015
+Compiler=PCD
+[Target Data]
+FileList=lab1_1.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[lab1_1.c]
+Type=4
+[mru-list]
+1=lab1_1.c
+[Units]
+Count=1
+1=lab1_1 (main)
