@@ -1,0 +1,85 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0      @delay_us1.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0 -W3  @F64TOSI64.P3
+W0      @delay_ms1.P4
+W0 -W1  @DIV3232B.P5
+W0 -W3  @SI64TOF64.P6
+W0      @PRINTFD16_115200_5725_5724.P7
+W0 -W3  @MULFF64.P8
+W0 -W3  @DIVFF64.P9
+W0 -W3  @FLT64.P10
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @READ_ROM_MEMORY.P1
+W2      @READ_PACKED_MEMORY.P2
+W2 -W3  @DIV3232B.P3
+W2      @WRITE_PACKED_MEMORY.P4
+W3      @WRITE_PACKED_MEMORY.P1
+W3      @READ_PACKED_MEMORY.P2
+W3      @READ_ROM_MEMORY.P3
+W4 -W7  @FLT64.P1
+W4 -W7  @MULFF64.P2
+W4 -W7  @DIVFF64.P3
+W4      @PRINTFD16_115200_5725_5724.P4
+630.6   C1OUT
+630.7   C2OUT
+802-803 MAIN.f
+804-805 MAIN.d
+808-809 PWM.f
+80A-80B PWM.d
+810-811 duty_cycle.f
+812-813 duty_cycle.d
+814-815 duty_cycle.duty_cycle
+822-829 frequency.f
+82A-831 frequency.frequency
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  @const767.call
+000E18  @const771.call
+000E32  @SI64TOF64
+000E96  @FLT64
+000F1A  @DIVFF64
+001022  frequency
+0010B8  @F64TOSI64
+00110E  @MULFF64
+00121E  @PRINTFD16_115200_5725_5724
+001314  duty_cycle
+00141E  PWM
+0014EE  MAIN
+0014EE  @cinit1
+001532  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Lab1\
+
+Project Files:
+    lab1_1_T_T.c                                            [28-Sep-18 01:22  CRC=87AB66FA]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [25-Sep-18 15:40  CRC=2918F78D]
+
+Source signature=04E67B8C
+
+Units:
+    lab1_1_T_T (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      lab1_1_T_T.err
+    INHX8:       lab1_1_T_T.hex
+    Symbols:     lab1_1_T_T.sym
+    List:        lab1_1_T_T.lst
+    Debug/COFF:  lab1_1_T_T.cof
+    Project:     lab1_1_T_T.ccspjt
+    Call Tree:   lab1_1_T_T.tre
+    Statistics:  lab1_1_T_T.STA

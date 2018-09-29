@@ -1,0 +1,6 @@
+>>> Warning 202 "Assignment5_2.c" Line 21(7,17): Variable never used:   timer3time
+>>> Warning 202 "Assignment5_2.c" Line 22(7,11): Variable never used:   volt
+>>> Warning 202 "Assignment5_2.c" Line 23(5,6): Variable never used:   x
+      Memory usage:   ROM=4%      RAM=4% - 4%
+      0 Errors,  3 Warnings.
+Build Successful.

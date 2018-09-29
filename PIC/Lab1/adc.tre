@@ -1,0 +1,7 @@
+ÀÄadc
+   ÀÄMAIN  0/142  Ram=3
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄinit_adc  0/24  Ram=0
+      ÃÄ@const752  0/22  Ram=0
+      ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
+      ÀÄ@delay_ms1  0/16  Ram=2

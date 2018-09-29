@@ -1,0 +1,9 @@
+ÀÄAssignment5_2
+   ÃÄMAIN  0/342  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄInit_Timer2  0/22  Ram=0
+   ³  ÀÄInit_Interrupts  0/6  Ram=0
+   ÃÄINT_EXT_INPUT1  0/34  Ram=0
+   ÀÄTIMER2_isr  0/150  Ram=3
+      ÃÄ@const1174  0/24  Ram=0
+      ÀÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0

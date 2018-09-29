@@ -1,0 +1,52 @@
+
+ROM used:   1372/33788 (4%)
+            1372/33788 (4%) including unused fragments
+
+            0.4 Average locations per line
+            1.5 Average locations per statement
+
+RAM used:   314/8192 (4%) at main() level
+            314/8192 (4%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   97    18   2  cantevenlab1.c
+  862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+ 2229   921  98  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+----- -----
+ 3220   939 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0    162   6    0   153  3.3  TIMER2_ist
+0     24   1    0             @const1170
+0    246   9    0             @PRINTFD16_115200_5725_5724
+0     28   1    0             @const1174
+0     34   1    0             @const1175
+0    370  13    0   315  4.2  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              939
+    Comments                524
+    Volume (V)              566
+    Difficulty (D)          6.8
+    Effort to implement (E) 3869
+    Time to implement (T)   4 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    39
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA   864  29344  
+
+
+

@@ -2,7 +2,7 @@ import serial
 import numpy as np
 import time
 
-BAUDRATE = 115200
+BAUDRATE = 9600
 PORT = 'COM5'
 max_data = 2000
 

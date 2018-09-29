@@ -1,0 +1,26 @@
+ÀÄlab1_3
+   ÃÄMAIN  0/646  Ram=5
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄDrivemotor  0/22  Ram=0
+   ³  ÃÄinit_Timer2  0/14  Ram=0
+   ³  ÃÄInit_Interrupts  0/6  Ram=0
+   ³  ÃÄinit_adc  0/24  Ram=0
+   ³  ÃÄ@SITOF  0/74  Ram=2
+   ³  ÃÄ@MULFF  0/196  Ram=8
+   ³  ÃÄ@SITOF  0/74  Ram=2
+   ³  ÃÄ@MULFF  0/196  Ram=8
+   ³  ÃÄ@ADDFF  0/426  Ram=8
+   ³  ÃÄ@SITOF  0/74  Ram=2
+   ³  ÃÄ@MULFF  0/196  Ram=8
+   ³  ÃÄ@ADDFF  0/426  Ram=8
+   ³  ÃÄ@SFTOI  0/44  Ram=4
+   ³  ÃÄ@const1199  0/22  Ram=0
+   ³  ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
+   ³  ÃÄ@const1203  0/20  Ram=0
+   ³  ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
+   ³  ÀÄ@delay_ms1  0/16  Ram=2
+   ÃÄTIMER2_isr  0/32  Ram=0
+   ÀÄTIMER3_ist  0/70  Ram=4
+      ÃÄdutyPercentInput  0/32  Ram=4
+      ÃÄgetDirection  0/32  Ram=4
+      ÀÄdirectional_drive  0/50  Ram=7

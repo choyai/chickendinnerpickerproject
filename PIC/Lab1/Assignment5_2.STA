@@ -1,0 +1,53 @@
+
+ROM used:   1332/33788 (4%)
+            1332/33788 (4%) including unused fragments
+
+            0.4 Average locations per line
+            1.4 Average locations per statement
+
+RAM used:   319/8192 (4%) at main() level
+            319/8192 (4%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  138    33   3  Assignment5_2.c
+  862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+ 2229   921  97  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+----- -----
+ 3261   954 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     34   1    0    25  1.9  INT_EXT_INPUT1
+0      6   0    0    42  1.4  Init_Interrupts
+0    150   6    3   504  6.5  TIMER2_isr
+0     24   1    0             @const1174
+0    246   9    0             @PRINTFD16_9600_5725_5724
+0     22   1    0   132  2.2  Init_Timer2
+0    342  13    0    74  1.6  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               5
+    Statements              954
+    Comments                530
+    Volume (V)              1071
+    Difficulty (D)          13.3
+    Effort to implement (E) 14286
+    Time to implement (T)   13 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   4
+    Maintainability (MI)    46
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA   824  29384  
+
+
+

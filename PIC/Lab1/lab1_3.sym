@@ -1,0 +1,137 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @READ_ROM_MEMORY.P1
+W0 -W2  @FLT48.P2
+W0 -W1  @DIV3232B.P3
+W0 -W2  @F48TOSI64.P4
+W0      @ITOF.P5
+W0 -W3  @I64TOF48.P6
+W0 -W2  @DIVFF48.P7
+W0 -W2  @MULFF48.P8
+W0      @SITOF.P9
+W0 -W3  @MULFF64.P10
+W0 -W2  @ADDFF48.P11
+W0 -W3  @F64TOSI64.P12
+W0 -W2  @F48TO64.P13
+W0      @delay_us1.P14
+W0 -W1  @DIVFF.P15
+W0 -W3  @SI64TOF48.P16
+W0 -W3  @F64TOI64.P17
+W0 -W3  @FLT64.P18
+W0 -W3  @DIVFF64.P19
+W0 -W1  @ADDFF.P20
+W0 -W3  @SI64TOF64.P21
+W0 -W3  @I64TOF64.P22
+W0      @delay_ms1.P23
+W0 -W1  @FLT.P24
+W0 -W1  @SFTOI.P25
+W0 -W3  @ADDFF64.P26
+W0      @PRINTFD16_9600_5725_5724.P27
+W0 -W1  @MULFF.P28
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2 -W3  @FLT.P1
+W2 -W3  @ADDFF.P2
+W2      @WRITE_PACKED_MEMORY.P3
+W2 -W3  @MULFF.P4
+W2      @READ_PACKED_MEMORY.P5
+W2 -W3  @DIVFF.P6
+W2      @READ_ROM_MEMORY.P7
+W2 -W3  @DIV3232B.P8
+W3      @WRITE_PACKED_MEMORY.P1
+W3 -W5  @ADDFF48.P2
+W3 -W5  @FLT48.P3
+W3      @READ_ROM_MEMORY.P4
+W3 -W5  @MULFF48.P5
+W3 -W5  @DIVFF48.P6
+W3      @READ_PACKED_MEMORY.P7
+W4 -W7  @MULFF64.P1
+W4      @PRINTFD16_9600_5725_5724.P2
+W4 -W7  @DIVFF64.P3
+W4 -W7  @FLT64.P4
+W4 -W7  @ADDFF64.P5
+630.6   C1OUT
+630.7   C2OUT
+800-827 pas_64
+828-84F qas_64
+850-87F pat_64
+880-8AF qat_64
+8B0-8B1 adc_data
+8B2-8B3 percent_duty
+8B4-8B7 countPulse
+8B8-8BB timer3time
+8BC-8BF volt
+8C0-8C1 x
+8C2-8C3 tolerance
+8C4-8C7 K_p
+8C8-8CB K_i
+8CC-8CF K_d
+8D0-8D1 e
+8D2-8D3 s
+8D4-8D5 u
+8D6-8D7 p
+8D8-8D9 desired_value
+8E2-8E3 TIMER3_ist.duty
+8E4-8E5 TIMER3_ist.dir
+8EA-8EB dutyPercentInput.duty_percent
+8EC-8ED getDirection.duty_percent
+8EC-8ED dutyPercentInput.duty
+8EE-8EF directional_drive.direction
+8EE-8EF getDirection.direction
+8F0-8F1 directional_drive.driveduty
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  @const1199.call
+000E12  @const1203.call
+000E26  TIMER2_isr
+000E46  dutyPercentInput
+000E66  getDirection
+000E86  directional_drive
+000EB8  TIMER3_ist
+000EFE  Drivemotor
+000F14  init_Timer2
+000F22  Init_Interrupts
+000F28  init_adc
+000F40  @SITOF
+000F8A  @MULFF
+00104E  @ADDFF
+0011F8  @SFTOI
+001224  @PRINTFD16_9600_5725_5724
+00131A  @delay_ms1
+00132A  MAIN
+00132A  @cinit1
+00139E  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Lab1\
+
+Project Files:
+    lab1_3.c                                                [28-Sep-18 20:10  CRC=227E94EF]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [25-Sep-18 15:40  CRC=2918F78D]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
+
+Source signature=1F68D786
+
+Units:
+    lab1_3 (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      lab1_3.err
+    INHX8:       lab1_3.hex
+    Symbols:     lab1_3.sym
+    List:        lab1_3.lst
+    Debug/COFF:  lab1_3.cof
+    Project:     lab1_3.ccspjt
+    Call Tree:   lab1_3.tre
+    Statistics:  lab1_3.STA

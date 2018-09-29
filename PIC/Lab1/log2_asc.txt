@@ -1,0 +1,8195 @@
+Docklight Log File (ASCII) - Started 28/9/2018 19:57:39.869 
+
+28/9/2018 19:59:28.366 [RX] - ???˘»?œä‚Pß&'HLCÖUêOêMúú<LF>
+AN3: 0<CR><LF>
+U = 358<LF>
+AN3: 0<CR><LF>
+U = 384<LF>
+AN3: 0<CR><LF>
+U = 409<LF>
+AN3: 0<CR><LF>
+U = 435<LF>
+AN3: 0<CR><LF>
+U = 460<LF>
+AN3: 0<CR><LF>
+U = 486<LF>
+AN3: 0<CR><LF>
+U = 512<LF>
+AN3: 0<CR><LF>
+U = 537<LF>
+AN3: 0<CR><LF>
+U = 563<LF>
+AN3: 0<CR><LF>
+U = 588<LF>
+AN3: 0<CR><LF>
+U = 614<LF>
+AN3: 0<CR><LF>
+U = 640<LF>
+AN3: 0<CR><LF>
+U = 665<LF>
+AN3: 0<CR><LF>
+U = 691<LF>
+AN3: 0<CR><LF>
+U = 716<LF>
+AN3: 0<CR><LF>
+U = 742<LF>
+AN3: 0<CR><LF>
+U = 768<LF>
+AN3: 0<CR><LF>
+U = 793<LF>
+AN3: 0<CR><LF>
+U = 819<LF>
+AN3: 0<CR><LF>
+U = 844<LF>
+AN3: 0<CR><LF>
+U = 870<LF>
+AN3: 0<CR><LF>
+U = 896˙??<RS>?IÔä‚Pß&'HLCÖUêOêMúú<LF>
+AN3: 71<CR><LF>
+U = 280<LF>
+AN3: 233<CR><LF>
+U = 151<LF>
+AN3: 371<CR><LF>
+U = 78<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+??~?iÔä‚Pß&'HLCÖUêOêMúú<LF>
+AN3: 59<CR><LF>
+U = 292<LF>
+AN3: 214<CR><LF>
+U = 154<LF>
+AN3: 363<CR><LF>
+U = 77<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U =??<RS>?Iœä‚Pß&'HLCÖUêOêMúú<LF>
+AN3: 57<CR><LF>
+U = 291<LF>
+AN3: 216<CR><LF>
+U = 164<LF>
+AN3: 365<CR><LF>
+U = 85<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 51
+28/9/2018 20:01:02.787 [RX] - ?AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+??~?iÔäbPß&'HLCÖUêOêô56<LF>
+AN3: 66<CR><LF>
+U = 224<LF>
+AN3: 232<CR><LF>
+U = 142<LF>
+AN3: 375<CR><LF>
+U = 68<LF>
+AN3: 476<CR><LF>
+U = 20<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 548<CR><LF>
+U = -18<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+28/9/2018 20:02:14.552 [RX] - AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+??~?iÔäbPß&'HLCÖUêOêô56<LF>
+AN3: 63<CR><LF>
+U = 224<LF>
+AN3: 228<CR><LF>
+U = 145<LF>
+AN3: 379<CR><LF>
+U = 67<LF>
+AN3: 481<CR><LF>
+U = 19<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 548<CR><LF>
+U = -19<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3:
+28/9/2018 20:04:28.319 [RX] - AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+??~?iœä‚Pß&'HLCÖUêOêMLôÖAN3: 59<CR><LF>
+U = 209<LF>
+AN3: 217<CR><LF>
+U = 52<LF>
+AN3: 323<CR><LF>
+U = 66<LF>
+AN3: 410<CR><LF>
+U = -16<LF>
+AN3: 409<CR><LF>
+U = 30<LF>
+AN3: 444<CR><LF>
+U = 31<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 489<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 484<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 487<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 487<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 486<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 483<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 485<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 481<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 482<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 489<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 480<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 486<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 485<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 489<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 487<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 489<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 482<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 489<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 485<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 482<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 486<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 482<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 474<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 470<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 486<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 487<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 490<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 484<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 486<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 487<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 488<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+28/9/2018 20:06:43.739 [RX] - <LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 531<CR><LF>
+U = 0<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 531<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 534<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 531<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 537<CR><LF>
+U = 0<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 534<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 536<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+??<RS>?iœäbPß&'HLCÖUêOêMLôÖAN3: 63<CR><LF>
+U = 705<LF>
+AN3: 219<CR><LF>
+U = 774<LF>
+AN3: 372<CR><LF>
+U = 771<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 535<CR><LF>
+U = 0<LF>
+AN3: 538<CR><LF>
+U = 0<LF>
+AN3: 547<CR><LF>
+U = 631<LF>
+AN3: 676<CR><LF>
+U = 485<LF>
+AN3: 869<CR><LF>
+U = 215<LF>
+AN3: 1023<CR><LF>
+U = -119<LF>
+AN3: 944<CR><LF>
+U = -301<LF>
+AN3: 747<CR><LF>
+U = -320<LF>
+AN3: 564<CR><LF>
+U = -258<LF>
+AN3: 426<CR><LF>
+U = -148<LF>
+AN3: 269<CR><LF>
+U = 50<LF>
+AN3: 308<CR><LF>
+U = 126<LF>
+AN3: 448<CR><LF>
+U = 92<LF>
+AN3: 557<CR><LF>
+U = 0<LF>
+AN3: 613<CR><LF>
+U = -60<LF>
+AN3: 522<CR><LF>
+U = -61<LF>
+AN3: 448<CR><LF>
+U = 36<LF>
+AN3: 484<CR><LF>
+U = 54<LF>
+AN3: 542<CR><LF>
+U = 0<LF>
+AN3: 569<CR><LF>
+U = -41<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 492<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+28/9/2018 20:08:09.902 [RX] - ???<RS>?Iœä‚Pß&'HLCÖUêOêì<DC3>'·AN3: 62<CR><LF>
+U = 676<LF>
+AN3: 223<CR><LF>
+U = 692<LF>
+AN3: 364<CR><LF>
+U = 706<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 541<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 542<CR><LF>
+U = 0<LF>
+AN3: 545<CR><LF>
+U = 0<LF>
+AN3: 534<CR><LF>
+U = 0<LF>
+AN3: 536<CR><LF>
+U = 0<LF>
+AN3: 543<CR><LF>
+U = 0<LF>
+AN3: 537<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 537<CR><LF>
+U = 0<LF>
+AN3: 541<CR><LF>
+U = 0<LF>
+AN3: 542<CR><LF>
+U = 0<LF>
+AN3: 537<CR><LF>
+U = 0<LF>
+AN3: 541<CR><LF>
+U = 0<LF>
+AN3: 541<CR><LF>
+U = 0<LF>
+AN3: 535<CR><LF>
+U = 0<LF>
+AN3: 535<CR><LF>
+U = 0<LF>
+AN3: 542<CR><LF>
+U = 0<LF>
+AN3: 540<CR><LF>
+U = 0<LF>
+AN3: 532<CR><LF>
+U = 0<LF>
+AN3: 537<CR><LF>
+U = 0<LF>
+AN3: 544<CR><LF>
+U = 0<LF>
+AN3: 533<CR><LF>
+U = 0<LF>
+AN3: 531<CR><LF>
+U = 0<LF>
+AN3: 539<CR><LF>
+U = 313<LF>
+AN3: 678<CR><LF>
+U = 110<LF>
+AN3: 862<CR><LF>
+U = -187<LF>
+AN3: 748<CR><LF>
+U = -103<LF>
+AN3: 564<CR><LF>
+U = -8<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 524<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 525<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 528<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 527<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 526<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 529<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 523<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 530<CR><LF>
+U = 0<LF>
+??~?)œä‚Pß&'HLCÖUêOêì<DC3>'·AN3: 63<CR><LF>
+U = 673<LF>
+AN3: 224<CR><LF>
+U = 686<LF>
+AN3: 377<CR><LF>
+U = 681<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 546<CR><LF>
+U = 0<LF>
+AN3: 551<CR><LF>
+U = 630<LF>
+AN3: 680<CR><LF>
+U = 422<LF>
+AN3: 873<CR><LF>
+U = 118<LF>
+AN3: 1023<CR><LF>
+U = -196<LF>
+AN3: 949<CR><LF>
+U = -268<LF>
+AN3: 752<CR><LF>
+U = -231<LF>
+AN3: 565<CR><LF>
+U = -169<LF>
+AN3: 431<CR><LF>
+U = -86<LF>
+AN3: 284<CR><LF>
+U = 114<LF>
+AN3: 386<CR><LF>
+U = -1<LF>
+AN3: 415<CR><LF>
+U = 65<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 521<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 522<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 519<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0
+28/9/2018 20:09:26.632 [RX] - ?AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 517<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 520<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 514<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 513<CR><LF>
+U = 0<LF>
+AN3: 516<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 518<CR><LF>
+U = 0<LF>
+AN3: 515<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+??~?iÔä‚Pß&'HLCÖUêOêMõ&·AN3: 68<CR><LF>
+U = 286<LF>
+AN3: 227<CR><LF>
+U = 193<LF>
+AN3: 382<CR><LF>
+U = 126<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 539<CR><LF>
+U = 0<LF>
+AN3: 551<CR><LF>
+U = 107<LF>
+AN3: 692<CR><LF>
+U = -37<LF>
+AN3: 663<CR><LF>
+U = 30<LF>
+AN3: 696<CR><LF>
+U = -32<LF>
+AN3: 639<CR><LF>
+U = 29<LF>
+AN3: 680<CR><LF>
+U = -56<LF>
+AN3: 635<CR><LF>
+U = 7<LF>
+AN3: 603<CR><LF>
+U = 12<LF>
+AN3: 623<CR><LF>
+U = -46<LF>
+AN3: 558<CR><LF>
+U = 3<LF>
+AN3: 552<CR><LF>
+U = -3<LF>
+AN3: 555<CR><LF>
+U = -8<LF>
+AN3: 550<CR><LF>
+U = -18<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 494<CR><LF>
+U = 0<LF>
+28/9/2018 20:10:22.068 [RX] - ?AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 493<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 496<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 491<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 497<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 495<CR><LF>
+U = 0<LF>
+??~?iœä‚Pß&'HLCÖUêOêMúú<LF>
+AN3: 64<CR><LF>
+U = 285<LF>
+AN3: 218<CR><LF>
+U = 160<LF>
+AN3: 372<CR><LF>
+U = 74<LF>
+AN3: 482<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 499<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 511<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 500<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 498<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 508<CR><LF>
+U = 0<LF>
+AN3: 503<CR><LF>
+U = 0<LF>
+AN3: 505<CR><LF>
+U = 0<LF>
+AN3: 510<CR><LF>
+U = 0<LF>
+AN3: 501<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 512<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 506<CR><LF>
+U = 0<LF>
+AN3: 504<CR><LF>
+U = 0<LF>
+AN3: 509<CR><LF>
+U = 0<LF>
+AN3: 507<CR><LF>
+U = 0<LF>
+AN3: 502<CR><LF>
+U = 0<LF>
+
+Docklight Log File (ASCII) - Stopped 29/9/2018 05:53:35.678 
+

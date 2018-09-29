@@ -1,0 +1,6 @@
+>>> Warning 202 "lab1_3.c" Line 20(5,17): Variable never used:   percent_duty
+>>> Warning 202 "lab1_3.c" Line 23(7,11): Variable never used:   volt
+>>> Warning 202 "lab1_3.c" Line 24(5,6): Variable never used:   x
+      Memory usage:   ROM=7%      RAM=4% - 5%
+      0 Errors,  3 Warnings.
+Build Successful.

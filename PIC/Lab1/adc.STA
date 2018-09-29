@@ -1,0 +1,50 @@
+
+ROM used:   958/33788 (3%)
+            958/33788 (3%) including unused fragments
+
+            1.0 Average locations per line
+            87.1 Average locations per statement
+
+RAM used:   133/8192 (2%) at main() level
+            133/8192 (2%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   27    11 100  adc.c
+  862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+----- -----
+  921    11 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     16   1    2             @delay_ms1
+0     24   1    0    78  1.6  init_adc
+0    142   7    3   125  2.4  MAIN
+0     22   1    0             @const752
+0    246  13    0             @PRINTFD16_9600_5725_5724
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              11
+    Comments                162
+    Volume (V)              259
+    Difficulty (D)          3.4
+    Effort to implement (E) 893
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    167
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA   450  29758  
+
+
+

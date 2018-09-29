@@ -1,0 +1,62 @@
+
+ROM used:   2514/33788 (7%)
+            2514/33788 (7%) including unused fragments
+
+            0.8 Average locations per line
+            2.6 Average locations per statement
+
+RAM used:   320/8192 (4%) at main() level
+            336/8192 (4%) worst case
+
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  125    55   6  lab1_2.c
+  862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
+   32     0   0  BL_Support.h
+ 2229   921  94  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+----- -----
+ 3248   976 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     68   1    8             @DIV3232B
+0     44   1    4             @SFTOI
+0    196   4    8             @MULFF
+0    426   8    8             @ADDFF
+0     54   1    0    88  3.5  INT_EXT_INPUT1
+0     32   1    4   102  3.2  dutyPercentInput
+0     32   1    4   172  4.2  getDirection
+0      6   0    0    42  1.4  Init_Interrupts
+0    128   3    3   211  2.5  TIMER2_isr
+0    246   5    0             @PRINTFD16_9600_5725_5724
+0    276   5    0             @PRINTFD32_9600_5725_5724
+0     14   0    0    52  1.9  init_Timer2
+0     50   1    7   354  3.9  directional_drive
+0     64   1    4    88  2.5  TIMER3_ist
+0     22   0    0   132  2.2  Drivemotor
+0    348   7    0   132  2.1  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              976
+    Comments                484
+    Volume (V)              2338
+    Difficulty (D)          26.6
+    Effort to implement (E) 62250
+    Time to implement (T)   58 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   7
+    Maintainability (MI)    19
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00BFE     0  3072  
+00C00-00C02     4  0  
+00C04-00DFA   504  0  
+00DFC-083FA  2006  28202  
+
+
+

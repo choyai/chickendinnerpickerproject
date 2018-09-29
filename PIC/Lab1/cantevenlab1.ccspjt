@@ -1,0 +1,16 @@
+[PROJECT]
+Target=cantevenlab1.hex
+Processor_Text=PIC24FJ48GA002
+CCSVersion=5.015
+Compiler=PCD
+[Target Data]
+FileList=cantevenlab1.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[cantevenlab1.c]
+Type=4
+[mru-list]
+1=cantevenlab1.c
+[Units]
+Count=1
+1=cantevenlab1 (main)
