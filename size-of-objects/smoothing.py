@@ -7,10 +7,10 @@ import imutils
 import cv2
 import time
 
-cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture(0)
 period = 0.1
 nexttime = time.time() + period
-
+iterstring = 0
 while(True):
     gauss_args = [3, 3]
     bilat_args = [9, 75, 75]
@@ -18,14 +18,15 @@ while(True):
     kernel1 = np.ones((k1size, k1size), np.float32) / (k1size ^ 2)
 
     # argument input
-    # gauss_args[0] = int(input("gauss x"))
-    # gauss_args[1] = int(input("gauss y"))
-    # bilat_args[0] = int(input("bilat kernel size"))
-    # bilat_args[1] = int(input("bilat1"))
-    # bilat_args[2] = int(input("bilat2"))
+    gauss_args[0] = int(input("gauss x"))
+    gauss_args[1] = int(input("gauss y"))
+    bilat_args[0] = int(input("bilat kernel size"))
+    bilat_args[1] = int(input("bilat1"))
+    bilat_args[2] = int(input("bilat2"))
+    k1size = int(input("k1size"))
 
     # Capture frame-by-frame
-    ret, frame = cap.read()
+    frame = cv2.imread("room.jpg")
     orig = frame.copy()
     now = time.time()
     refObj = None
@@ -63,9 +64,9 @@ while(True):
                     bilat, gauss_bilat, cl1, bilat_clahe]
     for i in range(len(filtered)):
         cv2.imshow('filtered' + str(i), filtered[i])
-    if cv2.waitKey(1) & 0xFF == ord('s'):
-        for i in range(len(filtered)):
-            cv2.imwrite('filtered' + str(i) + '.jpg', filtered[i])
+        cv2.imwrite('filtered' + str(i) + '_' +
+                    str(iterstring) + '.jpg', filtered[i])
+    iterstring += 1
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

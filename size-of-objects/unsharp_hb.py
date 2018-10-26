@@ -6,25 +6,12 @@ import numpy as np
 # import imutils
 import cv2
 
-orig = cv2.imread('gofestoneyear.jpg')
 
-# Grayscale conversion
-gray = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY)
-
-# Blur with Gaussian filter
-gauss = cv2.GaussianBlur(gray, (5, 5), 3)
-
-# generate mask
-mask = gray - gauss
-
-# Add mask to original for k = 1 to k = 3(highboost)
-sharp = []
-
-while True:
-    cv2.imshow("grayscale", gray)
-    cv2.imshow("mask", mask)
-    for k in range(3):
-        sharp.append(gray + (k + 1) * mask)
-        cv2.imshow("k = " + str(k + 1), sharp[k])
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+image = cv2.imread("gofestoneyear.jpg")
+gaussian_3 = cv2.GaussianBlur(image, (5, 5), 10.0)
+unsharp_image = cv2.addWeighted(image, 1.5, gaussian_3, -0.5, 0, image)
+highboost1 = cv2.addWeighted(unsharp_image, 1.5, gaussian_3, -0.5, 0, image)
+highboost2 = cv2.addWeighted(highboost1, 1.5, gaussian_3, -1, -0.5, image)
+cv2.imwrite("gofestunsharp.jpg", unsharp_image)
+cv2.imwrite("gofesthb1.jpg", highboost1)
+cv2.imwrite("gofesthb2.jpg", highboost2)

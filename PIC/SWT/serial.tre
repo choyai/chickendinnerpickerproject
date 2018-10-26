@@ -1,0 +1,28 @@
+ÀÄserial
+   ÃÄMAIN  0/268  Ram=5
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@const788  0/28  Ram=0
+   ³  ÃÄprint_float  0/134  Ram=35
+   ³  ³  ÃÄ@DIVFF  0/202  Ram=8
+   ³  ³  ÃÄ@SFTOI  0/44  Ram=4
+   ³  ³  ÃÄ@MULFF  0/196  Ram=8
+   ³  ³  ÃÄ@SITOF  0/74  Ram=2
+   ³  ³  ÃÄ@ADDFF  0/426  Ram=8
+   ³  ³  ÃÄ@SITOF  0/74  Ram=2
+   ³  ³  ÃÄ@MULFF  0/196  Ram=8
+   ³  ³  ÃÄ@SFTOI  0/44  Ram=4
+   ³  ³  ÃÄ@PRINTFD16_770  0/262  Ram=0
+   ³  ³  ³  ÃÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ³  ÃÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ³  ÃÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ³  ÃÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ³  ÃÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ³  ÀÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ÃÄ@SPRINTF  0/14  Ram=1
+   ³  ³  ÀÄ@PRINTFD16_770  0/262  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄprint_float  0/134  Ram=35
+   ³  ³  ÀÄ*
+   ³  ÀÄ@const790  0/30  Ram=0
+   ÀÄUART1_Isr  0/50  Ram=2
+      ÀÄSM_RxD  0/92  Ram=7

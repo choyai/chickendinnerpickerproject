@@ -1,0 +1,89 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0      @delay_us1.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0      @PRINTFD16_770.P3
+W0 -W1  @SFTOI.P4
+W0      @SITOF.P5
+W0 -W1  @DIV3232B.P6
+W0 -W1  @MULFF.P7
+W0      @delay_ms1.P8
+W0 -W1  @DIVFF.P9
+W0L     @SPRINTF.P10
+W0 -W1  @ADDFF.P11
+W1      @SCRATCH
+W1      @READ_PACKED_MEMORY.P1
+W1      @WRITE_PACKED_MEMORY.P2
+W2      @WRITE_PACKED_MEMORY.P1
+W2      @READ_PACKED_MEMORY.P2
+W2      @READ_ROM_MEMORY.P3
+W2 -W3  @MULFF.P4
+W2 -W3  @DIVFF.P5
+W2 -W3  @DIV3232B.P6
+W2 -W3  @ADDFF.P7
+W3      @READ_ROM_MEMORY.P1
+W3      @WRITE_PACKED_MEMORY.P2
+W3      @READ_PACKED_MEMORY.P3
+W4      @PRINTFD16_770.P1
+630.6   C1OUT
+630.7   C2OUT
+800-813 array
+814     SM_id
+816-817 getPackage
+818-819 @sprintf_string
+81A-81D MAIN.test
+822-825 print_float.data
+826-827 print_float.intDist
+828-829 print_float.dotDist
+82A-83D print_float.stringFloat
+84A-84B UART1_Isr.c
+850-851 SM_RxD.c
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  @const788.call
+000E18  @const790.call
+000E36  SM_RxD
+000E92  UART1_Isr
+000EC4  @DIVFF
+000F8E  @SFTOI
+000FBA  @MULFF
+00107E  @SITOF
+0010C8  @ADDFF
+001272  @SPRINTF
+001280  @PRINTFD16_770
+001386  print_float
+00140C  @cinit1
+00140C  MAIN
+00144E  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\
+
+Project Files:
+    serial.c                                                [26-Oct-18 07:16  CRC=C7DF4ECF]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [26-Oct-18 08:25  CRC=2918F78D]
+
+Source signature=451A6361
+
+Units:
+    serial (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      serial.err
+    INHX8:       serial.hex
+    Symbols:     serial.sym
+    List:        serial.lst
+    Debug/COFF:  serial.cof
+    Project:     serial.ccspjt
+    Call Tree:   serial.tre
+    Statistics:  serial.STA
