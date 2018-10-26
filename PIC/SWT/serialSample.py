@@ -10,7 +10,7 @@ import time
 import struct
 
 BAUDRATE = 9600
-portName = "COM6"
+portName = "COM12"
 serialDevice = serial.Serial(portName, BAUDRATE, 8, 'N', 1, 0, 0, 0, 0, 0)
 serialDevice.setRTS(0)
 serialDevice.setDTR(0)
@@ -20,17 +20,17 @@ print("ready")
 floatData = 12.354
 ba = bytearray(struct.pack("f", floatData))
 print(["0x%02x" % b for b in ba])
-Packet = [0xFF, 0xFF, 0x13]
+Packet = [0xFF, 0xFF, 0x02]
 str_packet = ''
 str_packet = str_packet.join([chr(c) for c in Packet])
 
 serialDevice.write(str_packet.encode('utf-8'))
 serialDevice.write(ba)
 
-arrayData = [chr(252), chr(169), chr(69), chr(65)]
-# v = struct.unpack(
-#     'f', struct.pack('4c', *arrayData))[0]
-# print("get data = ", v)
+arrayData = [255, 169, 69, 65]
+chararr = ""
+v = struct.unpack( 'f', struct.pack('4B', *arrayData))[0]
+print("get data = "+ str(v))
 countData = 0
 arrayData = []
 
