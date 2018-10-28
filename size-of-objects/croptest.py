@@ -15,6 +15,27 @@ def midpoint(ptA, ptB):
 width = 200
 
 
+def crop_minAreaRect(img, rect):
+
+    # rotate img
+    angle = rect[2]
+    rows, cols = img.shape[0], img.shape[1]
+    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), angle, 1)
+    img_rot = cv2.warpAffine(img, M, (cols, rows))
+
+    # rotate bounding box
+    rect0 = (rect[0], rect[1], 0.0)
+    box = cv2.boxPoints(rect)
+    pts = np.int0(cv2.transform(np.array([box]), M))[0]
+    pts[pts < 0] = 0
+
+    # crop
+    img_crop = img_rot[pts[1][1]:pts[0][1],
+                       pts[1][0]:pts[2][0]]
+
+    return img_crop
+
+
 def find_box(contours):
     box_contour = contours[0]
     for c in contours:
@@ -22,7 +43,6 @@ def find_box(contours):
             box_contour = c
             # print(cv2.contourArea(box_contour))
     box = cv2.minAreaRect(box_contour)
-    label = 'box'
     straight_rect = cv2.boundingRect(box_contour)
     box_im = image[straight_rect[1]:straight_rect[1] + straight_rect[3],
                    straight_rect[0]: straight_rect[0] + straight_rect[2]]
@@ -50,19 +70,128 @@ def nothing(n):
     pass
 
 
+def colourCheck(im):
+    hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
+    # define range of blue color in HSV
+    lower_blue = np.array([110, 50, 50])
+    upper_blue = np.array([130, 255, 255])
+
+    # Threshold the HSV image to get only blue colors
+    mask = cv2.inRange(hsv, lower_blue, upper_blue)
+
+    # Bitwise-AND mask and original image
+    res = cv2.bitwise_and(im, im, mask=mask)
+
+    # check for blue from grayscale
+    gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
+
+    # cv2.imshow('frame', im)
+    # cv2.imshow('mask', mask)
+    # cv2.imshow('res', res)
+    # cv2.imshow('gray', gray)
+    for i in gray:
+        for j in i:
+            if j > 10:
+                return True
+    return False
+
+
+def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
+    hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
+    # define range of blue color in HSV
+    lower_color = np.array([110, 50, 50])
+    upper_color = np.array([130, 255, 255])
+
+    # Threshold the HSV image to get only blue colors
+    mask = cv2.inRange(hsv, lower_color, upper_color)
+
+    # Bitwise-AND mask and original image
+    # res = cv2.bitwise_and(im, im, mask=mask)
+    iteration = 0
+    for i in range(len(mask)):
+        for j in range(len(mask[i])):
+            if mask[i][j] > 0:
+                iteration += 1
+    print(str(iteration) + ":  " + str(cX))
+    if iteration > thresh:
+        return True
+    else:
+        return False
+
+    # check for brown from grayscale
+    # gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
+    # cv2.imshow('frame', im)
+    # cv2.imshow('mask', mask)
+    # cv2.imshow('res', res)
+    # cv2.imshow('gray', gray)
+    # intensity = 0
+    # for i in gray:
+    #     for j in i:
+    #         if j > 10:
+    #             intensity += 1
+    #
+    # print(intensity)
+    # if intensity > thresh:
+    #     return True
+    # return False
+# def sizeCheck(im):
+#     gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+#     # edge = imutils.auto_canny(gray)
+#     edge = cv2.Canny(gray, 50, 100)
+#     # edge = cv2.dilate(edge, None, iterations=1)
+#     cv2.imshow('di' + str(int(time.time()) % 20), edge)
+#     edge = cv2.erode(edge, None, iterations=2)
+#
+#     contours = cv2.findContours(gray.copy(), cv2.RETR_EXTERNAL,
+#                                 cv2.CHAIN_APPROX_SIMPLE)
+#     box = cv2.minAreaRect(c)
+#     # rot_box_im = image[int(box[0][0]):int(
+#     #     box[2][1]), int(box[0][1]):int(box[2][1])]
+#     box = cv2.cv.BoxPoints(
+#         box) if imutils.is_cv2() else cv2.boxPoints(box)
+#     box = np.array(box, dtype="int")
+#     box = perspective.order_points(box)
+#     cv2.drawContours(im, [box.astype("int")], -1, (0, 255, 0), 1)
+#     # for c in contours:
+#     #     try:
+#     #         cv2.drawContours(im, c, 0, (0, 255, 0), 1)
+#     #     except:
+#     #         continue
+#     # for i in range(3):
+#     #     cv2.drawContours(im, [contours[i].astype('int')], 0, (0, 255, 0), 1)
+#     cv2.imshow('ed' + str(int(time.time()) % 20), edge)
+#     cv2.imshow('sizeCheck' + str(int(time.time()) % 20), im)
+#     print(len(contours))
+#     if len(contours) > 10:
+#         return True
+#     else:
+#         return False
+
+
+cap = cv2.VideoCapture(1)
+
+color_1 = np.zeros((300, 512, 3), np.uint8)
+color_2 = np.zeros((300, 512, 3), np.uint8)
 cv2.namedWindow('menu', cv2.WINDOW_NORMAL)
 cv2.createTrackbar('Gauss Kernel', 'menu', 3, 9, nothing)
 cv2.createTrackbar('Bilat Kernel', 'menu', 3, 9, nothing)
-cv2.createTrackbar('Bilat Area', 'menu', 75, 200, nothing)
-cv2.createTrackbar('Canny Low', 'menu', 50, 255, nothing)
-cv2.createTrackbar('Canny High', 'menu', 100, 255, nothing)
-cv2.createTrackbar('MinArea', 'menu', 1000, 100000, nothing)
+cv2.createTrackbar('Bilat Area', 'menu', 100, 200, nothing)
+cv2.createTrackbar('Canny Low', 'menu', 80, 255, nothing)
+cv2.createTrackbar('Canny High', 'menu', 150, 255, nothing)
+cv2.createTrackbar('MinArea', 'menu', 1700, 100000, nothing)
 cv2.createTrackbar('MaxArea', 'menu', 45000, 100000, nothing)
 cv2.createTrackbar('Filter Type', 'menu', 3, 6, nothing)
-cv2.createTrackbar('center_x', 'menu', 320, 640, nothing)
+cv2.createTrackbar('center_x', 'menu', 350, 640, nothing)
 cv2.createTrackbar('center_y', 'menu', 240, 480, nothing)
-cv2.createTrackbar('width', 'menu', 320, 640, nothing)
-cv2.createTrackbar('height', 'menu', 240, 480, nothing)
+cv2.createTrackbar('width', 'menu', 400, 640, nothing)
+cv2.createTrackbar('height', 'menu', 380, 480, nothing)
+cv2.createTrackbar('LowerH', 'menu', 25, 255, nothing)
+cv2.createTrackbar('LowerS', 'menu', 50, 255, nothing)
+cv2.createTrackbar('LowerV', 'menu', 50, 255, nothing)
+cv2.createTrackbar('UpperH', 'menu', 25, 255, nothing)
+cv2.createTrackbar('UpperS', 'menu', 255, 255, nothing)
+cv2.createTrackbar('UpperV', 'menu', 255, 255, nothing)
+cv2.createTrackbar('Threshold', 'menu', 149, 5000, nothing)
 
 period = 0.1
 nexttime = time.time() + period
@@ -84,8 +213,23 @@ while(True):
     center_y = cv2.getTrackbarPos('center_y', 'menu')
     roi_width = cv2.getTrackbarPos('width', 'menu')
     roi_height = cv2.getTrackbarPos('height', 'menu')
+    lowH = cv2.getTrackbarPos('LowerH', 'menu')
+    lowS = cv2.getTrackbarPos('LowerS', 'menu')
+    lowV = cv2.getTrackbarPos('LowerV', 'menu')
+    upH = cv2.getTrackbarPos('UpperH', 'menu')
+    upS = cv2.getTrackbarPos('UpperS', 'menu')
+    upV = cv2.getTrackbarPos('UpperV', 'menu')
+    thresh = cv2.getTrackbarPos('threshold', 'menu')
+    cv2.imshow('low', color_1)
+    cv2.imshow('hi', color_2)
+    color_1[:] = [lowH, lowS, lowV]
+    color_2[:] = [upH, upS, upV]
+    color_1 = cv2.cvtColor(color_1, cv2.COLOR_HSV2BGR)
+    color_2 = cv2.cvtColor(color_2, cv2.COLOR_HSV2BGR)
+
     if HIGH_edge < LOW_edge:
         HIGH_edge = LOW_edge + 1
+        center_y = 1
     if center_x == 0:
         center_x = 1
     if center_y == 0:
@@ -120,7 +264,8 @@ while(True):
     # tgs = int(input("tgs"))
 
     # Capture frame-by-frame
-    ret, frame = cv2.imread('orig6.jpg')
+    # frame = cv2.imread('orig6.jpg')
+    ret, frame = cap.read()
     cv2.imshow("uncropped image", frame)
     orig = frame.copy()
     roi = frame[int(center_y - roi_height / 2): int(center_y + roi_height / 2),
@@ -128,175 +273,153 @@ while(True):
     now = time.time()
     # refObj = None
 
-    if(nexttime <= now):
-        image = roi
-        nexttime = now + period
+    image = roi
 
-        edged = []
-        # Apply filters
-        # grayscale
-        # bgsubbed = bgsub.apply(image, learningRate=0)
-        # gray = bgsubbed
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        # clahe = cv2.createCLAHE(cliplimit=clm, tilegridsize=tgs)
-        # Contrast Limited Adaptive Histogram Equalization
-        clahe = cv2.createCLAHE()
-        cl1 = clahe.apply(gray)
+    edged = []
+    # Apply filters
+    # grayscale
+    # bgsubbed = bgsub.apply(image, learningRate=0)
+    # gray = bgsubbed
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    # clahe = cv2.createCLAHE(cliplimit=clm, tilegridsize=tgs)
+    # Contrast Limited Adaptive Histogram Equalization
+    clahe = cv2.createCLAHE()
+    cl1 = clahe.apply(gray)
 
-        # gaussian blur
-        # gauss = cv2.GaussianBlur(gray, (3, 3), 0)
-        gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
+    # gaussian blur
+    # gauss = cv2.GaussianBlur(gray, (3, 3), 0)
+    gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
 
-        # global Histogram Equalization
-        global_histeq = cv2.equalizeHist(gray)
+    # global Histogram Equalization
+    global_histeq = cv2.equalizeHist(gray)
 
-        # bilateralFilter
-        bilat = cv2.bilateralFilter(
-            gray, bilat_args[0], bilat_args[1], bilat_args[2])
+    # bilateralFilter
+    bilat = cv2.bilateralFilter(
+        gray, bilat_args[0], bilat_args[1], bilat_args[2])
 
-        # # gauss + bilat
-        # gauss_bilat = cv2.bilateralFilter(
-        #     gauss, bilat_args[0], bilat_args[1], bilat_args[2])
-        #
-        # # bilat + clahe
-        # bilat_clahe = cv2.bilateralFilter(
-        #     cl1, bilat_args[0], bilat_args[1], bilat_args[2])
+    # # gauss + bilat
+    # gauss_bilat = cv2.bilateralFilter(
+    #     gauss, bilat_args[0], bilat_args[1], bilat_args[2])
+    #
+    # # bilat + clahe
+    # bilat_clahe = cv2.bilateralFilter(
+    #     cl1, bilat_args[0], bilat_args[1], bilat_args[2])
 
-        # total list of individual filters
-        filtered = [gray, global_histeq, gauss,
-                    bilat]
+    # total list of individual filters
+    filtered = [gray, global_histeq, gauss,
+                bilat]
 
-        # perform Canny edge detection on all filters
-        for i in range(len(filtered)):
-            edged.append(cv2.Canny(filtered[i], LOW_edge, HIGH_edge))
-            edged[i] = cv2.dilate(edged[i], None, iterations=1)
-            edged[i] = cv2.erode(edged[i], None, iterations=1)
-            cv2.imshow("dilated" + str(i), edged[i])
+    # perform Canny edge detection on all filters
+    for i in range(len(filtered)):
+        edged.append(cv2.Canny(filtered[i], LOW_edge, HIGH_edge))
+        edged[i] = cv2.dilate(edged[i], None, iterations=1)
+        edged[i] = cv2.erode(edged[i], None, iterations=1)
+        cv2.imshow("dilated" + str(i), edged[i])
 
-        # findContours
-        index = current_filter
-        cnts = cv2.findContours(edged[index].copy(), cv2.RETR_EXTERNAL,
-                                cv2.CHAIN_APPROX_SIMPLE)
-        cnts = cnts[0] if imutils.is_cv2() else cnts[1]
-        if len(cnts) is not 0:
+    # findContours
+    index = current_filter
+    cnts = cv2.findContours(edged[index].copy(), cv2.RETR_EXTERNAL,
+                            cv2.CHAIN_APPROX_SIMPLE)
+    cnts = cnts[0] if imutils.is_cv2() else cnts[1]
+    if len(cnts) is not 0:
 
-            # (cnts, _) = contours.sort_contours(cnts)
+        # (cnts, _) = contours.sort_contours(cnts)
 
-            colors = ((0, 0, 255), (240, 0, 159), (0, 165, 255),
-                      (255, 255, 0), (255, 0, 255))
-            orig = image.copy()
-            big_box = find_box(cnts)
-            pixelsPerMetric = big_box[2]
-            for c in cnts:
-                if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
-                    continue
+        colors = ((0, 0, 255), (240, 0, 159), (0, 165, 255),
+                  (255, 255, 0), (255, 0, 255))
+        orig = image.copy()
+        big_box = find_box(cnts)
+        pixelsPerMetric = big_box[2]
+        for c in cnts:  # use for multiple objects
+            # c = big_box[2]
+            if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
+                continue
+            cv2.drawContours(orig, c, 0, (0, 255, 0), 2)
+            label = 'unknown'
+            box = cv2.boundingRect(c)
+            # contour_im = image[box[1]:box[1] +
+            #                    box[3], box[0]:box[0] + box[2]]
+            box = cv2.minAreaRect(c)
+            contour_im = crop_minAreaRect(orig, box)
+            # contour_im = image[int(box[0][1] - box[1][1] / 2):int(box[0][1] + box[1][1] / 2),
+            #                    int(box[0][0] - box[1][0] / 2): int(box[0][0] + box[1][0] / 2)]
+            box = cv2.cv.BoxPoints(
+                box) if imutils.is_cv2() else cv2.boxPoints(box)
+            box = np.array(box, dtype="int")
+            box = perspective.order_points(box)
+            cX = np.average(box[:, 0])
+            cY = np.average(box[:, 1])
+            try:
+                colour = colourCheck(contour_im)
+                size = sizeCheck(contour_im, lowH, lowS,
+                                 lowV, upH, upS, upV, thresh, cX)
+                if cX == big_box[1][0]:
+                    label = 'box'
+                elif colour == True:
+                    label = 'colored'
+                elif size == True:
+                    label = 'small_pebbles'
+                else:
+                    label = 'large_pebbles'
+            except Exception:
+                raise Exception
                 label = 'unknown'
-                box = cv2.boundingRect(c)
-                contour_im = image[box[1]:box[1] +
-                                   box[3], box[0]:box[0] + box[2]]
-                box = cv2.minAreaRect(c)
-                # rot_box_im = image[int(box[0][0]):int(
-                #     box[2][1]), int(box[0][1]):int(box[2][1])]
-                box = cv2.cv.BoxPoints(
-                    box) if imutils.is_cv2() else cv2.boxPoints(box)
-                box = np.array(box, dtype="int")
-                box = perspective.order_points(box)
-                try:
-                    if c.all() == big_box[3].all():
-                        label = 'box'
-                    cv2.imshow(label + str(cnts.index(c)), contour_im)
-                except:
-                    label = 'unknown'
-                cX = np.average(box[:, 0])
-                cY = np.average(box[:, 1])
-                cv2.drawContours(orig, [box.astype("int")], -1, (0, 255, 0), 2)
-                if big_box is not None:
-                    print('hi')
-                    cv2.drawContours(
-                        orig, [big_box[0].astype("int")], -1, (0, 255, 0), 2)
-                    refCoords = np.vstack([big_box[0], big_box[1]])
-                    objCoords = np.vstack([box, (cX, cY)])
-                    for (x, y) in box:
-                        cv2.circle(orig, (int(x), int(y)), 5, (0, 0, 255), -1)
-                        (tl, tr, br, bl) = box
-                        cv2.putText(orig, label,
-                                    (int(midpoint(tl, bl)[1]),
-                                     int(midpoint(tl, tr)[0])),
-                                    cv2.FONT_HERSHEY_SIMPLEX,
-                                    0.65, (255, 0, 255), 2)
-                        (tltrX, tltrY) = midpoint(tl, tr)
-                        (blbrX, blbrY) = midpoint(bl, br)
-                        (tlblX, tlblY) = midpoint(tl, bl)
-                        (trbrX, trbrY) = midpoint(tr, br)
-                        cv2.circle(orig, (int(tltrX), int(tltrY)),
-                                   5, (255, 0, 0), -1)
-                        cv2.circle(orig, (int(blbrX), int(blbrY)),
-                                   5, (255, 0, 0), -1)
-                        cv2.circle(orig, (int(tlblX), int(tlblY)),
-                                   5, (255, 0, 0), -1)
-                        cv2.circle(orig, (int(trbrX), int(trbrY)),
-                                   5, (255, 0, 0), -1)
-                        # cv2.line(orig, (int(tltrX), int(tltrY)), (int(blbrX), int(blbrY)),
-                        #          (255, 0, 255), 2)
-                        # cv2.line(orig, (int(tlblX), int(tlblY)), (int(trbrX), int(trbrY)),
-                        #          (255, 0, 255), 2)
-                        dA = dist.euclidean((tltrX, tltrY), (blbrX, blbrY))
-                        dB = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
+            cv2.imshow(label + str(int(cX)), contour_im)
 
-                        dimA = dA / pixelsPerMetric
-                        dimB = dB / pixelsPerMetric
+            cv2.drawContours(orig, [box.astype("int")], -1, (0, 255, 0), 2)
+            if big_box is not None:
+                cv2.drawContours(
+                    orig, [big_box[0].astype("int")], -1, (0, 255, 0), 2)
+                refCoords = np.vstack([big_box[0], big_box[1]])
+                objCoords = np.vstack([box, (cX, cY)])
+                for (x, y) in box:
+                    cv2.circle(orig, (int(x), int(y)), 5, (0, 0, 255), -1)
+                    (tl, tr, br, bl) = box
+                    cv2.putText(
+                        orig, label, (bl[0], bl[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
+                    (tltrX, tltrY) = midpoint(tl, tr)
+                    (blbrX, blbrY) = midpoint(bl, br)
+                    (tlblX, tlblY) = midpoint(tl, bl)
+                    (trbrX, trbrY) = midpoint(tr, br)
+                    cv2.circle(orig, (int(tltrX), int(tltrY)),
+                               5, (255, 0, 0), -1)
+                    cv2.circle(orig, (int(blbrX), int(blbrY)),
+                               5, (255, 0, 0), -1)
+                    cv2.circle(orig, (int(tlblX), int(tlblY)),
+                               5, (255, 0, 0), -1)
+                    cv2.circle(orig, (int(trbrX), int(trbrY)),
+                               5, (255, 0, 0), -1)
+                    # cv2.line(orig, (int(tltrX), int(tltrY)), (int(blbrX), int(blbrY)),
+                    #          (255, 0, 255), 2)
+                    # cv2.line(orig, (int(tlblX), int(tlblY)), (int(trbrX), int(trbrY)),
+                    #          (255, 0, 255), 2)
+                    dA = dist.euclidean((tltrX, tltrY), (blbrX, blbrY))
+                    dB = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
 
-                        for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
-                            cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
-                            cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
-                        (xA, yA) = big_box[1]
-                        (xB, yB) = (cX, cY)
-                        color = (0, 255, 255)
-                        # cv2.line(orig, (int(xA), int(yA)),
-                        #          (int(xB), int(yB)), color, 2)
-                        # D = dist.euclidean((xA, yA), (xB, yB)) / big_box[2]
-                        # (mX, mY) = midpoint((xA, yA), (xB, yB))
-                        # cv2.putText(orig, "{:.1f}mm".format(D), (int(mX), int(mY - 10)),
-                        #             cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
-                        cv2.putText(orig, "{:.1f}mm".format(dimA),
-                                    (int(tltrX - 15), int(tltrY - 10)
-                                     ), cv2.FONT_HERSHEY_SIMPLEX,
-                                    0.65, (255, 255, 255), 2)
-                        cv2.putText(orig, "{:.1f}mm".format(dimB),
-                                    (int(trbrX + 10), int(trbrY)),
-                                    cv2.FONT_HERSHEY_SIMPLEX,
-                                    0.65, (255, 255, 255), 2)
-        cv2.imshow("orig", orig)
-        # cv2.waitKey(0)
-    else:
-        orig = roi.copy()
-        gray = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY)
-        # gray = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY)
-        # clahe = cv2.createCLAHE(cliplimit=clm, tilegridsize=tgs)
-        # Contrast Limited Adaptive Histogram Equalization
-        clahe = cv2.createCLAHE()
-        cl1 = clahe.apply(gray)
-        # gaussian blur
-        gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
-        # global Histogram Equalization
-        global_histeq = cv2.equalizeHist(gray)
-        # bilateralFilter
-        bilat = cv2.bilateralFilter(
-            gray, bilat_args[0], bilat_args[1], bilat_args[2])
-        # gauss + bilat
-        gauss_bilat = cv2.bilateralFilter(
-            gauss, bilat_args[0], bilat_args[1], bilat_args[2])
-        # bilat + clahe
-        bilat_clahe = cv2.bilateralFilter(
-            cl1, bilat_args[0], bilat_args[1], bilat_args[2])
+                    dimA = dA / pixelsPerMetric
+                    dimB = dB / pixelsPerMetric
 
-        # perform Canny edge detection on all filters
-        for i in range(len(filtered)):
-            edged[i] = (cv2.Canny(filtered[i], 50, 100))
-            edged[i] = cv2.dilate(edged[i], None, iterations=1)
-            edged[i] = cv2.erode(edged[i], None, iterations=1)
-            # cv2.imshow("dilated" + str(i), edged[i])
-
+                    for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
+                        cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
+                        cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
+                    (xA, yA) = big_box[1]
+                    (xB, yB) = (cX, cY)
+                    color = (0, 255, 255)
+                    # cv2.line(orig, (int(xA), int(yA)),
+                    #          (int(xB), int(yB)), color, 2)
+                    # D = dist.euclidean((xA, yA), (xB, yB)) / big_box[2]
+                    # (mX, mY) = midpoint((xA, yA), (xB, yB))
+                    # cv2.putText(orig, "{:.1f}mm".format(D), (int(mX), int(mY - 10)),
+                    #             cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
+                    # cv2.putText(orig, "{:.1f}mm".format(dimA),
+                    #             (int(tltrX - 15), int(tltrY - 10)
+                    #              ), cv2.FONT_HERSHEY_SIMPLEX,
+                    #             0.65, (255, 255, 255), 2)
+                    # cv2.putText(orig, "{:.1f}mm".format(dimB),
+                    #             (int(trbrX + 10), int(trbrY)),
+                    #             cv2.FONT_HERSHEY_SIMPLEX,
+                    #             0.65, (255, 255, 255), 2)
+    cv2.imshow("orig", orig)
     # for i in range(len(filtered)):
     #     cv2.imshow('filtered' + str(i), filtered[i])
     for i in range(len(edged)):
@@ -330,4 +453,4 @@ while(True):
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-cap.release()
+# cap.release()
