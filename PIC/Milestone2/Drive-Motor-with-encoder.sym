@@ -73,15 +73,15 @@ W4      @PRINTFD16_115200_5725_5724.P6
 8CE-8CF flip.PWM
 8D0-8D3 convertToDUTY.voltage
 8D4-8D5 convertToDUTY.duty
-8E6-8E9 sin.x
-8F8-8FB cos.x
-8FC-8FF cos.y
-900-903 cos.t
-904-907 cos.t2
-908     cos.quad
-909     cos.i
-90A-90D cos.frac
-90E-921 cos.p
+8E0-8E3 sin.x
+8F2-8F5 cos.x
+8F6-8F9 cos.y
+8FA-8FD cos.t
+8FE-901 cos.t2
+902     cos.quad
+903     cos.i
+904-907 cos.frac
+908-91B cos.p
 2780-27FF Stack
 
 ROM Allocation:
@@ -98,28 +98,28 @@ ROM Allocation:
 001442  cos
 0015B6  sin
 0015DC  chirpSine
-001616  @DIVFF
-0016E0  convertToDUTY
-00171A  getDirection
-00174A  flip
-001796  TIMER3_ist
-001802  Drivemotor
-001814  init_Timer2
-001822  Init_Interrupts
-001828  MAIN
-001828  @cinit1
-001878  @cinit2
+00160A  @DIVFF
+0016D4  convertToDUTY
+00170E  getDirection
+00173E  flip
+00178A  TIMER3_ist
+0017F6  Drivemotor
+001808  init_Timer2
+001816  Init_Interrupts
+00181C  MAIN
+00181C  @cinit1
+00186C  @cinit2
 
 Project Directory:
-    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\baifern\
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\Milestone2\
 
 Project Files:
-    Drive-Motor-with-encoder.c                              [24-Sep-18 04:09  CRC=09B84995]
+    Drive-Motor-with-encoder.c                              [27-Oct-18 01:28  CRC=9F4EF679]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
     BL_Support.h                                            [23-Sep-18 20:59  CRC=2918F78D]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
 
-Source signature=06A28C2C
+Source signature=9C393910
 
 Units:
     Drive-Motor-with-encoder (main)

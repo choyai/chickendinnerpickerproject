@@ -29,7 +29,7 @@ void INT_EXT_INPUT1(void) {
 }
 
 float chirpSine(float time) {
-  float sig = sin(time * time) * 12;
+  float sig = sin(time) * 12;
   return sig;
 }
 int convertToDUTY(float voltage) {

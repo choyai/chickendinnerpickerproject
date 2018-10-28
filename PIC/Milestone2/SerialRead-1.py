@@ -2,8 +2,8 @@ import serial
 import numpy as np
 import time
 
-BAUDRATE = 9600
-PORT = 'COM5'
+BAUDRATE = int(input("input baud rate: "))
+PORT = 'COM' + str(input("input COM Port: COM"))
 max_data = 2000
 
 
@@ -57,7 +57,7 @@ while True:
                 ",{0:.5f},".format(voltage) + "{0:.5f}".format(angle)
             # Save to CSV file and exit after 20s or 2000 entries
             if counter >= max_data or time_in_seconds >= 10:
-                f = open("log_file2.csv", "w")
+                f = open("log_file3.csv", "w")
                 f.write(data)
                 f.close()
                 data = ''

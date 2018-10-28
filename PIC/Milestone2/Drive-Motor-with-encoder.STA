@@ -1,12 +1,12 @@
 
-ROM used:   3458/33788 (10%)
-            3458/33788 (10%) including unused fragments
+ROM used:   3446/33788 (10%)
+            3446/33788 (10%) including unused fragments
 
             1.1 Average locations per line
             3.5 Average locations per statement
 
 RAM used:   318/8192 (4%) at main() level
-            448/8192 (5%) worst case
+            440/8192 (5%) worst case
 
 Stack size: 128
 
@@ -31,7 +31,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0    372   5   47  1148  9.7  cos
 0     38   1    9    46  1.7  sin
 0     52   1    2    76  3.0  INT_EXT_INPUT1
-0     58   1   13    72  2.7  chirpSine
+0     46   1   13    63  2.7  chirpSine
 0     58   1   11    75  2.9  convertToDUTY
 0     48   1    6   174  4.0  getDirection
 0      6   0    0    42  1.4  Init_Interrupts
@@ -49,9 +49,9 @@ Program metrics:
     Functions               13
     Statements              982
     Comments                479
-    Volume (V)              4473
+    Volume (V)              4454
     Difficulty (D)          42.8
-    Effort to implement (E) 191658
+    Effort to implement (E) 190745
     Time to implement (T)   2 hours, 57 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   12
@@ -62,7 +62,7 @@ Program metrics:
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  2950  27258  
+00DFC-083FA  2938  27270  
 
 
 

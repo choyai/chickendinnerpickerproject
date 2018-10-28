@@ -1,3 +1,4 @@
-      Memory usage:   ROM=7%      RAM=2% - 3%
-      0 Errors,  0 Warnings.
+>>> Warning 202 "serial.c" Line 10(6,11): Variable never used:   array
+      Memory usage:   ROM=2%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
 Build Successful.

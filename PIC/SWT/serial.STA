@@ -1,58 +1,49 @@
 
-ROM used:   2328/33788 (7%)
-            2328/33788 (7%) including unused fragments
+ROM used:   770/33788 (2%)
+            770/33788 (2%) including unused fragments
 
-            2.4 Average locations per line
-            62.9 Average locations per statement
+            0.8 Average locations per line
+            36.7 Average locations per statement
 
-RAM used:   158/8192 (2%) at main() level
-            208/8192 (3%) worst case
+RAM used:   151/8192 (2%) at main() level
+            155/8192 (2%) worst case
 
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   67    37 100  serial.c
+   75    21 100  serial.c
   862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
    32     0   0  BL_Support.h
 ----- -----
-  961    37 Total
+  969    21 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0    202   4    8             @DIVFF
-0     44   1    4             @SFTOI
-0    196   4    8             @MULFF
-0     74   2    2             @SITOF
-0    426   9    8             @ADDFF
-0    134   3   35   293  5.4  print_float
-0     14   0    1             @SPRINTF
-0    262   6    0             @PRINTFD16_770
-0     92   2    7   394  6.1  SM_RxD
-0     50   1    2    40  1.7  UART1_Isr
-0    268   6    5   330  4.5  MAIN
-0     28   1    0             @const788
-0     30   1    0             @const790
+0     40   3    2   160  3.9  SM_RxD
+0     50   3    2    40  1.7  UART1_Isr
+0    144   9    0   167  2.9  MAIN
+0     28   2    0             @const757
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               4
-    Statements              37
-    Comments                163
-    Volume (V)              1444
-    Difficulty (D)          15.9
-    Effort to implement (E) 22968
-    Time to implement (T)   21 minutes
+    Functions               3
+    Statements              21
+    Comments                194
+    Volume (V)              492
+    Difficulty (D)          8.0
+    Effort to implement (E) 3962
+    Time to implement (T)   4 minutes
     Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   7
-    Maintainability (MI)    82
+    Cyclomatic Complexity   3
+    Maintainability (MI)    107
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  1820  28388  
+00DFC-083FA   262  29946  
 
 
 

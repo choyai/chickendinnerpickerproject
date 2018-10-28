@@ -12,7 +12,10 @@ def midpoint(ptA, ptB):
     return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
 
 
-cap = cv2.VideoCapture(0)
+try:
+    cap = cv2.VideoCapture(1)
+except:
+    cap = cv2.VideoCapture(0)
 period = 0.1
 nexttime = time.time() + period
 bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()

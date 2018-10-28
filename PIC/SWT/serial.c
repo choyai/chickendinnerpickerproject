@@ -10,18 +10,18 @@
 char array[20] = {};
 char SM_id = 1;
 int getPackage = 0;
-char* print_float(float data){
-	int intDist = data / 1;
-    int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 1000));
-    char stringFloat[20];
-    sprintf(stringFloat, "%d.%d", intDist, dotDist);
-    return stringFloat;
-}
-void print_float(char* stringResult, float data){
-	int intDist = data / 1;
-    int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 1000));
-    sprintf(stringResult, "%d.%d", intDist, dotDist);
-}
+// char* print_float(float data){
+// 	int intDist = data / 1;
+//     int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 1000));
+//     char stringFloat[20];
+//     sprintf(stringFloat, "%d.%d", intDist, dotDist);
+//     return stringFloat;
+// }
+// void print_float(char* stringResult, float data){
+// 	int intDist = data / 1;
+//     int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 1000));
+//     sprintf(stringResult, "%d.%d", intDist, dotDist);
+// }
 void SM_RxD(int c){
 	if (SM_id <= 2){
 		if (c == 255){
@@ -29,23 +29,28 @@ void SM_RxD(int c){
 		}else{
 			SM_id = 1;
 		}
-	}else if (SM_id <= 3){
-		if (c == DEVICE_ID){
-			SM_id++;
-		}
-	}else if (SM_id > 3){
-		array[SM_id - 4] = c;
-		SM_id++;
-		if (SM_id >= 8){
-			getPackage = 1;
-			SM_id = 1;
-		}
+	}else{
+		putc(c);
+		SM_id = 1;
 	}
+	// }else if (SM_id <= 3){
+	// 	if (c == DEVICE_ID){
+	// 		SM_id++;
+	// 	}
+	// }else if (SM_id > 3){
+	// 	array[SM_id - 4] = c;
+	// 	SM_id++;
+	// 	if (SM_id >= 8){
+	// 		getPackage = 1;
+	// 		SM_id = 1;
+	// 	}
+	// }
 }
 #INT_RDA               // receive data interrupt one time per one
 void UART1_Isr() {
-    int c = getc();
-    SM_RxD(c);
+    int c = (int)getc();
+		putc(c);
+    // SM_RxD(c);
 }
 void main(){
 	disable_interrupts(GLOBAL);
@@ -54,13 +59,16 @@ void main(){
     enable_interrupts(INT_RDA);
 
 	enable_interrupts(GLOBAL);
-    printf("System Ready!\r\n");
+    // printf("System Ready!\r\n");
 	while(TRUE){
 		if (getPackage >= 1){
 			getPackage = 0;
-			float test;
-			memcpy(&test, array, sizeof(test));
-			printf("\nresult = %s, %s\n", print_float(test), print_float(test));
+			// for(int i = 0; i < 8; i++){
+			// 	putc(array[i]);
+			// }
+			// float test;
+			// memcpy(&test, array, sizeof(test));
+			// printf("\nresult = %s, %s\n", print_float(test), print_float(test));
 		}
 	}
 }

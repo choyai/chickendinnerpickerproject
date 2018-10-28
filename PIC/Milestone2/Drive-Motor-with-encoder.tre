@@ -17,8 +17,7 @@
    ³  ÀÄ@PRINTFD16_115200_5725_5724  0/246  Ram=0
    ÀÄTIMER3_ist  0/108  Ram=0
       ÃÄ@FLT  0/104  Ram=8
-      ÃÄchirpSine  0/58  Ram=13
-      ³  ÃÄ@MULFF  0/196  Ram=8
+      ÃÄchirpSine  0/46  Ram=13
       ³  ÃÄsin  0/38  Ram=9
       ³  ³  ÃÄ@ADDFF  0/426  Ram=8
       ³  ³  ÀÄcos  0/372  Ram=47
