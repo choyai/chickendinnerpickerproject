@@ -213,8 +213,8 @@ while(True):
     # tgs = int(input("tgs"))
 
     # Capture frame-by-frame
-    for num in range(3):
-        frame = cv2.imread('orig' + str(num) + '.jpg')
+    for num in range(16):
+        frame = cv2.imread('single' + str(num) + '.jpg')
         # ret, frame = cap.read()
         cv2.imshow("uncropped image" + str(num), frame)
         orig = frame.copy()
@@ -264,7 +264,8 @@ while(True):
             edged.append(cv2.Canny(filtered[i], LOW_edge, HIGH_edge))
             edged[i] = cv2.dilate(edged[i], None, iterations=1)
             edged[i] = cv2.erode(edged[i], None, iterations=1)
-            cv2.imshow("dilated" + str(i) + str(num), edged[i])
+            # cv2.imshow("dilated" + str(i) + str(num), edged[i])
+        cv2.imshow("dilated" + str(3) + str(num), edged[3])
 
         # findContours
         index = current_filter
@@ -372,8 +373,8 @@ while(True):
         cv2.imshow("orig" + str(num), orig)
         # for i in range(len(filtered)):
         #     cv2.imshow('filtered' + str(i), filtered[i])
-        for i in range(len(edged)):
-            cv2.imshow('edged' + str(i) + str(num), edged[i])
+        # for i in range(len(edged)):
+        #     cv2.imshow('edged' + str(i) + str(num), edged[i])
     # WAITKEY sucks
     # if cv2.waitKey(1) & 0xFF == ord('x'):
     #     for i in gauss_args:
