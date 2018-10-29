@@ -21,7 +21,7 @@ while(True):
     # save on pressing 's'
     if cv2.waitKey(1) & 0xFF == ord('s'):
         iterstring = str(iter)
-        cv2.imwrite('orig' + iterstring + '.jpg', frame)
+        cv2.imwrite('single' + iterstring + '.jpg', frame)
         cv2.imwrite('scaled' + iterstring + '.jpg', scaled)
         cv2.imwrite('grayscale' + iterstring + '.jpg', gray)
         iter += 1
