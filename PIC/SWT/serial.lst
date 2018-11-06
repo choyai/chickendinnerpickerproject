@@ -1,17 +1,19 @@
-CCS PCD C Compiler, Version 5.015, 5967               27-Oct-18 02:49
+CCS PCD C Compiler, Version 5.015, 5967               30-Oct-18 19:01
 
                Filename:   C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\serial.lst
 
-               ROM used:   770 bytes (2%)
-                           Largest free fragment is 29946
-               RAM used:   151 (2%) at main() level
-                           155 (2%) worst case
+               ROM used:   1300 bytes (4%)
+                           Largest free fragment is 29416
+               RAM used:   162 (2%) at main() level
+                           178 (2%) worst case
                Stack size: 128
 
 *
-0C00:  GOTO    E72
+0C00:  GOTO    FF6
 *
-0C50:  GOTO    E40
+0C50:  GOTO    ED2
+*
+0C74:  GOTO    F02
 .................... #include <24FJ48GA002.h> 
 .................... //////////// Standard Header file for the PIC24FJ48GA002 device //////////////// 
 .................... /////////////////////////////////////////////////////////////////////////// 
@@ -31,14 +33,33 @@ CCS PCD C Compiler, Version 5.015, 5967               27-Oct-18 02:49
 0E02:  TBLRDL.B[W0],W0L
 0E04:  CLR.B   1
 0E06:  RETURN  
-0E08:  DATA    53,79,00
-0E0A:  DATA    73,74,00
-0E0C:  DATA    65,6D,00
-0E0E:  DATA    20,52,00
-0E10:  DATA    65,61,00
-0E12:  DATA    64,79,00
-0E14:  DATA    21,0D,00
-0E16:  DATA    0A,00,00
+0E08:  DATA    64,6F,00
+0E0A:  DATA    6E,65,00
+0E0C:  DATA    00,00,00
+0E0E:  CLR     32
+0E10:  MOV     #E1A,W3
+0E12:  ADD     W3,W0,W0
+0E14:  TBLRDL.B[W0],W0L
+0E16:  CLR.B   1
+0E18:  RETURN  
+0E1A:  DATA    53,79,00
+0E1C:  DATA    73,74,00
+0E1E:  DATA    65,6D,00
+0E20:  DATA    20,52,00
+0E22:  DATA    65,61,00
+0E24:  DATA    64,79,00
+0E26:  DATA    21,0D,00
+0E28:  DATA    0A,00,00
+0E2A:  CLR     32
+0E2C:  MOV     #E36,W3
+0E2E:  ADD     W3,W0,W0
+0E30:  TBLRDL.B[W0],W0L
+0E32:  CLR.B   1
+0E34:  RETURN  
+0E36:  DATA    72,65,00
+0E38:  DATA    73,65,00
+0E3A:  DATA    6E,64,00
+0E3C:  DATA    00,00,00
 ....................  
 .................... #list 
 ....................  
@@ -75,193 +96,556 @@ CCS PCD C Compiler, Version 5.015, 5967               27-Oct-18 02:49
 .................... #endif	/* BL_SUPPORT_H */ 
 ....................  
 ....................  
-.................... #use delay (internal = 8 MHz, clock = 32MHz) 
-.................... #PIN_SELECT U1RX = PIN_B12 //PIN_B14 // 
-.................... #PIN_SELECT U1TX = PIN_B13 //PIN_B15 // 
+.................... #use delay(internal = 8 MHz, clock = 32MHz) 
+....................  
+.................... #define DEVICE_ID 2 
+.................... #PIN_SELECT U1RX = PIN_B13 //PIN_B14 // 
+.................... #PIN_SELECT U1TX = PIN_B12 //PIN_B15 // 
 .................... #use rs232 (UART1, BAUD = 9600, XMIT = PIN_B13, RCV = PIN_B12) 
+0E3E:  BSET.B  2C9.4
+0E40:  BTSC.B  2CB.4
+0E42:  BRA     E40
+0E44:  MOV     #8,W3
+0E46:  CLR     W2
+0E48:  REPEAT  #229
+0E4A:  NOP     
+0E4C:  REPEAT  #67A
+0E4E:  NOP     
+0E50:  BCLR.B  42.0
+0E52:  BTSC.B  2CB.4
+0E54:  BSET.B  42.0
+0E56:  RRC.B   W2L,W2L
+0E58:  DEC     W3,W3
+0E5A:  BRA     NZ,E4C
+0E5C:  REPEAT  #681
+0E5E:  NOP     
+0E60:  MOV     W2,W0
+0E62:  RETURN  
+*
+0F3C:  BCLR.B  2C9.5
+0F3E:  BCLR.B  2CD.5
+0F40:  MOV     #8,W3
+0F42:  REPEAT  #67E
+0F44:  NOP     
+0F46:  RRC.B   824
+0F48:  BTSC.B  42.0
+0F4A:  BSET.B  2CD.5
+0F4C:  BTSS.B  42.0
+0F4E:  BCLR.B  2CD.5
+0F50:  REPEAT  #679
+0F52:  NOP     
+0F54:  DEC     W3,W3
+0F56:  BRA     NZ,F46
+0F58:  BSET.B  2CD.5
+0F5A:  REPEAT  #680
+0F5C:  NOP     
+0F5E:  RETURN  
+.................... #PIN_SELECT OC1 = PIN_B2         // Pin output is connected to DX02 
+.................... #PIN_SELECT OC2 = PIN_B3         // Pin output is connected to DX03 
+.................... #PIN_SELECT OC3 = PIN_B4         // Pin output is connected to DXI0  (PWM) 
+.................... #PIN_SELECT INT1 = PIN_B6 
+.................... #define limitSw_x PIN_B7 				 //PIN_B7 
 ....................  
-.................... #define DEVICE_ID   2 
-....................  
+.................... long count = 0; 
+.................... long direction = 0; 
 .................... char array[20] = {}; 
-.................... char SM_id = 1; 
+.................... char SM_id = 0; 
 .................... int getPackage = 0; 
+.................... char command_ID; 
+.................... int posi = 0; 
 .................... // char* print_float(float data){ 
 .................... // 	int intDist = data / 1; 
-.................... //     int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 1000)); 
+.................... //     int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 
+.................... //     1000)); 
 .................... //     char stringFloat[20]; 
 .................... //     sprintf(stringFloat, "%d.%d", intDist, dotDist); 
 .................... //     return stringFloat; 
 .................... // } 
 .................... // void print_float(char* stringResult, float data){ 
 .................... // 	int intDist = data / 1; 
-.................... //     int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 1000)); 
+.................... //     int dotDist = (((intDist>>15)*-2)+1) * ((data * 1000.0f) - (intDist * 
+.................... //     1000)); 
 .................... //     sprintf(stringResult, "%d.%d", intDist, dotDist); 
 .................... // } 
-.................... void SM_RxD(int c){ 
-.................... 	if (SM_id <= 2){ 
-0E18:  MOV.B   814,W0L
-0E1A:  SE      W0,W0
-0E1C:  CP      W0,#2
-0E1E:  BRA     GT,E30
-.................... 		if (c == 255){ 
-0E20:  MOV     81A,W4
-0E22:  XOR     #FF,W4
-0E24:  BRA     NZ,E2A
-.................... 			SM_id++; 
-0E26:  INC.B   0814
-.................... 		}else{ 
-0E28:  BRA     E2E
-.................... 			SM_id = 1; 
-0E2A:  MOV.B   #1,W0L
-0E2C:  MOV.B   W0L,814
-.................... 		} 
-.................... 	}else{ 
-0E2E:  BRA     E3E
-.................... 		putc(c); 
-0E30:  MOV.B   81A,W0L
-0E32:  BTSC.B  223.1
-0E34:  BRA     E32
-0E36:  MOV.B   W0L,224
-0E38:  CLR.B   225
-.................... 		SM_id = 1; 
-0E3A:  MOV.B   #1,W0L
-0E3C:  MOV.B   W0L,814
-.................... 	} 
-0E3E:  RETURN  
-.................... 	// }else if (SM_id <= 3){ 
-.................... 	// 	if (c == DEVICE_ID){ 
-.................... 	// 		SM_id++; 
-.................... 	// 	} 
-.................... 	// }else if (SM_id > 3){ 
-.................... 	// 	array[SM_id - 4] = c; 
-.................... 	// 	SM_id++; 
-.................... 	// 	if (SM_id >= 8){ 
-.................... 	// 		getPackage = 1; 
-.................... 	// 		SM_id = 1; 
-.................... 	// 	} 
-.................... 	// } 
+....................  
+.................... // Communication Routines// 
+....................  
+.................... void SM_RxD(int c) { 
+*
+0E64:  MOV     W5,[W15++]
+....................   if (getPackage == 0) { 
+0E66:  CP0     81E
+0E68:  BRA     NZ,ECE
+....................     if (SM_id < 2) { 
+0E6A:  MOV.B   81C,W0L
+0E6C:  SE      W0,W0
+0E6E:  CP      W0,#2
+0E70:  BRA     GE,E8C
+....................       if (c == 255) { 
+0E72:  MOV     830,W4
+0E74:  XOR     #FF,W4
+0E76:  BRA     NZ,E88
+....................         array[SM_id] = c; 
+0E78:  MOV.B   81C,W0L
+0E7A:  SE      W0,W0
+0E7C:  MOV     #808,W4
+0E7E:  ADD     W0,W4,W5
+0E80:  MOV     830,W0
+0E82:  MOV.B   W0L,[W5+#0]
+....................         SM_id++; 
+0E84:  INC.B   081C
+....................       } else { 
+0E86:  BRA     E8A
+....................         SM_id = 0; 
+0E88:  CLR.B   81C
+....................       } 
+....................     } else if (SM_id == 2) { 
+0E8A:  BRA     ECE
+0E8C:  MOV.B   81C,W0L
+0E8E:  SE      W0,W0
+0E90:  CP      W0,#2
+0E92:  BRA     NZ,EA8
+....................       array[SM_id] = c; 
+0E94:  MOV.B   81C,W0L
+0E96:  SE      W0,W0
+0E98:  MOV     #808,W4
+0E9A:  ADD     W0,W4,W5
+0E9C:  MOV     830,W0
+0E9E:  MOV.B   W0L,[W5+#0]
+....................       command_ID = c; 
+0EA0:  MOV.B   830,W0L
+0EA2:  MOV.B   W0L,81D
+....................       SM_id++; 
+0EA4:  INC.B   081C
+....................     } else if (SM_id > 2) { 
+0EA6:  BRA     ECE
+0EA8:  MOV.B   81C,W0L
+0EAA:  SE      W0,W0
+0EAC:  CP      W0,#2
+0EAE:  BRA     LE,ECE
+....................       array[SM_id] = c; 
+0EB0:  MOV.B   81C,W0L
+0EB2:  SE      W0,W0
+0EB4:  MOV     #808,W4
+0EB6:  ADD     W0,W4,W5
+0EB8:  MOV     830,W0
+0EBA:  MOV.B   W0L,[W5+#0]
+....................       if (SM_id >= 8) { 
+0EBC:  MOV.B   81C,W0L
+0EBE:  SE      W0,W0
+0EC0:  CP      W0,#8
+0EC2:  BRA     LT,ECC
+....................         getPackage = 1; 
+0EC4:  MOV     #1,W4
+0EC6:  MOV     W4,81E
+....................         SM_id = 0; 
+0EC8:  CLR.B   81C
+....................       } else { 
+0ECA:  BRA     ECE
+....................         SM_id++; 
+0ECC:  INC.B   081C
+....................       } 
+....................     } 
+....................   } 
+0ECE:  MOV     [--W15],W5
+0ED0:  RETURN  
 .................... } 
-.................... #INT_RDA               // receive data interrupt one time per one 
+.................... #INT_RDA 
 .................... void UART1_Isr() { 
-0E40:  PUSH    42
-0E42:  PUSH    36
-0E44:  PUSH    32
-0E46:  MOV     W0,[W15++]
-0E48:  MOV     #2,W0
-0E4A:  REPEAT  #C
-0E4C:  MOV     [W0++],[W15++]
-0E4E:  BTSS.B  222.0
-0E50:  BRA     E4E
-0E52:  MOV     226,W0
-0E54:  MOV.B   W0L,818
-0E56:  CLR.B   819
-....................     int c = getc(); 
-.................... 		// putc(c); 
-....................     SM_RxD(c); 
-0E58:  PUSH    818
-0E5A:  POP     81A
-0E5C:  CALL    E18
-0E60:  BCLR.B  85.3
-0E62:  MOV     #1A,W0
-0E64:  REPEAT  #C
-0E66:  MOV     [--W15],[W0--]
-0E68:  MOV     [--W15],W0
-0E6A:  POP     32
-0E6C:  POP     36
-0E6E:  POP     42
-0E70:  RETFIE  
+0ED2:  PUSH    42
+0ED4:  PUSH    36
+0ED6:  PUSH    32
+0ED8:  MOV     W0,[W15++]
+0EDA:  MOV     #2,W0
+0EDC:  REPEAT  #C
+0EDE:  MOV     [W0++],[W15++]
+0EE0:  CALL    E3E
+0EE4:  MOV.B   W0L,82E
+0EE6:  CLR.B   82F
+.................... 	int c = getc(); 
+.................... 	// putc(c); 
+.................... 	SM_RxD(c); 
+0EE8:  PUSH    82E
+0EEA:  POP     830
+0EEC:  CALL    E64
 .................... } 
-.................... void main(){ 
-0E72:  MOV     #2780,W15
-0E74:  MOV     #27FF,W0
-0E76:  MOV     W0,20
-0E78:  NOP     
-0E7A:  MOV     #4444,W0
-0E7C:  MOV     W0,A8
-0E7E:  BSET.B  81.7
-0E80:  MOV     #46,W0
-0E82:  MOV.B   W0L,742
-0E84:  MOV     #57,W0
-0E86:  MOV.B   W0L,742
-0E88:  BCLR.B  742.6
-0E8A:  MOV     #3F0C,W0
-0E8C:  MOV     W0,6A4
-0E8E:  MOV     #300,W0
-0E90:  MOV     W0,6CC
-0E92:  MOV     #46,W0
-0E94:  MOV.B   W0L,742
-0E96:  MOV     #57,W0
-0E98:  MOV.B   W0L,742
-0E9A:  BSET.B  742.6
-0E9C:  CLR     744
-0E9E:  MOV     #8000,W4
-0EA0:  MOV     W4,220
-0EA2:  MOV     #400,W4
-0EA4:  MOV     W4,222
-0EA6:  BSET.B  220.3
-0EA8:  MOV     #1A0,W4
-0EAA:  MOV     W4,228
-0EAC:  MOV.B   #1,W0L
-0EAE:  MOV.B   W0L,814
-0EB0:  CLR     816
-0EB2:  SETM    32C
-0EB4:  CLR     800
-0EB6:  CLR     802
-0EB8:  CLR     804
-0EBA:  CLR     806
-0EBC:  CLR     808
-0EBE:  CLR     80A
-0EC0:  CLR     80C
-0EC2:  CLR     80E
-0EC4:  CLR     810
-0EC6:  CLR     812
-.................... 	disable_interrupts(GLOBAL); 
-0EC8:  BCLR.B  81.7
-0ECA:  MOV     #E0,W4
-0ECC:  MOV     W4,42
-0ECE:  BSET.B  81.7
+.................... /***/ 
 ....................  
-....................     clear_interrupt(INT_RDA);   // recommend style coding to confirm everything clear before use 
-0ED0:  REPEAT  #3
-0ED2:  MOV     226,W0
-0ED4:  BCLR.B  85.3
-....................     enable_interrupts(INT_RDA); 
-0ED6:  BSET.B  95.3
+.................... //PID Control// 
+0EF0:  BCLR.B  85.3
+0EF2:  MOV     #1A,W0
+0EF4:  REPEAT  #C
+0EF6:  MOV     [--W15],[W0--]
+0EF8:  MOV     [--W15],W0
+0EFA:  POP     32
+0EFC:  POP     36
+0EFE:  POP     42
+0F00:  RETFIE  
+.................... #INT_EXT1 
+.................... void INT_EXT_INPUT1(void) { 
+0F02:  PUSH    42
+0F04:  PUSH    36
+0F06:  PUSH    32
+0F08:  MOV     W0,[W15++]
+0F0A:  MOV     #2,W0
+0F0C:  REPEAT  #C
+0F0E:  MOV     [W0++],[W15++]
+....................    if(input(PIN_B6)==1){ 
+0F10:  BSET.B  2C8.6
+0F12:  BTSS.B  2CA.6
+0F14:  BRA     F1E
+....................       count++; 
+0F16:  INC     0800
+0F18:  BTSC.B  42.1
+0F1A:  INC     0802
+....................    }else{ 
+0F1C:  BRA     F24
+....................       count--; 
+0F1E:  DEC     0800
+0F20:  BTSS.B  42.0
+0F22:  DEC     0802
+....................    } 
+0F24:  BCLR.B  86.4
+0F26:  MOV     #1A,W0
+0F28:  REPEAT  #C
+0F2A:  MOV     [--W15],[W0--]
+0F2C:  MOV     [--W15],W0
+0F2E:  POP     32
+0F30:  POP     36
+0F32:  POP     42
+0F34:  RETFIE  
+.................... } 
 ....................  
-.................... 	enable_interrupts(GLOBAL); 
-0ED8:  BCLR.B  81.7
-0EDA:  CLR     42
-0EDC:  BSET.B  81.7
-....................     printf("System Ready!\r\n"); 
-0EDE:  MOV     #0,W1
-0EE0:  MOV     W1,W0
-0EE2:  CLR.B   1
-0EE4:  CALL    DFC
-0EE8:  INC     W1,W1
-0EEA:  BTSC.B  223.1
-0EEC:  BRA     EEA
-0EEE:  MOV     W0,224
-0EF0:  MOV     #E,W0
-0EF2:  CPSGT   W1,W0
-0EF4:  BRA     EE0
-.................... 	while(TRUE){ 
-.................... 		if (getPackage >= 1){ 
-0EF6:  MOV     816,W4
-0EF8:  CP      W4,#1
-0EFA:  BRA     LT,EFE
-.................... 			getPackage = 0; 
-0EFC:  CLR     816
-.................... 			// for(int i = 0; i < 8; i++){ 
-.................... 			// 	putc(array[i]); 
-.................... 			// } 
-.................... 			// float test; 
-.................... 			// memcpy(&test, array, sizeof(test)); 
-.................... 			// printf("\nresult = %s, %s\n", print_float(test), print_float(test)); 
-.................... 		} 
-0EFE:  BRA     EF6
+.................... void Init_Interrupts() { 
+....................    enable_interrupts( INT_EXT1 ); 
+0F36:  BSET.B  96.4
+....................    ext_int_edge( 1, L_TO_H ); // Rising Edge 
+0F38:  BCLR.B  82.1
+0F3A:  RETURN  
+.................... } 
+....................  
+.................... //motor driver 
+....................  
+.................... void Motor(int u){ 
+....................    if (u > 100)u = 100; 
+....................    if (u < -100)u = -100; 
+....................    if(u>0){ 
+....................       output_bit(PIN_B2,0); 
+....................       output_bit(PIN_B3,1); 
+....................       direction = 0; 
+....................       set_pwm_duty(3, (int)(2 * u)); 
+....................    } 
+....................    else if(u<0) { 
+....................       output_bit(PIN_B2,1); 
+....................       output_bit(PIN_B3,0); 
+....................       direction = 1; 
+....................       set_pwm_duty(3, (int)(2 * -u)); 
+....................    }else{ 
+....................       output_bit(PIN_B2,1); 
+....................       output_bit(PIN_B3,1); 
+....................       set_pwm_duty(3, (int)(100)); 
+....................       delay_ms(100); 
+....................    } 
+.................... } 
+....................  
+.................... void Set_position(int post){ 
+....................    int error = post - count; 
+....................    int Kp = 1; 
+....................    if (error > 5){ 
+....................       Motor(error*Kp); 
+.................... 	  posi = (((count*2*5*22)/7)/768)+((((count*2*5*22*2)/7)/768)/5) ; 
+.................... 	  printf("Position : %d\n",posi); 
+....................    } 
+....................    else{ 
+....................       Motor(0); 
+....................       delay_ms(500); 
+....................       //printf("count: %d\n",count); 
+.................... 	  posi = (((count*2*5*22)/7)/768)+((((count*2*5*22*2)/7)/768)/5) ; 
+.................... 	  printf("Position : %d\n",posi); 
+....................    } 
+.................... } 
+.................... /***/ 
+....................  
+.................... //COMMANDS// 
+.................... void setHome(){ 
+.................... 	printf("done"); 
+*
+0F96:  MOV     #0,W1
+0F98:  MOV     W1,W0
+0F9A:  CLR.B   1
+0F9C:  CALL    DFC
+0FA0:  INC     W1,W1
+0FA2:  MOV     W1,[W15++]
+0FA4:  MOV.B   W0L,824
+0FA6:  CALL    F3C
+0FAA:  MOV     [--W15],W1
+0FAC:  MOV     #3,W0
+0FAE:  CPSGT   W1,W0
+0FB0:  BRA     F98
+.................... 	getPackage = 0; 
+0FB2:  CLR     81E
+0FB4:  RETURN  
+....................  
+.................... } 
+....................  
+.................... void setPosXY(){ 
+.................... 	printf("done"); 
+0FB6:  MOV     #0,W1
+0FB8:  MOV     W1,W0
+0FBA:  CLR.B   1
+0FBC:  CALL    DFC
+0FC0:  INC     W1,W1
+0FC2:  MOV     W1,[W15++]
+0FC4:  MOV.B   W0L,824
+0FC6:  CALL    F3C
+0FCA:  MOV     [--W15],W1
+0FCC:  MOV     #3,W0
+0FCE:  CPSGT   W1,W0
+0FD0:  BRA     FB8
+.................... 	getPackage = 0; 
+0FD2:  CLR     81E
+0FD4:  RETURN  
+.................... } 
+....................  
+.................... void setPosZ(){ 
+.................... 	printf("done"); 
+0FD6:  MOV     #0,W1
+0FD8:  MOV     W1,W0
+0FDA:  CLR.B   1
+0FDC:  CALL    DFC
+0FE0:  INC     W1,W1
+0FE2:  MOV     W1,[W15++]
+0FE4:  MOV.B   W0L,824
+0FE6:  CALL    F3C
+0FEA:  MOV     [--W15],W1
+0FEC:  MOV     #3,W0
+0FEE:  CPSGT   W1,W0
+0FF0:  BRA     FD8
+.................... 	getPackage = 0; 
+0FF2:  CLR     81E
+0FF4:  RETURN  
+.................... } 
+....................  
+.................... int sumCheck() { 
+*
+0F60:  CLR     824
+0F62:  MOV.B   810,W0L
+0F64:  SE      W0,W0
+0F66:  MOV     W0,826
+.................... 	int sum = 0; 
+.................... 	int checksum = array[8]; 
+.................... 	for(int i = 0; i < 7; i++){ 
+0F68:  CLR     828
+0F6A:  MOV     828,W4
+0F6C:  CP      W4,#7
+0F6E:  BRA     GE,F82
+.................... 		sum = sum + array[i]; 
+0F70:  MOV     #808,W4
+0F72:  MOV     828,W3
+0F74:  ADD     W3,W4,W0
+0F76:  MOV     W0,W4
+0F78:  MOV.B   [W4],W0L
+0F7A:  SE      W0,W0
+0F7C:  ADD     824
+0F7E:  INC     0828
+0F80:  BRA     F6A
 .................... 	} 
+.................... 	if(sum == checksum){ 
+0F82:  MOV     824,W0
+0F84:  CP      826
+0F86:  BRA     NZ,F90
+.................... 		return 1; 
+0F88:  MOV     #1,W4
+0F8A:  MOV     W4,0
+0F8C:  BRA     F94
+.................... 	} 
+0F8E:  BRA     F94
+.................... 	else{ 
+.................... 		return 0; 
+0F90:  CLR     0
+0F92:  BRA     F94
+.................... 	} 
+0F94:  RETURN  
 .................... } 
-0F00:  PWRSAV  #0
+....................  
+....................  
+.................... void main() { 
+*
+0FF6:  MOV     #2780,W15
+0FF8:  MOV     #27FF,W0
+0FFA:  MOV     W0,20
+0FFC:  NOP     
+0FFE:  MOV     #4444,W0
+1000:  MOV     W0,A8
+1002:  BSET.B  81.7
+1004:  MOV     #46,W0
+1006:  MOV.B   W0L,742
+1008:  MOV     #57,W0
+100A:  MOV.B   W0L,742
+100C:  BCLR.B  742.6
+100E:  MOV     #63F,W0
+1010:  MOV     W0,680
+1012:  MOV     #3F0D,W0
+1014:  MOV     W0,6A4
+1016:  MOV     #1312,W0
+1018:  MOV     W0,6C2
+101A:  MOV     #14,W0
+101C:  MOV     W0,6C4
+101E:  MOV     #3,W0
+1020:  MOV     W0,6CC
+1022:  MOV     #46,W0
+1024:  MOV.B   W0L,742
+1026:  MOV     #57,W0
+1028:  MOV.B   W0L,742
+102A:  BSET.B  742.6
+102C:  CLR     744
+102E:  BCLR.B  2C9.5
+1030:  BSET.B  2CD.5
+1032:  CLR     800
+1034:  CLR     802
+1036:  CLR     804
+1038:  CLR     806
+103A:  CLR.B   81C
+103C:  CLR     81E
+103E:  CLR     820
+1040:  SETM    32C
+1042:  CLR     808
+1044:  CLR     80A
+1046:  CLR     80C
+1048:  CLR     80E
+104A:  CLR     810
+104C:  CLR     812
+104E:  CLR     814
+1050:  CLR     816
+1052:  CLR     818
+1054:  CLR     81A
+....................  
+....................   disable_interrupts(GLOBAL); 
+1056:  BCLR.B  81.7
+1058:  MOV     #E0,W4
+105A:  MOV     W4,42
+105C:  BSET.B  81.7
+....................   clear_interrupt( 
+....................       INT_RDA); // recommend style coding to confirm everything clear before use 
+105E:  REPEAT  #3
+1060:  MOV     226,W0
+1062:  BCLR.B  85.3
+....................   enable_interrupts(INT_RDA); 
+1064:  BSET.B  95.3
+.................... 	Init_Interrupts(); 
+1066:  CALL    F36
+.................... 	setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, 200); 
+106A:  CLR     112
+106C:  MOV     #C8,W4
+106E:  MOV     W4,10E
+1070:  MOV     #8010,W4
+1072:  MOV     W4,112
+.................... 	setup_compare(3, COMPARE_PWM | COMPARE_TIMER3); 
+1074:  MOV     #E,W4
+1076:  MOV     W4,190
+.................... 	set_pwm_duty(3,0); 
+1078:  CLR     18C
+....................   enable_interrupts(GLOBAL); 
+107A:  BCLR.B  81.7
+107C:  CLR     42
+107E:  BSET.B  81.7
+....................  
+.................... 	printf("System Ready!\r\n"); 
+1080:  MOV     #0,W1
+1082:  MOV     W1,W0
+1084:  CLR.B   1
+1086:  CALL    E0E
+108A:  INC     W1,W1
+108C:  MOV     W1,[W15++]
+108E:  MOV.B   W0L,824
+1090:  CALL    F3C
+1094:  MOV     [--W15],W1
+1096:  MOV     #E,W0
+1098:  CPSGT   W1,W0
+109A:  BRA     1082
+....................  
+....................   while (TRUE) { 
+....................     if (getPackage >= 1) { 
+109C:  MOV     81E,W4
+109E:  CP      W4,#1
+10A0:  BRA     LT,1110
+....................       int received = sumCheck(); 
+10A2:  CALL    F60
+10A6:  MOV     W0,822
+....................       if (!received) { 
+10A8:  CP0     822
+10AA:  BRA     NZ,10CC
+.................... 				printf("resend"); 
+10AC:  MOV     #0,W1
+10AE:  MOV     W1,W0
+10B0:  CLR.B   1
+10B2:  CALL    E2A
+10B6:  INC     W1,W1
+10B8:  MOV     W1,[W15++]
+10BA:  MOV.B   W0L,824
+10BC:  CALL    F3C
+10C0:  MOV     [--W15],W1
+10C2:  MOV     #5,W0
+10C4:  CPSGT   W1,W0
+10C6:  BRA     10AE
+....................         getPackage = 0; 
+10C8:  CLR     81E
+....................       } 
+10CA:  BRA     1110
+.................... 			else{ 
+.................... 				switch (array[2]) { 
+10CC:  MOV.B   80A,W0L
+10CE:  CLR.B   1
+10D0:  XOR     #0,W0
+10D2:  BRA     Z,10DE
+10D4:  XOR     #1,W0
+10D6:  BRA     Z,10E4
+10D8:  XOR     #3,W0
+10DA:  BRA     Z,10EA
+10DC:  BRA     10F0
+.................... 					case 0: 
+.................... 						setHome(); 
+10DE:  CALL    F96
+.................... 						break; 
+10E2:  BRA     1110
+.................... 					case 1: 
+.................... 						setPosXY(); 
+10E4:  CALL    FB6
+.................... 						break; 
+10E8:  BRA     1110
+.................... 					case 2: 
+.................... 						setPosZ(); 
+10EA:  CALL    FD6
+.................... 						break; 
+10EE:  BRA     1110
+.................... 					default: 
+.................... 						printf("resend"); 
+10F0:  MOV     #0,W1
+10F2:  MOV     W1,W0
+10F4:  CLR.B   1
+10F6:  CALL    E2A
+10FA:  INC     W1,W1
+10FC:  MOV     W1,[W15++]
+10FE:  MOV.B   W0L,824
+1100:  CALL    F3C
+1104:  MOV     [--W15],W1
+1106:  MOV     #5,W0
+1108:  CPSGT   W1,W0
+110A:  BRA     10F2
+.................... 						getPackage = 0; 
+110C:  CLR     81E
+.................... 						break; 
+110E:  BRA     1110
+.................... 				} 
+.................... 			} 
+....................       // float test; 
+....................       // memcpy(&test, array, sizeof(test)); 
+....................       // printf("\nresult = %s, %s\n", print_float(test), print_float(test)); 
+....................     } 
+1110:  BRA     109C
+....................   } 
+.................... } 
+1112:  PWRSAV  #0
 
 Configuration Fuses:
    Word  1L: 3F7F   WPOSTS16 WDT128 WINDIS NOWDT ICSP1 NODEBUG NOWRT NOPROTECT NOJTAG
