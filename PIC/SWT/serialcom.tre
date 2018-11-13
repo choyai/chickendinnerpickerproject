@@ -1,0 +1,15 @@
+ÀÄserialcom
+   ÃÄMAIN  0/252  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@const771  0/28  Ram=0
+   ³  ÃÄsumCheck  0/54  Ram=4
+   ³  ÃÄ@const773  0/20  Ram=0
+   ³  ÃÄsetHome  0/28  Ram=0
+   ³  ³  ÀÄ@const759  0/18  Ram=0
+   ³  ÃÄsetPosXY  0/28  Ram=0
+   ³  ³  ÀÄ@const759  0/18  Ram=0
+   ³  ÃÄsetPosZ  0/28  Ram=0
+   ³  ³  ÀÄ@const759  0/18  Ram=0
+   ³  ÀÄ@const773  0/20  Ram=0
+   ÀÄUART1_Isr  0/50  Ram=2
+      ÀÄSM_RxD  0/110  Ram=5

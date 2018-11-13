@@ -63,7 +63,7 @@ void SM_RxD(int c) {
 #INT_RDA
 void UART1_Isr() {
 	int c = getc();
-	// putc(c);
+	putc(c);
 	SM_RxD(c);
 }
 /***/

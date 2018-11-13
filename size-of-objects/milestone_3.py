@@ -50,10 +50,11 @@ def nothing(n):
     pass
 
 
-try:
-    cap = cv2.VideoCapture(1)
-except:
-    cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
+# try:
+#     cap = cv2.VideoCapture(1)
+# except:
+#     cap = cv2.VideoCapture(0)
 # Create Trackbars to adjust settings
 cv2.namedWindow('menu', cv2.WINDOW_NORMAL)
 cv2.createTrackbar('Gauss Kernel', 'menu', 3, 9, nothing)

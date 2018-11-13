@@ -16,13 +16,13 @@ def sendCommand(command, ser):
         if serialDevice.inWaiting() > 0:
             data = serialDevice.read(1)
             print("data =", ord(data))
-            response = serialDevice.readline().decode('utf-8')
-            print(response)
-            if response == 'resend':
-                ser.write(bytes(command))
-            elif response == 'done':
-                print('doot')
-                break
+            # response = serialDevice.readline().decode('utf-8')
+            # print(response)
+            # if response == 'resend':
+            #     ser.write(bytes(command))
+            # elif response == 'done':
+            #     print('doot')
+            #     break
 
 
 def setHome(ser):
@@ -97,7 +97,7 @@ serialDevice.dtr = 0
 serialDevice.open()
 
 
-time.sleep(0.5)
+# time.sleep(0.5)
 
 arrayData = [255, 255, 69, 65, 0, 0, 0, 0, 45]
 
@@ -114,8 +114,7 @@ while(1):
         # print(serialDevice.readline().decode('utf-8'))
     a = input("input command: ")
     if a != '':
-        # setPosXY(3220, 10243, serialDevice)
         setHome(serialDevice)
-        serialDevice.write(bytes(arrayData))
+
 serialDevice.close()
 print("end")

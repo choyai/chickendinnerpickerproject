@@ -1,0 +1,9 @@
+*** Error 18 "position.c" Line 2(10,24): File can not be opened
+    Not in local "BL_Support.h"
+    Not in local "C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\toiy\BL_Support.h"
+    Not in last "C:\Program Files (x86)\PICC\devices\BL_Support.h"
+    Not in project "C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\toiy\BL_Support.h"
+    Not in ";C:\Program Files (x86)\PICC\devices\BL_Support.h"
+    Not in "C:\Program Files (x86)\PICC\drivers\BL_Support.h"
+      1 Errors,  0 Warnings.
+Build Failed.
