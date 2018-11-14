@@ -7,13 +7,13 @@ W0      @delay_us1.P4
 W1      @SCRATCH
 W1      @WRITE_PACKED_MEMORY.P1
 W1      @READ_PACKED_MEMORY.P2
-W2      @READ_ROM_MEMORY.P1
-W2      @READ_PACKED_MEMORY.P2
-W2 -W3  @DIV3232B.P3
-W2      @WRITE_PACKED_MEMORY.P4
+W2      @READ_PACKED_MEMORY.P1
+W2      @WRITE_PACKED_MEMORY.P2
+W2      @READ_ROM_MEMORY.P3
+W2 -W3  @DIV3232B.P4
 W3      @READ_PACKED_MEMORY.P1
-W3      @WRITE_PACKED_MEMORY.P2
-W3      @READ_ROM_MEMORY.P3
+W3      @READ_ROM_MEMORY.P2
+W3      @WRITE_PACKED_MEMORY.P3
 630.6   C1OUT
 630.7   C2OUT
 800-803 count
@@ -33,27 +33,26 @@ W3      @READ_ROM_MEMORY.P3
 
 ROM Allocation:
 000DFC  @const759.call
-000E0E  @const771.call
-000E2A  @const773.call
-000E3E  SM_RxD
-000EAC  UART1_Isr
-000EDE  sumCheck
-000F14  setHome
-000F30  setPosXY
-000F4C  setPosZ
-000F68  MAIN
-000F68  @cinit1
-000FB2  @cinit2
+000E0E  @const772.call
+000E22  SM_RxD
+000E90  UART1_Isr
+000EC2  sumCheck
+000EF8  setHome
+000F14  setPosXY
+000F30  setPosZ
+000F4C  @cinit1
+000F4C  MAIN
+000F96  @cinit2
 
 Project Directory:
     C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\
 
 Project Files:
-    serialcom.c                                             [13-Nov-18 22:19  CRC=B5D10EFF]
+    serialcom.c                                             [13-Nov-18 22:34  CRC=8D04127D]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
     BL_Support.h                                            [26-Oct-18 08:25  CRC=2918F78D]
 
-Source signature=330C2391
+Source signature=0A3F270F
 
 Units:
     serialcom (main)

@@ -100,7 +100,7 @@ void main() {
   enable_interrupts(INT_RDA);
 
   enable_interrupts(GLOBAL);
-  printf("System Ready!\r\n");
+  // printf("System Ready!\r\n");
   while (TRUE) {
     if (getPackage >= 1) {
       int received = sumCheck();

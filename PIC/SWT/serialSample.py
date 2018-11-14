@@ -14,14 +14,13 @@ def sendCommand(command, ser):
     ser.write(bytes(command))
     while(1):
         if serialDevice.inWaiting() > 0:
-            data = serialDevice.read(1)
-            print("data =", ord(data))
+            # data = serialDevice.read(1)
+            # print("data =", ord(data))
             response = serialDevice.readline().decode('utf-8')
             print(response)
             if response == 'resend':
                 ser.write(bytes(command))
             elif response == 'done':
-                print('doot')
                 break
 
 
@@ -109,13 +108,19 @@ n = 3000
 startTime = time.time()
 while(1):
     if serialDevice.inWaiting() > 0:
-        data = serialDevice.read(1)
-        print("data =", ord(data))
-        # print(serialDevice.readline().decode('utf-8'))
+        # data = serialDevice.read(1)
+        # print("data =", ord(data))
+        try:
+            print(serialDevice.readline().decode('utf-8'))
+        except:
+            pass
     a = input("input command: ")
     if a != '':
-        # setPosXY(3220, 10243, serialDevice)
-        setHome(serialDevice)
-        serialDevice.write(bytes(arrayData))
+        if a == 'c':
+            serialDevice.write(bytes(arrayData))
+        elif a == 'd':
+            setPosXY(3220, 10243, serialDevice)
+        elif a == 'e':
+            setHome(serialDevice)
 serialDevice.close()
 print("end")

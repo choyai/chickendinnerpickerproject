@@ -1,9 +1,9 @@
 
-ROM used:   1124/33788 (3%)
-            1124/33788 (3%) including unused fragments
+ROM used:   1072/33788 (3%)
+            1072/33788 (3%) including unused fragments
 
-            1.1 Average locations per line
-            17.8 Average locations per statement
+            1.0 Average locations per line
+            17.3 Average locations per statement
 
 RAM used:   162/8192 (2%) at main() level
             176/8192 (2%) worst case
@@ -12,11 +12,11 @@ Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  130    63 100  serialcom.c
+  130    62 100  serialcom.c
   862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
    32     0   0  BL_Support.h
 ----- -----
- 1024    63 Total
+ 1024    62 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -26,30 +26,29 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     18   1    0             @const759
 0     28   1    0    35  1.1  setPosXY
 0     28   1    0    35  1.1  setPosZ
-0     54   2    4   254  6.5  sumCheck
-0    252  11    0   539  6.9  MAIN
-0     28   1    0             @const771
-0     20   1    0             @const773
+0     54   3    4   254  6.5  sumCheck
+0    228  11    0   511  6.8  MAIN
+0     20   1    0             @const772
  Inline         0             @cinit1
 
 Program metrics:
     Functions               7
-    Statements              63
-    Comments                180
-    Volume (V)              2068
-    Difficulty (D)          23.7
-    Effort to implement (E) 49026
+    Statements              62
+    Comments                181
+    Volume (V)              2031
+    Difficulty (D)          23.8
+    Effort to implement (E) 48413
     Time to implement (T)   45 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   14
-    Maintainability (MI)    155
+    Maintainability (MI)    156
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA   616  29592  
+00DFC-083FA   564  29644  
 
 
 
