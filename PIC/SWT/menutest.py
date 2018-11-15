@@ -8,20 +8,22 @@ import cv2
 import serial
 import time
 import struct
+import readchar
 
 
 def sendCommand(command, ser):
     ser.write(bytes(command))
     while(1):
         if serialDevice.inWaiting() > 0:
-            # data = serialDevice.read(1)
-            # print("data =", ord(data))
-            response = serialDevice.readline().decode('utf-8')
-            print(response)
-            if response == 'resend':
-                ser.write(bytes(command))
-            elif response == 'done':
-                break
+            data = serialDevice.read(1)
+            print("data =", ord(data))
+            # response = serialDevice.readline().decode('utf-8')
+            # print(response)
+            # if response == 'resend':
+            #     ser.write(bytes(command))
+            # elif response == 'done':
+            #     print('doot')
+            #     break
 
 
 def setHome(ser):
@@ -65,11 +67,6 @@ def setPosZ(z, ser):
     sendCommand(buffer, ser)
 
 
-def startUpRoutine(ser):
-    setHome(ser)
-    print('ready to start')
-
-
 def split_large_ints(num):
     numstring = str(hex(num))
     lsB = '0x'
@@ -90,18 +87,18 @@ def split_large_ints(num):
     return [int(msB, 16), int(lsB, 16)]
 
 
-BAUDRATE = int(input("input baud rate: "))
-portName = "COM" + str(input("Port: COM"))
-serialDevice = serial.Serial()
-serialDevice.baudrate = BAUDRATE
-serialDevice.port = portName
-serialDevice.timeout = 1
-serialDevice.rts = 0
-serialDevice.dtr = 0
-serialDevice.open()
+# BAUDRATE = int(input("input baud rate: "))
+# portName = "COM" + str(input("Port: COM"))
+# serialDevice = serial.Serial()
+# serialDevice.baudrate = BAUDRATE
+# serialDevice.port = portName
+# serialDevice.timeout = 1
+# serialDevice.rts = 0
+# serialDevice.dtr = 0
+# serialDevice.open()
 
 
-time.sleep(0.5)
+# time.sleep(0.5)
 
 arrayData = [255, 255, 69, 65, 0, 0, 0, 0, 45]
 
@@ -111,21 +108,19 @@ n = 3000
 # print(str(hex(n)))
 
 startTime = time.time()
-while(1):
-    if serialDevice.inWaiting() > 0:
-        # data = serialDevice.read(1)
-        # print("data =", ord(data))
-        try:
-            print(serialDevice.readline().decode('utf-8'))
-        except:
-            pass
-    a = input("input command: ")
-    if a != '':
-        if a == 'c':
-            serialDevice.write(bytes(arrayData))
-        elif a == 'd':
-            setPosXY(3220, 10243, serialDevice)
-        elif a == 'e':
-            setHome(serialDevice)
-serialDevice.close()
+while(time.time() - startTime < 10):
+    # if serialDevice.inWaiting() > 0:
+    #     data = serialDevice.read(1)
+    #     print("data =", ord(data))
+        # print(serialDevice.readline().decode('utf-8'))
+    print(str(time.time() % 15))
+    try:
+        key = readchar.readchar()
+        print(repr(key))
+        if repr(key)[2] == 'k':
+            break
+    except:
+        pass
+
+# serialDevice.close()
 print("end")
