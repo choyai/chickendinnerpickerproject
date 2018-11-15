@@ -4,6 +4,16 @@ Version=1.0
 [File000]
 Location=C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\serialcom.o
 Folder=Intermediary
+DeviceName=
+LanguageToolSuiteID=
+LanguageToolID=
+LanguageToolLocation=
+PPAD=
+SOLK=
+SuiteArgsString=
+ToolArgsString=
+TraceCmdString=
+DebugOptions=
 [File001]
 Location=serial.ERR
 Folder=Output

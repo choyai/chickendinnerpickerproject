@@ -1,10 +1,11 @@
 import numpy as np
 import cv2
 
-try:
-    capt = cv2.VideoCapture(1)
-except:
-    capt = cv2.VideoCapture(0)
+# try:
+capt = cv2.VideoCapture(0)
+# except:
+# capt = cv2.VideoCapture(0)
+
 # return single frame
 iter = 0
 while(True):
