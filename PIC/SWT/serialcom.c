@@ -1,9 +1,14 @@
 #include <24FJ48GA002.h>
 #include "BL_Support.h"
 #use delay(internal = 8 MHz, clock = 32MHz)
+
 #PIN_SELECT U1RX = PIN_B12 // PIN_B14 //
 #PIN_SELECT U1TX = PIN_B13 // PIN_B15 //
 #use rs232(UART1, BAUD = 9600, XMIT = PIN_B13, RCV = PIN_B12)
+
+#PIN_SELECT INT1 = PIN_B5
+#PIN_SELECT INT2 = PIN_B6
+
 
 #define DEVICE_ID 2
 
@@ -28,6 +33,11 @@ int posi = 0;
 //     1000));
 //     sprintf(stringResult, "%d.%d", intDist, dotDist);
 // }
+
+//Encoder Interrupts
+
+//
+
 
 // Communication Routines
 
@@ -69,12 +79,27 @@ void setHome() {
   getPackage = 0;
 }
 
-void setPosXY() {
+void setPosAB() {
   printf("done");
   getPackage = 0;
 }
 
 void setPosZ() {
+  printf("done");
+  getPackage = 0;
+}
+
+void gripClose(){
+  printf("done");
+  getPackage = 0;
+}
+
+void gripOpen(){
+  printf("done");
+  getPackage = 0;
+}
+
+void gripRotate(){
   printf("done");
   getPackage = 0;
 }
@@ -92,6 +117,7 @@ int sumCheck() {
   }
 }
 
+//
 void main() {
   disable_interrupts(GLOBAL);
 
@@ -113,10 +139,19 @@ void main() {
           setHome();
           break;
         case 1:
-          setPosXY();
+          setPosAB();
           break;
         case 2:
           setPosZ();
+          break;
+        case 3:
+          gripClose();
+          break;
+        case 4:
+          gripOpen();
+          break;
+        case 5:
+          gripRotate();
           break;
         default:
           printf("resend");

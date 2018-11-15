@@ -38,8 +38,10 @@ def setHome(ser):
 
 def setPosXY(x, y, ser):
     buffer = [255, 255, 1]
-    buffer.extend(split_large_ints(x))
-    buffer.extend(split_large_ints(y))
+    a = int(np.sqrt(2) / 2 * (y - x))
+    b = int(np.sqrt(2) / 2 * (y + x))
+    buffer.extend(split_large_ints(a))
+    buffer.extend(split_large_ints(b))
     buffer.append(0)
     checksum = 0
     for i in buffer:
@@ -54,6 +56,44 @@ def setPosXY(x, y, ser):
 def setPosZ(z, ser):
     buffer = [255, 255, 2]
     buffer.extend(split_large_ints(z))
+    buffer.extend([0, 0, 0])
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
+def gripClose(ser):
+    buffer = [255, 255, 3, 0, 0, 0, 0, 0]
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
+def gripOpen(ser):
+    buffer = [255, 255, 4, 0, 0, 0, 0, 0]
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
+def gripRotate(angle, ser):
+    buffer = [255, 255, 5]
+    buffer.extend(split_large_ints(angle))
     buffer.extend([0, 0, 0])
     checksum = 0
     for i in buffer:
@@ -111,6 +151,7 @@ n = 3000
 # print(str(hex(n)))
 
 startTime = time.time()
+print("1: set Home\n2: set x, y \n3: set z \n4: close gripper\n5: open gripper\n6: rotate gripper")
 while(1):
     if serialDevice.inWaiting() > 0:
         # data = serialDevice.read(1)
@@ -119,13 +160,25 @@ while(1):
             print(serialDevice.readline().decode('utf-8'))
         except:
             pass
-    a = input("input command: ")
-    if a != '':
-        if a == 'c':
+    keyinput = input("input command: ")
+    if keyinput != '':
+        if keyinput == 'd':
             serialDevice.write(bytes(arrayData))
-        elif a == 'd':
-            setPosXY(3220, 10243, serialDevice)
-        elif a == 'e':
+        elif keyinput == '1':
             setHome(serialDevice)
+        elif keyinput == '2':
+            x = int(input("input x: "))
+            y = int(input("input y: "))
+            setPosXY(x, y, serialDevice)
+        elif keyinput == '3':
+            z = int(input("input z: "))
+            setPosZ(z, serialDevice)
+        elif keyinput == '4':
+            gripClose(serialDevice)
+        elif keyinput == '5':
+            gripOpen(serialDevice)
+        elif keyinput == '6':
+            angle = int(input("input angle: "))
+            gripRotate(angle, serialDevice)
 serialDevice.close()
 print("end")
