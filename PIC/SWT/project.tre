@@ -1,0 +1,10 @@
+ÀÄproject
+   ÃÄMAIN  0/400  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄInit_Interrupts  0/14  Ram=0
+   ³  ÃÄGrip_Open  0/10  Ram=0
+   ³  ÃÄ@delay_ms1  0/16  Ram=2
+   ³  ÀÄGrip_Close  0/10  Ram=0
+   ÃÄINT_EXT_INPUT0  0/38  Ram=0
+   ÃÄINT_EXT_INPUT1  0/38  Ram=0
+   ÀÄINT_EXT_INPUT2  0/38  Ram=0

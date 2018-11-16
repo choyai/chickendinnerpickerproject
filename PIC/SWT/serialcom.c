@@ -6,19 +6,44 @@
 #PIN_SELECT U1TX = PIN_B13 // PIN_B15 //
 #use rs232(UART1, BAUD = 9600, XMIT = PIN_B13, RCV = PIN_B12)
 
-#PIN_SELECT INT1 = PIN_B5
-#PIN_SELECT INT2 = PIN_B6
-
-
 #define DEVICE_ID 2
+#define limitSw_x PIN_B8        //
+#define limitSw_y PIN_A2        //
+#define limitSw_z PIN_A4        //
+#define Motor_Bp PIN_B10        // Pin output is connected to DXI0  (PWM)
+#define Motor_Br PIN_B2         // Pin output is connected to DX02
+#define Motor_Bl PIN_B3         // Pin output is connected to DX03
+#define Motor_Ap PIN_B4         // Pin output is connected to DX03
+#define Motor_Ar PIN_A0         // Pin output is connected to DX03
+#define Motor_Al PIN_A1         // Pin output is connected to DX03
+#define Motor_Zp PIN_B14        // Pin output is connected to DX03
+#define Motor_Zr PIN_B15        // Pin output is connected to DX03
+#define Motor_Zl PIN_B9         // Pin output is connected to DX03
+#define Encode_A PIN_B7         // Pin output is connected to DX03
+#define Encode_B PIN_B6         // Pin output is connected to DX03
+#define Encode_Z PIN_B5         // Pin output is connected to DX03
+#define servo_r PIN_B0          // servo 270
+#define servo_l PIN_B1          // servo 180
 
-long count = 0;
-long direction = 0;
+#PIN_SELECT OC1 = Motor_Bp
+#PIN_SELECT OC2 = Motor_Ap
+#PIN_SELECT OC3 = Motor_Zp
+#PIN_SELECT OC4 = servo_r
+#PIN_SELECT OC5 = servo_l
+#PIN_SELECT INT1 = Encode_B
+#PIN_SELECT INT2 = Encode_Z
+
+
+// long count = 0;
+long count_a = 0;
+long count_b = 0;
+long count_z = 0;
+long posi = 0;
+int direction = 0;
 char array[20] = {};
 char SM_id = 0;
 int getPackage = 0;
 char command_ID;
-int posi = 0;
 // char* print_float(float data){
 //    long intDist = data / 1;
 //     long dotDist = (((intDist>>31)*-2)+1) * ((data * 1000.0f) - (intDist *
@@ -35,6 +60,30 @@ int posi = 0;
 // }
 
 //Encoder Interrupts
+#INT_EXT0
+void INT_EXT_INPUT0(void) {
+      count_a++;
+}
+
+#INT_EXT1
+void INT_EXT_INPUT1(void) {
+      count_b++;
+}
+
+#INT_EXT2
+void INT_EXT_INPUT2(void) {
+      count_z++;
+}
+
+void Init_Interrupts() {
+	enable_interrupts( INT_EXT0 );
+    ext_int_edge( 0, L_TO_H ); // Rising Edge
+	enable_interrupts( INT_EXT1 );
+    ext_int_edge( 1, L_TO_H ); // Rising Edge
+	enable_interrupts( INT_EXT2 );
+    ext_int_edge( 2, L_TO_H ); // Rising Edge
+}
+
 
 //
 
@@ -73,8 +122,97 @@ void UART1_Isr() {
   SM_RxD(c);
 }
 
+//Motor
+void Motor_z(int u){
+  if (u > 100)u = 100;
+  if (u < -100)u = -100;
+  if(u>0){
+    output_bit(Motor_Zr,0);
+    output_bit(Motor_Zl,1);
+    direction = 0;
+    set_pwm_duty(3, (int)(2 * u));
+  }
+  else if(u<0) {
+    output_bit(Motor_Zr,1);
+    output_bit(Motor_Zl,0);
+    direction = 1;
+    set_pwm_duty(3, (int)(2 * -u));
+  }else{
+    output_bit(Motor_Zr,1);
+    output_bit(Motor_Zl,1);
+    set_pwm_duty(3, (int)(100));
+    delay_ms(100);
+  }
+}
+
+void Motor_A(int u){
+  if (u > 100)u = 100;
+  if (u < -100)u = -100;
+  if(u>0){
+    output_bit(Motor_Ar,1);
+    output_bit(Motor_Al,0);
+    direction = 0;
+    set_pwm_duty(2, (int)(2 * u));
+  }
+  else if(u<0) {
+    output_bit(Motor_Ar,0);
+    output_bit(Motor_Al,1);
+    direction = 1;
+    set_pwm_duty(2, (int)(2 * -u));
+  }else{
+    output_bit(Motor_Ar,1);
+    output_bit(Motor_Al,1);
+    set_pwm_duty(2, (int)(100));
+    delay_ms(100);
+  }
+}
+
+void Motor_B(int u){
+  if (u > 100)u = 100;
+  if (u < -100)u = -100;
+  if(u>0){
+    output_bit(Motor_Br,1);
+    output_bit(Motor_Bl,0);
+    direction = 0;
+    set_pwm_duty(1, (int)(2 * u));
+  }
+  else if(u<0) {
+    output_bit(Motor_Br,0);
+    output_bit(Motor_Bl,1);
+    direction = 1;
+    set_pwm_duty(1, (int)(2 * -u));
+  }else{
+    output_bit(Motor_Br,1);
+    output_bit(Motor_Bl,1);
+    set_pwm_duty(1, (int)(100));
+    delay_ms(100);
+  }
+}
+//
 // COMMANDS//
 void setHome() {
+  setup_compare(3, COMPARE_PWM | COMPARE_TIMER3);
+    setup_compare(2, COMPARE_PWM | COMPARE_TIMER3);
+	setup_compare(1, COMPARE_PWM | COMPARE_TIMER3);
+	set_pwm_duty(3,0);
+	set_pwm_duty(2,0);
+    set_pwm_duty(1,0);
+	do{
+		Motor_z(-100);
+	}while(input(limitSw_z)==1);
+	Motor_z(0);
+	do{
+		Motor_a(-100);
+		Motor_b(-100);
+	}while(input(limitSw_x)==1);
+	Motor_a(0);
+	Motor_b(0);
+	do{
+		Motor_a(100);
+		Motor_b(-100);
+	}while(input(limitSw_y)==1);
+	Motor_a(0);
+	Motor_b(0);
   printf("done");
   getPackage = 0;
 }
@@ -90,11 +228,17 @@ void setPosZ() {
 }
 
 void gripClose(){
+  setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
+  set_pwm_duty(5, 1600);
+  delay_ms(500);
   printf("done");
   getPackage = 0;
 }
 
 void gripOpen(){
+  setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
+  set_pwm_duty(5, 4800);
+  delay_ms(500);
   printf("done");
   getPackage = 0;
 }
@@ -116,16 +260,24 @@ int sumCheck() {
     return 0;
   }
 }
+//
 
 //
 void main() {
   disable_interrupts(GLOBAL);
 
   clear_interrupt(INT_RDA); // recommend style coding to confirm everything clear before use
-      
-  enable_interrupts(INT_RDA);
 
+  enable_interrupts(INT_RDA);
+  Init_Interrupts();
   enable_interrupts(GLOBAL);
+  setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, 200);
+  setup_timer2(TMR_INTERNAL | TMR_DIV_BY_8, 8000);
+  setup_timer1(TMR_INTERNAL | TMR_DIV_BY_8, 6666);
+  gripOpen();
+  delay_ms(1000);
+  gripClose();
+  delay_ms(1000);
   // printf("System Ready!\r\n");
   while (TRUE) {
     if (getPackage >= 1) {

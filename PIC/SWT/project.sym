@@ -1,0 +1,118 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @READ_ROM_MEMORY.P1
+W0 -W3  @FLT64.P2
+W0 -W2  @F48TOSI64.P3
+W0 -W1  @DIV3232B.P4
+W0 -W3  @I64TOF48.P5
+W0 -W2  @MULFF48.P6
+W0      @SITOF.P7
+W0 -W2  @ADDFF48.P8
+W0 -W3  @F64TOSI64.P9
+W0 -W2  @F48TO64.P10
+W0 -W3  @SI64TOF64.P11
+W0 -W1  @DIVFF.P12
+W0 -W3  @SI64TOF48.P13
+W0 -W2  @FLT48.P14
+W0 -W1  @SFTOI.P15
+W0      @ITOF.P16
+W0 -W3  @F64TOI64.P17
+W0      @delay_ms1.P18
+W0 -W3  @I64TOF64.P19
+W0      @delay_us1.P20
+W0 -W3  @MULFF64.P21
+W0 -W1  @PRINTFD32_1161.P22
+W0 -W1  @MULS3232.P23
+W0 -W3  @DIVFF64.P24
+W0 -W1  @FLT.P25
+W0 -W1  @ADDFF.P26
+W0 -W3  @ADDFF64.P27
+W0 -W1  @MULFF.P28
+W0 -W2  @DIVFF48.P29
+W0 -W1  @DIVS3232A.P30
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2 -W3  @ADDFF.P1
+W2      @WRITE_PACKED_MEMORY.P2
+W2 -W3  @DIV3232B.P3
+W2 -W3  @MULFF.P4
+W2 -W3  @FLT.P5
+W2      @READ_PACKED_MEMORY.P6
+W2      @READ_ROM_MEMORY.P7
+W2 -W3  @DIVS3232A.P8
+W2 -W3  @MULS3232.P9
+W2 -W3  @DIVFF.P10
+W3 -W5  @FLT48.P1
+W3 -W5  @MULFF48.P2
+W3      @READ_PACKED_MEMORY.P3
+W3      @READ_ROM_MEMORY.P4
+W3 -W5  @ADDFF48.P5
+W3 -W5  @DIVFF48.P6
+W3      @WRITE_PACKED_MEMORY.P7
+W4 -W7  @MULFF64.P1
+W4 -W7  @DIVFF64.P2
+W4 -W7  @ADDFF64.P3
+W4 -W7  @FLT64.P4
+W4      @PRINTFD32_1161.P5
+630.6   C1OUT
+630.7   C2OUT
+800-827 pas_64
+828-84F qas_64
+850-87F pat_64
+880-8AF qat_64
+8B0-8B3 count_a
+8B4-8B7 count_b
+8B8-8BB count_z
+8BC-8BF direction
+8C0-8C3 posi
+8C4-8C7 K_Pz
+8C8-8CB K_Iz
+8CC-8CD s
+8CE-8CF p
+8D0-8D1 desired_value
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  INT_EXT_INPUT0
+000E22  INT_EXT_INPUT1
+000E48  INT_EXT_INPUT2
+000E6E  Init_Interrupts
+000E7C  Grip_Open
+000E86  @delay_ms1
+000E96  Grip_Close
+000EA0  @cinit1
+000EA0  MAIN
+000F12  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\
+
+Project Files:
+    project.c                                               [16-Nov-18 19:05  CRC=6F322039]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [26-Oct-18 08:25  CRC=2918F78D]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
+
+Source signature=6C1C62D0
+
+Units:
+    project (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      project.err
+    INHX8:       project.hex
+    Symbols:     project.sym
+    List:        project.lst
+    Debug/COFF:  project.cof
+    Project:     project.ccspjt
+    Call Tree:   project.tre
+    Statistics:  project.STA

@@ -1,6 +1,4 @@
->>> Warning 202 "serialcom.c" Line 15(6,11): Variable never used:   count
->>> Warning 202 "serialcom.c" Line 16(6,15): Variable never used:   direction
->>> Warning 202 "serialcom.c" Line 21(5,9): Variable never used:   posi
-      Memory usage:   ROM=4%      RAM=2% - 2%
-      0 Errors,  3 Warnings.
+>>> Warning 202 "serialcom.c" Line 41(6,10): Variable never used:   posi
+      Memory usage:   ROM=6%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
 Build Successful.
