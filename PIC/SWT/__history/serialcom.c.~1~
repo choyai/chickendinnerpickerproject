@@ -20,7 +20,7 @@ int getPackage = 0;
 char command_ID;
 int posi = 0;
 // char* print_float(float data){
-//    long intDist = data / 1;
+// 	long intDist = data / 1;
 //     long dotDist = (((intDist>>31)*-2)+1) * ((data * 1000.0f) - (intDist *
 //     1000));
 //     char stringFloat[20];
@@ -28,7 +28,7 @@ int posi = 0;
 //     return stringFloat;
 // }
 // void print_float(char* stringResult, float data){
-//    long intDist = data / 1;
+// 	long intDist = data / 1;
 //     long dotDist = (((intDist>>31)*-2)+1) * ((data * 1000.0f) - (intDist *
 //     1000));
 //     sprintf(stringResult, "%d.%d", intDist, dotDist);
@@ -121,8 +121,8 @@ int sumCheck() {
 void main() {
   disable_interrupts(GLOBAL);
 
-  clear_interrupt(INT_RDA); // recommend style coding to confirm everything clear before use
-      
+  clear_interrupt(
+      INT_RDA); // recommend style coding to confirm everything clear before use
   enable_interrupts(INT_RDA);
 
   enable_interrupts(GLOBAL);
