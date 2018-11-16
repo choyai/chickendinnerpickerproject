@@ -40,11 +40,8 @@ long count_b = 0;
 long count_z = 0;
 // long posi = 0;
 int u_a;
-int *a_u = &u_a;
 int u_b;
-int *b_u = &u_b;
 int u_z;
-int *z_u = &u_z;
 
 int s_a = 0;
 int s_b = 0;
@@ -241,11 +238,7 @@ void PID(long r, long count, long s, long p, int *u, float K_P, float K_I,
 //
 
 // Utilities
-int mergeInts(int MSB, int LSB) { 
-long a = (256 * MSB) + LSB;
-printf("merged %d and %d into: %d", MSB, LSB, a);
-return a;
- }
+int mergeInts(int MSB, int LSB) { return 256 * MSB + LSB; }
 //
 
 // COMMANDS//
@@ -282,13 +275,11 @@ void setPosAB() {
   long r_b = mergeInts((int)array[5], (int)array[6]);
   printf("r_b = %d", (int)r_b);
   while (abs(r_a - count_a) > tolerance && abs(r_b - count_b) > tolerance) {
-    PID(r_a, count_a, s_a, p_a, a_u, K_Pa, K_Ia, K_Da);
-    PID(r_b, count_b, s_b, p_b, b_u, K_Pb, K_Ib, K_Db);
-   Motor_a(u_a);
+    PID(r_a, count_a, s_a, p_a, &u_a, K_Pa, K_Ia, K_Da);
+    PID(r_b, count_b, s_b, p_b, &u_b, K_Pb, K_Ib, K_Db);
+    Motor_a(u_a);
     Motor_b(u_b);
   }
-  Motor_a(0);
-  Motor_b(0);
   printf("position = %d, %d\n", count_a, count_b);
   printf("done");
   getPackage = 0;
@@ -298,10 +289,9 @@ void setPosZ() {
   long r_z = mergeInts((int)array[3], (int)array[4]);
   printf("r_z = %d", (int)r_z);
   while (abs(r_z - count_z) > tolerance) {
-    PID(r_z, count_z, s_z, p_z, z_u, K_Pz, K_Iz, K_Dz);
-   Motor_z(u_z);
+    PID(r_z, count_z, s_z, p_z, &u_z, K_Pz, K_Iz, K_Dz);
   }
-  Motor_z(0);   
+  Motor_z(u_z);
   printf("position = %d\n", count_z);
   printf("done");
   getPackage = 0;
@@ -361,11 +351,10 @@ void main() {
   set_pwm_duty(3, 0);
   set_pwm_duty(2, 0);
   set_pwm_duty(1, 0);
-  setPosAB();   
-  //gripOpen();
-  //delay_ms(1000);
-  //gripClose();
-  //delay_ms(1000);
+  gripOpen();
+  delay_ms(1000);
+  gripClose();
+  delay_ms(1000);
   // printf("System Ready!\r\n");
   while (TRUE) {
     if (getPackage >= 1) {
