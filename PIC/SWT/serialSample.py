@@ -40,6 +40,8 @@ def setPosXY(x, y, ser):
     buffer = [255, 255, 1]
     a = int(np.sqrt(2) / 2 * (y - x))
     b = int(np.sqrt(2) / 2 * (y + x))
+    print("a = " + str(a))
+    print("b = " + str(b))
     buffer.extend(split_large_ints(a))
     buffer.extend(split_large_ints(b))
     buffer.append(0)
@@ -130,15 +132,26 @@ def split_large_ints(num):
     return [int(msB, 16), int(lsB, 16)]
 
 
-BAUDRATE = int(input("input baud rate: "))
-portName = "COM" + str(input("Port: COM"))
-serialDevice = serial.Serial()
-serialDevice.baudrate = BAUDRATE
-serialDevice.port = portName
-serialDevice.timeout = 1
-serialDevice.rts = 0
-serialDevice.dtr = 0
-serialDevice.open()
+try:
+    BAUDRATE = 9600
+    portName = "COM" + str(input("Port: COM"))
+    serialDevice = serial.Serial()
+    serialDevice.baudrate = BAUDRATE
+    serialDevice.port = portName
+    serialDevice.timeout = 1
+    serialDevice.rts = 0
+    serialDevice.dtr = 0
+    serialDevice.open()
+except:
+    BAUDRATE = int(input("input baud rate: "))
+    portName = "COM" + str(input("Port: COM"))
+    serialDevice = serial.Serial()
+    serialDevice.baudrate = BAUDRATE
+    serialDevice.port = portName
+    serialDevice.timeout = 1
+    serialDevice.rts = 0
+    serialDevice.dtr = 0
+    serialDevice.open()
 
 
 time.sleep(0.5)
