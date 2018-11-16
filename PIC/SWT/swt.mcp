@@ -33,6 +33,9 @@ file_005=.
 file_006=.
 file_007=.
 file_008=.
+file_009=.
+file_010=.
+file_011=.
 [GENERATED_FILES]
 file_000=no
 file_001=no
@@ -43,6 +46,9 @@ file_005=no
 file_006=no
 file_007=no
 file_008=no
+file_009=no
+file_010=no
+file_011=no
 [OTHER_FILES]
 file_000=no
 file_001=no
@@ -53,8 +59,11 @@ file_005=yes
 file_006=yes
 file_007=yes
 file_008=yes
+file_009=yes
+file_010=yes
+file_011=yes
 [FILE_INFO]
-file_000=project.c
+file_000=serialcom.c
 file_001=24FJ48GA002.h
 file_002=BL_Support.h
 file_003=serial.SYM
@@ -63,6 +72,9 @@ file_005=serial.STA
 file_006=serialcom.SYM
 file_007=serialcom.TRE
 file_008=serialcom.STA
+file_009=project.SYM
+file_010=project.TRE
+file_011=project.STA
 [SUITE_INFO]
 suite_guid={BA86BF99-4C07-4CE2-A9E7-C2A337910996}
 suite_state=
