@@ -68,7 +68,7 @@ try:
 except:
     cap = cv2.VideoCapture(1)
 
-startUpRoutine(serialDevice, cap)
+bag, image = startUpRoutine(serialDevice, cap)
 
 time.sleep(0.5)
 
