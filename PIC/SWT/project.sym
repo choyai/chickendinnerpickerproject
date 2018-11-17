@@ -1,0 +1,215 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W2  @ADDFF48.P1
+W0 -W1  @READ_ROM_MEMORY.P2
+W0 -W3  @DIV6464B.P3
+W0 -W3  @SI64TOF48.P4
+W0 -W1  @DIVFF.P5
+W0 -W1  @DIV3232B.P6
+W0 -W2  @F48TO64.P7
+W0 -W1  @FLT.P8
+W0 -W3  @FLT64.P9
+W0 -W2  @DIVFF48.P10
+W0 -W1  @SFTOI.P11
+W0 -W3  @F64TOI64.P12
+W0      @ITOF.P13
+W0 -W1  @MULFF.P14
+W0      @PRINTFD16_9600_5725_5724.P15
+W0 -W3  @DIVFF64.P16
+W0 -W1  @ADDFF.P17
+W0 -W3  @F64TOSI64.P18
+W0 -W1  @SDTOF.P19
+W0 -W3  @ADDFF64.P20
+W0 -W3  @I64TOF48.P21
+W0 -W3  @I64TOF64.P22
+W0 -W2  @MULFF48.P23
+W0      @delay_ms1.P24
+W0 -W2  @FLT48.P25
+W0      @delay_us1.P26
+W0 -W1  @PRINTFD32_9600_5725_5724.P27
+W0      @SITOF.P28
+W0 -W2  @F48TOSI64.P29
+W0 -W3  @SI64TOF64.P30
+W0 -W3  @PRINTF_F64_9600_5725_5724.P31
+W0 -W3  @MULFF64.P32
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2 -W3  @DIVFF.P1
+W2 -W3  @ADDFF.P2
+W2 -W3  @FLT.P3
+W2      @READ_ROM_MEMORY.P4
+W2      @READ_PACKED_MEMORY.P5
+W2 -W3  @DIV3232B.P6
+W2      @WRITE_PACKED_MEMORY.P7
+W2 -W3  @MULFF.P8
+W3      @WRITE_PACKED_MEMORY.P1
+W3 -W5  @DIVFF48.P2
+W3      @READ_ROM_MEMORY.P3
+W3 -W5  @ADDFF48.P4
+W3      @READ_PACKED_MEMORY.P5
+W3 -W5  @MULFF48.P6
+W3 -W5  @FLT48.P7
+W4      @PRINTFD16_9600_5725_5724.P1
+W4 -W7  @ADDFF64.P2
+W4 -W7  @DIV6464B.P3
+W4 -W7  @FLT64.P4
+W4 -W7  @DIVFF64.P5
+W4      @PRINTFD32_9600_5725_5724.P6
+W4 -W7  @MULFF64.P7
+W9 -W10 @PRINTF_F64_9600_5725_5724.P1
+630.6   C1OUT
+630.7   C2OUT
+800-827 pas_64
+828-84F qas_64
+850-87F pat_64
+880-8AF qat_64
+8B0-8B3 count_a
+8B4-8B7 count_b
+8B8-8BB count_z
+8BC-8BD u_a
+8BE-8BF a_u
+8C0-8C1 u_b
+8C2-8C3 b_u
+8C4-8C5 u_z
+8C6-8C7 z_u
+8C8-8C9 s_a
+8CA-8CB a_s
+8CC-8CD s_b
+8CE-8CF b_s
+8D0-8D1 s_z
+8D2-8D3 z_s
+8D4-8D5 p_a
+8D6-8D7 a_p
+8D8-8D9 p_b
+8DA-8DB b_p
+8DC-8DD p_z
+8DE-8DF z_p
+8E0-8E1 tolerance
+8E2-8E5 K_Pz
+8E6-8E9 K_Iz
+8EA-8ED K_Dz
+8EE-8F1 K_Pa
+8F2-8F5 K_Ia
+8F6-8F9 K_Da
+8FA-8FD K_Pb
+8FE-901 K_Ib
+902-905 K_Db
+906-907 direction_z
+908-909 direction_a
+90A-90B direction_b
+90C-91F array
+920     SM_id
+921     command_ID
+922-923 getPackage
+924-925 MAIN.received
+926     sumCheck.sum
+926-929 setPosZ.r_z
+926     intsToFloat.LSB
+926-929 setPosAB.r_a
+927     intsToFloat.hexadec
+927     sumCheck.checksum
+928-929 sumCheck.i
+928-92B intsToFloat.flo
+92A-92B Motor_z.u
+92A-92D setPosAB.r_b
+930-931 Motor_a.u
+930-931 Motor_b.u
+930-933 PID.r
+934-937 PID.count
+936-937 mergeInts.MSB
+938-93B PID.s
+938-939 mergeInts.LSB
+93A-93D mergeInts.a
+93C-93F PID.p
+940-941 PID.u
+942-945 PID.K_P
+946-949 PID.K_I
+94A-94D PID.K_D
+94E-951 PID.e
+98E-98F UART1_Isr.c
+992-993 SM_RxD.c
+2780-27FF Stack
+
+ROM Allocation:
+000DFC  @const1232.call
+000E24  @const1243.call
+000E4E  @const1252.call
+000E60  @const1255.call
+000E76  @const1257.call
+000E8C  @const1258.call
+000EAC  @const1262.call
+000EC2  @const1263.call
+000EDE  @const1285.call
+000EF2  INT_EXT_INPUT0
+000F24  INT_EXT_INPUT1
+000F56  INT_EXT_INPUT2
+000F88  SM_RxD
+000FF6  UART1_Isr
+001028  Init_Interrupts
+001036  sumCheck
+001068  @delay_ms1
+001078  Motor_z
+0010E4  Motor_a
+001150  Motor_b
+0011BC  @DIV3232B
+001200  @PRINTFD32_9600_5725_5724
+001314  setHome
+0013F0  @PRINTFD16_9600_5725_5724
+0014E6  mergeInts
+00157C  @SDTOF
+0015CA  @MULFF
+00168E  @ADDFF
+001838  @SFTOI
+001864  PID
+001904  setPosAB
+001AF2  setPosZ
+001BFC  gripClose
+001C26  gripOpen
+001C50  gripRotate
+001C6C  @ITOF
+001CA6  @DIVFF
+001D70  @F48TO64
+001DB6  @MULFF64
+001EC6  @F64TOI64
+001F1C  @DIV6464B
+001FB0  @PRINTF_F64_9600_5725_5724
+002132  intsToFloat
+0021F4  setAGains
+002240  setBGains
+00228C  setZGains
+0022D8  @cinit1
+0022D8  MAIN
+0023A6  @cinit2
+
+Project Directory:
+    C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\
+
+Project Files:
+    project.c                                               [17-Nov-18 15:38  CRC=CEB5FC1B]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
+    BL_Support.h                                            [26-Oct-18 08:25  CRC=2918F78D]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
+
+Source signature=CBA03EB2
+
+Units:
+    project (main)
+
+Compiler Settings:
+    Processor:      PIC24FJ48GA002
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+
+Output Files:
+    Errors:      project.err
+    INHX8:       project.hex
+    Symbols:     project.sym
+    List:        project.lst
+    Debug/COFF:  project.cof
+    Project:     project.ccspjt
+    Call Tree:   project.tre
+    Statistics:  project.STA

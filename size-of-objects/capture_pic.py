@@ -28,7 +28,7 @@ while(True):
         iter += 1
         cv2.imshow('img', gray)
     # quit on pressing 'q'
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    elif cv2.waitKey(1) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
 capt.release()
