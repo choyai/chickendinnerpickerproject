@@ -63,7 +63,7 @@ file_009=yes
 file_010=yes
 file_011=yes
 [FILE_INFO]
-file_000=serialcom.c
+file_000=project.c
 file_001=24FJ48GA002.h
 file_002=BL_Support.h
 file_003=serial.SYM

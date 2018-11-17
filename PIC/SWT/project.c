@@ -149,7 +149,7 @@ void SM_RxD(int c) {
       SM_id++;
     } else if (SM_id > 2) {
       array[SM_id] = c;
-      if (SM_id >= 8) {
+      if (SM_id >= 9) {
         getPackage = 1;
         SM_id = 0;
       } else {
@@ -247,11 +247,17 @@ void PID(long r, long count, long s, long p, int *u, float K_P, float K_I,
 //
 
 // Utilities
-int mergeInts(int MSB, int LSB) { 
-long a = (256 * MSB) + LSB;
-printf("merged %d and %d into: %d", MSB, LSB, a);
+int mergeInts(int MSB, int LSB) {
+long a = (256 * (int)(unsigned char)MSB) + (unsigned char)LSB;
+printf("merged %d and %d into: %d \n", MSB, LSB, a);
 return a;
  }
+
+float intsToFloat(unsigned char LSB, unsigned char hexadec){
+  float flo = (float)LSB + ((float)hexadec) / 256;
+  printf("merged %d and %d into: %0.2f\n", LSB, hexadec, flo);
+  return flo;
+}
 //
 
 // COMMANDS//
@@ -278,6 +284,7 @@ void setHome() {
   } while (input(limitSw_y) == 1);
   Motor_a(0);
   Motor_b(0);
+  printf("%d, %d, %d\n", count_a, count_b, count_z);
   count_a = 0;
   count_b = 0;
   count_z = 0;
@@ -287,9 +294,9 @@ void setHome() {
 
 void setPosAB() {
   long r_a = mergeInts((int)array[3], (int)array[4]);
-  printf("r_a = %d", (int)r_a);
+  printf("r_a = %d\n", (int)r_a);
   long r_b = mergeInts((int)array[5], (int)array[6]);
-  printf("r_b = %d", (int)r_b);
+  printf("r_b = %d\n", (int)r_b);
   while (abs(r_a - count_a) > tolerance || abs(r_b - count_b) > tolerance) {
     PID(r_a, count_a, a_s, a_p, a_u, K_Pa, K_Ia, K_Da);
     PID(r_b, count_b, b_s, b_p, b_u, K_Pb, K_Ib, K_Db);
@@ -309,10 +316,10 @@ void setPosZ() {
   while (abs(r_z - count_z) > tolerance) {
     PID(r_z, count_z, z_s, z_p, z_u, K_Pz, K_Iz, K_Dz);
    Motor_z(u_z);
-   printf("count_z : %d\n",count_z);
-   delay_ms(10);
+   // printf("count_z : %d\n",count_z);
+   // delay_ms(10);
   }
-  Motor_z(0);      
+  Motor_z(0);
   printf("position = %d\n", count_z);
   printf("done");
   getPackage = 0;
@@ -339,13 +346,38 @@ void gripRotate() {
   getPackage = 0;
 }
 
+void setAGains(){
+  K_Pa = intsToFloat((unsigned char)array[3], (unsigned char)array[4]);
+  K_Ia = intsToFloat((unsigned char)array[5], (unsigned char)array[6]);
+  K_Da = intsToFloat((unsigned char)array[7], (unsigned char)array[8]);
+  printf("done");
+  getPackage =0;
+}
+
+void setBGains(){
+  K_Pb = intsToFloat((unsigned char)array[3], (unsigned char)array[4]);
+  K_Ib = intsToFloat((unsigned char)array[5], (unsigned char)array[6]);
+  K_Db = intsToFloat((unsigned char)array[7], (unsigned char)array[8]);
+  printf("done");
+  getPackage =0;
+}
+
+void setZGains(){
+  K_Pz = intsToFloat((unsigned char)array[3], (unsigned char)array[4]);
+  K_Iz = intsToFloat((unsigned char)array[5], (unsigned char)array[6]);
+  K_Dz = intsToFloat((unsigned char)array[7], (unsigned char)array[8]);
+  printf("done");
+  getPackage =0;
+}
+
 int sumCheck() {
   int sum = 0;
-  int checksum = array[8];
-  for (int i = 0; i < 7; i++) {
-    sum = sum + array[i];
+  unsigned char checksum = array[9];
+  for (int i = 0; i < 8; i++) {
+    sum = sum + (int)(unsigned char)array[i];
   }
-  if (sum == checksum) {
+  sum = sum % 256;
+  if (sum == (unsigned int)checksum) {
     return 1;
   } else {
     return 0;
@@ -372,7 +404,7 @@ void main() {
   set_pwm_duty(3, 0);
   set_pwm_duty(2, 0);
   set_pwm_duty(1, 0);
-  //setPosAB();   
+  //setPosAB();
   //gripOpen();
   //delay_ms(1000);
   //gripClose();
@@ -403,6 +435,15 @@ void main() {
           break;
         case 5:
           gripRotate();
+          break;
+        case 6:
+          setAGains();
+          break;
+        case 7:
+          setBGains();
+          break;
+        case 8:
+          setZGains();
           break;
         default:
           printf("resend");

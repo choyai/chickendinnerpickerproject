@@ -26,7 +26,7 @@ def sendCommand(command, ser):
 
 
 def setHome(ser):
-    buffer = [255, 255, 0, 0, 0, 0, 0, 0]
+    buffer = [255, 255, 0, 0, 0, 0, 0, 0, 0]
     checksum = 0
     for i in buffer:
         checksum += i
@@ -41,7 +41,7 @@ def setPosXY(x, y, ser):
     buffer = [255, 255, 1]
     buffer.extend(split_large_ints(x))
     buffer.extend(split_large_ints(y))
-    buffer.append(0)
+    buffer.extend([0, 0])
     checksum = 0
     for i in buffer:
         checksum += i
@@ -55,7 +55,7 @@ def setPosXY(x, y, ser):
 def setPosZ(z, ser):
     buffer = [255, 255, 2]
     buffer.extend(split_large_ints(z))
-    buffer.extend([0, 0, 0])
+    buffer.extend([0, 0, 0, 0])
     checksum = 0
     for i in buffer:
         checksum += i
