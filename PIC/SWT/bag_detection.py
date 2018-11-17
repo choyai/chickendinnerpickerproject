@@ -211,7 +211,7 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
             #             0.65, (255, 255, 255), 2)
     return label, min_rect
 
-# returns an array of bags which are an array of type and minAreaRect and also the big_box
+# returns an array of bags which are an array of type and minAreaRect and also the big_box and image
 # too many levels of abstraction is killing me ugh
 
 
@@ -308,7 +308,7 @@ def get_bags(cap):
             # print(type)
             bags.append([type, min_rect])
         cv2.imshow("orig", orig)
-        return bags, big_box
+        return bags, big_box, orig
 
 
 # try:
@@ -323,6 +323,6 @@ def get_bags(cap):
 # # bgsub.apply(bg, learningRate=0.5)
 # # cv2.imshow("background", bg)
 # while(True):
-#     print(get_bags("colored", cap))
+#     print(get_bags(cap))
 #     if cv2.waitKey(1) & 0xFF == ord('q'):
 #         break

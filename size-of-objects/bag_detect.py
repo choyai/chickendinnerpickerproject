@@ -96,7 +96,7 @@ def colourCheck(im, lowH, lowS, lowV, upH, upS, upV, threshblue):
     #             bluecount += 1
     bluecount = np.asscalar(np.sum(res))
 
-    # print("blue: " + str(bluecount) + '<' + str(threshblue))
+    print("blue: " + str(bluecount) + '<' + str(threshblue))
     # print(str(type(bluecount)) + "," + str(type(threshblue)))
     if bluecount >= threshblue:
         return True
@@ -136,24 +136,24 @@ blue_1 = np.zeros((300, 512, 3), np.uint8)
 blue_2 = np.zeros((300, 512, 3), np.uint8)
 cv2.namedWindow('menu', cv2.WINDOW_NORMAL)
 cv2.createTrackbar('Gauss Kernel', 'menu', 3, 9, nothing)
-cv2.createTrackbar('Bilat Kernel', 'menu', 3, 9, nothing)
-cv2.createTrackbar('Bilat Area', 'menu', 100, 200, nothing)
-cv2.createTrackbar('Canny Low', 'menu', 80, 255, nothing)
-cv2.createTrackbar('Canny High', 'menu', 150, 255, nothing)
+cv2.createTrackbar('Bilat Kernel', 'menu', 5, 9, nothing)
+cv2.createTrackbar('Bilat Area', 'menu', 140, 200, nothing)
+cv2.createTrackbar('Canny Low', 'menu', 50, 255, nothing)
+cv2.createTrackbar('Canny High', 'menu', 139, 255, nothing)
 cv2.createTrackbar('MinArea', 'menu', 1700, 100000, nothing)
 cv2.createTrackbar('MaxArea', 'menu', 45000, 100000, nothing)
-cv2.createTrackbar('Filter Type', 'menu', 3, 6, nothing)
-cv2.createTrackbar('center_x', 'menu', 315, 640, nothing)
+cv2.createTrackbar('Filter Type', 'menu', 2, 6, nothing)
+cv2.createTrackbar('center_x', 'menu', 288, 640, nothing)
 cv2.createTrackbar('center_y', 'menu', 300, 480, nothing)
 cv2.createTrackbar('width', 'menu', 360, 640, nothing)
 cv2.createTrackbar('height', 'menu', 275, 480, nothing)
 cv2.createTrackbar('LowerH', 'menu', 25, 255, nothing)
-cv2.createTrackbar('LowerS', 'menu', 50, 255, nothing)
-cv2.createTrackbar('LowerV', 'menu', 50, 255, nothing)
+cv2.createTrackbar('LowerS', 'menu', 6, 255, nothing)
+cv2.createTrackbar('LowerV', 'menu', 25, 255, nothing)
 cv2.createTrackbar('UpperH', 'menu', 25, 255, nothing)
 cv2.createTrackbar('UpperS', 'menu', 255, 255, nothing)
 cv2.createTrackbar('UpperV', 'menu', 255, 255, nothing)
-cv2.createTrackbar('Threshold', 'menu', 9000, 60000, nothing)
+cv2.createTrackbar('Threshold', 'menu', 42000, 60000, nothing)
 cv2.createTrackbar('LowerBlueH', 'menu', 110, 180, nothing)
 cv2.createTrackbar('LowerBlueS', 'menu', 50, 255, nothing)
 cv2.createTrackbar('LowerBlueV', 'menu', 50, 255, nothing)
@@ -201,8 +201,8 @@ while(True):
     upperblueS = cv2.getTrackbarPos('UpperBlueS', 'menu')
     upperblueV = cv2.getTrackbarPos('UpperBlueV', 'menu')
     bluethresh = cv2.getTrackbarPos('ThreshBlue', 'menu')
-    print(str(lowblueH))
-    print("bluethresh :" + str(bluethresh))
+    # print(str(lowblueH))
+    # print("bluethresh :" + str(bluethresh))
 
     cv2.imshow('low', color_1)
     cv2.imshow('hi', color_2)
@@ -304,7 +304,7 @@ while(True):
     # perform Canny edge detection on all filters
     for i in range(len(filtered)):
         edged.append(cv2.Canny(filtered[i], LOW_edge, HIGH_edge))
-        edged[i] = cv2.dilate(edged[i], None, iterations=1)
+        edged[i] = cv2.dilate(edged[i], None, iterations=2)
         edged[i] = cv2.erode(edged[i], None, iterations=1)
         # cv2.imshow("dilated" + str(i) + str(num), edged[i])
     cv2.imshow("dilated" + str(3), edged[3])
@@ -352,9 +352,9 @@ while(True):
                 elif colour == True:
                     label = 'colored'
                 elif size == True:
-                    label = 'large_pebbles'
-                else:
                     label = 'small_pebbles'
+                else:
+                    label = 'large_pebbles'
             except Exception:
                 raise Exception
                 label = 'unknown'
