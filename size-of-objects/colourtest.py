@@ -89,15 +89,19 @@ def colourCheck(im, lowH, lowS, lowV, upH, upS, upV, threshblue):
     # cv2.imshow('mask', mask)
     cv2.imshow('bluecheck' + str(cX), res)
     # cv2.imshow('gray', gray)
-    bluecount = 0
-    for i in gray:
-        for j in i:
-            if j > 10:
-                bluecount += 1
+    # bluecount = 0
+    # for i in gray:
+    #     for j in i:
+    #         if j > 10:
+    #             bluecount += 1
+    bluecount = np.asscalar(np.sum(res))
+
+    print("blue: " + str(bluecount) + '<' + str(threshblue))
+    print(str(type(bluecount))+ "," + str(type(threshblue)))
     if bluecount >= threshblue:
-        print("blue: " + str(bluecount))
         return True
-    return False
+    else:
+        return False
 
 
 def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
@@ -110,15 +114,16 @@ def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
 
     # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_color, upper_color)
-    cv2.imshow('mask' + str(cX), mask)
     # Bitwise-AND mask and original image
-    # res = cv2.bitwise_and(im, im, mask=mask)
+    res = cv2.bitwise_and(im, im, mask=mask)
+    cv2.imshow('sizecheck' + str(cX), res)
     iteration = 0
-    for i in range(len(mask)):
-        for j in range(len(mask[i])):
-            if mask[i][j] > 0:
-                iteration += 1
-    print("size" + str(iteration) + ":  " + str(cX))
+    # for i in range(len(mask)):
+    #     for j in range(len(mask[i])):
+    #         if mask[i][j] > 0:
+    #             iteration += 1
+    iteration = np.asscalar(np.sum(res))
+    print("size" + str(cX) + ":  " + str(iteration))
     if iteration > thresh:
         return True
     else:
@@ -138,24 +143,24 @@ cv2.createTrackbar('Canny High', 'menu', 150, 255, nothing)
 cv2.createTrackbar('MinArea', 'menu', 1700, 100000, nothing)
 cv2.createTrackbar('MaxArea', 'menu', 45000, 100000, nothing)
 cv2.createTrackbar('Filter Type', 'menu', 3, 6, nothing)
-cv2.createTrackbar('center_x', 'menu', 320, 640, nothing)
+cv2.createTrackbar('center_x', 'menu', 315, 640, nothing)
 cv2.createTrackbar('center_y', 'menu', 300, 480, nothing)
-cv2.createTrackbar('width', 'menu', 400, 640, nothing)
-cv2.createTrackbar('height', 'menu', 300, 480, nothing)
+cv2.createTrackbar('width', 'menu', 360, 640, nothing)
+cv2.createTrackbar('height', 'menu', 275, 480, nothing)
 cv2.createTrackbar('LowerH', 'menu', 25, 255, nothing)
 cv2.createTrackbar('LowerS', 'menu', 50, 255, nothing)
 cv2.createTrackbar('LowerV', 'menu', 50, 255, nothing)
 cv2.createTrackbar('UpperH', 'menu', 25, 255, nothing)
 cv2.createTrackbar('UpperS', 'menu', 255, 255, nothing)
 cv2.createTrackbar('UpperV', 'menu', 255, 255, nothing)
-cv2.createTrackbar('Threshold', 'menu', 149, 5000, nothing)
+cv2.createTrackbar('Threshold', 'menu', 5000, 5000, nothing)
 cv2.createTrackbar('LowerBlueH', 'menu', 110, 180, nothing)
 cv2.createTrackbar('LowerBlueS', 'menu', 50, 255, nothing)
 cv2.createTrackbar('LowerBlueV', 'menu', 50, 255, nothing)
 cv2.createTrackbar('UpperBlueH', 'menu', 130, 220, nothing)
 cv2.createTrackbar('UpperBlueS', 'menu', 255, 255, nothing)
 cv2.createTrackbar('UpperBlueV', 'menu', 255, 255, nothing)
-cv2.createTrackbar('ThresBlue',  'menu', 30, 3000, nothing)
+cv2.createTrackbar('ThreshBlue',  'menu', 6000, 40000, nothing)
 
 period = 0.1
 nexttime = time.time() + period
@@ -190,7 +195,9 @@ while(True):
     upperblueH = cv2.getTrackbarPos('UpperBlueH', 'menu')
     upperblueS = cv2.getTrackbarPos('UpperBlueS', 'menu')
     upperblueV = cv2.getTrackbarPos('UpperBlueV', 'menu')
-    bluethresh = cv2.getTrackbarPos('Thresblue', 'menu')
+    bluethresh = cv2.getTrackbarPos('ThreshBlue', 'menu')
+    print(str(lowblueH))
+    print("bluethresh :" + str(bluethresh))
 
     cv2.imshow('low', color_1)
     cv2.imshow('hi', color_2)
@@ -339,9 +346,9 @@ while(True):
                     elif colour == True:
                         label = 'colored'
                     elif size == True:
-                        label = 'small_pebbles'
-                    else:
                         label = 'large_pebbles'
+                    else:
+                        label = 'small_pebbles'
                 except Exception:
                     raise Exception
                     label = 'unknown'
@@ -406,6 +413,7 @@ while(True):
         # for i in range(len(edged)):
         #     cv2.imshow('edged' + str(i) + str(num), edged[i])
     # WAITKEY sucks
+        cv2.waitKey(0)
     # if cv2.waitKey(1) & 0xFF == ord('x'):
     #     for i in gauss_args:
     #         i += 1
