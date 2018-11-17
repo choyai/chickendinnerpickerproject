@@ -70,11 +70,11 @@ def nothing(n):
     pass
 
 
-def colourCheck(im, threshblue):
+def colourCheck(im, lowH, lowS, lowV, upH, upS, upV, threshblue):
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
     # define range of blue color in HSV
-    lower_blue = np.array([110, 50, 50])
-    upper_blue = np.array([130, 255, 255])
+    lower_blue = np.array([lowH, lowS, lowV])
+    upper_blue = np.array([upH, upS, upV])
 
     # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_blue, upper_blue)
@@ -87,7 +87,7 @@ def colourCheck(im, threshblue):
 
     # cv2.imshow('frame', im)
     # cv2.imshow('mask', mask)
-    # cv2.imshow('res', res)
+    cv2.imshow('bluecheck' + str(cX), res)
     # cv2.imshow('gray', gray)
     bluecount = 0
     for i in gray:
@@ -95,7 +95,7 @@ def colourCheck(im, threshblue):
             if j > 10:
                 bluecount += 1
     if bluecount >= threshblue:
-        print(str(bluecount))
+        print("blue: " + str(bluecount))
         return True
     return False
 
@@ -118,7 +118,7 @@ def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
         for j in range(len(mask[i])):
             if mask[i][j] > 0:
                 iteration += 1
-    # print(str(iteration) + ":  " + str(cX))
+    print("size" + str(iteration) + ":  " + str(cX))
     if iteration > thresh:
         return True
     else:
@@ -127,6 +127,8 @@ def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
 
 color_1 = np.zeros((300, 512, 3), np.uint8)
 color_2 = np.zeros((300, 512, 3), np.uint8)
+blue_1 = np.zeros((300, 512, 3), np.uint8)
+blue_2 = np.zeros((300, 512, 3), np.uint8)
 cv2.namedWindow('menu', cv2.WINDOW_NORMAL)
 cv2.createTrackbar('Gauss Kernel', 'menu', 3, 9, nothing)
 cv2.createTrackbar('Bilat Kernel', 'menu', 3, 9, nothing)
@@ -136,10 +138,10 @@ cv2.createTrackbar('Canny High', 'menu', 150, 255, nothing)
 cv2.createTrackbar('MinArea', 'menu', 1700, 100000, nothing)
 cv2.createTrackbar('MaxArea', 'menu', 45000, 100000, nothing)
 cv2.createTrackbar('Filter Type', 'menu', 3, 6, nothing)
-cv2.createTrackbar('center_x', 'menu', 350, 640, nothing)
-cv2.createTrackbar('center_y', 'menu', 240, 480, nothing)
+cv2.createTrackbar('center_x', 'menu', 320, 640, nothing)
+cv2.createTrackbar('center_y', 'menu', 300, 480, nothing)
 cv2.createTrackbar('width', 'menu', 400, 640, nothing)
-cv2.createTrackbar('height', 'menu', 380, 480, nothing)
+cv2.createTrackbar('height', 'menu', 300, 480, nothing)
 cv2.createTrackbar('LowerH', 'menu', 25, 255, nothing)
 cv2.createTrackbar('LowerS', 'menu', 50, 255, nothing)
 cv2.createTrackbar('LowerV', 'menu', 50, 255, nothing)
@@ -147,7 +149,13 @@ cv2.createTrackbar('UpperH', 'menu', 25, 255, nothing)
 cv2.createTrackbar('UpperS', 'menu', 255, 255, nothing)
 cv2.createTrackbar('UpperV', 'menu', 255, 255, nothing)
 cv2.createTrackbar('Threshold', 'menu', 149, 5000, nothing)
-cv2.createTrackbar('ThresBlue', 'menu', 30, 3000, nothing)
+cv2.createTrackbar('LowerBlueH', 'menu', 110, 180, nothing)
+cv2.createTrackbar('LowerBlueS', 'menu', 50, 255, nothing)
+cv2.createTrackbar('LowerBlueV', 'menu', 50, 255, nothing)
+cv2.createTrackbar('UpperBlueH', 'menu', 130, 220, nothing)
+cv2.createTrackbar('UpperBlueS', 'menu', 255, 255, nothing)
+cv2.createTrackbar('UpperBlueV', 'menu', 255, 255, nothing)
+cv2.createTrackbar('ThresBlue',  'menu', 30, 3000, nothing)
 
 period = 0.1
 nexttime = time.time() + period
@@ -176,13 +184,26 @@ while(True):
     upS = cv2.getTrackbarPos('UpperS', 'menu')
     upV = cv2.getTrackbarPos('UpperV', 'menu')
     thresh = cv2.getTrackbarPos('Threshold', 'menu')
+    lowblueH = cv2.getTrackbarPos('LowerBlueH', 'menu')
+    lowblueS = cv2.getTrackbarPos('LowerBlueS', 'menu')
+    lowblueV = cv2.getTrackbarPos('LowerBlueV', 'menu')
+    upperblueH = cv2.getTrackbarPos('UpperBlueH', 'menu')
+    upperblueS = cv2.getTrackbarPos('UpperBlueS', 'menu')
+    upperblueV = cv2.getTrackbarPos('UpperBlueV', 'menu')
     bluethresh = cv2.getTrackbarPos('Thresblue', 'menu')
+
     cv2.imshow('low', color_1)
     cv2.imshow('hi', color_2)
+    cv2.imshow('bluelow', blue_1)
+    cv2.imshow('bluehigh', blue_2)
+    blue_1[:] = [lowblueH, lowblueS, lowblueV]
+    blue_2[:] = [upperblueH, upperblueS, upperblueV]
     color_1[:] = [lowH, lowS, lowV]
     color_2[:] = [upH, upS, upV]
     color_1 = cv2.cvtColor(color_1, cv2.COLOR_HSV2BGR)
     color_2 = cv2.cvtColor(color_2, cv2.COLOR_HSV2BGR)
+    blue_1 = cv2.cvtColor(blue_1, cv2.COLOR_HSV2BGR)
+    blue_2 = cv2.cvtColor(blue_2, cv2.COLOR_HSV2BGR)
 
     if HIGH_edge < LOW_edge:
         HIGH_edge = LOW_edge + 1
@@ -222,7 +243,7 @@ while(True):
 
     # Capture frame-by-frame
     for num in range(3):
-        frame = cv2.imread('kuy' + str(num) + '.jpg')
+        frame = cv2.imread('single' + str(num) + '.jpg')
         # ret, frame = cap.read()
         cv2.imshow("uncropped image" + str(num), frame)
         orig = frame.copy()
@@ -309,13 +330,14 @@ while(True):
                 cX = np.average(box[:, 0])
                 cY = np.average(box[:, 1])
                 try:
-                    colour = colourCheck(contour_im, bluethresh)
+                    colour = colourCheck(
+                        contour_im, lowblueH, lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
                     size = sizeCheck(contour_im, lowH, lowS,
                                      lowV, upH, upS, upV, thresh, cX)
                     if cX == big_box[1][0]:
                         label = 'box'
-                    #elif colour == True:
-                    #   label = 'colored'
+                    elif colour == True:
+                        label = 'colored'
                     elif size == True:
                         label = 'small_pebbles'
                     else:
