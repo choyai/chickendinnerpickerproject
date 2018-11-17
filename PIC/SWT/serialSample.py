@@ -156,6 +156,8 @@ def startUpRoutine(ser):
     setHome(ser)
     print('ready to start')
 
+# splits large ints into msb and lsb. Doesn't support ints larger than 16 bits
+
 
 def split_large_ints(num):
     # numstring = str(hex(num))
@@ -188,9 +190,10 @@ def split_floats(num):
     return [a, b]
 
 
+# Connect to PIC
 try:
     BAUDRATE = 9600
-    portName = "COM" + str(input("Port: COM"))
+    portName = "COM" + str(6)
     serialDevice = serial.Serial()
     serialDevice.baudrate = BAUDRATE
     serialDevice.port = portName
@@ -199,15 +202,26 @@ try:
     serialDevice.dtr = 0
     serialDevice.open()
 except:
-    BAUDRATE = int(input("input baud rate: "))
-    portName = "COM" + str(input("Port: COM"))
-    serialDevice = serial.Serial()
-    serialDevice.baudrate = BAUDRATE
-    serialDevice.port = portName
-    serialDevice.timeout = 1
-    serialDevice.rts = 0
-    serialDevice.dtr = 0
-    serialDevice.open()
+    try:
+        BAUDRATE = 9600
+        portName = "COM" + str(13)
+        serialDevice = serial.Serial()
+        serialDevice.baudrate = BAUDRATE
+        serialDevice.port = portName
+        serialDevice.timeout = 1
+        serialDevice.rts = 0
+        serialDevice.dtr = 0
+        serialDevice.open()
+    except:
+        BAUDRATE = int(input("input baud rate: "))
+        portName = "COM" + str(input("Port: COM"))
+        serialDevice = serial.Serial()
+        serialDevice.baudrate = BAUDRATE
+        serialDevice.port = portName
+        serialDevice.timeout = 1
+        serialDevice.rts = 0
+        serialDevice.dtr = 0
+        serialDevice.open()
 
 
 time.sleep(0.5)
