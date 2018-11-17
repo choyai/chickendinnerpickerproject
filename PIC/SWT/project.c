@@ -371,13 +371,13 @@ void setZGains(){
 }
 
 int sumCheck() {
-  int sum = 0;
-  unsigned char checksum = array[9];
-  for (int i = 0; i < 8; i++) {
-    sum = sum + (int)(unsigned char)array[i];
+  char sum = 0;
+  char checksum = array[9];
+  for (int i = 0; i < 9; i++) {
+    sum = sum +(char)array[i];
   }
-  sum = sum % 256;
-  if (sum == (unsigned int)checksum) {
+  sum = (char)sum;
+  if (sum == checksum) {
     return 1;
   } else {
     return 0;

@@ -2,7 +2,7 @@
    ÃÄMAIN  0/684  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄInit_Interrupts  0/14  Ram=0
-   ³  ÃÄsumCheck  0/64  Ram=3
+   ³  ÃÄsumCheck  0/50  Ram=2
    ³  ÃÄ@const1285  0/20  Ram=0
    ³  ÃÄsetHome  0/220  Ram=2
    ³  ³  ÃÄMotor_z  0/108  Ram=5

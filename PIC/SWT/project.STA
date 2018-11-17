@@ -1,6 +1,6 @@
 
-ROM used:   6546/33788 (19%)
-            6546/33788 (19%) including unused fragments
+ROM used:   6532/33788 (19%)
+            6532/33788 (19%) including unused fragments
 
             1.8 Average locations per line
             5.6 Average locations per statement
@@ -24,7 +24,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     68   1    8             @DIV3232B
 0     44   0    4             @SFTOI
 0     58   0    2             @ITOF
-0    196   1    8             @MULFF
+0    196   2    8             @MULFF
 0    426   3    8             @ADDFF
 0     86   1    0             @F64TOI64
 0    272   2    0             @MULFF64
@@ -65,7 +65,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     76   1    0   323  3.8  setAGains
 0     76   1    0   323  3.8  setBGains
 0     76   1    0   323  3.8  setZGains
-0     64   0    3   346  8.1  sumCheck
+0     50   0    2   302  6.8  sumCheck
 0    684   5    0  1373  8.2  MAIN
 0     20   0    0             @const1285
  Inline         0             @cinit1
@@ -74,10 +74,10 @@ Program metrics:
     Functions               23
     Statements              1169
     Comments                511
-    Volume (V)              15445
-    Difficulty (D)          95.6
-    Effort to implement (E) 1476614
-    Time to implement (T)   22 hours, 47 minutes
+    Volume (V)              15369
+    Difficulty (D)          94.7
+    Effort to implement (E) 1455477
+    Time to implement (T)   22 hours, 28 minutes
     Est Delivered Bugs (B)  4
     Cyclomatic Complexity   38
     Maintainability (MI)    116
@@ -87,7 +87,7 @@ Program metrics:
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  6038  24170  
+00DFC-083FA  6024  24184  
 
 
 

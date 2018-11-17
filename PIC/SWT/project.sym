@@ -103,14 +103,14 @@ W9 -W10 @PRINTF_F64_9600_5725_5724.P1
 921     command_ID
 922-923 getPackage
 924-925 MAIN.received
-926-927 sumCheck.sum
+926     sumCheck.sum
 926-929 setPosZ.r_z
 926     intsToFloat.LSB
 926-929 setPosAB.r_a
 927     intsToFloat.hexadec
+927     sumCheck.checksum
+928-929 sumCheck.i
 928-92B intsToFloat.flo
-928     sumCheck.checksum
-92A-92B sumCheck.i
 92A-92B Motor_z.u
 92A-92D setPosAB.r_b
 930-931 Motor_a.u
@@ -148,50 +148,50 @@ ROM Allocation:
 000FF6  UART1_Isr
 001028  Init_Interrupts
 001036  sumCheck
-001076  @delay_ms1
-001086  Motor_z
-0010F2  Motor_a
-00115E  Motor_b
-0011CA  @DIV3232B
-00120E  @PRINTFD32_9600_5725_5724
-001322  setHome
-0013FE  @PRINTFD16_9600_5725_5724
-0014F4  mergeInts
-00158A  @SDTOF
-0015D8  @MULFF
-00169C  @ADDFF
-001846  @SFTOI
-001872  PID
-001912  setPosAB
-001B00  setPosZ
-001C0A  gripClose
-001C34  gripOpen
-001C5E  gripRotate
-001C7A  @ITOF
-001CB4  @DIVFF
-001D7E  @F48TO64
-001DC4  @MULFF64
-001ED4  @F64TOI64
-001F2A  @DIV6464B
-001FBE  @PRINTF_F64_9600_5725_5724
-002140  intsToFloat
-002202  setAGains
-00224E  setBGains
-00229A  setZGains
-0022E6  @cinit1
-0022E6  MAIN
-0023B4  @cinit2
+001068  @delay_ms1
+001078  Motor_z
+0010E4  Motor_a
+001150  Motor_b
+0011BC  @DIV3232B
+001200  @PRINTFD32_9600_5725_5724
+001314  setHome
+0013F0  @PRINTFD16_9600_5725_5724
+0014E6  mergeInts
+00157C  @SDTOF
+0015CA  @MULFF
+00168E  @ADDFF
+001838  @SFTOI
+001864  PID
+001904  setPosAB
+001AF2  setPosZ
+001BFC  gripClose
+001C26  gripOpen
+001C50  gripRotate
+001C6C  @ITOF
+001CA6  @DIVFF
+001D70  @F48TO64
+001DB6  @MULFF64
+001EC6  @F64TOI64
+001F1C  @DIV6464B
+001FB0  @PRINTF_F64_9600_5725_5724
+002132  intsToFloat
+0021F4  setAGains
+002240  setBGains
+00228C  setZGains
+0022D8  @cinit1
+0022D8  MAIN
+0023A6  @cinit2
 
 Project Directory:
     C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\
 
 Project Files:
-    project.c                                               [17-Nov-18 08:46  CRC=D684CBC5]
+    project.c                                               [17-Nov-18 15:38  CRC=CEB5FC1B]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h [12-Nov-13 14:36  CRC=2B092578]
     BL_Support.h                                            [26-Oct-18 08:25  CRC=2918F78D]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h [28-Sep-12 11:35  CRC=546412C9]
 
-Source signature=D36F0E5C
+Source signature=CBA03EB2
 
 Units:
     project (main)
