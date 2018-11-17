@@ -70,7 +70,7 @@ def nothing(n):
     pass
 
 
-def colourCheck(im):
+def colourCheck(im, threshblue):
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
     # define range of blue color in HSV
     lower_blue = np.array([110, 50, 50])
@@ -89,22 +89,28 @@ def colourCheck(im):
     # cv2.imshow('mask', mask)
     # cv2.imshow('res', res)
     # cv2.imshow('gray', gray)
+    bluecount = 0
     for i in gray:
         for j in i:
             if j > 10:
-                return True
+                bluecount += 1
+    if bluecount >= threshblue:
+        print(str(bluecount))
+        return True
     return False
 
 
 def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
     # define range of blue color in HSV
-    lower_color = np.array([110, 50, 50])
-    upper_color = np.array([130, 255, 255])
+    # lower_color = np.array([110, 50, 50])
+    # upper_color = np.array([130, 255, 255])
+    lower_color = np.array([lowH, lowS, lowV])
+    upper_color = np.array([upH, upS, upV])
 
     # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_color, upper_color)
-
+    cv2.imshow('mask' + str(cX), mask)
     # Bitwise-AND mask and original image
     # res = cv2.bitwise_and(im, im, mask=mask)
     iteration = 0
@@ -112,7 +118,7 @@ def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
         for j in range(len(mask[i])):
             if mask[i][j] > 0:
                 iteration += 1
-    print(str(iteration) + ":  " + str(cX))
+    # print(str(iteration) + ":  " + str(cX))
     if iteration > thresh:
         return True
     else:
@@ -141,6 +147,7 @@ cv2.createTrackbar('UpperH', 'menu', 25, 255, nothing)
 cv2.createTrackbar('UpperS', 'menu', 255, 255, nothing)
 cv2.createTrackbar('UpperV', 'menu', 255, 255, nothing)
 cv2.createTrackbar('Threshold', 'menu', 149, 5000, nothing)
+cv2.createTrackbar('ThresBlue', 'menu', 30, 3000, nothing)
 
 period = 0.1
 nexttime = time.time() + period
@@ -168,7 +175,8 @@ while(True):
     upH = cv2.getTrackbarPos('UpperH', 'menu')
     upS = cv2.getTrackbarPos('UpperS', 'menu')
     upV = cv2.getTrackbarPos('UpperV', 'menu')
-    thresh = cv2.getTrackbarPos('threshold', 'menu')
+    thresh = cv2.getTrackbarPos('Threshold', 'menu')
+    bluethresh = cv2.getTrackbarPos('Thresblue', 'menu')
     cv2.imshow('low', color_1)
     cv2.imshow('hi', color_2)
     color_1[:] = [lowH, lowS, lowV]
@@ -213,8 +221,8 @@ while(True):
     # tgs = int(input("tgs"))
 
     # Capture frame-by-frame
-    for num in range(16):
-        frame = cv2.imread('single' + str(num) + '.jpg')
+    for num in range(3):
+        frame = cv2.imread('kuy' + str(num) + '.jpg')
         # ret, frame = cap.read()
         cv2.imshow("uncropped image" + str(num), frame)
         orig = frame.copy()
@@ -301,13 +309,13 @@ while(True):
                 cX = np.average(box[:, 0])
                 cY = np.average(box[:, 1])
                 try:
-                    colour = colourCheck(contour_im)
+                    colour = colourCheck(contour_im, bluethresh)
                     size = sizeCheck(contour_im, lowH, lowS,
                                      lowV, upH, upS, upV, thresh, cX)
                     if cX == big_box[1][0]:
                         label = 'box'
-                    elif colour == True:
-                        label = 'colored'
+                    #elif colour == True:
+                    #   label = 'colored'
                     elif size == True:
                         label = 'small_pebbles'
                     else:
