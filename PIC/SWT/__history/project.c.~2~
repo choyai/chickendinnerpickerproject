@@ -59,16 +59,16 @@ int *b_p = &p_b;
 int p_z = 0;
 int *z_p = &p_z;
 
-int tolerance = 50;
+int tolerance = 5;
 
 float K_Pz = 0.6;
 float K_Iz = 0.00;
 float K_Dz = 0.0;
-float K_Pa = 0.65;
-float K_Ia = 0.01;
+float K_Pa = 0.6;
+float K_Ia = 0.00;
 float K_Da = 0.0;
-float K_Pb = 0.65;
-float K_Ib = 0.01;
+float K_Pb = 0.6;
+float K_Ib = 0.00;
 float K_Db = 0.0;
 
 int direction_z = 0;
@@ -187,7 +187,7 @@ void Motor_z(int u) {
     output_bit(Motor_Zr, 1);
     output_bit(Motor_Zl, 1);
     set_pwm_duty(3, (int)(100));
-    delay_ms(200);
+    delay_ms(100);
   }
 }
 
@@ -210,7 +210,7 @@ void Motor_a(int u) {
     output_bit(Motor_Ar, 1);
     output_bit(Motor_Al, 1);
     set_pwm_duty(2, (int)(100));
-    delay_ms(200);
+    delay_ms(100);
   }
 }
 
@@ -233,7 +233,7 @@ void Motor_b(int u) {
     output_bit(Motor_Br, 1);
     output_bit(Motor_Bl, 1);
     set_pwm_duty(1, (int)(100));
-    delay_ms(200);
+    delay_ms(100);
   }
 }
 
@@ -241,7 +241,7 @@ void PID(long r, long count, long s, long p, int *u, float K_P, float K_I,
          float K_D) {
   long e = r - count;
   s = s + e;
-  *u = (K_P * e) + (K_I * s) + (K_D * (e - p));
+  *u = K_P * e + K_I * s + K_D * (e - p);
   p = e;
 }
 //
@@ -273,15 +273,15 @@ void setHome() {
   } while (input(limitSw_z) == 1);
   Motor_z(0);
   do {
-    Motor_a(-100);
-    Motor_b(-100);
-  } while (input(limitSw_y) == 1);
-  Motor_a(0);
-  Motor_b(0);
-  do {
     Motor_a(100);
     Motor_b(-100);
   } while (input(limitSw_x) == 1);
+  Motor_a(0);
+  Motor_b(0);
+  do {
+    Motor_a(-100);
+    Motor_b(-100);
+  } while (input(limitSw_y) == 1);
   Motor_a(0);
   Motor_b(0);
   printf("%d, %d, %d\n", count_a, count_b, count_z);
@@ -313,7 +313,7 @@ void setPosAB() {
 void setPosZ() {
   long r_z = mergeInts((int)array[3], (int)array[4]);
   printf("r_z = %d", (int)r_z);
-  while (abs(r_z - count_z) > 20) {
+  while (abs(r_z - count_z) > tolerance) {
     PID(r_z, count_z, z_s, z_p, z_u, K_Pz, K_Iz, K_Dz);
    Motor_z(u_z);
    // printf("count_z : %d\n",count_z);
@@ -335,17 +335,13 @@ void gripClose() {
 
 void gripOpen() {
   setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
-  set_pwm_duty(5, 4200);
+  set_pwm_duty(5, 4000);
   delay_ms(500);
   printf("done");
   getPackage = 0;
 }
 
 void gripRotate() {
-  int angle = mergeInts((int)array[3], (int)array[4]);
-  setup_compare(4, COMPARE_PWM | COMPARE_TIMER2);
-  set_pwm_duty(4, (int)(((angle*0.1)+12)*80));
-  delay_ms(500);   
   printf("done");
   getPackage = 0;
 }
@@ -401,15 +397,13 @@ void main() {
   enable_interrupts(GLOBAL);
   setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, 200);
   setup_timer2(TMR_INTERNAL | TMR_DIV_BY_8, 8000);
+  setup_timer1(TMR_INTERNAL | TMR_DIV_BY_8, 6666);
   setup_compare(3, COMPARE_PWM | COMPARE_TIMER3);
   setup_compare(2, COMPARE_PWM | COMPARE_TIMER3);
   setup_compare(1, COMPARE_PWM | COMPARE_TIMER3);
   set_pwm_duty(3, 0);
   set_pwm_duty(2, 0);
   set_pwm_duty(1, 0);
-  count_a = 0;
-  count_b = 0;
-  count_z = 0;   
   //setPosAB();
   //gripOpen();
   //delay_ms(1000);
