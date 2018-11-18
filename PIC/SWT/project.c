@@ -59,7 +59,9 @@ int *b_p = &p_b;
 int p_z = 0;
 int *z_p = &p_z;
 
-int tolerance = 50;
+int tolerance_a = 50;
+int tolerance_b = 50;
+int tolerance_z = 50;
 
 float K_Pz = 0.6;
 float K_Iz = 0.00;
@@ -303,7 +305,7 @@ void setPosAB() {
   }
   printf("r_a = %d\n", (int)r_a);
   printf("r_b = %d\n", (int)r_b);
-  while (abs(r_a - count_a) > tolerance || abs(r_b - count_b) > tolerance) {
+  while (abs(r_a - count_a) > tolerance_a || abs(r_b - count_b) > tolerance_b) {
     PID(r_a, count_a, a_s, a_p, a_u, K_Pa, K_Ia, K_Da);
     PID(r_b, count_b, b_s, b_p, b_u, K_Pb, K_Ib, K_Db);
     Motor_a(u_a);
@@ -319,7 +321,7 @@ void setPosAB() {
 void setPosZ() {
   long r_z = mergeInts((int)array[3], (int)array[4]);
   printf("r_z = %d", (int)r_z);
-  while (abs(r_z - count_z) > 20) {
+  while (abs(r_z - count_z) > tolerance_z) {
     PID(r_z, count_z, z_s, z_p, z_u, K_Pz, K_Iz, K_Dz);
     Motor_z(u_z);
     // printf("count_z : %d\n",count_z);
@@ -376,6 +378,14 @@ void setZGains() {
   K_Pz = intsToFloat((unsigned char)array[3], (unsigned char)array[4]);
   K_Iz = intsToFloat((unsigned char)array[5], (unsigned char)array[6]);
   K_Dz = intsToFloat((unsigned char)array[7], (unsigned char)array[8]);
+  printf("done");
+  getPackage = 0;
+}
+
+void setTolerances(){
+  tolerance_a = mergeInts((int)array[3], (int)array[4]);
+  tolerance_b = mergeInts((int)array[5], (int)array[6]);
+  tolerance_z = mergeInts((int)array[7], (int)array[8]);
   printf("done");
   getPackage = 0;
 }
@@ -456,6 +466,9 @@ void main() {
           break;
         case 8:
           setZGains();
+          break;
+        case 9:
+          setTolerances();
           break;
         default:
           printf("resend");

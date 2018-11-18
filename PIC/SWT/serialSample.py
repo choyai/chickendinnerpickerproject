@@ -16,15 +16,21 @@ def startUpRoutine(ser, cap):
     setHome(ser)
     gripClose(ser)
     gripRotate(0, ser)
+    ret, frame = cap.read()
     while(1):
         try:
-            bags, box, image = get_bags(cap)
+            bags, box, image = get_bags(frame)
             print('ready to start')
             cv2.imshow("bg", image)
             # cv2.waitKey(0)
             return box, image
         except:
             pass
+# def handleBag(ser, desired_type, bag_list, pixelsPerMetric):
+#     gripClose(ser)
+#     setHome(ser)
+#     gripRotate(0, ser)
+#
 
 
 # connect to video
@@ -71,6 +77,12 @@ except:
 
 
 box, image = startUpRoutine(serialDevice, cap)
+# set up stuff here then
+bag_placements = {
+    '1': [],
+    '2': [],
+    '3': [],
+}
 pixelsPerMetric = box[2]
 Xbox, Ybox = box[1]
 center_x = Xbox - pixelsPerMetric * 50 + 290 - 180
@@ -92,9 +104,16 @@ rectangle = [(center_x, center_y), (roi_width, roi_height), box[4][2]]
 time.sleep(0.5)
 
 startTime = time.time()
+desired_type = input(
+    "input desired bag type:\ncolored\nlarge_pebbles\nsmall_pebbles\n")
+placement = input("input desired bag placement:\n1\n2\n3\n")
+bag_list = []
+
 while(1):
     ret, frame = cap.read()
+    roted = imutils.rotate(frame, angle=rectangle[2])
     cv2.imshow("uncropped", frame)
+    cv2.imshow("roted", roted)
     if serialDevice.inWaiting() > 0:
         # data = serialDevice.read(1)
         # print("data =", ord(data))
@@ -141,9 +160,12 @@ while(1):
         elif keyinput == 'manual':
             manual_command = input("enter manual command:")
             eval(manual_command)
+        elif keyinput == 'tol':
+            setTolerances(serialDevice)
         elif keyinput == 'bags':
             baglist, bowox, labeled_image = get_bags(
-                cap, center_x, center_y, roi_width, roi_height)
+                roted, center_x, center_y, roi_width, roi_height)
+            bag_list.extend(baglist)
             cv2.imshow('current', labeled_image)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

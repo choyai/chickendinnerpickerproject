@@ -224,7 +224,7 @@ roi_height = np.float32(275)
 def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
 
 
-def get_bags(cap, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
+def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
     g_kernel = 3
     bi_kernel = 4
     bi_area = 100
@@ -251,7 +251,6 @@ def get_bags(cap, center_x=center_x, center_y=center_y, roi_width=roi_width, roi
     gauss_args = [g_kernel, g_kernel]
     bilat_args = [bi_kernel, bi_area, bi_area]
 
-    ret, frame = cap.read()
     # cv2.imshow("uncropped image", frame)
     orig = frame.copy()
     roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),

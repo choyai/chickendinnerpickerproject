@@ -154,6 +154,28 @@ def setZGains(K_P, K_I, K_D, ser):
     print(buffer)
     sendCommand(buffer, ser)
 
+
+def setTolerances(ser):
+    buffer = [255, 255, 9]
+    tolerances = []
+    for al in ['a', 'b', 'z']:
+        while(1):
+            try:
+                tolerance = (int(input("set tolerance" + al + ": ")))
+                buffer.extend(split_large_ints(tolerance))
+                break
+            except:
+                print("try again")
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
 # splits large ints into msb and lsb. Doesn't support ints larger than 16 bits
 
 
