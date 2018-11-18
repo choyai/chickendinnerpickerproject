@@ -8,6 +8,7 @@ import cv2
 import time
 
 width = 200
+height = 200
 
 
 def midpoint(ptA, ptB):
@@ -60,8 +61,11 @@ def find_box(contours, max_area, image):
     (tl, tr, br, bl) = box
     (tlblX, tlblY) = midpoint(tl, bl)
     (trbrX, trbrY) = midpoint(tr, br)
+    (tltrX, tltrY) = midpoint(tl, tr)
+    (blbrX, blbrY) = midpoint(bl, br)
     D = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
-    refObj = (box, (cX, cY), D / width, box_contour, min_rect)
+    hoit = dist.euclidean((blbrX, blbrY), (tltrX, tltrY))
+    refObj = (box, (cX, cY), D / width, box_contour, min_rect, hoit / height)
     pixelsPerMetric = D / width
     return refObj
 
@@ -311,7 +315,8 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
                                          lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
             # important!!!!
             # print(type)
-            bags.append([type, min_rect])
+            if type is not 'box':
+                bags.append([type, min_rect])
         # cv2.imshow("orig", orig)
         return bags, big_box, orig
 

@@ -161,7 +161,7 @@ def setTolerances(ser):
     for al in ['a', 'b', 'z']:
         while(1):
             try:
-                tolerance = (int(input("set tolerance" + al + ": ")))
+                tolerance = (int(input("set tolerance_" + al + ": ")))
                 buffer.extend(split_large_ints(tolerance))
                 break
             except:
@@ -174,7 +174,6 @@ def setTolerances(ser):
     print('sending ')
     print(buffer)
     sendCommand(buffer, ser)
-
 
 # splits large ints into msb and lsb. Doesn't support ints larger than 16 bits
 
