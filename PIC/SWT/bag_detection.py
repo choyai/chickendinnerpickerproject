@@ -66,7 +66,7 @@ def find_box(contours, max_area, image):
     D = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
     hoit = dist.euclidean((blbrX, blbrY), (tltrX, tltrY))
     refObj = (box, (cX, cY), D / width, box_contour, min_rect, hoit / height)
-    print(hoit/height)
+    print(hoit / height)
     pixelsPerMetric = D / width
     return refObj
 
@@ -221,15 +221,15 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
 # too many levels of abstraction is killing me ugh
 
 
-center_x = np.float32(290)
-center_y = np.float32(300)
-roi_width = np.float32(360)
-roi_height = np.float32(275)
+center_x = np.float32(270)
+center_y = np.float32(250)
+roi_width = np.float32(370)
+roi_height = np.float32(315)
 
 def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
 
 
-def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height, cool_box = None):
+def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height, cool_box=None):
     g_kernel = 3
     bi_kernel = 4
     bi_area = 100
@@ -261,9 +261,6 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
     roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
                 int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
     now = time.time()
-
-    if cool_box is not None:
-        cv2.drawContours(roi, [cool_box[0].astype("int")], -1, (0, 0, 0), 2)
 
     cv2.imshow('roi', roi)
 
@@ -311,6 +308,7 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
         # (cnts, _) = contours.sort_contours(cnts)
         orig = image.copy()
         big_box = find_box(cnts, max_area, image)
+
         bags = []
         for c in cnts:
             if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
