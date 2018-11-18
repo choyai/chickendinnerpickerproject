@@ -42,14 +42,15 @@ def find_box(contours, max_area, image):
             box_contour = c
             # print(cv2.contourArea(box_contour))
     box = cv2.minAreaRect(box_contour)
+    min_rect = box
     straight_rect = cv2.boundingRect(box_contour)
     box_im = image[straight_rect[1]:straight_rect[1] + straight_rect[3],
                    straight_rect[0]: straight_rect[0] + straight_rect[2]]
     # print(box_im)
-    try:
-        cv2.imshow('box', box_im)
-    except Exception:
-        raise Exception
+    # try:
+    #     # cv2.imshow('box', box_im)
+    # except Exception:
+    #     raise Exception
     box = cv2.cv.BoxPoints(
         box) if imutils.is_cv2() else cv2.boxPoints(box)
     box = np.array(box, dtype="int")
@@ -60,7 +61,7 @@ def find_box(contours, max_area, image):
     (tlblX, tlblY) = midpoint(tl, bl)
     (trbrX, trbrY) = midpoint(tr, br)
     D = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
-    refObj = (box, (cX, cY), D / width, box_contour)
+    refObj = (box, (cX, cY), D / width, box_contour, min_rect)
     pixelsPerMetric = D / width
     return refObj
 
@@ -115,7 +116,7 @@ def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
     mask = cv2.inRange(hsv, lower_color, upper_color)
     # Bitwise-AND mask and original image
     res = cv2.bitwise_and(im, im, mask=mask)
-    cv2.imshow('sizecheck' + str(cX), res)
+    # cv2.imshow('sizecheck' + str(cX), res)
     iteration = 0
     # for i in range(len(mask)):
     #     for j in range(len(mask[i])):
@@ -166,7 +167,7 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
     except Exception:
         raise Exception
         label = 'unknown'
-    cv2.imshow(label + str(int(cX)), contour_im)
+    # cv2.imshow(label + str(int(cX)), contour_im)
 
     cv2.drawContours(orig, [box.astype("int")], -1, (0, 255, 0), 2)
     if big_box is not None:
@@ -215,19 +216,23 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
 # too many levels of abstraction is killing me ugh
 
 
-def get_bags(cap):
+center_x = np.float32(290)
+center_y = np.float32(300)
+roi_width = np.float32(360)
+roi_height = np.float32(275)
+
+def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
+
+
+def get_bags(cap, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
     g_kernel = 3
-    bi_kernel = 5
-    bi_area = 140
+    bi_kernel = 4
+    bi_area = 100
     min_area = 1700
     max_area = 45000
     LOW_edge = 50
     HIGH_edge = 139
     current_filter = 2
-    center_x = 288
-    center_y = 300
-    roi_width = 360
-    roi_height = 275
     lowH = 25
     lowS = 6
     lowV = 25
@@ -247,11 +252,12 @@ def get_bags(cap):
     bilat_args = [bi_kernel, bi_area, bi_area]
 
     ret, frame = cap.read()
-    cv2.imshow("uncropped image", frame)
+    # cv2.imshow("uncropped image", frame)
     orig = frame.copy()
-    roi = frame[int(center_y - roi_height / 2): int(center_y + roi_height / 2),
-                int(center_x - roi_width / 2): int(center_x + roi_width / 2)]
+    roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
+                int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
     now = time.time()
+    cv2.imshow('roi', roi)
 
     image = roi
 
@@ -282,8 +288,8 @@ def get_bags(cap):
     # perform Canny edge detection on all filters
     for i in range(len(filtered)):
         edged.append(cv2.Canny(filtered[i], LOW_edge, HIGH_edge))
-        edged[i] = cv2.dilate(edged[i], None, iterations=2)
-        edged[i] = cv2.erode(edged[i], None, iterations=2)
+        edged[i] = cv2.dilate(edged[i], None, iterations=1)
+        edged[i] = cv2.erode(edged[i], None, iterations=1)
         # cv2.imshow("dilated" + str(i) + str(num), edged[i])
     cv2.imshow("dilated" + str(3), edged[3])
 
@@ -307,7 +313,7 @@ def get_bags(cap):
             # important!!!!
             # print(type)
             bags.append([type, min_rect])
-        cv2.imshow("orig", orig)
+        # cv2.imshow("orig", orig)
         return bags, big_box, orig
 
 

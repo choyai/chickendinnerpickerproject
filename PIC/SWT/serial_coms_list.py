@@ -14,10 +14,10 @@ from bag_detection import get_bags
 def sendCommand(command, ser):
     ser.write(bytes(command))
     while(1):
-        if serialDevice.inWaiting() > 0:
+        if ser.inWaiting() > 0:
             # data = serialDevice.read(1)
             # print("data =", ord(data))
-            response = serialDevice.readline().decode('utf-8')
+            response = ser.readline().decode('utf-8')
             print(response)
             if response == 'resend':
                 ser.write(bytes(command))
@@ -43,9 +43,11 @@ def setPosXY(x, y, ser):
     b = int(np.sqrt(2) / 2 * (y + x))
     print("a = " + str(a))
     print("b = " + str(b))
-    buffer.extend(split_large_ints(a))
-    buffer.extend(split_large_ints(b))
-    buffer.extend([0, 0])
+    a_sign = 0 if a >= 0 else 1
+    b_sign = 0 if b >= 0 else 1
+    buffer.extend(split_large_ints(abs(a)))
+    buffer.extend(split_large_ints(abs(b)))
+    buffer.extend([a_sign, b_sign])
     checksum = 0
     for i in buffer:
         checksum += i

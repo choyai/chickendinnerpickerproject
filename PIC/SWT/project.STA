@@ -1,35 +1,38 @@
 
-ROM used:   6532/33788 (19%)
-            6532/33788 (19%) including unused fragments
+ROM used:   7338/33788 (22%)
+            7338/33788 (22%) including unused fragments
 
-            1.8 Average locations per line
-            5.6 Average locations per statement
+            2.0 Average locations per line
+            6.2 Average locations per statement
 
 RAM used:   420/8192 (5%) at main() level
-            531/8192 (6%) worst case
+            532/8192 (6%) worst case
 
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  457   248  21  project.c
+  469   256  22  project.c
   862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
    32     0   0  BL_Support.h
- 2229   921  79  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+ 2229   921  78  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
 ----- -----
- 3580  1169 Total
+ 3592  1177 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     68   1    8             @DIV3232B
+0     68   0    8             @DIV3232B
 0     44   0    4             @SFTOI
 0     58   0    2             @ITOF
-0    196   2    8             @MULFF
+0    196   1    8             @MULFF
 0    426   3    8             @ADDFF
 0     86   1    0             @F64TOI64
 0    272   2    0             @MULFF64
-0    202   2    8             @DIVFF
-0     70   1    0             @F48TO64
+0     86   1    0             @F64TOSI64
+0    100   1    0             @SI64TOF64
+0    494   3    8             @ADDFF64
+0    202   1    8             @DIVFF
+0     70   0    0             @F48TO64
 0     16   0    2             @delay_ms1
 0     50   0    0    66  2.9  INT_EXT_INPUT0
 0     50   0    0    66  2.9  INT_EXT_INPUT1
@@ -40,7 +43,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0    108   1    5   709  5.6  Motor_z
 0    108   1    5   709  5.6  Motor_a
 0    108   1    5   709  5.6  Motor_b
-0    160   1   41   315  4.7  PID
+0    160   1   41   331  4.7  PID
 0     78   1    4             @SDTOF
 0    150   1   11   181  4.2  mergeInts
 0     40   0    0             @const1232
@@ -50,36 +53,35 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     42   0    0             @const1243
 0    148   1    0             @DIV6464B
 0    386   3    0             @PRINTF_F64_9600_5725_5724
-0    220   2    2   930  4.8  setHome
+0    220   1    2   930  4.8  setHome
 0     18   0    0             @const1252
-0    494   4    9   860  5.2  setPosAB
-0     22   0    0             @const1255
+0    546   4   13  1101  6.4  setPosAB
+0     22   0    0             @const1256
 0     22   0    0             @const1257
 0     32   0    0             @const1258
-0    266   2    9   428  4.4  setPosZ
+0    192   1    9   361  4.4  setPosZ
 0     22   0    0             @const1262
-0     28   0    0             @const1263
 0     42   0    0   125  2.4  gripClose
 0     42   0    0   125  2.4  gripOpen
-0     28   0    0    35  1.1  gripRotate
+0    194   1   11   290  4.3  gripRotate
 0     76   1    0   323  3.8  setAGains
 0     76   1    0   323  3.8  setBGains
 0     76   1    0   323  3.8  setZGains
 0     50   0    2   302  6.8  sumCheck
-0    684   5    0  1373  8.2  MAIN
-0     20   0    0             @const1285
+0    694   5    0  1405  8.2  MAIN
+0     20   0    0             @const1284
  Inline         0             @cinit1
 
 Program metrics:
     Functions               23
-    Statements              1169
-    Comments                511
-    Volume (V)              15369
-    Difficulty (D)          94.7
-    Effort to implement (E) 1455477
-    Time to implement (T)   22 hours, 28 minutes
-    Est Delivered Bugs (B)  4
-    Cyclomatic Complexity   38
+    Statements              1177
+    Comments                513
+    Volume (V)              16203
+    Difficulty (D)          98.5
+    Effort to implement (E) 1595765
+    Time to implement (T)   24 hours, 38 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   40
     Maintainability (MI)    116
 
  Segment     Used  Free
@@ -87,7 +89,7 @@ Program metrics:
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  6024  24184  
+00DFC-083FA  6830  23378  
 
 
 

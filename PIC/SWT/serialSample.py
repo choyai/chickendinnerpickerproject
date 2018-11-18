@@ -8,23 +8,31 @@ import cv2
 import serial
 import time
 import struct
-from bag_detection import get_bags
+from bag_detection import *
 from serial_coms_list import *
 
 
 def startUpRoutine(ser, cap):
     setHome(ser)
     gripClose(ser)
-    gripRotate(0)
-    while(1)
-       try:
+    gripRotate(0, ser)
+    while(1):
+        try:
             bags, box, image = get_bags(cap)
             print('ready to start')
+            cv2.imshow("bg", image)
+            # cv2.waitKey(0)
             return box, image
         except:
             pass
 
 
+# connect to video
+
+try:
+    cap = cv2.VideoCapture(0)
+except:
+    cap = cv2.VideoCapture(1)
 # Connect to PIC
 try:
     BAUDRATE = 9600
@@ -61,19 +69,32 @@ except:
         serialDevice.open()
         print('connected to pic')
 
-# connect to video
 
-try:
-    cap = cv2.VideoCapture(0)
-except:
-    cap = cv2.VideoCapture(1)
+box, image = startUpRoutine(serialDevice, cap)
+pixelsPerMetric = box[2]
+Xbox, Ybox = box[1]
+center_x = Xbox - pixelsPerMetric * 50 + 290 - 180
+center_y = Ybox - pixelsPerMetric * 50 + 300 - 137.5
+roi_width = pixelsPerMetric * 350
+roi_height = pixelsPerMetric * 350
+rectangle = [(center_x, center_y), (roi_width, roi_height), box[4][2]]
 
-bag, image = startUpRoutine(serialDevice, cap)
+#
+# print("pixpermil" + str(pixelsPerMetric))
+# print(type(roi_height))
+# print(int(np.asscalar(center_x)))
+# print(type(int(np.asscalar(center_x))))
+# print("cX: " + str(center_x))
+# print("cY: " + str(center_y))
+# print("roi_width: " + str(roi_width))
+# print("roi_height: " + str(roi_height))
 
 time.sleep(0.5)
 
 startTime = time.time()
 while(1):
+    ret, frame = cap.read()
+    cv2.imshow("uncropped", frame)
     if serialDevice.inWaiting() > 0:
         # data = serialDevice.read(1)
         # print("data =", ord(data))
@@ -117,5 +138,14 @@ while(1):
             K_Iz = float(input("input K_Iz:"))
             K_Dz = float(input("input K_Dz:"))
             setZGains(K_Pz, K_Iz, K_Dz, serialDevice)
+        elif keyinput == 'manual':
+            manual_command = input("enter manual command:")
+            eval(manual_command)
+        elif keyinput == 'bags':
+            baglist, bowox, labeled_image = get_bags(
+                cap, center_x, center_y, roi_width, roi_height)
+            cv2.imshow('current', labeled_image)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 serialDevice.close()
 print("end")

@@ -1,9 +1,9 @@
 ÀÄproject
-   ÃÄMAIN  0/684  Ram=0
+   ÃÄMAIN  0/694  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄInit_Interrupts  0/14  Ram=0
    ³  ÃÄsumCheck  0/50  Ram=2
-   ³  ÃÄ@const1285  0/20  Ram=0
+   ³  ÃÄ@const1284  0/20  Ram=0
    ³  ÃÄsetHome  0/220  Ram=2
    ³  ³  ÃÄMotor_z  0/108  Ram=5
    ³  ³  ³  ÀÄ@delay_ms1  0/16  Ram=2
@@ -32,7 +32,7 @@
    ³  ³  ÃÄ@PRINTFD32_9600_5725_5724  0/276  Ram=0
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄ@const1252  0/18  Ram=0
-   ³  ÃÄsetPosAB  0/494  Ram=9
+   ³  ÃÄsetPosAB  0/546  Ram=13
    ³  ³  ÃÄmergeInts  0/150  Ram=11
    ³  ³  ³  ÃÄ@const1232  0/40  Ram=0
    ³  ³  ³  ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
@@ -41,10 +41,10 @@
    ³  ³  ³  ÃÄ@const1232  0/40  Ram=0
    ³  ³  ³  ÀÄ@PRINTFD32_9600_5725_5724  0/276  Ram=0
    ³  ³  ³     ÀÄ*
-   ³  ³  ÃÄ@const1255  0/22  Ram=0
-   ³  ³  ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
    ³  ³  ÃÄmergeInts  0/150  Ram=11
    ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@const1256  0/22  Ram=0
+   ³  ³  ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
    ³  ³  ÃÄ@const1257  0/22  Ram=0
    ³  ³  ÃÄ@PRINTFD16_9600_5725_5724  0/246  Ram=0
    ³  ³  ÃÄPID  0/160  Ram=41
@@ -73,7 +73,7 @@
    ³  ³  ÃÄ@PRINTFD32_9600_5725_5724  0/276  Ram=0
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄ@const1252  0/18  Ram=0
-   ³  ÃÄsetPosZ  0/266  Ram=9
+   ³  ÃÄsetPosZ  0/192  Ram=9
    ³  ³  ÃÄmergeInts  0/150  Ram=11
    ³  ³  ³  ÀÄ*
    ³  ³  ÃÄ@const1262  0/22  Ram=0
@@ -82,19 +82,23 @@
    ³  ³  ³  ÀÄ*
    ³  ³  ÃÄMotor_z  0/108  Ram=5
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄMotor_z  0/108  Ram=5
-   ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@const1263  0/28  Ram=0
-   ³  ³  ÃÄ@PRINTFD32_9600_5725_5724  0/276  Ram=0
-   ³  ³  ³  ÀÄ*
-   ³  ³  ÀÄ@const1252  0/18  Ram=0
+   ³  ³  ÀÄMotor_z  0/108  Ram=5
+   ³  ³     ÀÄ*
    ³  ÃÄgripClose  0/42  Ram=0
    ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÀÄ@const1252  0/18  Ram=0
    ³  ÃÄgripOpen  0/42  Ram=0
    ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÀÄ@const1252  0/18  Ram=0
-   ³  ÃÄgripRotate  0/28  Ram=0
+   ³  ÃÄgripRotate  0/194  Ram=11
+   ³  ³  ÃÄmergeInts  0/150  Ram=11
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@SI64TOF64  0/100  Ram=0
+   ³  ³  ÃÄ@MULFF64  0/272  Ram=0
+   ³  ³  ÃÄ@ADDFF64  0/494  Ram=8
+   ³  ³  ÃÄ@MULFF64  0/272  Ram=0
+   ³  ³  ÃÄ@F64TOSI64  0/86  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÀÄ@const1252  0/18  Ram=0
    ³  ÃÄsetAGains  0/76  Ram=0
    ³  ³  ÃÄintsToFloat  0/194  Ram=15
@@ -133,7 +137,7 @@
    ³  ³  ÃÄintsToFloat  0/194  Ram=15
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄ@const1252  0/18  Ram=0
-   ³  ÀÄ@const1285  0/20  Ram=0
+   ³  ÀÄ@const1284  0/20  Ram=0
    ÃÄINT_EXT_INPUT0  0/50  Ram=0
    ÃÄINT_EXT_INPUT1  0/50  Ram=0
    ÃÄINT_EXT_INPUT2  0/50  Ram=0
