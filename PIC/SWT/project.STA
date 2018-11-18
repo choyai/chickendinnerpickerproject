@@ -1,6 +1,6 @@
 
-ROM used:   7560/33788 (22%)
-            7560/33788 (22%) including unused fragments
+ROM used:   7568/33788 (22%)
+            7568/33788 (22%) including unused fragments
 
             2.1 Average locations per line
             6.4 Average locations per statement
@@ -70,7 +70,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     76   1    0   323  3.8  setZGains
 0    102   1    5   290  3.2  setTolerances
 0     50   0    2   302  6.8  sumCheck
-0    712   5    0  1465  8.2  MAIN
+0    720   5    0  1465  8.2  MAIN
 0     20   0    0             @const1290
  Inline         0             @cinit1
 
@@ -91,7 +91,7 @@ Program metrics:
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  7052  23156  
+00DFC-083FA  7060  23148  
 
 
 

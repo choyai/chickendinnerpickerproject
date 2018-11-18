@@ -1,9 +1,9 @@
-CCS PCD C Compiler, Version 5.015, 5967               18-Nov-18 17:46
+CCS PCD C Compiler, Version 5.015, 5967               19-Nov-18 04:06
 
                Filename:   C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\project.lst
 
-               ROM used:   7560 bytes (22%)
-                           Largest free fragment is 23156
+               ROM used:   7568 bytes (22%)
+                           Largest free fragment is 23148
                RAM used:   424 (5%) at main() level
                            536 (7%) worst case
                Stack size: 128
@@ -4102,19 +4102,19 @@ CCS PCD C Compiler, Version 5.015, 5967               18-Nov-18 17:46
 .................... int p_z = 0; 
 .................... int *z_p = &p_z; 
 ....................  
-.................... int tolerance_a = 50; 
-.................... int tolerance_b = 50; 
-.................... int tolerance_z = 50; 
+.................... int tolerance_a = 20; 
+.................... int tolerance_b = 20; 
+.................... int tolerance_z = 5; 
 ....................  
 .................... float K_Pz = 0.6; 
-.................... float K_Iz = 0.00; 
-.................... float K_Dz = 0.0; 
-.................... float K_Pa = 0.65; 
-.................... float K_Ia = 0.01; 
-.................... float K_Da = 0.0; 
-.................... float K_Pb = 0.65; 
-.................... float K_Ib = 0.01; 
-.................... float K_Db = 0.0; 
+.................... float K_Iz = 0.0015; 
+.................... float K_Dz = 0.002; 
+.................... float K_Pa = 0.6; 
+.................... float K_Ia = 0.000; 
+.................... float K_Da = 0.0025; 
+.................... float K_Pb = 0.6; 
+.................... float K_Ib = 0.000; 
+.................... float K_Db = 0.0025; 
 ....................  
 .................... int direction_z = 0; 
 .................... int direction_a = 0; 
@@ -5858,212 +5858,216 @@ CCS PCD C Compiler, Version 5.015, 5967               18-Nov-18 17:46
 2748:  CLR     8DC
 274A:  MOV     #8DC,W4
 274C:  MOV     W4,8DE
-274E:  MOV     #32,W4
+274E:  MOV     #14,W4
 2750:  MOV     W4,8E0
-2752:  MOV     #32,W4
+2752:  MOV     #14,W4
 2754:  MOV     W4,8E2
-2756:  MOV     #32,W4
+2756:  MOV     #5,W4
 2758:  MOV     W4,8E4
 275A:  MOV     #999A,W4
 275C:  MOV     W4,8E6
 275E:  MOV     #3F19,W4
 2760:  MOV     W4,8E8
-2762:  CLR     8EA
-2764:  CLR     8EC
-2766:  CLR     8EE
-2768:  CLR     8F0
-276A:  MOV     #6666,W4
-276C:  MOV     W4,8F2
-276E:  MOV     #3F26,W4
-2770:  MOV     W4,8F4
-2772:  MOV     #D70A,W4
-2774:  MOV     W4,8F6
-2776:  MOV     #3C23,W4
-2778:  MOV     W4,8F8
-277A:  CLR     8FA
-277C:  CLR     8FC
-277E:  MOV     #6666,W4
-2780:  MOV     W4,8FE
-2782:  MOV     #3F26,W4
-2784:  MOV     W4,900
-2786:  MOV     #D70A,W4
-2788:  MOV     W4,902
-278A:  MOV     #3C23,W4
-278C:  MOV     W4,904
-278E:  CLR     906
-2790:  CLR     908
-2792:  CLR     90A
-2794:  CLR     90C
-2796:  CLR     90E
-2798:  CLR.B   924
-279A:  CLR     926
-279C:  SETM    32C
-279E:  BRA     2838
-27A0:  DATA    C0,06,08
-27A2:  DATA    00,00,00
-27A4:  DATA    4B,F0,3F
-27A6:  DATA    5C,0A,58
-27A8:  DATA    F6,3B,8F
-27AA:  DATA    00,C0,3C
-27AC:  DATA    8B,28,AC
-27AE:  DATA    3C,BE,F6
-27B0:  DATA    3F,D2,D5
-27B2:  DATA    44,16,8C
-27B4:  DATA    15,D7,BF
-27B6:  DATA    69,00,5A
-27B8:  DATA    2E,1B,87
-27BA:  DATA    99,3F,9A
-27BC:  DATA    5F,AD,4B
-27BE:  DATA    91,E4,01
-27C0:  DATA    C0,5D,11
-27C2:  DATA    2F,92,E4
-27C4:  DATA    81,FB,3F
-27C6:  DATA    38,DA,91
-27C8:  DATA    80,9D,C5
-27CA:  DATA    E0,BF,6F
-27CC:  DATA    12,C0,B4
-27CE:  DATA    C3,09,AB
-27D0:  DATA    3F,6B,C1
-27D2:  DATA    03,4E,C1
-27D4:  DATA    B5,45,BF
-27D6:  DATA    F7,40,05
-27D8:  DATA    FF,00,5A
-27DA:  DATA    EF,3F,F3
-27DC:  DATA    A3,E2,F7
-27DE:  DATA    D7,FF,01
-27E0:  DATA    40,C0,B4
-27E2:  DATA    FF,05,3C
-27E4:  DATA    58,FC,3F
-27E6:  DATA    3B,D3,C0
-27E8:  DATA    B5,BA,8C
-27EA:  DATA    E2,3F,39
-27EC:  DATA    D3,C7,3D
-27EE:  DATA    41,79,B2
-27F0:  DATA    3F,87,0D
-27F2:  DATA    3C,50,D0
-27F4:  DATA    AF,62,3F
-27F6:  DATA    30,4B,8D
-27F8:  DATA    A2,82,AA
-27FA:  DATA    04,40,09
-27FC:  DATA    A0,40,4A
-27FE:  DATA    05,76,03
-2800:  DATA    40,EC,9E
-2802:  DATA    37,88,A6
-2804:  DATA    44,F0,3F
-2806:  DATA    8F,12,8D
-2808:  DATA    29,9A,5B
-280A:  DATA    C7,3F,0E
-280C:  DATA    E0,80,7C
-280E:  DATA    A1,D8,86
-2810:  DATA    3F,29,4B
-2812:  DATA    FB,95,C2
-2814:  DATA    37,1A,3F
-2816:  DATA    C0,14,09
-2818:  DATA    10,00,00
-281A:  DATA    00,00,00
-281C:  INC     W2,W2
-281E:  CP      W2,#1
-2820:  BRA     NZ,282A
-2822:  TBLRDL  [W1],W3
-2824:  TBLRDH  [W1++],W4
-2826:  MOV.B   6,W0L
-2828:  RETURN  
-282A:  CP      W2,#2
-282C:  BRA     NZ,2832
-282E:  MOV.B   7,W0L
+2762:  MOV     #9BA6,W4
+2764:  MOV     W4,8EA
+2766:  MOV     #3AC4,W4
+2768:  MOV     W4,8EC
+276A:  MOV     #126F,W4
+276C:  MOV     W4,8EE
+276E:  MOV     #3B03,W4
+2770:  MOV     W4,8F0
+2772:  MOV     #999A,W4
+2774:  MOV     W4,8F2
+2776:  MOV     #3F19,W4
+2778:  MOV     W4,8F4
+277A:  CLR     8F6
+277C:  CLR     8F8
+277E:  MOV     #D70A,W4
+2780:  MOV     W4,8FA
+2782:  MOV     #3B23,W4
+2784:  MOV     W4,8FC
+2786:  MOV     #999A,W4
+2788:  MOV     W4,8FE
+278A:  MOV     #3F19,W4
+278C:  MOV     W4,900
+278E:  CLR     902
+2790:  CLR     904
+2792:  MOV     #D70A,W4
+2794:  MOV     W4,906
+2796:  MOV     #3B23,W4
+2798:  MOV     W4,908
+279A:  CLR     90A
+279C:  CLR     90C
+279E:  CLR     90E
+27A0:  CLR.B   924
+27A2:  CLR     926
+27A4:  SETM    32C
+27A6:  BRA     2840
+27A8:  DATA    C0,06,08
+27AA:  DATA    00,00,00
+27AC:  DATA    4B,F0,3F
+27AE:  DATA    5C,0A,58
+27B0:  DATA    F6,3B,8F
+27B2:  DATA    00,C0,3C
+27B4:  DATA    8B,28,AC
+27B6:  DATA    3C,BE,F6
+27B8:  DATA    3F,D2,D5
+27BA:  DATA    44,16,8C
+27BC:  DATA    15,D7,BF
+27BE:  DATA    69,00,5A
+27C0:  DATA    2E,1B,87
+27C2:  DATA    99,3F,9A
+27C4:  DATA    5F,AD,4B
+27C6:  DATA    91,E4,01
+27C8:  DATA    C0,5D,11
+27CA:  DATA    2F,92,E4
+27CC:  DATA    81,FB,3F
+27CE:  DATA    38,DA,91
+27D0:  DATA    80,9D,C5
+27D2:  DATA    E0,BF,6F
+27D4:  DATA    12,C0,B4
+27D6:  DATA    C3,09,AB
+27D8:  DATA    3F,6B,C1
+27DA:  DATA    03,4E,C1
+27DC:  DATA    B5,45,BF
+27DE:  DATA    F7,40,05
+27E0:  DATA    FF,00,5A
+27E2:  DATA    EF,3F,F3
+27E4:  DATA    A3,E2,F7
+27E6:  DATA    D7,FF,01
+27E8:  DATA    40,C0,B4
+27EA:  DATA    FF,05,3C
+27EC:  DATA    58,FC,3F
+27EE:  DATA    3B,D3,C0
+27F0:  DATA    B5,BA,8C
+27F2:  DATA    E2,3F,39
+27F4:  DATA    D3,C7,3D
+27F6:  DATA    41,79,B2
+27F8:  DATA    3F,87,0D
+27FA:  DATA    3C,50,D0
+27FC:  DATA    AF,62,3F
+27FE:  DATA    30,4B,8D
+2800:  DATA    A2,82,AA
+2802:  DATA    04,40,09
+2804:  DATA    A0,40,4A
+2806:  DATA    05,76,03
+2808:  DATA    40,EC,9E
+280A:  DATA    37,88,A6
+280C:  DATA    44,F0,3F
+280E:  DATA    8F,12,8D
+2810:  DATA    29,9A,5B
+2812:  DATA    C7,3F,0E
+2814:  DATA    E0,80,7C
+2816:  DATA    A1,D8,86
+2818:  DATA    3F,29,4B
+281A:  DATA    FB,95,C2
+281C:  DATA    37,1A,3F
+281E:  DATA    C0,14,09
+2820:  DATA    10,00,00
+2822:  DATA    00,00,00
+2824:  INC     W2,W2
+2826:  CP      W2,#1
+2828:  BRA     NZ,2832
+282A:  TBLRDL  [W1],W3
+282C:  TBLRDH  [W1++],W4
+282E:  MOV.B   6,W0L
 2830:  RETURN  
-2832:  MOV.B   8,W0L
-2834:  CLR     W2
-2836:  RETURN  
-2838:  MOV     #0,W6
-283A:  MOV     #0,W0
-283C:  MOV     W0,32
-283E:  MOV     #27A0,W0
-2840:  MOV     W0,W1
-2842:  CLR     W2
-2844:  CALL    281C
-2848:  MOV.B   W0L,B
-284A:  CALL    281C
-284E:  MOV.B   W0L,A
-2850:  CP0     W5
-2852:  BRA     Z,2886
-2854:  BTSS    W5.F
-2856:  BRA     2866
-2858:  CALL    281C
-285C:  MOV.B   W0L,D
-285E:  CALL    281C
-2862:  MOV.B   W0L,C
-2864:  BCLR    W5.F
-2866:  BTSS    W5.E
-2868:  BRA     287A
-286A:  BCLR    W5.E
-286C:  DEC     W5,W5
-286E:  CALL    281C
-2872:  MOV.B   W0L,W7L
-2874:  REPEAT  W5
-2876:  MOV.B   W7L,[W6++]
-2878:  BRA     2844
-287A:  CALL    281C
-287E:  MOV.B   W0L,[W6++]
-2880:  DEC     W5,W5
-2882:  BRA     NZ,287A
-2884:  BRA     2844
+2832:  CP      W2,#2
+2834:  BRA     NZ,283A
+2836:  MOV.B   7,W0L
+2838:  RETURN  
+283A:  MOV.B   8,W0L
+283C:  CLR     W2
+283E:  RETURN  
+2840:  MOV     #0,W6
+2842:  MOV     #0,W0
+2844:  MOV     W0,32
+2846:  MOV     #27A8,W0
+2848:  MOV     W0,W1
+284A:  CLR     W2
+284C:  CALL    2824
+2850:  MOV.B   W0L,B
+2852:  CALL    2824
+2856:  MOV.B   W0L,A
+2858:  CP0     W5
+285A:  BRA     Z,288E
+285C:  BTSS    W5.F
+285E:  BRA     286E
+2860:  CALL    2824
+2864:  MOV.B   W0L,D
+2866:  CALL    2824
+286A:  MOV.B   W0L,C
+286C:  BCLR    W5.F
+286E:  BTSS    W5.E
+2870:  BRA     2882
+2872:  BCLR    W5.E
+2874:  DEC     W5,W5
+2876:  CALL    2824
+287A:  MOV.B   W0L,W7L
+287C:  REPEAT  W5
+287E:  MOV.B   W7L,[W6++]
+2880:  BRA     284C
+2882:  CALL    2824
+2886:  MOV.B   W0L,[W6++]
+2888:  DEC     W5,W5
+288A:  BRA     NZ,2882
+288C:  BRA     284C
 ....................   disable_interrupts(GLOBAL); 
-2886:  BCLR.B  81.7
-2888:  MOV     #E0,W4
-288A:  MOV     W4,42
-288C:  BSET.B  81.7
+288E:  BCLR.B  81.7
+2890:  MOV     #E0,W4
+2892:  MOV     W4,42
+2894:  BSET.B  81.7
 ....................  
 ....................   clear_interrupt( 
 ....................       INT_RDA); // recommend style coding to confirm everything clear before use 
-288E:  REPEAT  #3
-2890:  MOV     226,W0
-2892:  BCLR.B  85.3
+2896:  REPEAT  #3
+2898:  MOV     226,W0
+289A:  BCLR.B  85.3
 ....................  
 ....................   enable_interrupts(INT_RDA); 
-2894:  BSET.B  95.3
+289C:  BSET.B  95.3
 ....................   Init_Interrupts(); 
-2896:  CALL    1028
+289E:  CALL    1028
 ....................   enable_interrupts(GLOBAL); 
-289A:  BCLR.B  81.7
-289C:  CLR     42
-289E:  BSET.B  81.7
+28A2:  BCLR.B  81.7
+28A4:  CLR     42
+28A6:  BSET.B  81.7
 ....................   setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, 200); 
-28A0:  CLR     112
-28A2:  MOV     #C8,W4
-28A4:  MOV     W4,10E
-28A6:  MOV     #8010,W4
-28A8:  MOV     W4,112
+28A8:  CLR     112
+28AA:  MOV     #C8,W4
+28AC:  MOV     W4,10E
+28AE:  MOV     #8010,W4
+28B0:  MOV     W4,112
 ....................   setup_timer2(TMR_INTERNAL | TMR_DIV_BY_8, 8000); 
-28AA:  CLR     110
-28AC:  MOV     #1F40,W4
-28AE:  MOV     W4,10C
-28B0:  MOV     #8010,W4
-28B2:  MOV     W4,110
+28B2:  CLR     110
+28B4:  MOV     #1F40,W4
+28B6:  MOV     W4,10C
+28B8:  MOV     #8010,W4
+28BA:  MOV     W4,110
 ....................   setup_compare(3, COMPARE_PWM | COMPARE_TIMER3); 
-28B4:  MOV     #E,W4
-28B6:  MOV     W4,190
-....................   setup_compare(2, COMPARE_PWM | COMPARE_TIMER3); 
-28B8:  MOV     #E,W4
-28BA:  MOV     W4,18A
-....................   setup_compare(1, COMPARE_PWM | COMPARE_TIMER3); 
 28BC:  MOV     #E,W4
-28BE:  MOV     W4,184
+28BE:  MOV     W4,190
+....................   setup_compare(2, COMPARE_PWM | COMPARE_TIMER3); 
+28C0:  MOV     #E,W4
+28C2:  MOV     W4,18A
+....................   setup_compare(1, COMPARE_PWM | COMPARE_TIMER3); 
+28C4:  MOV     #E,W4
+28C6:  MOV     W4,184
 ....................   set_pwm_duty(3, 0); 
-28C0:  CLR     18C
+28C8:  CLR     18C
 ....................   set_pwm_duty(2, 0); 
-28C2:  CLR     186
+28CA:  CLR     186
 ....................   set_pwm_duty(1, 0); 
-28C4:  CLR     180
+28CC:  CLR     180
 ....................   count_a = 0; 
-28C6:  CLR     8B0
-28C8:  CLR     8B2
+28CE:  CLR     8B0
+28D0:  CLR     8B2
 ....................   count_b = 0; 
-28CA:  CLR     8B4
-28CC:  CLR     8B6
+28D2:  CLR     8B4
+28D4:  CLR     8B6
 ....................   count_z = 0; 
-28CE:  CLR     8B8
-28D0:  CLR     8BA
+28D6:  CLR     8B8
+28D8:  CLR     8BA
 ....................   // setPosAB(); 
 ....................   // gripOpen(); 
 ....................   // delay_ms(1000); 
@@ -6072,129 +6076,129 @@ CCS PCD C Compiler, Version 5.015, 5967               18-Nov-18 17:46
 ....................   // printf("System Ready!\r\n"); 
 ....................   while (TRUE) { 
 ....................     if (getPackage >= 1) { 
-28D2:  MOV     926,W4
-28D4:  CP      W4,#1
-28D6:  BRA     LT,2984
+28DA:  MOV     926,W4
+28DC:  CP      W4,#1
+28DE:  BRA     LT,298C
 ....................       int received = sumCheck(); 
-28D8:  CALL    1036
-28DC:  MOV     W0,928
+28E0:  CALL    1036
+28E4:  MOV     W0,928
 ....................       if (!received) { 
-28DE:  CP0     928
-28E0:  BRA     NZ,28FE
+28E6:  CP0     928
+28E8:  BRA     NZ,2906
 ....................         printf("resend"); 
-28E2:  MOV     #0,W1
-28E4:  MOV     W1,W0
-28E6:  CLR.B   1
-28E8:  CALL    EDE
-28EC:  INC     W1,W1
-28EE:  BTSC.B  223.1
-28F0:  BRA     28EE
-28F2:  MOV     W0,224
-28F4:  MOV     #5,W0
-28F6:  CPSGT   W1,W0
-28F8:  BRA     28E4
+28EA:  MOV     #0,W1
+28EC:  MOV     W1,W0
+28EE:  CLR.B   1
+28F0:  CALL    EDE
+28F4:  INC     W1,W1
+28F6:  BTSC.B  223.1
+28F8:  BRA     28F6
+28FA:  MOV     W0,224
+28FC:  MOV     #5,W0
+28FE:  CPSGT   W1,W0
+2900:  BRA     28EC
 ....................         getPackage = 0; 
-28FA:  CLR     926
+2902:  CLR     926
 ....................       } else { 
-28FC:  BRA     2984
+2904:  BRA     298C
 ....................         switch (array[2]) { 
-28FE:  MOV.B   912,W0L
-2900:  CLR.B   1
-2902:  XOR     #0,W0
-2904:  BRA     Z,292C
-2906:  XOR     #1,W0
-2908:  BRA     Z,2932
-290A:  XOR     #3,W0
-290C:  BRA     Z,2938
+2906:  MOV.B   912,W0L
+2908:  CLR.B   1
+290A:  XOR     #0,W0
+290C:  BRA     Z,2934
 290E:  XOR     #1,W0
-2910:  BRA     Z,293E
-2912:  XOR     #7,W0
-2914:  BRA     Z,2944
+2910:  BRA     Z,293A
+2912:  XOR     #3,W0
+2914:  BRA     Z,2940
 2916:  XOR     #1,W0
-2918:  BRA     Z,294A
-291A:  XOR     #3,W0
-291C:  BRA     Z,2950
+2918:  BRA     Z,2946
+291A:  XOR     #7,W0
+291C:  BRA     Z,294C
 291E:  XOR     #1,W0
-2920:  BRA     Z,2956
-2922:  XOR     #F,W0
-2924:  BRA     Z,295C
+2920:  BRA     Z,2952
+2922:  XOR     #3,W0
+2924:  BRA     Z,2958
 2926:  XOR     #1,W0
-2928:  BRA     Z,2962
-292A:  BRA     2968
+2928:  BRA     Z,295E
+292A:  XOR     #F,W0
+292C:  BRA     Z,2964
+292E:  XOR     #1,W0
+2930:  BRA     Z,296A
+2932:  BRA     2970
 ....................         case 0: 
 ....................           setHome(); 
-292C:  CALL    1314
+2934:  CALL    1314
 ....................           break; 
-2930:  BRA     2984
+2938:  BRA     298C
 ....................         case 1: 
 ....................           setPosAB(); 
-2932:  CALL    1904
+293A:  CALL    1904
 ....................           break; 
-2936:  BRA     2984
+293E:  BRA     298C
 ....................         case 2: 
 ....................           setPosZ(); 
-2938:  CALL    1B26
+2940:  CALL    1B26
 ....................           break; 
-293C:  BRA     2984
+2944:  BRA     298C
 ....................         case 3: 
 ....................           gripClose(); 
-293E:  CALL    1C30
+2946:  CALL    1C30
 ....................           break; 
-2942:  BRA     2984
+294A:  BRA     298C
 ....................         case 4: 
 ....................           gripOpen(); 
-2944:  CALL    1C5A
+294C:  CALL    1C5A
 ....................           break; 
-2948:  BRA     2984
+2950:  BRA     298C
 ....................         case 5: 
 ....................           gripRotate(); 
-294A:  CALL    203C
+2952:  CALL    203C
 ....................           break; 
-294E:  BRA     2984
+2956:  BRA     298C
 ....................         case 6: 
 ....................           setAGains(); 
-2950:  CALL    2576
+2958:  CALL    2576
 ....................           break; 
-2954:  BRA     2984
+295C:  BRA     298C
 ....................         case 7: 
 ....................           setBGains(); 
-2956:  CALL    25C2
+295E:  CALL    25C2
 ....................           break; 
-295A:  BRA     2984
+2962:  BRA     298C
 ....................         case 8: 
 ....................           setZGains(); 
-295C:  CALL    260E
+2964:  CALL    260E
 ....................           break; 
-2960:  BRA     2984
+2968:  BRA     298C
 ....................         case 9: 
 ....................           setTolerances(); 
-2962:  CALL    265A
+296A:  CALL    265A
 ....................           break; 
-2966:  BRA     2984
+296E:  BRA     298C
 ....................         default: 
 ....................           printf("resend"); 
-2968:  MOV     #0,W1
-296A:  MOV     W1,W0
-296C:  CLR.B   1
-296E:  CALL    EDE
-2972:  INC     W1,W1
-2974:  BTSC.B  223.1
-2976:  BRA     2974
-2978:  MOV     W0,224
-297A:  MOV     #5,W0
-297C:  CPSGT   W1,W0
-297E:  BRA     296A
+2970:  MOV     #0,W1
+2972:  MOV     W1,W0
+2974:  CLR.B   1
+2976:  CALL    EDE
+297A:  INC     W1,W1
+297C:  BTSC.B  223.1
+297E:  BRA     297C
+2980:  MOV     W0,224
+2982:  MOV     #5,W0
+2984:  CPSGT   W1,W0
+2986:  BRA     2972
 ....................           getPackage = 0; 
-2980:  CLR     926
+2988:  CLR     926
 ....................           break; 
-2982:  BRA     2984
+298A:  BRA     298C
 ....................         } 
 ....................       } 
 ....................     } 
-2984:  BRA     28D2
+298C:  BRA     28DA
 ....................   } 
 .................... } 
-2986:  PWRSAV  #0
+298E:  PWRSAV  #0
 
 Configuration Fuses:
    Word  1L: 3F7F   WPOSTS16 WDT128 WINDIS NOWDT ICSP1 NODEBUG NOWRT NOPROTECT NOJTAG

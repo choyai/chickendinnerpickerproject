@@ -28,15 +28,15 @@ def startUpRoutine(ser, cap):
             pass
 
 
-def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, x_pixels_per_mil, y_pixels_per_mil, start, roi_width, roi_height):
+def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPerMillimeter_z, x_pixels_per_mil, y_pixels_per_mil, start, roi_width, roi_height):
     setHome(ser)
     gripClose(ser)
     gripRotate(0, ser)
     for bag in baglist:
         bag = baglist.pop(0)
         bag_x, bag_y = bag[1][1]
-        bag_x_grip = bag_x / x_pixels_per_mil  # 10 mm from the gripper 0
-        bag_y_grip = bag_y / y_pixels_per_mil + 110  # pic 0 is -50 mm
+        bag_x_grip = bag_x / x_pixels_per_mil + 10  # 10 mm from the gripper 0
+        bag_y_grip = bag_y / y_pixels_per_mil - 50  # pic 0 is -50 mm
         if bag_y_grip < 0:  # Saturate for output
             bag_y_grip = 0
         bag_x_count = int(bag_x_grip * countsPerMillimeter)
@@ -48,13 +48,13 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, x_pixels
             setPosXY(bag_x_count, bag_y_count, ser)
             gripRotate(int(bag_angle), ser)
             gripOpen(ser)
-            setPosZ(int(135 * countsPerMillimeter), ser)
+            setPosZ(int(135 * countsPerMillimeter_z), ser)
             gripClose(ser)
-            setPosZ(int(50 * countsPerMillimeter), ser)
+            setPosZ(int(50 * countsPerMillimeter_z), ser)
             gripRotate(0, ser)
             setPosXY(int(360 * countsPerMillimeter),
                      int(250 * countsPerMillimeter), ser)
-            setPosZ(int(200 * countsPerMillimeter), ser)
+            setPosZ(int(200 * countsPerMillimeter_z), ser)
             gripOpen(ser)
             setHome(ser)
             gripClose(ser)
@@ -63,13 +63,13 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, x_pixels
             setPosXY(bag_x_count, bag_y_count, ser)
             gripRotate(int(bag_angle), ser)
             gripOpen(ser)
-            setPosZ(int(135 * countsPerMillimeter), ser)
+            setPosZ(int(135 * countsPerMillimeter_z), ser)
             gripClose(ser)
-            setPosZ(int(50 * countsPerMillimeter), ser)
+            setPosZ(int(50 * countsPerMillimeter_z), ser)
             gripRotate(0, ser)
             setPosXY(int(360 * countsPerMillimeter),
                      int(250 * countsPerMillimeter), ser)
-            setPosZ(int(208 * countsPerMillimeter), ser)
+            setPosZ(int(208 * countsPerMillimeter_z), ser)
             gripOpen(ser)
             setHome(ser)
         elif bag[0] != desired_type and bag_x_grip > 160:
@@ -124,6 +124,7 @@ except:
 box, image = startUpRoutine(serialDevice, cap)
 # set up stuff here then
 countsPerMillimeter = (12 * 66) / (np.pi * 10)
+countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
 x_pixels_per_mil = box[2]
 y_pixels_per_mil = box[5]
 Xbox, Ybox = box[1]
@@ -179,7 +180,7 @@ while(1):
             pass
     if start == 1 and config is not []:
         handleBag(serialDevice, desired_type, bag_list,
-                  config, countsPerMillimeter, x_pixels_per_mil, y_pixels_per_mil, start, roi_width, roi_height)
+                  config, countsPerMillimeter, countsPerMillimeter_z, x_pixels_per_mil, y_pixels_per_mil, start, roi_width, roi_height)
     elif start == 1 and config == []:
         break
     else:

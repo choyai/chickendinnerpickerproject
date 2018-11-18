@@ -59,19 +59,19 @@ int *b_p = &p_b;
 int p_z = 0;
 int *z_p = &p_z;
 
-int tolerance_a = 50;
-int tolerance_b = 50;
-int tolerance_z = 50;
+int tolerance_a = 20;
+int tolerance_b = 20;
+int tolerance_z = 5;
 
 float K_Pz = 0.6;
-float K_Iz = 0.00;
-float K_Dz = 0.0;
-float K_Pa = 0.65;
-float K_Ia = 0.01;
-float K_Da = 0.0;
-float K_Pb = 0.65;
-float K_Ib = 0.01;
-float K_Db = 0.0;
+float K_Iz = 0.0015;
+float K_Dz = 0.002;
+float K_Pa = 0.6;
+float K_Ia = 0.001;
+float K_Da = 0.0025;
+float K_Pb = 0.6;
+float K_Ib = 0.001;
+float K_Db = 0.0025;
 
 int direction_z = 0;
 int direction_a = 0;
