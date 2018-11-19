@@ -66,6 +66,7 @@ def find_box(contours, max_area, image):
     D = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
     hoit = dist.euclidean((blbrX, blbrY), (tltrX, tltrY))
     refObj = (box, (cX, cY), D / width, box_contour, min_rect, hoit / height)
+    print(hoit/height)
     pixelsPerMetric = D / width
     return refObj
 
@@ -228,7 +229,7 @@ roi_height = np.float32(275)
 def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
 
 
-def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
+def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height, cool_box = None):
     g_kernel = 3
     bi_kernel = 4
     bi_area = 100
@@ -260,6 +261,10 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
     roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
                 int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
     now = time.time()
+
+    if cool_box is not None:
+        cv2.drawContours(roi, [cool_box[0].astype("int")], -1, (0, 0, 0), 2)
+
     cv2.imshow('roi', roi)
 
     image = roi
@@ -294,7 +299,7 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
         edged[i] = cv2.dilate(edged[i], None, iterations=1)
         edged[i] = cv2.erode(edged[i], None, iterations=1)
         # cv2.imshow("dilated" + str(i) + str(num), edged[i])
-    cv2.imshow("dilated" + str(3), edged[3])
+    cv2.imshow("dilated" + str(3), edged[current_filter])
 
     # findContours
     index = current_filter
@@ -317,14 +322,14 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
             # print(type)
             if type is not 'box':
                 bags.append([type, min_rect])
-        # cv2.imshow("orig", orig)
+        cv2.imshow("orig", orig)
         return bags, big_box, orig
 
 
-# try:
-#     cap = cv2.VideoCapture(0)
-# except:
-#     cap = cv2.VideoCapture(1)
+try:
+    cap = cv2.VideoCapture(1)
+except:
+    cap = cv2.VideoCapture(0)
 #
 # period = 0.1
 # nexttime = time.time() + period
@@ -333,6 +338,57 @@ def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, r
 # # bgsub.apply(bg, learningRate=0.5)
 # # cv2.imshow("background", bg)
 # while(True):
-#     print(get_bags(cap))
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
+#     ret, frame = cap.read()
+#     orig = frame.copy()
+#     roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
+#                 int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
+#     cv2.imshow('roi', roi)
+#
+#     image = roi
+#
+#     edged = []
+#     # Apply filters
+#
+#     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+#
+#     # Contrast Limited Adaptive Histogram Equalization
+#     clahe = cv2.createCLAHE()
+#     cl1 = clahe.apply(gray)
+#
+#     # gaussian blur
+#     gauss = cv2.GaussianBlur(gray, (3, 3), 0)
+#     # gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
+#
+#     # global Histogram Equalization
+#     global_histeq = cv2.equalizeHist(gray)
+#
+#     # bilateralFilter
+#     bilat = cv2.bilateralFilter(
+#         gray, 4, 100, 100)
+#
+#     # total list of individual filters
+#     filtered = [gray, global_histeq, gauss,
+#                 bilat]
+#
+#     # perform Canny edge detection on all filters
+#     for i in range(len(filtered)):
+#         edged.append(cv2.Canny(filtered[i], 50, 139))
+#         edged[i] = cv2.dilate(edged[i], None, iterations=1)
+#         edged[i] = cv2.erode(edged[i], None, iterations=1)
+#         # cv2.imshow("dilated" + str(i) + str(num), edged[i])
+#     cv2.imshow("dilated" + str(3), edged[3])
+#
+#     # findContours
+#     index = 3
+#     cnts = cv2.findContours(edged[index].copy(), cv2.RETR_EXTERNAL,
+#                             cv2.CHAIN_APPROX_SIMPLE)
+#     cnts = cnts[0] if imutils.is_cv2() else cnts[1]
+#     if len(cnts) is not 0:
+#
+#         # (cnts, _) = contours.sort_contours(cnts)
+#         orig = image.copy()
+#         big_box = find_box(cnts, 45000, image)
+#     print(get_bags(frame, center_x, center_y, roi_width, roi_height, big_box))
+#     # if cv2.waitKey(1) & 0xFF == ord('q'):
+#     #     break
+#     cv2.waitKey(0)
