@@ -10,6 +10,9 @@ import time
 import struct
 from bag_detection import get_bags
 
+countsPerMillimeter = (12 * 66) / (np.pi * 10)
+countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
+
 
 def sendCommand(command, ser):
     ser.write(bytes(command))
@@ -41,6 +44,8 @@ def setPosXY(x, y, ser):
     buffer = [255, 255, 1]
     a = int(np.sqrt(2) / 2 * (y - x))
     b = int(np.sqrt(2) / 2 * (y + x))
+    print("x = " + str(x / countsPerMillimeter))
+    print("y = " + str(y / countsPerMillimeter))
     print("a = " + str(a))
     print("b = " + str(b))
     a_sign = 0 if a >= 0 else 1

@@ -29,14 +29,16 @@ def startUpRoutine(ser, cap):
 
 
 def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPerMillimeter_z, x_pixels_per_mil, y_pixels_per_mil, roi_width, roi_height):
-    setHome(ser)
+    print('remaining bags: ')
+    print(bag_list)
+    # setHome(ser)
     gripClose(ser)
     gripRotate(180, ser)
     for i in range(len(bag_list)):
-        bag = bag_list.pop(0)
+        bag = bag_list[i]
         bag_x, bag_y = bag[1][1]
-        bag_x_grip = bag_x / x_pixels_per_mil + 10  # 10 mm from the gripper 0
-        bag_y_grip = bag_y / y_pixels_per_mil + 150  # pic 0 is -50 mm
+        bag_x_grip = bag_x / x_pixels_per_mil  # 10 mm from the gripper 0
+        bag_y_grip = bag_y / y_pixels_per_mil  # pic 0 is -50 mm
         if bag_y_grip < 0:  # Saturate for output
             bag_y_grip = 0
         bag_x_count = int(bag_x_grip * countsPerMillimeter)
@@ -60,8 +62,8 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
             setHome(ser)
             gripClose(ser)
             gripRotate(180, ser)
-            config.delete(0)
-        elif bag[0] != desired_type and bag_x_grip < 160:
+            del config[0]
+        if bag[0] != desired_type and bag_x_grip < 160:
             setPosXY(bag_x_count, bag_y_count, ser)
             gripRotate(int(bag_angle), ser)
             gripOpen(ser)
@@ -71,13 +73,12 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
             gripRotate(0, ser)
             setPosXY(int(360 * countsPerMillimeter),
                      0, ser)
-            setPosZ(int(208 * countsPerMillimeter_z), ser)
+            setPosZ(int(188 * countsPerMillimeter_z), ser)
             gripOpen(ser)
             setHome(ser)
-        elif bag[0] != desired_type and bag_x_grip > 160:
+        if bag[0] != desired_type and bag_x_grip > 160:
             print('nothing can be done')
-        else:
-            print('wtf')
+        del bag_list[i]
 
     start = 0
     print('baglist: ', bag_list)
@@ -129,7 +130,7 @@ except:
 box, image = startUpRoutine(serialDevice, cap)
 # set up stuff here then
 countsPerMillimeter = (12 * 66) / (np.pi * 10)
-countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
+countsPerMillimeter_z = (4 * 66) / (np.pi * 12)
 x_pixels_per_mil = box[2]
 y_pixels_per_mil = box[5]
 Xbox, Ybox = box[1]
@@ -140,11 +141,12 @@ roi_height = y_pixels_per_mil * 400
 rectangle = [(center_x, center_y), (roi_width, roi_height), box[4][2]]
 
 bag_configs = {
-    '1': [[322, 168, 208, 0], [188, 168, 208, 180], [322, 168, 186, 0], [188, 168, 208, 180], [322, 168, 164, 0], [188, 168, 208, 180]],
+    '1': [[322, 168, 188, 0], [188, 168, 188, 180], [322, 168, 166, 0], [188, 168, 166, 180], [322, 168, 144, 0], [188, 168, 144, 180]],
     '2': [[322, 368, 208, 0], [228, 262, 208, 90], [188, 168, 208, 180], [292, 130, 208, 270]],
     '3': [[188, 168, 208, 180], [188, 206, 186, 180], [188, 244, 164, 180], [322, 168, 208, 0], [322, 206, 186, 0], [322, 206, 186, 0], [322, 244, 164, 0]],
 }
 print(str(countsPerMillimeter))
+print(str(countsPerMillimeter_z))
 # print("pixpermil" + str(x_pixels_per_mil))
 # print(type(roi_height))
 # print(int(np.asscalar(center_x)))
@@ -157,9 +159,20 @@ print(str(countsPerMillimeter))
 time.sleep(0.5)
 
 startTime = time.time()
-desired_type = ''
-desired_type = input(
-    "input desired bag type:\ncolored\nlarge_pebbles\nsmall_pebbles\n")
+desired_types = {
+    '1': 'colored',
+    '2': 'large_pebbles',
+    '3': 'small_pebbles',
+}
+while(1):
+    try:
+        keydt = input(
+            "input desired bag type:\n1: colored\n2: large_pebbles\nsmall_pebbles\n")
+        desired_type = desired_types[keydt]
+        break
+    except:
+        print('try again')
+
 while(1):
     try:
         config = bag_configs[input("input desired bag placement:\n1\n2\n3\n")]
@@ -170,6 +183,8 @@ bag_list = []
 start = 0
 
 while(1):
+    print("remaining spots: ")
+    print(config)
     ret, frame = cap.read()
     # frame = frame[int(250 - 315 / 2): int(250 + 315 / 2),
     #               int(270 - 370 / 2): int(370 + 370 / 2)]
@@ -179,7 +194,7 @@ while(1):
     else:
         roteangle = rectangle[2] - 270
     roted = imutils.rotate(frame, angle=roteangle)
-    cv2.imshow("uncropped", frame)
+    # cv2.imshow("uncropped", frame)
     cv2.imshow("roted", roted)
     if serialDevice.inWaiting() > 0:
         # data = serialDevice.read(1)
@@ -189,11 +204,13 @@ while(1):
         except:
             pass
     if start == 1 and config is not []:
+        cv2.waitKey(0)
         if bag_list == []:
             baglist, bowox, labeled_image = get_bags(
                 roted, center_x, center_y, roi_width, roi_height, box)
             bag_list.extend(baglist)
             cv2.imshow('current', labeled_image)
+
         handleBag(serialDevice, desired_type, bag_list,
                   config, countsPerMillimeter, countsPerMillimeter_z, x_pixels_per_mil, y_pixels_per_mil, roi_width, roi_height)
     elif start == 1 and config == []:
