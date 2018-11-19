@@ -1,23 +1,23 @@
 
-ROM used:   7576/33788 (22%)
-            7576/33788 (22%) including unused fragments
+ROM used:   7824/33788 (23%)
+            7824/33788 (23%) including unused fragments
 
             2.1 Average locations per line
-            6.4 Average locations per statement
+            6.3 Average locations per statement
 
 RAM used:   424/8192 (5%) at main() level
-            536/8192 (7%) worst case
+            542/8192 (7%) worst case
 
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  482   265  22  project.c
+  543   330  26  project.c
   862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
    32     0   0  BL_Support.h
- 2229   921  78  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+ 2229   921  74  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
 ----- -----
- 3605  1186 Total
+ 3666  1251 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -40,58 +40,58 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     14   0    0   141  1.8  Init_Interrupts
 0    110   1    5   497  5.7  SM_RxD
 0     50   0    2    40  1.7  UART1_Isr
-0    108   1    5   709  5.6  Motor_z
-0    108   1    5   709  5.6  Motor_a
-0    108   1    5   709  5.6  Motor_b
+0    190   1    7  1550  6.2  Motor_z
+0    182   1    7  1470  6.2  Motor_a
+0    182   1    7  1470  6.2  Motor_b
 0    160   1   41   331  4.7  PID
-0     78   1    4             @SDTOF
+0     78   0    4             @SDTOF
 0    150   1   11   181  4.2  mergeInts
-0     40   0    0             @const1234
+0     40   0    0             @const1237
 0    246   2    0             @PRINTFD16_9600_5725_5724
 0    276   2    0             @PRINTFD32_9600_5725_5724
 0    194   1   15   169  4.2  intsToFloat
-0     42   0    0             @const1245
+0     42   0    0             @const1248
 0    148   1    0             @DIV6464B
-0    386   3    0             @PRINTF_F64_9600_5725_5724
-0    220   1    2   930  4.8  setHome
-0     18   0    0             @const1254
-0    546   4   13  1101  6.4  setPosAB
-0     22   0    0             @const1258
-0     22   0    0             @const1259
-0     32   0    0             @const1260
-0    266   2    9   428  4.4  setPosZ
-0     22   0    0             @const1264
-0     28   0    0             @const1265
+0    386   2    0             @PRINTF_F64_9600_5725_5724
+0    240   2    2  1085  4.8  setHome
+0     18   0    0             @const1257
+0    558   4   13  1164  6.4  setPosAB
+0     22   0    0             @const1261
+0     22   0    0             @const1262
+0     32   0    0             @const1263
+0    272   2    9   455  4.4  setPosZ
+0     22   0    0             @const1267
+0     28   0    0             @const1268
 0     42   0    0   125  2.4  gripClose
 0     42   0    0   125  2.4  gripOpen
 0    194   1   11   290  4.3  gripRotate
-0     76   1    0   323  3.8  setAGains
-0     76   1    0   323  3.8  setBGains
-0     76   1    0   323  3.8  setZGains
+0     76   0    0   323  3.8  setAGains
+0     76   0    0   323  3.8  setBGains
+0     76   0    0   323  3.8  setZGains
 0    102   1    5   290  3.2  setTolerances
 0     50   0    2   302  6.8  sumCheck
-0    728   5    0  1465  8.2  MAIN
-0     20   0    0             @const1290
+0    708   5    0  1465  8.2  MAIN
+0     20   0    0             @const1293
  Inline         0             @cinit1
 
 Program metrics:
     Functions               24
-    Statements              1186
+    Statements              1251
     Comments                511
-    Volume (V)              17057
-    Difficulty (D)          101.6
-    Effort to implement (E) 1733784
-    Time to implement (T)   26 hours, 45 minutes
-    Est Delivered Bugs (B)  5
-    Cyclomatic Complexity   41
-    Maintainability (MI)    111
+    Volume (V)              20876
+    Difficulty (D)          104.1
+    Effort to implement (E) 2173073
+    Time to implement (T)   33 hours, 32 minutes
+    Est Delivered Bugs (B)  6
+    Cyclomatic Complexity   55
+    Maintainability (MI)    109
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  7068  23140  
+00DFC-083FA  7316  22892  
 
 
 
