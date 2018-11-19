@@ -37,8 +37,8 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
     for i in range(len(bag_list)):
         bag = bag_list[i]
         bag_x, bag_y = bag[1][1]
-        bag_x_grip = bag_x / x_pixels_per_mil  # 10 mm from the gripper 0
-        bag_y_grip = bag_y / y_pixels_per_mil  # pic 0 is -50 mm
+        bag_x_grip = bag_x / x_pixels_per_mil - 10  # 10 mm from the gripper 0
+        bag_y_grip = bag_y / y_pixels_per_mil + 50  # pic 0 is -50 mm
         if bag_y_grip < 0:  # Saturate for output
             bag_y_grip = 0
         bag_x_count = int(bag_x_grip * countsPerMillimeter)
@@ -130,7 +130,7 @@ except:
 box, image = startUpRoutine(serialDevice, cap)
 # set up stuff here then
 countsPerMillimeter = (12 * 66) / (np.pi * 10)
-countsPerMillimeter_z = (4 * 66) / (np.pi * 12)
+countsPerMillimeter_z = (8 * 66) / (np.pi * 12)
 x_pixels_per_mil = box[2]
 y_pixels_per_mil = box[5]
 Xbox, Ybox = box[1]
@@ -192,7 +192,7 @@ while(1):
     if abs(rectangle[2]) < 50:
         roteangle = rectangle[2]
     else:
-        roteangle = rectangle[2] - 270
+        roteangle = 270 - rectangle[2]
     roted = imutils.rotate(frame, angle=roteangle)
     # cv2.imshow("uncropped", frame)
     cv2.imshow("roted", roted)

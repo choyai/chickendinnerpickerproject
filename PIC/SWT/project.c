@@ -59,9 +59,9 @@ int *b_p = &p_b;
 int p_z = 0;
 int *z_p = &p_z;
 
-int tolerance_a = 20;
-int tolerance_b = 20;
-int tolerance_z = 5;
+int tolerance_a = 30;
+int tolerance_b = 30;
+int tolerance_z = 20;
 
 float K_Pz = 0.6;
 float K_Iz = 0.0015;
