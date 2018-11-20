@@ -2,18 +2,8 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
-Location=C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\serialcom.o
+Location=C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\project.o
 Folder=Intermediary
-DeviceName=
-LanguageToolSuiteID=
-LanguageToolID=
-LanguageToolLocation=
-PPAD=
-SOLK=
-SuiteArgsString=
-ToolArgsString=
-TraceCmdString=
-DebugOptions=
 [File001]
 Location=serial.ERR
 Folder=Output
@@ -131,5 +121,17 @@ SuiteArgsString=
 ToolArgsString=
 TraceCmdString=
 DebugOptions=
+[File010]
+Location=project.HEX
+Folder=Output
+[File011]
+Location=project.LST
+Folder=Output
+[File012]
+Location=project.ERR
+Folder=Output
+[File013]
+Location=project.COF
+Folder=Output
 [TOOL_LOC_STAMPS]
 tool_loc{0C155615-B197-4A4B-AEB6-343BB3F41A35}=C:\Program Files (x86)\PICC\Ccsc.exe
