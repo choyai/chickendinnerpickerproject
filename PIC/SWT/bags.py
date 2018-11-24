@@ -80,9 +80,10 @@ def find_box(contours, max_area, image):
     D = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
     hoit = dist.euclidean((blbrX, blbrY), (tltrX, tltrY))
     refObj = (box, (cX, cY), D / width, box_contour, min_rect, hoit / height)
-    print(hoit / height)
+    bigbox = Box(contour=box_contour)
+    ypixPerMet = hoit / height
     pixelsPerMetric = D / width
-    return refObj
+    return bigbox, pixelsPerMetric, ypixPerMet
 
 
 def nothing(n):
@@ -210,9 +211,9 @@ def drawBags(orig, box):
         dimA = dA / pixelsPerMetric
         dimB = dB / pixelsPerMetric
 
-        for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
-            cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
-            cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
+        # for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
+        #     cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
+        #     cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
         # (xA, yA) = big_box[1]
         # (xB, yB) = (cX, cY)
         # color = (0, 255, 255)
@@ -232,29 +233,31 @@ def drawBags(orig, box):
         #             0.65, (255, 255, 255), 2)
 
 
+g_kernel = 3
+bi_kernel = 4
+bi_area = 100
+min_area = 1700
+max_area = 25000
+LOW_edge = 50
+HIGH_edge = 139
+current_filter = 2
+lowH = 25
+lowS = 6
+lowV = 25
+upH = 25
+upS = 255
+upV = 255
+thresh = 42000
+lowblueH = 110
+lowblueS = 50
+lowblueV = 50
+upperblueH = 130
+upperblueS = 255
+upperblueV = 255
+bluethresh = 10000
+
+
 def get_contours(frame):
-    g_kernel = 3
-    bi_kernel = 4
-    bi_area = 100
-    min_area = 1700
-    max_area = 45000
-    LOW_edge = 50
-    HIGH_edge = 139
-    current_filter = 2
-    lowH = 25
-    lowS = 6
-    lowV = 25
-    upH = 25
-    upS = 255
-    upV = 255
-    thresh = 42000
-    lowblueH = 110
-    lowblueS = 50
-    lowblueV = 50
-    upperblueH = 130
-    upperblueS = 255
-    upperblueV = 255
-    bluethresh = 10000
 
     gauss_args = [g_kernel, g_kernel]
     bilat_args = [bi_kernel, bi_area, bi_area]
@@ -304,31 +307,40 @@ def get_contours(frame):
     return cnts
 
 
-def find_bags(cnts):
+def find_bags(cnts, image):
     if len(cnts) is not 0:
         # (cnts, _) = contours.sort_contours(cnts)
         orig = image.copy()
-        big_box = find_box(cnts, max_area, image)
+        big_box, pixelsPerMetric, ypixPerMet = find_box(cnts, 45000, image)
 
         bags = []
         for c in cnts:
             if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
                 continue
 
-            type, min_rect = detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
+            type, min_rect = detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
                                          lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
             # important!!!!
             # print(type)
-            if type is not 'box':
-                bags.append([type, min_rect])
+
+            bags.append(Bag(contour=c, type=type))
+
+        print("bags=", bags)
         cv2.imshow("orig", orig)
         return bags, big_box, orig
 
 
+def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
+    roi = crop_pic(frame, center_x, center_y, roi_width, roi_height)
+    contours = get_contours(roi)
+    for c in contours:
+        cv2.drawContours(frame, c, 0, (0, 255, 0), 2)
+    bags, box, orig = find_bags(contours, roi)
+    return bags, box, orig
+
+
 class Entity:
     """docstring for Entity."""
-
-    type = 'unknown'
 
     def __init__(self, contour):
         super(Entity, self).__init__()
@@ -338,86 +350,37 @@ class Entity:
         self.corners = cv2.boxPoints(self.min_rect)
 
 
-# class Box(Entity):
-#     """docstring for Box."""
-#
-#     type = 'Box'
-#
-#     def __init__(self, **kwargs):
-#         super(Box, self).__init__(**kwargs)
-#
-#
-# class Bag(Entity):
-#     """docstring for Bag."""
-#
-#     def __init__(self, **kwargs, type):
-#         super(Bag, self).__init__(**kwargs)
-#         self.type = type
+class Box(Entity):
+    """docstring for Box."""
+
+    type = 'box'
+
+    def __init__(self, type='box', **kwargs):
+        super(Box, self).__init__(**kwargs)
+        self.type = type
 
 
-# try:
-#     cap = cv2.VideoCapture(1)
-# except:
-#     cap = cv2.VideoCapture(0)
-#
-# period = 0.15
-# nexttime = time.time() + period
-# # bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()
-# # ret, bg = cap.read()
-# # bgsub.apply(bg, learningRate=0.5)
-# # cv2.imshow("background", bg)
-# while(True):
-#     ret, frame = cap.read()
-#     orig = frame.copy()
-#     roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
-#                 int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
-#     cv2.imshow('roi', roi)
-#
-#     image = roi
-#
-#     edged = []
-#     # Apply filters
-#
-#     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-#
-#     # Contrast Limited Adaptive Histogram Equalization
-#     clahe = cv2.createCLAHE()
-#     cl1 = clahe.apply(gray)
-#
-#     # gaussian blur
-#     gauss = cv2.GaussianBlur(gray, (3, 3), 0)
-#     # gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
-#
-#     # global Histogram Equalization
-#     global_histeq = cv2.equalizeHist(gray)
-#
-#     # bilateralFilter
-#     bilat = cv2.bilateralFilter(
-#         gray, 4, 100, 100)
-#
-#     # total list of individual filters
-#     filtered = [gray, global_histeq, gauss,
-#                 bilat]
-#
-#     # perform Canny edge detection on all filters
-#     for i in range(len(filtered)):
-#         edged.append(cv2.Canny(filtered[i], 50, 139))
-#         edged[i] = cv2.dilate(edged[i], None, iterations=1)
-#         edged[i] = cv2.erode(edged[i], None, iterations=1)
-#         # cv2.imshow("dilated" + str(i) + str(num), edged[i])
-#     cv2.imshow("dilated" + str(3), edged[3])
-#
-#     # findContours
-#     index = 3
-#     cnts = cv2.findContours(edged[index].copy(), cv2.RETR_EXTERNAL,
-#                             cv2.CHAIN_APPROX_SIMPLE)
-#     cnts = cnts[0] if imutils.is_cv2() else cnts[1]
-#     if len(cnts) is not 0:
-#
-#         # (cnts, _) = contours.sort_contours(cnts)
-#         orig = image.copy()
-#         big_box = find_box(cnts, 45000, image)
-#     print(get_bags(frame, center_x, center_y, roi_width, roi_height, big_box))
-#     # if cv2.waitKey(1) & 0xFF == ord('q'):
-#     #     break
-#     cv2.waitKey(0)
+class Bag(Entity):
+    """docstring for Bag."""
+
+    def __init__(self, type, **kwargs):
+        super(Bag, self).__init__(**kwargs)
+        self.type = type
+
+
+period = 0.15
+nexttime = time.time() + period
+# bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()
+# ret, bg = cap.read()
+# bgsub.apply(bg, learningRate=0.5)
+# cv2.imshow("background", bg)
+try:
+    cap = cv2.VideoCapture(0)
+except:
+    cap = cv2.VideoCapture(1)
+
+while(True):
+    ret, frame = cap.read()
+    bags, box, orig = get_bags(frame)
+
+    cv2.waitKey(0)
