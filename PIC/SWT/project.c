@@ -189,7 +189,6 @@ void Motor_z(int u) {
     output_bit(Motor_Zr, 1);
     output_bit(Motor_Zl, 1);
     set_pwm_duty(3, (int)(100));
-    delay_ms(200);
   }
 }
 
@@ -212,7 +211,6 @@ void Motor_a(int u) {
     output_bit(Motor_Ar, 1);
     output_bit(Motor_Al, 1);
     set_pwm_duty(2, (int)(100));
-    delay_ms(200);
   }
 }
 
@@ -235,7 +233,6 @@ void Motor_b(int u) {
     output_bit(Motor_Br, 1);
     output_bit(Motor_Bl, 1);
     set_pwm_duty(1, (int)(100));
-    delay_ms(200);
   }
 }
 
@@ -270,22 +267,22 @@ void setHome() {
   set_pwm_duty(3, 0);
   set_pwm_duty(2, 0);
   set_pwm_duty(1, 0);
-  do {
+while (input(limitSw_z) == 1){
     Motor_z(-100);
-  } while (input(limitSw_z) == 1);
+  }
   Motor_z(0);
-  do {
+   while (input(limitSw_y) == 1){
     Motor_a(-100);
     Motor_b(-100);
-  } while (input(limitSw_y) == 1);
-  Motor_a(0);
-  Motor_b(0);
-  do {
+  }
+  // Motor_a(0);
+  // Motor_b(0);
+  while (input(limitSw_x) == 1){
     Motor_a(100);
     Motor_b(-100);
-  } while (input(limitSw_x) == 1);
-  Motor_a(0);
+  }
   Motor_b(0);
+  Motor_a(0);
   printf("%d, %d, %d\n", count_a, count_b, count_z);
   count_a = 0;
   count_b = 0;

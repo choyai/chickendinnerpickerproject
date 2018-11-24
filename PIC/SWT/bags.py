@@ -9,6 +9,20 @@ import time
 
 width = 200
 height = 200
+center_x = np.float32(270)
+center_y = np.float32(250)
+roi_width = np.float32(370)
+roi_height = np.float32(315)
+
+def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
+
+
+def crop_pic(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
+    # cv2.imshow("uncropped image", frame)
+    orig = frame.copy()
+    roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
+                int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
+    return roi
 
 
 def midpoint(ptA, ptB):
@@ -217,112 +231,6 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
             #             0.65, (255, 255, 255), 2)
     return label, min_rect
 
-# returns an array of bags which are an array of type and minAreaRect and also the big_box and image
-# too many levels of abstraction is killing me ugh
-
-
-center_x = np.float32(270)
-center_y = np.float32(250)
-roi_width = np.float32(370)
-roi_height = np.float32(315)
-
-def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
-
-
-def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height, cool_box=None):
-    g_kernel = 3
-    bi_kernel = 4
-    bi_area = 100
-    min_area = 1700
-    max_area = 45000
-    LOW_edge = 50
-    HIGH_edge = 139
-    current_filter = 2
-    lowH = 25
-    lowS = 6
-    lowV = 25
-    upH = 25
-    upS = 255
-    upV = 255
-    thresh = 42000
-    lowblueH = 110
-    lowblueS = 50
-    lowblueV = 50
-    upperblueH = 130
-    upperblueS = 255
-    upperblueV = 255
-    bluethresh = 10000
-
-    gauss_args = [g_kernel, g_kernel]
-    bilat_args = [bi_kernel, bi_area, bi_area]
-
-    # cv2.imshow("uncropped image", frame)
-    orig = frame.copy()
-    roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
-                int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
-    now = time.time()
-
-    cv2.imshow('roi', roi)
-
-    image = roi
-
-    edged = []
-    # Apply filters
-
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-    # Contrast Limited Adaptive Histogram Equalization
-    clahe = cv2.createCLAHE()
-    cl1 = clahe.apply(gray)
-
-    # gaussian blur
-    # gauss = cv2.GaussianBlur(gray, (3, 3), 0)
-    gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
-
-    # global Histogram Equalization
-    global_histeq = cv2.equalizeHist(gray)
-
-    # bilateralFilter
-    bilat = cv2.bilateralFilter(
-        gray, bilat_args[0], bilat_args[1], bilat_args[2])
-
-    # total list of individual filters
-    filtered = [gray, global_histeq, gauss,
-                bilat]
-
-    # perform Canny edge detection on all filters
-    for i in range(len(filtered)):
-        edged.append(cv2.Canny(filtered[i], LOW_edge, HIGH_edge))
-        edged[i] = cv2.dilate(edged[i], None, iterations=1)
-        edged[i] = cv2.erode(edged[i], None, iterations=1)
-        # cv2.imshow("dilated" + str(i) + str(num), edged[i])
-    cv2.imshow("dilated" + str(3), edged[current_filter])
-
-    # findContours
-    index = current_filter
-    cnts = cv2.findContours(edged[index].copy(), cv2.RETR_EXTERNAL,
-                            cv2.CHAIN_APPROX_SIMPLE)
-    cnts = cnts[0] if imutils.is_cv2() else cnts[1]
-    if len(cnts) is not 0:
-
-        # (cnts, _) = contours.sort_contours(cnts)
-        orig = image.copy()
-        big_box = find_box(cnts, max_area, image)
-
-        bags = []
-        for c in cnts:
-            if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
-                continue
-
-            type, min_rect = detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
-                                         lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
-            # important!!!!
-            # print(type)
-            if type is not 'box':
-                bags.append([type, min_rect])
-        cv2.imshow("orig", orig)
-        return bags, big_box, orig
-
 
 def get_contours(frame):
     g_kernel = 3
@@ -394,6 +302,27 @@ def get_contours(frame):
                             cv2.CHAIN_APPROX_SIMPLE)
     cnts = cnts[0] if imutils.is_cv2() else cnts[1]
     return cnts
+
+
+def find_bags(cnts):
+    if len(cnts) is not 0:
+        # (cnts, _) = contours.sort_contours(cnts)
+        orig = image.copy()
+        big_box = find_box(cnts, max_area, image)
+
+        bags = []
+        for c in cnts:
+            if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
+                continue
+
+            type, min_rect = detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
+                                         lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
+            # important!!!!
+            # print(type)
+            if type is not 'box':
+                bags.append([type, min_rect])
+        cv2.imshow("orig", orig)
+        return bags, big_box, orig
 
 
 class Entity:
