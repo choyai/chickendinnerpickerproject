@@ -65,13 +65,13 @@ int tolerance_z = 20;
 
 float K_Pz = 0.6;
 float K_Iz = 0.0015;
-float K_Dz = 0.00;
-float K_Pa = 2;
+float K_Dz = 0.002;
+float K_Pa = 0.6;
 float K_Ia = 0.001;
-float K_Da = 0.00;
-float K_Pb = 2;
-float K_Ib = 0.00;
-float K_Db = 0.00;
+float K_Da = 0.0025;
+float K_Pb = 0.6;
+float K_Ib = 0.001;
+float K_Db = 0.0025;
 
 int direction_z = 0;
 int direction_a = 0;
@@ -170,133 +170,72 @@ void UART1_Isr() {
 //
 
 // Motor
-void Motor_z(int u , int s) {
+void Motor_z(int u) {
   if (u > 100)
     u = 100;
   if (u < -100)
     u = -100;
-  if(s==0){
-    if (u > 0) {
-      output_bit(Motor_Zr, 0);
-      output_bit(Motor_Zl, 1);
-      direction_z = 0;
-      set_pwm_duty(3, 50);
-    } else if (u < 0) {
-      output_bit(Motor_Zr, 1);
-      output_bit(Motor_Zl, 0);
-      direction_z = 1;
-      set_pwm_duty(3, -50);
-    } else if (u==0) {
-      output_bit(Motor_Zr, 1);
-      output_bit(Motor_Zl, 1);
-      set_pwm_duty(3, (int)(100));
-      delay_ms(200);
-    }
-  }
-  if(s==1){
-    if (u > 0) {
-      output_bit(Motor_Zr, 0);
-      output_bit(Motor_Zl, 1);
-      direction_z = 0;
-      set_pwm_duty(3, (int)(2 * u));
-    } else if (u < 0) {
-      output_bit(Motor_Zr, 1);
-      output_bit(Motor_Zl, 0);
-      direction_z = 1;
-      set_pwm_duty(3, (int)(2 * -u));
-    } else if (u==0) {
-      output_bit(Motor_Zr, 1);
-      output_bit(Motor_Zl, 1);
-      set_pwm_duty(3, (int)(100));
-      delay_ms(200);
-    }
+  if (u > 0) {
+    output_bit(Motor_Zr, 0);
+    output_bit(Motor_Zl, 1);
+    direction_z = 0;
+    set_pwm_duty(3, (int)(2 * u));
+  } else if (u < 0) {
+    output_bit(Motor_Zr, 1);
+    output_bit(Motor_Zl, 0);
+    direction_z = 1;
+    set_pwm_duty(3, (int)(2 * -u));
+  } else {
+    output_bit(Motor_Zr, 1);
+    output_bit(Motor_Zl, 1);
+    set_pwm_duty(3, (int)(100));
+    delay_ms(200);
   }
 }
 
-void Motor_a(int u, int s) {
+void Motor_a(int u) {
   if (u > 100)
     u = 100;
   if (u < -100)
     u = -100;
-  if(s==0){
-    if (u > 0) {
-      output_bit(Motor_Ar, 1);
-      output_bit(Motor_Al, 0);
-      set_pwm_duty(2, 50);
-      direction_a = 0;
-    } else if (u < 0) {
-      output_bit(Motor_Ar, 0);
-      output_bit(Motor_Al, 1);
-      direction_a = 1;
-      set_pwm_duty(2, -50);
-    } else {
-      output_bit(Motor_Ar, 1);
-      output_bit(Motor_Al, 1);
-      set_pwm_duty(2, (int)(100));
-      delay_ms(200);
-    }
+  if (u > 0) {
+    output_bit(Motor_Ar, 1);
+    output_bit(Motor_Al, 0);
+    direction_a = 0;
+    set_pwm_duty(2, (int)(2 * u));
+  } else if (u < 0) {
+    output_bit(Motor_Ar, 0);
+    output_bit(Motor_Al, 1);
+    direction_a = 1;
+    set_pwm_duty(2, (int)(2 * -u));
+  } else {
+    output_bit(Motor_Ar, 1);
+    output_bit(Motor_Al, 1);
+    set_pwm_duty(2, (int)(100));
+    delay_ms(200);
   }
-  if(s==1){
-    if (u > 0) {
-      output_bit(Motor_Ar, 1);
-      output_bit(Motor_Al, 0);
-      direction_a = 0;
-      set_pwm_duty(2, (int)(2*u));
-    } else if (u < 0) {
-      output_bit(Motor_Ar, 0);
-      output_bit(Motor_Al, 1);
-      direction_a = 1;
-      set_pwm_duty(2, (int)(2*-u));
-    } else {
-      output_bit(Motor_Ar, 1);
-      output_bit(Motor_Al, 1);
-      set_pwm_duty(2, (int)(100));
-      delay_ms(200);
-    }
-  }
-
 }
 
-void Motor_b(int u, int s) {
+void Motor_b(int u) {
   if (u > 100)
     u = 100;
   if (u < -100)
     u = -100;
-  if(s == 0){
-    if (u > 0) {
-      output_bit(Motor_Br, 1);
-      output_bit(Motor_Bl, 0);
-      direction_b = 0;
-      set_pwm_duty(1, 40);
-    } else if (u < 0) {
-      output_bit(Motor_Br, 0);
-      output_bit(Motor_Bl, 1);
-      direction_b = 1;
-      set_pwm_duty(1, -40);
-    } else {
-      output_bit(Motor_Br, 1);
-      output_bit(Motor_Bl, 1);
-      set_pwm_duty(1, (int)(100));
-      delay_ms(200);
-    }
-  }
-  if(s == 1){
-    if (u > 0) {
-      output_bit(Motor_Br, 1);
-      output_bit(Motor_Bl, 0);
-      direction_b = 0;
-      set_pwm_duty(1, (int)(2 * u));
-    } else if (u < 0) {
-      output_bit(Motor_Br, 0);
-      output_bit(Motor_Bl, 1);
-      direction_b = 1;
-      set_pwm_duty(1, (int)(2 * -u));
-    } else {
-      output_bit(Motor_Br, 1);
-      output_bit(Motor_Bl, 1);
-      set_pwm_duty(1, (int)(100));
-      delay_ms(200);
-    }
+  if (u > 0) {
+    output_bit(Motor_Br, 1);
+    output_bit(Motor_Bl, 0);
+    direction_b = 0;
+    set_pwm_duty(1, (int)(2 * u));
+  } else if (u < 0) {
+    output_bit(Motor_Br, 0);
+    output_bit(Motor_Bl, 1);
+    direction_b = 1;
+    set_pwm_duty(1, (int)(2 * -u));
+  } else {
+    output_bit(Motor_Br, 1);
+    output_bit(Motor_Bl, 1);
+    set_pwm_duty(1, (int)(100));
+    delay_ms(200);
   }
 }
 
@@ -332,21 +271,21 @@ void setHome() {
   set_pwm_duty(2, 0);
   set_pwm_duty(1, 0);
   do {
-    Motor_z(-100,0);
+    Motor_z(-100);
   } while (input(limitSw_z) == 1);
-  Motor_z(0,0);
+  Motor_z(0);
   do {
-    Motor_a(-100,0);
-    Motor_b(-100,0);
+    Motor_a(-100);
+    Motor_b(-100);
   } while (input(limitSw_y) == 1);
-  Motor_a(0,0);
-  Motor_b(0,0);
+  Motor_a(0);
+  Motor_b(0);
   do {
-    Motor_a(100,0);
-    Motor_b(-100,0);
+    Motor_a(100);
+    Motor_b(-100);
   } while (input(limitSw_x) == 1);
-  Motor_a(0,0);
-  Motor_b(0,0);
+  Motor_a(0);
+  Motor_b(0);
   printf("%d, %d, %d\n", count_a, count_b, count_z);
   count_a = 0;
   count_b = 0;
@@ -369,11 +308,11 @@ void setPosAB() {
   while (abs(r_a - count_a) > tolerance_a || abs(r_b - count_b) > tolerance_b) {
     PID(r_a, count_a, a_s, a_p, a_u, K_Pa, K_Ia, K_Da);
     PID(r_b, count_b, b_s, b_p, b_u, K_Pb, K_Ib, K_Db);
-    Motor_a(u_a,1);
-    Motor_b(u_b,1);
+    Motor_a(u_a);
+    Motor_b(u_b);
   }
-  Motor_a(0,0);
-  Motor_b(0,0);
+  Motor_a(0);
+  Motor_b(0);
   printf("position = %d, %d\n", count_a, count_b);
   printf("done");
   getPackage = 0;
@@ -384,11 +323,11 @@ void setPosZ() {
   printf("r_z = %d", (int)r_z);
   while (abs(r_z - count_z) > tolerance_z) {
     PID(r_z, count_z, z_s, z_p, z_u, K_Pz, K_Iz, K_Dz);
-    Motor_z(u_z,1);
+    Motor_z(u_z);
     // printf("count_z : %d\n",count_z);
     // delay_ms(10);
   }
-  Motor_z(0,0);
+  Motor_z(0);
   printf("position = %d\n", count_z);
   printf("done");
   getPackage = 0;
