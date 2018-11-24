@@ -359,6 +359,9 @@ class Box(Entity):
         super(Box, self).__init__(**kwargs)
         self.type = type
 
+    def __str__(self):
+        return "box"
+
 
 class Bag(Entity):
     """docstring for Bag."""
@@ -366,6 +369,9 @@ class Bag(Entity):
     def __init__(self, type, **kwargs):
         super(Bag, self).__init__(**kwargs)
         self.type = type
+
+    def __str__(self):
+        return type + "at" + str(self.center[0])
 
 
 period = 0.15
