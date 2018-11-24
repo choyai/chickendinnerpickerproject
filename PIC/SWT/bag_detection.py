@@ -7,8 +7,8 @@ import imutils
 import cv2
 import time
 
-width = 200
-height = 200
+width = 205
+height = 215
 
 
 def midpoint(ptA, ptB):

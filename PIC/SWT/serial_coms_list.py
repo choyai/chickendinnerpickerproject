@@ -65,8 +65,8 @@ def setPosXY(x, y, ser):
 
 def setPosXY_mm(x, y, ser, x_pix, y_pix, countsPerMillimeter=countsPerMillimeter):
     buffer = [255, 255, 1]
-    x = x / x_pix * countsPerMillimeter
-    y = y / y_pix * countsPerMillimeter
+    x = x * countsPerMillimeter
+    y = y * countsPerMillimeter
 
     a = int(np.sqrt(2) / 2 * (y - x))
     b = int(np.sqrt(2) / 2 * (y + x))
@@ -91,6 +91,21 @@ def setPosXY_mm(x, y, ser, x_pix, y_pix, countsPerMillimeter=countsPerMillimeter
 
 def setPosZ(z, ser):
     buffer = [255, 255, 2]
+    buffer.extend(split_large_ints(z))
+    buffer.extend([0, 0, 0, 0])
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
+def setPosZ_mm(z, ser, countsPerMillimeter_z):
+    buffer = [255, 255, 2]
+    z = int(z * countsPerMillimeter_z)
     buffer.extend(split_large_ints(z))
     buffer.extend([0, 0, 0, 0])
     checksum = 0

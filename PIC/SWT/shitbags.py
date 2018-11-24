@@ -190,7 +190,7 @@ while(1):
     #               int(270 - 370 / 2): int(370 + 370 / 2)]
     # cv2.drawContours(frame, [box[0].astype("int")], -1, (0, 0, 0), 3)
     if abs(rectangle[2]) < 50:
-        roteangle = rectangle[2]
+        roteangle = 0 - rectangle[2]
     else:
         roteangle = rectangle[2] - 270
     roted = imutils.rotate(frame, angle=roteangle)
@@ -272,6 +272,9 @@ while(1):
                 y = int(input("input y: "))
                 setPosXY_mm(x, y, serialDevice, x_pixels_per_mil,
                             y_pixels_per_mil, countsPerMillimeter)
+            elif keyinput == 'posz':
+                z = int(input("input z: "))
+                setPosZ_mm(z, serialDevice, countsPerMillimeter_z)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 serialDevice.close()
