@@ -10,7 +10,7 @@ import time
 import struct
 from bag_detection import get_bags
 
-countsPerMillimeter = (12 * 66) / (np.pi * 10)
+countsPerMillimeter = (400) / (np.pi * 10)
 countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
 
 
@@ -42,6 +42,32 @@ def setHome(ser):
 
 def setPosXY(x, y, ser):
     buffer = [255, 255, 1]
+    a = int(np.sqrt(2) / 2 * (y - x))
+    b = int(np.sqrt(2) / 2 * (y + x))
+    print("x = " + str(x / countsPerMillimeter))
+    print("y = " + str(y / countsPerMillimeter))
+    print("a = " + str(a))
+    print("b = " + str(b))
+    a_sign = 0 if a >= 0 else 1
+    b_sign = 0 if b >= 0 else 1
+    buffer.extend(split_large_ints(abs(a)))
+    buffer.extend(split_large_ints(abs(b)))
+    buffer.extend([a_sign, b_sign])
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
+def setPosXY_mm(x, y, ser, x_pix, y_pix, countsPerMillimeter=countsPerMillimeter):
+    buffer = [255, 255, 1]
+    x = x / x_pix * countsPerMillimeter
+    y = y / y_pix * countsPerMillimeter
+
     a = int(np.sqrt(2) / 2 * (y - x))
     b = int(np.sqrt(2) / 2 * (y + x))
     print("x = " + str(x / countsPerMillimeter))

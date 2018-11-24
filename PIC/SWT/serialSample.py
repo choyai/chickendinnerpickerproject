@@ -13,9 +13,9 @@ from serial_coms_list import *
 
 
 def startUpRoutine(ser, cap):
-    # setHome(ser)
-    # gripClose(ser)
-    # gripRotate(180, ser)
+    setHome(ser)
+    gripClose(ser)
+    gripRotate(180, ser)
     ret, frame = cap.read()
     while(1):
         try:
@@ -37,7 +37,7 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
     for i in range(len(bag_list)):
         bag = bag_list[i]
         bag_x, bag_y = bag[1][1]
-        bag_x_grip = bag_x / x_pixels_per_mil - 10  # 10 mm from the gripper 0
+        bag_x_grip = bag_x / x_pixels_per_mil + 10  # 10 mm from the gripper 0
         bag_y_grip = bag_y / y_pixels_per_mil + 50  # pic 0 is -50 mm
         if bag_y_grip < 0:  # Saturate for output
             bag_y_grip = 0
@@ -130,7 +130,7 @@ except:
 box, image = startUpRoutine(serialDevice, cap)
 # set up stuff here then
 countsPerMillimeter = (400) / (np.pi * 10)
-countsPerMillimeter_z = (8 * 66) / (np.pi * 12)
+countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
 x_pixels_per_mil = box[2]
 y_pixels_per_mil = box[5]
 Xbox, Ybox = box[1]
@@ -141,7 +141,7 @@ roi_height = y_pixels_per_mil * 400
 rectangle = [(center_x, center_y), (roi_width, roi_height), box[4][2]]
 
 bag_configs = {
-    '1': [[322, 168, 208, 0], [188, 168, 208, 180], [322, 168, 186, 0], [188, 168, 186, 180], [322, 168, 164, 0], [188, 168, 164, 180]],
+    '1': [[322, 172, 208, 0], [188, 172, 208, 180], [322, 172, 186, 0], [188, 172, 186, 180], [322, 172, 164, 0], [188, 172, 164, 180]],
     '2': [[322, 368, 208, 0], [228, 262, 208, 90], [188, 168, 208, 180], [292, 130, 208, 270]],
     '3': [[188, 175, 208, 180], [188, 200, 186, 180], [188, 225, 164, 180], [322, 175, 208, 0], [322, 200, 186, 0], [322, 225, 164, 0]],
 }
@@ -192,11 +192,11 @@ while(1):
     if abs(rectangle[2]) < 50:
         roteangle = rectangle[2]
     else:
-        roteangle = 270 - rectangle[2]
+        roteangle = rectangle[2] - 270
     roted = imutils.rotate(frame, angle=roteangle)
     for i in config:
         cv2.circle(roted, ((int(x_pixels_per_mil *
-                               i[0])), int(y_pixels_per_mil * i[1])), 5, (0, 0, 255), -1)
+                                i[0])), int(y_pixels_per_mil * i[1])), 5, (0, 0, 255), -1)
     # cv2.imshow("uncropped", frame)
     cv2.imshow("roted", roted)
     if serialDevice.inWaiting() > 0:
