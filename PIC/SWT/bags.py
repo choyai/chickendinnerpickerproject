@@ -149,11 +149,10 @@ def sizeCheck(im, lowH, lowS, lowV, upH, upS, upV, thresh, cX):
         return False
 
 
-def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH, lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh):
+def detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH, lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh):
     # c = big_box[2]
     colors = ((0, 0, 255), (240, 0, 159), (0, 165, 255),
               (255, 255, 0), (255, 0, 255))
-    pixelsPerMetric = big_box[2]
     cv2.drawContours(orig, c, 0, (0, 255, 0), 2)
     label = 'unknown'
     box = cv2.boundingRect(c)
@@ -175,9 +174,7 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
             contour_im, lowblueH, lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
         size = sizeCheck(contour_im, lowH, lowS,
                          lowV, upH, upS, upV, thresh, cX)
-        if cX == big_box[1][0]:
-            label = 'box'
-        elif colour == True:
+        if colour == True:
             label = 'colored'
         elif size == True:
             label = 'small_pebbles'
@@ -185,51 +182,54 @@ def detect_type(big_box, orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowbl
             label = 'large_pebbles'
     except Exception:
         raise Exception
-        label = 'unknown'
     # cv2.imshow(label + str(int(cX)), contour_im)
 
     cv2.drawContours(orig, [box.astype("int")], -1, (0, 255, 0), 2)
-    if big_box is not None:
-        cv2.drawContours(
-            orig, [big_box[0].astype("int")], -1, (0, 255, 0), 2)
-        refCoords = np.vstack([big_box[0], big_box[1]])
-        objCoords = np.vstack([box, (cX, cY)])
-        for (x, y) in box:
-            cv2.circle(orig, (int(x), int(y)), 5, (0, 0, 255), -1)
-            (tl, tr, br, bl) = box
-            cv2.putText(
-                orig, label, (bl[0], bl[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
-            (tltrX, tltrY) = midpoint(tl, tr)
-            (blbrX, blbrY) = midpoint(bl, br)
-            (tlblX, tlblY) = midpoint(tl, bl)
-            (trbrX, trbrY) = midpoint(tr, br)
-            dA = dist.euclidean((tltrX, tltrY), (blbrX, blbrY))
-            dB = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
 
-            dimA = dA / pixelsPerMetric
-            dimB = dB / pixelsPerMetric
-
-            for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
-                cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
-                cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
-            (xA, yA) = big_box[1]
-            (xB, yB) = (cX, cY)
-            color = (0, 255, 255)
-            # cv2.line(orig, (int(xA), int(yA)),
-            #          (int(xB), int(yB)), color, 2)
-            # D = dist.euclidean((xA, yA), (xB, yB)) / big_box[2]
-            # (mX, mY) = midpoint((xA, yA), (xB, yB))
-            # cv2.putText(orig, "{:.1f}mm".format(D), (int(mX), int(mY - 10)),
-            #             cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
-            # cv2.putText(orig, "{:.1f}mm".format(dimA),
-            #             (int(tltrX - 15), int(tltrY - 10)
-            #              ), cv2.FONT_HERSHEY_SIMPLEX,
-            #             0.65, (255, 255, 255), 2)
-            # cv2.putText(orig, "{:.1f}mm".format(dimB),
-            #             (int(trbrX + 10), int(trbrY)),
-            #             cv2.FONT_HERSHEY_SIMPLEX,
-            #             0.65, (255, 255, 255), 2)
     return label, min_rect
+
+
+def drawBags(orig, box):
+    # if big_box is not None:
+    #     cv2.drawContours(
+    #         orig, [big_box[0].astype("int")], -1, (0, 255, 0), 2)
+    #     refCoords = np.vstack([big_box[0], big_box[1]])
+    objCoords = np.vstack([box, (cX, cY)])
+    for (x, y) in box:
+        cv2.circle(orig, (int(x), int(y)), 5, (0, 0, 255), -1)
+        (tl, tr, br, bl) = box
+        cv2.putText(
+            orig, label, (bl[0], bl[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
+        (tltrX, tltrY) = midpoint(tl, tr)
+        (blbrX, blbrY) = midpoint(bl, br)
+        (tlblX, tlblY) = midpoint(tl, bl)
+        (trbrX, trbrY) = midpoint(tr, br)
+        dA = dist.euclidean((tltrX, tltrY), (blbrX, blbrY))
+        dB = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
+
+        dimA = dA / pixelsPerMetric
+        dimB = dB / pixelsPerMetric
+
+        for ((xA, yA), (xB, yB), color) in zip(refCoords, objCoords, colors):
+            cv2.circle(orig, (int(xA), int(yA)), 5, color, -1)
+            cv2.circle(orig, (int(xB), int(yB)), 5, color, -1)
+        # (xA, yA) = big_box[1]
+        # (xB, yB) = (cX, cY)
+        # color = (0, 255, 255)
+        # cv2.line(orig, (int(xA), int(yA)),
+        #          (int(xB), int(yB)), color, 2)
+        # D = dist.euclidean((xA, yA), (xB, yB)) / big_box[2]
+        # (mX, mY) = midpoint((xA, yA), (xB, yB))
+        # cv2.putText(orig, "{:.1f}mm".format(D), (int(mX), int(mY - 10)),
+        #             cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2)
+        # cv2.putText(orig, "{:.1f}mm".format(dimA),
+        #             (int(tltrX - 15), int(tltrY - 10)
+        #              ), cv2.FONT_HERSHEY_SIMPLEX,
+        #             0.65, (255, 255, 255), 2)
+        # cv2.putText(orig, "{:.1f}mm".format(dimB),
+        #             (int(trbrX + 10), int(trbrY)),
+        #             cv2.FONT_HERSHEY_SIMPLEX,
+        #             0.65, (255, 255, 255), 2)
 
 
 def get_contours(frame):
@@ -338,21 +338,21 @@ class Entity:
         self.corners = cv2.boxPoints(self.min_rect)
 
 
-class Box(Entity):
-    """docstring for Box."""
-
-    type = 'Box'
-
-    def __init__(self, **kwargs):
-        super(Box, self).__init__(**kwargs)
-
-
-class Bag(Entity):
-    """docstring for Bag."""
-
-    def __init__(self, **kwargs, type):
-        super(Bag, self).__init__(**kwargs)
-        self.type = type
+# class Box(Entity):
+#     """docstring for Box."""
+#
+#     type = 'Box'
+#
+#     def __init__(self, **kwargs):
+#         super(Box, self).__init__(**kwargs)
+#
+#
+# class Bag(Entity):
+#     """docstring for Bag."""
+#
+#     def __init__(self, **kwargs, type):
+#         super(Bag, self).__init__(**kwargs)
+#         self.type = type
 
 
 # try:

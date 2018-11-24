@@ -194,6 +194,9 @@ while(1):
     else:
         roteangle = 270 - rectangle[2]
     roted = imutils.rotate(frame, angle=roteangle)
+    for i in config:
+        cv2.circle(orig, ((int(x_pixels_per_mil *
+                               i[0])), int(y_pixels_per_mil * i[1])), 5, (0, 0, 255), -1)
     # cv2.imshow("uncropped", frame)
     cv2.imshow("roted", roted)
     if serialDevice.inWaiting() > 0:
