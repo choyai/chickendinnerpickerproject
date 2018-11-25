@@ -13,9 +13,9 @@ from serial_coms_list import *
 
 
 def startUpRoutine(ser, cap):
-    setHome(ser)
-    gripClose(ser)
-    gripRotate(180, ser)
+    # setHome(ser)
+    # gripClose(ser)
+    # gripRotate(180, ser)
     ret, frame = cap.read()
     while(1):
         try:
@@ -129,7 +129,7 @@ except:
 
 box, image = startUpRoutine(serialDevice, cap)
 # set up stuff here then
-countsPerMillimeter = (12 * 66) / (np.pi * 10)
+countsPerMillimeter = (400) / (np.pi * 10)
 countsPerMillimeter_z = (8 * 66) / (np.pi * 12)
 x_pixels_per_mil = box[2]
 y_pixels_per_mil = box[5]
@@ -141,9 +141,9 @@ roi_height = y_pixels_per_mil * 400
 rectangle = [(center_x, center_y), (roi_width, roi_height), box[4][2]]
 
 bag_configs = {
-    '1': [[322, 168, 188, 0], [188, 168, 188, 180], [322, 168, 166, 0], [188, 168, 166, 180], [322, 168, 144, 0], [188, 168, 144, 180]],
+    '1': [[322, 168, 208, 0], [188, 168, 208, 180], [322, 168, 186, 0], [188, 168, 186, 180], [322, 168, 164, 0], [188, 168, 164, 180]],
     '2': [[322, 368, 208, 0], [228, 262, 208, 90], [188, 168, 208, 180], [292, 130, 208, 270]],
-    '3': [[188, 168, 208, 180], [188, 206, 186, 180], [188, 244, 164, 180], [322, 168, 208, 0], [322, 206, 186, 0], [322, 206, 186, 0], [322, 244, 164, 0]],
+    '3': [[188, 175, 208, 180], [188, 200, 186, 180], [188, 225, 164, 180], [322, 175, 208, 0], [322, 200, 186, 0], [322, 225, 164, 0]],
 }
 print(str(countsPerMillimeter))
 print(str(countsPerMillimeter_z))
@@ -195,7 +195,7 @@ while(1):
         roteangle = 270 - rectangle[2]
     roted = imutils.rotate(frame, angle=roteangle)
     for i in config:
-        cv2.circle(orig, ((int(x_pixels_per_mil *
+        cv2.circle(roted, ((int(x_pixels_per_mil *
                                i[0])), int(y_pixels_per_mil * i[1])), 5, (0, 0, 255), -1)
     # cv2.imshow("uncropped", frame)
     cv2.imshow("roted", roted)
