@@ -1,4 +1,4 @@
-CCS PCD C Compiler, Version 5.015, 5967               26-Nov-18 00:05
+CCS PCD C Compiler, Version 5.015, 5967               26-Nov-18 00:28
 
                Filename:   C:\Users\asus\Documents\GitHub\chickendinnerpickerproject\PIC\SWT\project.lst
 
@@ -5435,8 +5435,8 @@ CCS PCD C Compiler, Version 5.015, 5967               26-Nov-18 00:05
 ....................   setup_compare(5, COMPARE_PWM | COMPARE_TIMER2); 
 1C4A:  MOV     #6,W4
 1C4C:  MOV     W4,19C
-....................   set_pwm_duty(5, 3500); 
-1C4E:  MOV     #DAC,W4
+....................   set_pwm_duty(5, 2500); 
+1C4E:  MOV     #9C4,W4
 1C50:  MOV     W4,198
 ....................   delay_ms(500); 
 1C52:  MOV     #1F4,W0

@@ -43,7 +43,7 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
     for bag in bag_list:
         bag_x, bag_y = bag.center
         bag_x_grip = bag_x / x_pixels_per_mil + 10  # 10 mm from the gripper 0
-        bag_y_grip = bag_y / y_pixels_per_mil - 50  # pic 0 is -50 mm
+        bag_y_grip = bag_y / y_pixels_per_mil - 70  # pic 0 is -50 mm
         if bag_y_grip < 0:  # Saturate for output
             bag_y_grip = 0
         bag_x_count = int(bag_x_grip * countsPerMillimeter)
@@ -89,8 +89,8 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
             gripClose(ser)
             setPosZ(int(50 * countsPerMillimeter_z), ser)
             gripRotate(0, ser)
-            setPosXY(int(360 * countsPerMillimeter),
-                     0, ser)
+            setPosXY(int(340 * countsPerMillimeter),
+                     15, ser)
             setPosZ(int(100 * countsPerMillimeter_z), ser)
             gripOpen(ser)
             setHome(ser)
@@ -160,7 +160,7 @@ roi_height = y_pixels_per_mil * 400
 rectangle = [(center_x, center_y), (roi_width, roi_height), box.angle]
 
 bag_configs = {
-    '1': [[322, 162, 205, 0], [210, 162, 205, 180], [322, 162, 186, 0], [210, 162, 186, 180], [322, 162, 164, 0], [210, 162, 164, 180]],
+    '1': [[322, 146, 205, 0], [210, 146, 205, 180], [322, 146, 186, 0], [210, 146, 186, 180], [322, 146, 164, 0], [210, 146, 164, 180]],
     '2': [[322, 238, 205, 180], [228, 252, 205, 270], [212, 163, 190, 0], [292, 133, 192, 90]],
     '3': [[188, 175, 205, 180], [188, 200, 186, 180], [188, 225, 164, 180], [322, 175, 205, 0], [322, 200, 186, 0], [322, 225, 164, 0]],
 }
@@ -240,7 +240,6 @@ while(1):
         except:
             pass
     if start == 1 and config is not []:
-        cv2.waitKey(0)
         if bag_list == []:
             baglist, bowox, labeled_image = get_bags(
                 roted, bgsub, center_x, center_y, roi_width, roi_height)
@@ -249,6 +248,7 @@ while(1):
 
         handleBag(serialDevice, desired_type, bag_list,
                   config, countsPerMillimeter, countsPerMillimeter_z, x_pixels_per_mil, y_pixels_per_mil, roi_width, roi_height)
+        cv2.waitKey(0)
     elif start == 1 and config == []:
         start = 0
         break
@@ -297,6 +297,7 @@ while(1):
                 bag_list.extend(baglist)
                 start = 1
                 cv2.imshow('current', labeled_image)
+                cv2.waitKey(0)
             elif keyinput == 'posxy':
                 x = int(input("input x: "))
                 y = int(input("input y: "))

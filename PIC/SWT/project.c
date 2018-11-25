@@ -342,7 +342,7 @@ void gripClose() {
 
 void gripOpen() {
   setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
-  set_pwm_duty(5, 3500);
+  set_pwm_duty(5, 2500);
   delay_ms(500);
   set_pwm_duty(5, 0);
   delay_ms(500);
