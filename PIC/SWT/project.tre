@@ -1,9 +1,9 @@
 ÀÄproject
-   ÃÄMAIN  0/728  Ram=0
+   ÃÄMAIN  0/708  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄInit_Interrupts  0/14  Ram=0
    ³  ÃÄsumCheck  0/50  Ram=2
-   ³  ÃÄ@const1290  0/20  Ram=0
+   ³  ÃÄ@const1293  0/20  Ram=0
    ³  ÃÄsetHome  0/214  Ram=2
    ³  ³  ÃÄMotor_z  0/102  Ram=5
    ³  ³  ÃÄMotor_z  0/102  Ram=5
@@ -70,19 +70,20 @@
    ³  ³  ÃÄ@PRINTFD32_9600_5725_5724  0/276  Ram=0
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄ@const1254  0/18  Ram=0
-   ³  ÃÄgripClose  0/42  Ram=0
+   ³  ÃÄgripClose  0/50  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÀÄ@const1254  0/18  Ram=0
-   ³  ÃÄgripOpen  0/42  Ram=0
+   ³  ÃÄgripOpen  0/50  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÀÄ@const1254  0/18  Ram=0
-   ³  ÃÄgripRotate  0/194  Ram=11
+   ³  ÃÄgripRotate  0/154  Ram=11
    ³  ³  ÃÄmergeInts  0/150  Ram=11
    ³  ³  ³  ÀÄ*
    ³  ³  ÃÄ@SI64TOF64  0/100  Ram=0
    ³  ³  ÃÄ@MULFF64  0/272  Ram=0
    ³  ³  ÃÄ@ADDFF64  0/494  Ram=8
-   ³  ³  ÃÄ@MULFF64  0/272  Ram=0
    ³  ³  ÃÄ@F64TOSI64  0/86  Ram=0
    ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
    ³  ³  ÀÄ@const1254  0/18  Ram=0
@@ -131,7 +132,13 @@
    ³  ³  ÃÄmergeInts  0/150  Ram=11
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄ@const1254  0/18  Ram=0
-   ³  ÀÄ@const1290  0/20  Ram=0
+   ³  ÃÄgripHalf  0/80  Ram=5
+   ³  ³  ÃÄmergeInts  0/150  Ram=11
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
+   ³  ³  ÃÄ@delay_ms1  0/16  Ram=2
+   ³  ³  ÀÄ@const1254  0/18  Ram=0
+   ³  ÀÄ@const1293  0/20  Ram=0
    ÃÄINT_EXT_INPUT0  0/50  Ram=0
    ÃÄINT_EXT_INPUT1  0/50  Ram=0
    ÃÄINT_EXT_INPUT2  0/50  Ram=0

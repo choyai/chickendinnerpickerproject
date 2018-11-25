@@ -142,6 +142,20 @@ def gripOpen(ser):
     sendCommand(buffer, ser)
 
 
+def gripHalf(duty, ser):
+    buffer = [255, 255, 10, ]
+    buffer.extend(split_large_ints(duty))
+    buffer.extend([0, 0, 0, 0])
+    checksum = 0
+    for i in buffer:
+        checksum += i
+    checksum = checksum % 256
+    buffer.append(checksum)
+    print('sending ')
+    print(buffer)
+    sendCommand(buffer, ser)
+
+
 def gripRotate(angle, ser):
     buffer = [255, 255, 5]
     buffer.extend(split_large_ints(angle))

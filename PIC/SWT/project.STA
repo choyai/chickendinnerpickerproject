@@ -1,23 +1,23 @@
 
-ROM used:   7552/33788 (22%)
-            7552/33788 (22%) including unused fragments
+ROM used:   7588/33788 (22%)
+            7588/33788 (22%) including unused fragments
 
             2.1 Average locations per line
-            6.4 Average locations per statement
+            6.3 Average locations per statement
 
 RAM used:   424/8192 (5%) at main() level
-            536/8192 (7%) worst case
+            535/8192 (7%) worst case
 
 Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  479   260  22  project.c
+  497   274  23  project.c
   862     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\24FJ48GA002.h
    32     0   0  BL_Support.h
- 2229   921  78  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+ 2229   921  77  ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
 ----- -----
- 3602  1181 Total
+ 3620  1195 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -62,36 +62,37 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0    266   2    9   428  4.4  setPosZ
 0     22   0    0             @const1264
 0     28   0    0             @const1265
-0     42   0    0   125  2.4  gripClose
-0     42   0    0   125  2.4  gripOpen
-0    194   1   11   290  4.3  gripRotate
+0     50   0    0   181  2.6  gripClose
+0     50   0    0   181  2.6  gripOpen
+0     80   1    5   282  3.4  gripHalf
+0    154   1   11   272  4.3  gripRotate
 0     76   1    0   323  3.8  setAGains
 0     76   1    0   323  3.8  setBGains
 0     76   1    0   323  3.8  setZGains
 0    102   1    5   290  3.2  setTolerances
 0     50   0    2   302  6.8  sumCheck
-0    728   5    0  1465  8.2  MAIN
-0     20   0    0             @const1290
+0    708   5    0  1525  8.2  MAIN
+0     20   0    0             @const1293
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               24
-    Statements              1181
+    Functions               25
+    Statements              1195
     Comments                513
-    Volume (V)              16771
-    Difficulty (D)          101.1
-    Effort to implement (E) 1696083
-    Time to implement (T)   26 hours, 10 minutes
+    Volume (V)              17682
+    Difficulty (D)          104.5
+    Effort to implement (E) 1848397
+    Time to implement (T)   28 hours, 31 minutes
     Est Delivered Bugs (B)  5
-    Cyclomatic Complexity   38
-    Maintainability (MI)    112
+    Cyclomatic Complexity   39
+    Maintainability (MI)    107
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00BFE     0  3072  
 00C00-00C02     4  0  
 00C04-00DFA   504  0  
-00DFC-083FA  7044  23164  
+00DFC-083FA  7080  23128  
 
 
 

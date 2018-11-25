@@ -59,19 +59,19 @@ int *b_p = &p_b;
 int p_z = 0;
 int *z_p = &p_z;
 
-int tolerance_a = 30;
-int tolerance_b = 30;
-int tolerance_z = 20;
+int tolerance_a = 3;
+int tolerance_b = 3;
+int tolerance_z = 3;
 
-float K_Pz = 0.6;
-float K_Iz = 0.0015;
-float K_Dz = 0.002;
-float K_Pa = 0.6;
-float K_Ia = 0.001;
-float K_Da = 0.0025;
-float K_Pb = 0.6;
-float K_Ib = 0.001;
-float K_Db = 0.0025;
+float K_Pz = 2;
+float K_Iz = 0;
+float K_Dz = 0;
+float K_Pa = 4;
+float K_Ia = 0;
+float K_Da = 0;
+float K_Pb = 4;
+float K_Ib = 0;
+float K_Db = 0;
 
 int direction_z = 0;
 int direction_a = 0;
@@ -332,7 +332,9 @@ void setPosZ() {
 
 void gripClose() {
   setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
-  set_pwm_duty(5, 2600);
+  set_pwm_duty(5, 1000);
+  delay_ms(500);
+  set_pwm_duty(5, 0);
   delay_ms(500);
   printf("done");
   getPackage = 0;
@@ -340,7 +342,20 @@ void gripClose() {
 
 void gripOpen() {
   setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
-  set_pwm_duty(5, 4200);
+  set_pwm_duty(5, 3500);
+  delay_ms(500);
+  set_pwm_duty(5, 0);
+  delay_ms(500);
+  printf("done");
+  getPackage = 0;
+}
+
+void gripHalf(){
+  setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
+  int duty = mergeInts((int)array[3], (int)array[4]);
+  set_pwm_duty(5, duty);
+  delay_ms(500);
+  set_pwm_duty(5, 0);
   delay_ms(500);
   printf("done");
   getPackage = 0;
@@ -349,7 +364,7 @@ void gripOpen() {
 void gripRotate() {
   int angle = mergeInts((int)array[3], (int)array[4]);
   setup_compare(4, COMPARE_PWM | COMPARE_TIMER2);
-  set_pwm_duty(4, (int)(((angle * 0.186) + 12) * 80));
+  set_pwm_duty(4, (int)((angle * 14.8) + 880));
   delay_ms(500);
   printf("done");
   getPackage = 0;
@@ -413,7 +428,7 @@ void main() {
   Init_Interrupts();
   enable_interrupts(GLOBAL);
   setup_timer3(TMR_INTERNAL | TMR_DIV_BY_8, 200);
-  setup_timer2(TMR_INTERNAL | TMR_DIV_BY_8, 8000);
+  setup_timer2(TMR_INTERNAL | TMR_DIV_BY_8, 10000);
   setup_compare(3, COMPARE_PWM | COMPARE_TIMER3);
   setup_compare(2, COMPARE_PWM | COMPARE_TIMER3);
   setup_compare(1, COMPARE_PWM | COMPARE_TIMER3);
@@ -466,6 +481,9 @@ void main() {
           break;
         case 9:
           setTolerances();
+          break;
+        case 10:
+          gripHalf();
           break;
         default:
           printf("resend");

@@ -186,7 +186,7 @@ def detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH, lowb
         else:
             label = 'large_pebbles'
     except Exception:
-        raise Exception
+        return None
     # cv2.imshow(label + str(int(cX)), contour_im)
 
     cv2.drawContours(orig, [box.astype("int")], -1, (0, 255, 0), 2)
@@ -274,7 +274,10 @@ def get_contours(frame):
     edged = []
     # Apply filters
 
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    try:
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    except:
+        gray = image
 
     # Contrast Limited Adaptive Histogram Equalization
     clahe = cv2.createCLAHE()
@@ -322,14 +325,17 @@ def find_bags(cnts, image):
             if cv2.contourArea(c) < min_area or cv2.contourArea(c) > max_area:
                 continue
 
-            type, min_rect = detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
-                                         lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
+            try:
+                type, min_rect = detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
+                                             lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
+                bag = Bag(contour=c, type=type)
+                cv2.putText(orig, bag.type, (int(bag.center[0]), int(
+                    bag.center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
+                bags.append(bag)
+            except:
+                pass
             # important!!!!
             # print(type)
-            bag = Bag(contour=c, type=type)
-            cv2.putText(
-                orig, bag.type, (int(bag.center[0]), int(bag.center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
-            bags.append(bag)
 
         for bag in bags:
             print(str(bag))
@@ -337,8 +343,10 @@ def find_bags(cnts, image):
         return bags, big_box, orig
 
 
-def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
+def get_bags(frame, bgsub, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
     roi = crop_pic(frame, center_x, center_y, roi_width, roi_height)
+    bgsubbed = bgsub.apply(roi, learningRate=0)
+    # contours = get_contours(bgsubbed)
     contours = get_contours(roi)
     for c in contours:
         cv2.drawContours(frame, c, 0, (0, 255, 0), 2)
@@ -415,6 +423,7 @@ nexttime = time.time() + period
 #         roteangle = box.min_rect[2] - 270
 #     roted = imutils.rotate(frame, angle=roteangle)
 #     cv2.imshow("rotated", roted)
+#     roted = bgsub.apply(roted, learningRate=0)
 #     bags, new_box, orig = get_bags(
 #         frame=roted, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height)
 #
