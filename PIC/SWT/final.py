@@ -161,8 +161,9 @@ rectangle = [(center_x, center_y), (roi_width, roi_height), box.angle]
 
 bag_configs = {
     '1': [[322, 146, 205, 0], [210, 146, 205, 180], [322, 146, 186, 0], [210, 146, 186, 180], [322, 146, 164, 0], [210, 146, 164, 180]],
-    '2': [[322, 238, 205, 180], [228, 252, 205, 270], [212, 163, 190, 0], [292, 133, 192, 90]],
-    '3': [[188, 175, 205, 180], [188, 200, 186, 180], [188, 225, 164, 180], [322, 175, 205, 0], [322, 200, 186, 0], [322, 225, 164, 0]],
+    '2': [[322, 214, 205, 0], [228, 227, 205, 90], [210, 146, 196, 180], [302, 123, 196, 270]],
+    # '3': [[188, 175, 205, 180], [188, 200, 186, 180], [188, 225, 164, 180], [322, 175, 205, 0], [322, 200, 186, 0], [322, 225, 164, 0]],
+    '3': [[322, 227, 205, 0], [210, 227, 205, 180], [322, 180, 190, 0], [210, 180, 190, 180], [322, 146, 185, 0], [210, 146, 185, 180]]
 }
 print(str(countsPerMillimeter))
 print(str(countsPerMillimeter_z))
@@ -217,6 +218,8 @@ bgsub.apply(roted, learningRate=0.5)
 while(1):
     print("remaining spots: ")
     print(config)
+    if config == []:
+        start = 0
     ret, frame = cap.read()
     # frame = frame[int(250 - 315 / 2): int(250 + 315 / 2),
     #               int(270 - 370 / 2): int(370 + 370 / 2)]
@@ -251,7 +254,6 @@ while(1):
         cv2.waitKey(0)
     elif start == 1 and config == []:
         start = 0
-        break
     else:
         print("1: set Home\n2: set x, y \n3: set z \n4: close gripper\n5: open gripper\n6: rotate gripper\nka: set gains for A-axis\nkb: set gains for the B-axis\nkz: set gains for the Z-axis")
         keyinput = input("input command: ")
