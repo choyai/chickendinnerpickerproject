@@ -6,3 +6,5 @@ pyserial
 imutils
 scipy
 readchar
+jupyter
+keras
