@@ -7,8 +7,8 @@ import imutils
 import cv2
 import time
 
-width = 200
-height = 200
+width = 205
+height = 215
 center_x = np.float32(270)
 center_y = np.float32(250)
 roi_width = np.float32(370)
@@ -20,8 +20,12 @@ def_rect = [(center_x, center_y), (roi_width, roi_height), 0.0]
 def crop_pic(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
     # cv2.imshow("uncropped image", frame)
     orig = frame.copy()
-    roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
-                int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
+    try:
+        roi = frame[int(np.asscalar(center_y - roi_height / 2)): int(np.asscalar(center_y + roi_height / 2)),
+                    int(np.asscalar(center_x - roi_width / 2)): int(np.asscalar(center_x + roi_width / 2))]
+    except:
+        roi = frame[int(center_y - roi_height / 2):int(center_y + roi_height / 2),
+                    int(center_x - roi_width / 2):int(center_x + roi_width / 2)]
     return roi
 
 
@@ -62,10 +66,10 @@ def find_box(contours, max_area, image):
     box_im = image[straight_rect[1]:straight_rect[1] + straight_rect[3],
                    straight_rect[0]: straight_rect[0] + straight_rect[2]]
     # print(box_im)
-    # try:
-    #     # cv2.imshow('box', box_im)
-    # except Exception:
-    #     raise Exception
+    try:
+        cv2.imshow('box', box_im)
+    except Exception:
+        raise Exception
     box = cv2.cv.BoxPoints(
         box) if imutils.is_cv2() else cv2.boxPoints(box)
     box = np.array(box, dtype="int")
@@ -322,10 +326,13 @@ def find_bags(cnts, image):
                                          lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
             # important!!!!
             # print(type)
+            bag = Bag(contour=c, type=type)
+            cv2.putText(
+                orig, bag.type, (int(bag.center[0]), int(bag.center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
+            bags.append(bag)
 
-            bags.append(Bag(contour=c, type=type))
-
-        print("bags=", bags)
+        for bag in bags:
+            print(str(bag))
         cv2.imshow("orig", orig)
         return bags, big_box, orig
 
@@ -348,6 +355,9 @@ class Entity:
         self.min_rect = cv2.minAreaRect(contour)
         self.center = self.min_rect[0]
         self.corners = cv2.boxPoints(self.min_rect)
+        self.angle = self.min_rect[2]
+        self.width = self.min_rect[1][0]
+        self.height = self.min_rect[1][1]
 
 
 class Box(Entity):
@@ -371,22 +381,42 @@ class Bag(Entity):
         self.type = type
 
     def __str__(self):
-        return type + "at" + str(self.center[0])
+        return self.type + " at " + str(self.center[0]) + ", " + str(self.center[1])
 
 
 period = 0.15
 nexttime = time.time() + period
+
+# try:
+#     cap = cv2.VideoCapture(0)
+# except:
+#     cap = cv2.VideoCapture(1)
+#
 # bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()
 # ret, bg = cap.read()
 # bgsub.apply(bg, learningRate=0.5)
 # cv2.imshow("background", bg)
-try:
-    cap = cv2.VideoCapture(0)
-except:
-    cap = cv2.VideoCapture(1)
-
-while(True):
-    ret, frame = cap.read()
-    bags, box, orig = get_bags(frame)
-
-    cv2.waitKey(0)
+# ret, frame = cap.read()
+# roi = crop_pic(frame, center_x, center_y, roi_width, roi_height)
+# contours = get_contours(roi)
+# box, x_pixels_per_mil, y_pixels_per_mil = find_box(contours, 45000, roi)
+#
+# Xbox, Ybox = box.center
+# center_x = Xbox - x_pixels_per_mil * 50 + 270 - 185
+# center_y = Ybox - y_pixels_per_mil * 50 + 250 - 157.5
+# roi_width = x_pixels_per_mil * 400
+# roi_height = y_pixels_per_mil * 400
+#
+# while(True):
+#     ret, frame = cap.read()
+#     if abs(box.min_rect[2]) < 45:
+#         roteangle = 0 - box.min_rect[2]
+#     else:
+#         roteangle = box.min_rect[2] - 270
+#     roted = imutils.rotate(frame, angle=roteangle)
+#     cv2.imshow("rotated", roted)
+#     bags, new_box, orig = get_bags(
+#         frame=roted, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height)
+#
+#     if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break

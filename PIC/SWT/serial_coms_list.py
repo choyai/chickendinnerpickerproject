@@ -8,9 +8,9 @@ import cv2
 import serial
 import time
 import struct
-from bag_detection import get_bags
+from bags import *
 
-countsPerMillimeter = (400) / (np.pi * 10)
+countsPerMillimeter = (321 / 300 * 400) / (np.pi * 10)
 countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
 
 

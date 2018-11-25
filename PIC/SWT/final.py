@@ -8,7 +8,7 @@ import cv2
 import serial
 import time
 import struct
-from bag_detection import *
+from bags import *
 from serial_coms_list import *
 
 
@@ -19,24 +19,29 @@ def startUpRoutine(ser, cap):
     ret, frame = cap.read()
     while(1):
         try:
-            bags, box, image = get_bags(frame)
+            roi = crop_pic(frame)
+            contours = get_contours(roi)
+            for c in contours:
+                cv2.drawContours(frame, c, 0, (0, 255, 0), 2)
+            box, x_pixels_per_mil, y_pixels_per_mil = find_box(
+                contours, 45000, roi)
             print('ready to start')
-            cv2.imshow("bg", image)
+            cv2.imshow("bg", frame)
             # cv2.waitKey(0)
-            return box, image
+            return box, x_pixels_per_mil, y_pixels_per_mil, frame
         except:
             pass
 
 
 def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPerMillimeter_z, x_pixels_per_mil, y_pixels_per_mil, roi_width, roi_height):
     print('remaining bags: ')
-    print(bag_list)
+    for bag in bag_list:
+        print(str(bag))
     # setHome(ser)
     gripClose(ser)
     gripRotate(180, ser)
-    for i in range(len(bag_list)):
-        bag = bag_list[i]
-        bag_x, bag_y = bag[1][1]
+    for bag in bag_list:
+        bag_x, bag_y = bag.center
         bag_x_grip = bag_x / x_pixels_per_mil + 10  # 10 mm from the gripper 0
         bag_y_grip = bag_y / y_pixels_per_mil - 50  # pic 0 is -50 mm
         if bag_y_grip < 0:  # Saturate for output
@@ -44,9 +49,22 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
         bag_x_count = int(bag_x_grip * countsPerMillimeter)
         bag_y_count = int(bag_y_grip * countsPerMillimeter)
         # angle in minAreaRect is clockwise, and servo turns clockwise. the conditional is to checkthe width and height
-        bag_angle = 90 + \
-            bag[1][2] if bag[1][1][0] > bag[1][1][1] else 0 - bag[1][2]
-        if bag[0] == desired_type and bag_x_grip < 160:
+        if bag.angle < 90:
+            if bag.width >= bag.height:
+                bag_angle = 90 + bag.angle
+            else:
+                bag_angle = bag.angle
+        elif bag.angle >= 90:
+            if bag.width >= bag.height:
+                bag_angle = 180 + bag.angle
+            else:
+                bag_angle = 90 + bag.angle
+        else:
+            print('wtf')
+            bag_angle = bag.angle
+        if bag_angle < 0:
+            bag_angle += 180
+        if bag.type == desired_type and bag_x_grip < 160:
             goal = config[0]
             setPosXY(bag_x_count, bag_y_count, ser)
             gripRotate(int(bag_angle), ser)
@@ -63,7 +81,7 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
             gripClose(ser)
             gripRotate(180, ser)
             del config[0]
-        if bag[0] != desired_type and bag_x_grip < 160:
+        if bag.type != desired_type and bag_x_grip < 160:
             setPosXY(bag_x_count, bag_y_count, ser)
             gripRotate(int(bag_angle), ser)
             gripOpen(ser)
@@ -73,15 +91,16 @@ def handleBag(ser, desired_type, bag_list, config, countsPerMillimeter, countsPe
             gripRotate(0, ser)
             setPosXY(int(360 * countsPerMillimeter),
                      0, ser)
-            setPosZ(int(188 * countsPerMillimeter_z), ser)
+            setPosZ(int(100 * countsPerMillimeter_z), ser)
             gripOpen(ser)
             setHome(ser)
-        if bag[0] != desired_type and bag_x_grip > 160:
+        if bag.type != desired_type and bag_x_grip > 160:
             print('nothing can be done')
-        del bag_list[i]
+        bag_list.remove(bag)
 
     start = 0
-    print('baglist: ', bag_list)
+    for bag in baglist:
+        print(str(bag))
     config = []
 
 
@@ -127,22 +146,21 @@ except:
         print('connected to pic')
 
 
-box, image = startUpRoutine(serialDevice, cap)
+box, x_pixels_per_mil, y_pixels_per_mil, image = startUpRoutine(
+    serialDevice, cap)
 # set up stuff here then
 countsPerMillimeter = (331 / 300 * 400) / (np.pi * 10)
 countsPerMillimeter_z = (12 * 66) / (np.pi * 12)
-x_pixels_per_mil = box[2]
-y_pixels_per_mil = box[5]
-Xbox, Ybox = box[1]
+Xbox, Ybox = box.center
 center_x = Xbox - x_pixels_per_mil * 50 + 270 - 185
 center_y = Ybox - y_pixels_per_mil * 50 + 250 - 157.5
 roi_width = x_pixels_per_mil * 400
 roi_height = y_pixels_per_mil * 400
-rectangle = [(center_x, center_y), (roi_width, roi_height), box[4][2]]
+rectangle = [(center_x, center_y), (roi_width, roi_height), box.angle]
 
 bag_configs = {
-    '1': [[322, 172, 208, 0], [188, 172, 208, 180], [322, 172, 186, 0], [188, 172, 186, 180], [322, 172, 164, 0], [188, 172, 164, 180]],
-    '2': [[322, 348, 208, 0], [228, 262, 208, 90], [188, 168, 208, 180], [292, 130, 208, 270]],
+    '1': [[322, 172, 208, 0], [196, 172, 208, 180], [322, 172, 186, 0], [196, 172, 186, 180], [322, 172, 164, 0], [196, 172, 164, 180]],
+    '2': [[322, 238, 208, 180], [228, 252, 208, 270], [212, 163, 190, 0], [292, 133, 192, 90]],
     '3': [[188, 175, 208, 180], [188, 200, 186, 180], [188, 225, 164, 180], [322, 175, 208, 0], [322, 200, 186, 0], [322, 225, 164, 0]],
 }
 print(str(countsPerMillimeter))
@@ -189,14 +207,14 @@ while(1):
     # frame = frame[int(250 - 315 / 2): int(250 + 315 / 2),
     #               int(270 - 370 / 2): int(370 + 370 / 2)]
     # cv2.drawContours(frame, [box[0].astype("int")], -1, (0, 0, 0), 3)
-    if abs(rectangle[2]) < 45:
-        roteangle = 0 - rectangle[2]
+    if abs(box.min_rect[2]) < 45:
+        roteangle = 0 - box.min_rect[2]
     else:
-        roteangle = rectangle[2] - 270
+        roteangle = box.min_rect[2] - 270
     roted = imutils.rotate(frame, angle=roteangle)
     for i in config:
         cv2.circle(roted, ((int(x_pixels_per_mil *
-                                i[0])), int(y_pixels_per_mil * i[1])), 5, (0, 0, 255), -1)
+                                i[0] + 270 - 185)), int(y_pixels_per_mil * i[1] + 250 - 157.5)), 5, (0, 0, 255), -1)
     # cv2.imshow("uncropped", frame)
     cv2.imshow("roted", roted)
     if serialDevice.inWaiting() > 0:
@@ -210,7 +228,7 @@ while(1):
         cv2.waitKey(0)
         if bag_list == []:
             baglist, bowox, labeled_image = get_bags(
-                roted, center_x, center_y, roi_width, roi_height, box)
+                roted, center_x, center_y, roi_width, roi_height)
             bag_list.extend(baglist)
             cv2.imshow('current', labeled_image)
 
@@ -256,14 +274,11 @@ while(1):
                 K_Iz = float(input("input K_Iz:"))
                 K_Dz = float(input("input K_Dz:"))
                 setZGains(K_Pz, K_Iz, K_Dz, serialDevice)
-            # elif keyinput == 'manual':
-            #     manual_command = input("enter manual command:")
-            #     eval(manual_command)
             elif keyinput == 'tol':
                 setTolerances(serialDevice)
             elif keyinput == 'bags':
-                baglist, bowox, labeled_image = get_bags(
-                    roted, center_x, center_y, roi_width, roi_height, box)
+                baglist, newbox, labeled_image = get_bags(
+                    roted, center_x, center_y, roi_width, roi_height)
                 bag_list.extend(baglist)
                 start = 1
                 cv2.imshow('current', labeled_image)
