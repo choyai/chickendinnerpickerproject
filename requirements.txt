@@ -8,3 +8,4 @@ scipy
 readchar
 jupyter
 keras
+tensorflow

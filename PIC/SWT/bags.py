@@ -6,6 +6,12 @@ import argparse
 import imutils
 import cv2
 import time
+from keras.models import model_from_json
+
+json_file = open('model.json', 'r')
+loaded_model_json = json_file.read()
+model = model_from_json(loaded_model_json)
+model.load_weights('model.h5')
 
 width = 205
 height = 215
@@ -57,7 +63,7 @@ def crop_minAreaRect(img, rect):
 def find_box(contours, max_area, image):
     box_contour = contours[0]
     for c in contours:
-        if cv2.contourArea(c) > cv2.contourArea(box_contour) and cv2.contourArea(c) < max_area:
+        if cv2.contourArea(c) > cv2.contourArea(box_contour) and cv2.contourArea(c) < 45000:
             box_contour = c
             # print(cv2.contourArea(box_contour))
     box = cv2.minAreaRect(box_contour)
@@ -237,13 +243,13 @@ def drawBags(orig, box):
         #             0.65, (255, 255, 255), 2)
 
 
-g_kernel = 3
+g_kernel = 5
 bi_kernel = 4
 bi_area = 100
 min_area = 1700
-max_area = 25000
-LOW_edge = 50
-HIGH_edge = 139
+max_area = 17000
+LOW_edge = 60
+HIGH_edge = 120
 current_filter = 2
 lowH = 25
 lowS = 6
@@ -280,22 +286,22 @@ def get_contours(frame):
         gray = image
 
     # Contrast Limited Adaptive Histogram Equalization
-    clahe = cv2.createCLAHE()
-    cl1 = clahe.apply(gray)
+    # clahe = cv2.createCLAHE()
+    # cl1 = clahe.apply(gray)
 
     # gaussian blur
     # gauss = cv2.GaussianBlur(gray, (3, 3), 0)
     gauss = cv2.GaussianBlur(gray, (gauss_args[0], gauss_args[1]), 0)
 
     # global Histogram Equalization
-    global_histeq = cv2.equalizeHist(gray)
+    # global_histeq = cv2.equalizeHist(gray)
 
     # bilateralFilter
     bilat = cv2.bilateralFilter(
         gray, bilat_args[0], bilat_args[1], bilat_args[2])
 
     # total list of individual filters
-    filtered = [gray, global_histeq, gauss,
+    filtered = [gray, gray, gauss,
                 bilat]
 
     # perform Canny edge detection on all filters
@@ -314,6 +320,46 @@ def get_contours(frame):
     return cnts
 
 
+def type_detect_trained(image, contour):
+    cv2.drawContours(image, contour, 0, (0, 255, 0), 2)
+    label = 'unknown'
+    box = cv2.boundingRect(contour)
+    # contour_im = image[box[1]:box[1] +
+    #                    box[3], box[0]:box[0] + box[2]]
+    box = cv2.minAreaRect(contour)
+    # contour_im = crop_minAreaRect(image, box)
+    if abs(box[2]) < 45:
+        angle_of_rot = 0 - box[2]
+    else:
+        angle_of_rot = box[2] - 270
+    rotated = imutils.rotate(image, angle=angle_of_rot)
+    contour_im = crop_pic(rotated, box[0][0], box[0][1], 100, 100)
+    # contour_im = image[int(box[0][1] - box[1][1] / 2):int(box[0][1] + box[1][1] / 2),
+    #                    int(box[0][0] - box[1][0] / 2): int(box[0][0] + box[1][0] / 2)]
+    min_rect = box
+    box = cv2.cv.BoxPoints(
+        box) if imutils.is_cv2() else cv2.boxPoints(box)
+    box = np.array(box, dtype="int")
+    box = perspective.order_points(box)
+    cX = np.average(box[:, 0])
+    cY = np.average(box[:, 1])
+    cont_img = cv2.cvtColor(contour_im, cv2.COLOR_BGR2RGB)
+    cont_img = np.array([cont_img.tolist()])
+    prediction = model.predict(cont_img)
+    print(prediction)
+    prediction = prediction[0]
+    if prediction[0] > prediction[1] and prediction[0] > prediction[2]:
+        label = "colored"
+    elif prediction[1] > prediction[0] and prediction[1] > prediction[2]:
+        label = "large_pebbles"
+    elif prediction[2] > prediction[0] and prediction[2] > prediction[1]:
+        label = "small_pebbles"
+
+    cv2.drawContours(image, [box.astype("int")], -1, (0, 255, 0), 2)
+
+    return label, min_rect
+
+
 def find_bags(cnts, image):
     if len(cnts) is not 0:
         # (cnts, _) = contours.sort_contours(cnts)
@@ -326,8 +372,9 @@ def find_bags(cnts, image):
                 continue
 
             try:
-                type, min_rect = detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
-                                             lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
+                type, min_rect = type_detect_trained(orig, c)
+                # type, min_rect = detect_type(orig, c, lowH, lowS, lowV, upH, upS, upV, thresh, lowblueH,
+                #                              lowblueS, lowblueV, upperblueH, upperblueS, upperblueV, bluethresh)
                 bag = Bag(contour=c, type=type)
                 cv2.putText(orig, bag.type, (int(bag.center[0]), int(
                     bag.center[1])), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2)
@@ -343,9 +390,9 @@ def find_bags(cnts, image):
         return bags, big_box, orig
 
 
-def get_bags(frame, bgsub, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
+def get_bags(frame, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height):
     roi = crop_pic(frame, center_x, center_y, roi_width, roi_height)
-    bgsubbed = bgsub.apply(roi, learningRate=0)
+    # bgsubbed = bgsub.apply(roi, learningRate=0)
     # contours = get_contours(bgsubbed)
     contours = get_contours(roi)
     for c in contours:
@@ -400,10 +447,10 @@ nexttime = time.time() + period
 # except:
 #     cap = cv2.VideoCapture(1)
 #
-# bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()
-# ret, bg = cap.read()
-# bgsub.apply(bg, learningRate=0.5)
-# cv2.imshow("background", bg)
+# # bgsub = cv2.bgsegm.createBackgroundSubtractorMOG()
+# # ret, bg = cap.read()
+# # bgsub.apply(bg, learningRate=0.5)
+# # cv2.imshow("background", bg)
 # ret, frame = cap.read()
 # roi = crop_pic(frame, center_x, center_y, roi_width, roi_height)
 # contours = get_contours(roi)
@@ -423,7 +470,7 @@ nexttime = time.time() + period
 #         roteangle = box.min_rect[2] - 270
 #     roted = imutils.rotate(frame, angle=roteangle)
 #     cv2.imshow("rotated", roted)
-#     roted = bgsub.apply(roted, learningRate=0)
+#     # roted = bgsub.apply(roted, learningRate=0)
 #     bags, new_box, orig = get_bags(
 #         frame=roted, center_x=center_x, center_y=center_y, roi_width=roi_width, roi_height=roi_height)
 #

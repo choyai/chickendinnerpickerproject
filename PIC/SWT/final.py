@@ -230,6 +230,10 @@ while(1):
         roteangle = box.min_rect[2] - 270
     roted = imutils.rotate(frame, angle=roteangle)
     # roted = bgsub.apply(roted, learningRate=0)
+    cv2.rectangle(roted, (int(box.center[0] - box.width / 2 + 100 * x_pixels_per_mil), int(box.center[1] - box.height / 2 + 100 * y_pixels_per_mil)),
+                  (int(box.center[0] + box.width / 2 + 150 * x_pixels_per_mil), int(box.center[1] + box.height / 2 + 150 * y_pixels_per_mil)), (0, 0, 0), thickness=-1)
+    # cv2.rectangle(roted, (int(center_x - roi_width / 2), int(center_y - roi_height / 2)),
+    #               (int(center_x + roi_width / 2), int(center_y + roi_height / 2)), (0, 0, 0), thickness=int(10 * x_pixels_per_mil + 3))
     for i in config:
         cv2.circle(roted, ((int(x_pixels_per_mil *
                                 (i[0] + 150))), int(y_pixels_per_mil * (i[1] + 150))), 5, (0, 0, 255), -1)
@@ -245,7 +249,7 @@ while(1):
     if start == 1 and config is not []:
         if bag_list == []:
             baglist, bowox, labeled_image = get_bags(
-                roted, bgsub, center_x, center_y, roi_width, roi_height)
+                roted, center_x, center_y, roi_width, roi_height)
             bag_list.extend(baglist)
             cv2.imshow('current', labeled_image)
 
@@ -294,8 +298,27 @@ while(1):
             elif keyinput == 'tol':
                 setTolerances(serialDevice)
             elif keyinput == 'bags':
+                ret, frame = cap.read()
+                # frame = frame[int(250 - 315 / 2): int(250 + 315 / 2),
+                #               int(270 - 370 / 2): int(370 + 370 / 2)]
+                # cv2.drawContours(frame, [box[0].astype("int")], -1, (0, 0, 0), 3)
+                if abs(box.angle) < 45:
+                    roteangle = 0 - box.angle
+                else:
+                    roteangle = box.min_rect[2] - 270
+                roted = imutils.rotate(frame, angle=roteangle)
+                # roted = bgsub.apply(roted, learningRate=0)
+                cv2.rectangle(roted, (int(box.center[0] - box.width / 2 + 100 * x_pixels_per_mil), int(box.center[1] - box.height / 2 + 100 * y_pixels_per_mil)),
+                              (int(box.center[0] + box.width / 2 + 150 * x_pixels_per_mil), int(box.center[1] + box.height / 2 + 150 * y_pixels_per_mil)), (0, 0, 0), thickness=-1)
+                # cv2.rectangle(roted, (int(center_x - roi_width / 2), int(center_y - roi_height / 2)),
+                #               (int(center_x + roi_width / 2), int(center_y + roi_height / 2)), (0, 0, 0), thickness=int(10 * x_pixels_per_mil + 3))
+                for i in config:
+                    cv2.circle(roted, ((int(x_pixels_per_mil *
+                                            (i[0] + 150))), int(y_pixels_per_mil * (i[1] + 150))), 5, (0, 0, 255), -1)
+                # cv2.imshow("uncropped", frame)
+                cv2.imshow("roted", roted)
                 baglist, newbox, labeled_image = get_bags(
-                    roted, bgsub, center_x, center_y, roi_width, roi_height)
+                    roted, center_x, center_y, roi_width, roi_height)
                 bag_list.extend(baglist)
                 start = 1
                 cv2.imshow('current', labeled_image)

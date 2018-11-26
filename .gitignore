@@ -5,3 +5,4 @@ venv/*
 takeapic/images/example_01.png
 takeapic/images/example_02.png
 takeapic/images/example_03.png
+newenv/*
