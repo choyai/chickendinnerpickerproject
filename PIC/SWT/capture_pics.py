@@ -14,7 +14,7 @@ except:
     capt = cv2.VideoCapture(1)
 
 # return single frame
-iter = 45
+iter = 100
 bag_types = {
     '1': 'colored',
     '2': 'large_pebbles',
@@ -33,7 +33,7 @@ while(True):
     img = frame
     cv2.imshow('original', frame)
     # Resize using Areal interpolation(assuming camera has higher resolution)
-    scaled = crop_pic(frame, 180, 220, 100, 100)
+    scaled = crop_pic(frame, 180, 260, 100, 100)
     cv2.imshow('scaled', scaled)
     gray = cv2.cvtColor(scaled, cv2.COLOR_BGR2GRAY)
     cv2.imshow('grayscale', gray)

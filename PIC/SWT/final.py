@@ -317,12 +317,18 @@ while(1):
                                             (i[0] + 150))), int(y_pixels_per_mil * (i[1] + 150))), 5, (0, 0, 255), -1)
                 # cv2.imshow("uncropped", frame)
                 cv2.imshow("roted", roted)
-                baglist, newbox, labeled_image = get_bags(
-                    roted, center_x, center_y, roi_width, roi_height)
-                bag_list.extend(baglist)
-                start = 1
-                cv2.imshow('current', labeled_image)
-                cv2.waitKey(0)
+
+                inputee = input("kk")
+                if inputee == 'y':
+
+                    baglist, newbox, labeled_image = get_bags(
+                        roted, center_x, center_y, roi_width, roi_height)
+                    bag_list.extend(baglist)
+                    start = 1
+                    cv2.imshow('current', labeled_image)
+                    cv2.waitKey(0)
+                else:
+                    continue
             elif keyinput == 'posxy':
                 x = int(input("input x: "))
                 y = int(input("input y: "))
