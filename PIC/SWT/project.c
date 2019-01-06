@@ -267,17 +267,17 @@ void setHome() {
   set_pwm_duty(3, 0);
   set_pwm_duty(2, 0);
   set_pwm_duty(1, 0);
-while (input(limitSw_z) == 1){
+  while (input(limitSw_z) == 1) {
     Motor_z(-100);
   }
   Motor_z(0);
-   while (input(limitSw_y) == 1){
+  while (input(limitSw_y) == 1) {
     Motor_a(-100);
     Motor_b(-100);
   }
   // Motor_a(0);
   // Motor_b(0);
-  while (input(limitSw_x) == 1){
+  while (input(limitSw_x) == 1) {
     Motor_a(100);
     Motor_b(-100);
   }
@@ -350,7 +350,7 @@ void gripOpen() {
   getPackage = 0;
 }
 
-void gripHalf(){
+void gripHalf() {
   setup_compare(5, COMPARE_PWM | COMPARE_TIMER2);
   int duty = mergeInts((int)array[3], (int)array[4]);
   set_pwm_duty(5, duty);
@@ -394,7 +394,7 @@ void setZGains() {
   getPackage = 0;
 }
 
-void setTolerances(){
+void setTolerances() {
   tolerance_a = mergeInts((int)array[3], (int)array[4]);
   tolerance_b = mergeInts((int)array[5], (int)array[6]);
   tolerance_z = mergeInts((int)array[7], (int)array[8]);
